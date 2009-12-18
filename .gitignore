@@ -1,0 +1,6 @@
+.DS_Store
+
+# These are added by bundler
+gems/*
+!gems/cache
+bin/*
