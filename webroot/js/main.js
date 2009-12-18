@@ -18,7 +18,6 @@ $(document).ready(function() {
   $("body").append(schedule);
 
   $("body > div._presentation").each(function() {
-    console.log("here");
     var presentation = new Presentation($(this));
     presentations.push(presentation);
   });
