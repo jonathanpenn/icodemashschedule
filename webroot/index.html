@@ -1,6 +1,6 @@
 <html manifest='cache.manifest'>
 <head>
-    <title>Bookworm</title>
+    <title>iCodeMash</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width; height=device-height; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,7 +19,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
           $(".sessionTitle, .sessionItem").hide();
-          $(".sessionTitle:nth(3)").show().next().show();
+          $(".sessionItem[room]").show().prev().show();
           $("#loading").hide();
           $("#schedule").show();
       });
@@ -42,7 +42,7 @@
 
 
 <div class="sessionTitle">(panel) Starting Up Fast - Lessons from the Rails Rumble</div>
-<div class="sessionItem">
+<div class="sessionItem" room="Indigo Bay" startTime="Jan 14, 2009 11:00 am" endTime="Jan 14, 2009 12:00 pm">
   <div>
     <b>Technology/Platform: </b>Ruby</div>
   <div>
@@ -60,7 +60,7 @@
 
 
 <div class="sessionTitle">0-60 with Fluent NHibernate</div>
-<div class="sessionItem">
+<div class="sessionItem" room="Cypres" startTime="Jan 15, 2009 10:45 am" endTime="Jan 15, 2009 11:45 am">
   <div>
     <b>Technology/Platform: </b>.NET</div>
   <div>
