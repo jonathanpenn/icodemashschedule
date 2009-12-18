@@ -24,21 +24,41 @@ $(document).ready(function() {
 
   presentations.sort(PresentationSort.byStartTime);
 
+  var presByDays = $.groupBy(presentations, function(p) { return p.dayGroup(); });
 
-  var lastSeen = null;
-  $.each(presentations, function(index, presentation) {
+  for (day in presByDays) {
+    $("#timeList").append("<li class='sep'>"+day+"</li>");
 
-    if (lastSeen != presentation.dayGroup()) {
-      $("#timeList").append("<li class='sep'>"+presentation.dayGroup()+"</li>");
-      lastSeen = presentation.dayGroup();
+    var presByTime = $.groupBy(presByDays[day], function(p) { return p.timeGroup(); });
+
+    for (time in presByTime) {
+      var id = domid(day, time);
+      $("#timeList").append("\
+        <li class='arrow'>\
+          <a href='#"+id+"'>"+time+" &gt; </a>\
+        </li>\
+      ");
+
+      var $div = $("\
+        <div id='"+id+"'>\
+          <div class='toolbar'>\
+            <h1>"+day+" "+time+"</h1>\
+            <a class='back' href='#'>Back</a>\
+          </div>\
+          <ul class='rounded'></ul>\
+        </div>\
+      ");
+      var $ul = $div.find("ul");
+
+      $.each(presByTime[time], function(index, pres) {
+        $ul.append("\
+          <li class='arrow'><a href='#"+pres.id+"'>"+pres.title+"</a></li>\
+        ");
+      });
+
+      $("body").append($div);
     }
-
-    $("#timeList").append("\
-      <li class='arrow'>\
-        <a href='#"+presentation.id+"'>"+presentation.timeGroup()+" &gt; </a>\
-      </li>\
-    ");
-  });
+  }
 
   $("#loading").hide();
 });

@@ -36,7 +36,9 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
           <li class='_endTime'>#{event.dtend}</li>
         </ul>
 
-        #{to_html(event.description)}
+        <div class='description'>
+          #{to_html(event.description)}
+        </div>
       </div>
     EOHTML
     f.puts result
