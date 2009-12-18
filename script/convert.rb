@@ -3,6 +3,7 @@ require 'vpim'
 require 'bluecloth'
 
 data_dir = File.join(File.dirname(File.dirname(__FILE__)), "data")
+webroot_dir = File.join(File.dirname(data_dir), "webroot")
 ical_data = File.read(File.join(data_dir, "codemash.ics"))
 
 ical = Vpim::Icalendar.decode(ical_data)
@@ -11,7 +12,7 @@ def to_html(text)
   BlueCloth.new(text).to_html
 end
 
-File.open(File.join(data_dir, "codemash.html"), "w") do |f|
+File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
 
   ical.first.events.each do |event|
 
