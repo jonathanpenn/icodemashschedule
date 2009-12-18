@@ -13,7 +13,7 @@ def to_html(text)
 end
 
 def js_escape(text)
-  text.gsub("\n", '\n').gsub("\"", '\"')
+  text.gsub("\n", "\\\n").gsub("\"", '\"')
 end
 
 def full_escape(text)
@@ -43,12 +43,14 @@ File.open(File.join(webroot_dir, "js/codemash.js"), "w") do |f|
   ical.first.events.each do |event|
 
     f.puts "p = {};"
-    f.puts "p.title = \"#{full_escape(event.summary)}\";"
+    f.puts "p.title = \"#{js_escape(event.summary)}\";"
     f.puts "p.startTime = new Date(Date.parse(\"#{event.dtstart}\"));"
     f.puts "p.endTime = new Date(Date.parse(\"#{event.dtend}\"));"
-    f.puts "p.location = \"#{full_escape(event.location)}\";"
+    f.puts "p.location = \"#{js_escape(event.location)}\";"
 
+    f.puts
     f.puts "p.description = \"#{full_escape(utf8_escape(event.description))}\";"
+    f.puts
     f.puts "presentations.push(p);"
     f.puts
 
