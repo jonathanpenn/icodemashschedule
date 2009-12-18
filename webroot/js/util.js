@@ -17,8 +17,8 @@ $.groupBy = function(arr, grouper)
 function domid()
 {
   var arr = [];
-  for (k in arguments) {
-    arr.push(arguments[k])
+  for (var i = 0; arguments[i] != undefined; i++ ) {
+    arr.push(arguments[i])
   }
   return arr.join("_").replace(/[^_A-z0-9]/g, '').toLowerCase();
 }

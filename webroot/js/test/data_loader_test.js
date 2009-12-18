@@ -4,11 +4,11 @@ $(document).ready(function() {
 
   test("loadFrom", function() {
     var loader = new DataLoader();
-    var html = loader.loadFrom("codemash.html");
+    var html = loader.loadFrom("codemash.html") + '';
 
     expect(2);
     ok( html, "result should be defined" );
-    ok( $(html).find("h1").length > 0, "finds html data in the result" );
+    ok( html.indexOf("<h1>") > 0, "finds html data in the result" );
   });
 
 
