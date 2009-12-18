@@ -38,3 +38,30 @@ $(document).ready(function() {
   });
 
 });
+
+
+
+$(document).ready(function() {
+
+  module("PresentationSort");
+
+
+  test("byStartTime", function() {
+    var presentations = [
+      {startTime: 1, title: 'a'},
+      {startTime: 3, title: 'a'},
+      {startTime: 2, title: 'b'},
+      {startTime: 2, title: 'a'}
+    ];
+
+    presentations.sort(PresentationSort.byStartTime);
+    expect(6);
+    ok( presentations[0].startTime == 1);
+    ok( presentations[1].startTime == 2);
+    ok( presentations[1].title == 'a');
+    ok( presentations[2].startTime == 2);
+    ok( presentations[2].title == 'b');
+    ok( presentations[3].startTime == 3);
+  });
+
+});

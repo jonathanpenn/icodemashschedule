@@ -23,7 +23,7 @@ $(document).ready(function() {
     presentations.push(presentation);
   });
 
-  presentations.sort(function(a,b) { return a.startTime > b.startTime ? 1 : -1; });
+  presentations.sort(PresentationSort.byStartTime);
 
   $.each(presentations, function(index, presentation) {
     $("#scheduleList").append("\
