@@ -1,0 +1,2214 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:CodeMash 2010
+X-WR-TIMEZONE:America/New_York
+X-WR-CALDESC:Public Google Calendar of events for CodeMash 2010 (copied fro
+ m codemash.org/CM-2010-Schedule.pdf).  See also: codemash.org and codemash.
+ org/Sessions\n   
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:le1ivqkb0l40dqsq593ko93hm0@google.com
+CREATED:20091215T202436Z
+DESCRIPTION:==Session Description Pending==\n\nAbout the speaker:\nNick Sie
+ ger is an engineer at Engine Yard\, working on JRuby and leading the effort
+  to make the Java Virtual Machine a robust yet easy-to-use deployment platf
+ orm for Rails and Ruby web applications. He created and co-maintains the JD
+ BC adapter for ActiveRecord that JRuby on Rails uses for database connectiv
+ ity\, as well as the Warbler\ntool and JRuby-Rack library for dealing with 
+ Java application server deployment. He maintains a blog on Ruby and JRuby-r
+ elated topics at http://blog.nicksieger.com/.
+LAST-MODIFIED:20091217T164841Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:JRuby (Nick Sieger)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T184500Z
+DTEND:20100115T194500Z
+DTSTAMP:20091218T032634Z
+UID:a337t9vsjbkj72a34o7fe1o960@google.com
+CREATED:20091215T205607Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Advanced\n\nAbstra
+ ct: Technical debt\, the cost of putting off good development practices\, c
+ an cripple a project's velocity\, flexibility\, and quality. This presentat
+ ion will focus on a number of common anti-patterns such as "sensitive tests
+ " which are brittle and overly coupled to odd situations which cause them t
+ o fail. Having identified these behaviours\, we’ll look at techniques to fi
+ rstly quantify the impacts via real world costing examples\, after which we
+ 'll walk through mitigation strategies such as buying components of a solut
+ ion versus developing everything from scratch. You'll leave this session wi
+ th a better idea of how to avoid these pitfalls\, and how to pull yourself 
+ out of them if you do end up therein.\n\nPresented By: Gary Short\n\nAbout 
+ the Speaker: Gary Short works for Developer Express as the Technical Evange
+ list on the frameworks team. He has a deep interest in technical architectu
+ re\, especially in the areas of technical debt and refactoring. Gary is a C
+ # MVP and gives presentations at user groups and conferences throughout the
+  UK.\n\nAs well as C#\, Gary also has an interest in dynamic languages such
+  as Smalltalk\, Ruby and Python as well as iPhone development using Objecti
+ ve-C.\n\nGary's ducelt tones can also be heard on the SodThis and the CodeC
+ ast podcasts.
+LAST-MODIFIED:20091215T205607Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Credit Crunch Code: Time to Pay Back the Technical Debt (Gary Short
+ )
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:nhr9qrukv45115iipu6e2rhkec@google.com
+CREATED:20091215T205534Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: The World of Warcraft (WoW) is today's most popular MMORPG\, with 1
+ 1.5 million subscribers generating an estimated $120+ million in monthly re
+ venue for Blizzard Entertainment. Besides being a very successful video gam
+ e\, WoW can also be examined as a case study for creating interesting and s
+ calable applications. In this session\, we will demonstrate a handful of fe
+ atures found in WoW\, including end-user interface customization using APIs
+  and add-ons\, presence awareness\, realtime communication between users\, 
+ data caching\, and offline access to application data. For each feature\, w
+ e will investigate ways to build similar functionality into your own LOB ap
+ plication using tools and technologies available today for free.\n\nPresent
+ ed By: Jason Follas\n\nAbout the Speaker: Jason Follas is a Technical Archi
+ tect for Perficient\, serving clients primarily located in the greater Detr
+ oit region (including Toledo\, where he lives and serves as the President o
+ f the Northwest Ohio .NET User Group). Since 1994\, he has developed many i
+ nteresting solutions on the Microsoft platform\, including an Aircraft Weig
+ ht and Balance system used by an air freight company\, several e-Commerce w
+ ebsites\, Risk Management systems\, and blend optimization software. In 200
+ 7 and 2008\, Microsoft recognized Jason as a Microsoft MVP (SQL Server).
+LAST-MODIFIED:20091215T205535Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Looting Design Ideas from the World of Warcraft (Jason Follas)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:ffkmitl233k42kqpk4f5hcof8s@google.com
+CREATED:20091215T205453Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Beginner\n\nAbstr
+ act: It doesn’t matter what point you’re at in your career\, you need to un
+ derstand some fundamentals about good leadership. If you’re well into your 
+ career you need to know how to get the most out of your teams. If you’re ju
+ st starting then you need to learn what good leadership looks like – and ho
+ w to help ensure you’re getting the leadership you and your colleagues need
+  to succeed. In this session you’ll learn basic concepts about respect\, re
+ sponsibility\, communication\, and teamwork\, based on experience drawn fro
+ m Jim’s years of serving in the military\, playing competitive sports\, and
+  working in a wide range of jobs.\n\nPresented By: Jim Holmes\n\nAbout the 
+ Speaker: Father. Husband. Geek. Veteran. Over 20 years IT experience. Co-au
+ thor of “Windows Developer Power Tools.” Coffee Roaster. MVP for C#. Chief 
+ Cat Herder of the CodeMash Conference. Liked 5th grade so much he did it tw
+ ice. One-time setter\, middle blocker\, and weakside hitter. Blogger (http:
+ //FrazzledDad.com). Quality Lead at Telligent Systems. Big fan of naps.\n
+LAST-MODIFIED:20091215T205453Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Leadership 101 (Jim Holmes)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:dbkpqet3llib01ecosb8qpij7o@google.com
+CREATED:20091215T205355Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Interme
+ diate\n\nAbstract: RIAs are certainly changing the way we build software. U
+ ser experience is now central to building great software. How does this imp
+ act our Agile methodologies? How do we implement Agile when working with de
+ signers? What testing and development tools exist to aid us in implementing
+  Agile in RIAs? This session will use live coding and demos to show how Agi
+ le is being used to build Flex RIAs.\n\nPresented By: James Ward\n\nAbout t
+ he Speaker: James Ward is a Technical Evangelist for Flex at Adobe and Adob
+ e's JCP representative to JSR 286\, 299\, and 301.\n\nMuch like his love fo
+ r climbing mountains he enjoys programming because it provides endless new 
+ discoveries\, elegant workarounds\, summits and valleys. His adventures in 
+ climbing have taken him many places.\n\nLikewise\, technology has brought h
+ im many adventures\, including: Pascal and Assembly back in the early 90's\
+ ; Perl\, HTML\, and JavaScript in the mid 90's\; then Java and many of it's
+  frameworks beginning in the late 90's.\n\nToday he primarily uses Flex to 
+ build beautiful front-ends for Java based back-ends. Prior to Adobe\, James
+  built a rich marketing and customer service portal for Pillar Data Systems
+ .
+LAST-MODIFIED:20091215T205355Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:An Agile Toolchain for Flex RIAs (James Ward)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:iafq3hms09todn3jcbnjl3lqrg@google.com
+CREATED:20091215T205306Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: There is undeniable value in doing automated testing\, but the ques
+ tion is whether the benefits of automated testing are worth the time and ma
+ npower investment. The benefits and costs of automated testing are greatly 
+ affected by design and architecture choices. In this talk I will examine th
+ e real world design issues\, patterns\, and principles that can enhance or 
+ hinder testability.\n\nPresented By: Jeremy D. Miller\n\nAbout the Speaker:
+  Jeremy is the Chief Software Architect at Dovetail Software\, the coolest 
+ ISV in Austin. Jeremy began his IT career writing "Shadow IT" applications 
+ to automate his engineering documentation\, then wandered into software dev
+ elopment because it looked like more fun. Jeremy previously worked as a sys
+ tems architect building mission critical supply chain software for a Fortun
+ e 100 company and learned agile development practices as a .Net consultant 
+ at ThoughtWorks\, one of the pioneers of agile development. Jeremy is the a
+ uthor of the open source StructureMap (http://structuremap.sourceforge.net)
+  tool for Dependency Injection with .Net and the forthcoming StoryTeller (h
+ ttp://storyteller.tigris.org) tool for supercharged acceptance testing in .
+ Net. Jeremy's thoughts on just about everything software related can be fou
+ nd on his weblog "The Shade Tree Developer" at http://codebetter.com/blogs/
+ jeremy.miller\, part of the popular CodeBetter site. Jeremy is a Microsoft 
+ MVP for C#.
+LAST-MODIFIED:20091215T205309Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Software Design and Testability (Jeremy D. Miller)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:e0db8saubev5trklkj86qkndos@google.com
+CREATED:20091215T205230Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Advanced\n\nAbstra
+ ct: In today's competitive global economy it's increasingly difficult to fi
+ nd quality henchmen to aid you in taking over the Earth. Fortunately the .N
+ ET platform has plenty of technological gems which can help you in your que
+ st.\n\nSpeech recognition APIs to automate your demands for ransom. The Par
+ allel Extensions to .NET for distributing control your nanobots. Even image
+  recognition to identify CIA spys and kill them on sight!\n\nThis code-focu
+ sed talk will show you the libraries you can use to make your next high-pow
+ ered plot for world domination a success. (F# knowledge is not required\, t
+ hough will help any aspiring evil genius grep the demos.)\n\nPresented By: 
+ Chris Smith\n\nAbout the Speaker: Chris Smith works as a tester on the Micr
+ osoft F# team and is author of Programming F# by O'Reilly. Before joining t
+ he F# team\, Chris worked on various parts of Visual Studio from WCF suppor
+ t to the Settings and Resource designers. Chris lives in the Seattle area a
+ nd enjoys skiing and blogging about F# at http://blogs.msdn.com/chrsmith. H
+ e has a burning passion for girly drinks.
+LAST-MODIFIED:20091215T205230Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Being an Evil Genius with F# and .NET (Chris Smith)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:38c9po7npdr8ccad7ri6ko7p2k@google.com
+CREATED:20091215T205127Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: The Apache Tapestry web framework has been making a name for itself in 
+ terms of\ninnovative features and ease of use. In this session\, we'll intr
+ oduce Tapestry\nand explain its innovative approach to building fast\, comp
+ lex\, reliable applications\nfrom simple and reusable components. Along the
+  way\, we'll demonstrate the features\nthat make Tapestry so fun and produc
+ tive: including live class reloading and\nconvention over configuration: we
+ 'll show how these result in minute amounts of code\nto accomplish big goal
+ s\, and how Tapestry brings scripting language productivity\nwithin reach o
+ f Java developers without sacrificing any of Java's inherent speed and powe
+ r.\n\nPresented By: Howard M. Lewis Ship\n\nAbout the Speaker: Creator of t
+ he Apache Tapestry web framework and author of "Tapestry in Action". Freque
+ nt speaker at JavaOne\, ApacheCon\, NoFluffJustStuff and elsewhere.
+LAST-MODIFIED:20091215T205127Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tapestry 5: Java Power\, Scripting Ease (Howard M. Lewis Ship) in M
+ angrove
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T214000Z
+DTEND:20100115T224000Z
+DTSTAMP:20091218T032634Z
+UID:467qers777qnqrqis9gv6h7hf0@google.com
+CREATED:20091215T205008Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T205015Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:4:40 - 5:40 Raffle
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T203500Z
+DTEND:20100115T213500Z
+DTSTAMP:20091218T032634Z
+UID:h0jm8avikadpund6fi0vlbmg18@google.com
+CREATED:20091215T204956Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: Talk about strange bedfellows: what happens when you mix one part Lisp\
+ n(one of the oldest computer languages)\, one part Java (so young\, yet\nso
+  well adopted)\, a healthy serving of functional programming\, and a\nstate
+ -of-the-art concurrency layer on top? That's Clojure\, which\n"feels like a
+  general-purpose language beamed back from the near\nfuture." Clojure embra
+ ces functional programming with immutable data\ntypes and first class funct
+ ions. It is fully interoperable with\nJava. Clojure's approach to concurren
+ cy includes asynchonous Agents\,\nand Software Transactional Memory. Clojur
+ e is fast\, elegant\, dynamic\,\nand scalable: a language for the future\, 
+ today.\n\nPresented By: Howard M. Lewis Ship\n\nAbout the Speaker: Creator 
+ of the Apache Tapestry web framework and author of "Tapestry in Action". Fr
+ equent speaker at JavaOne\, ApacheCon\, NoFluffJustStuff and elsewhere.
+LAST-MODIFIED:20091215T204956Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Clojure: Concurrent Functional Programming for the JVM (Howard M. L
+ ewis Ship)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T203500Z
+DTEND:20100115T213500Z
+DTSTAMP:20091218T032634Z
+UID:1b1q6ge0mrmnb70j09l24jcrik@google.com
+CREATED:20091215T204910Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Beginner\n\nAbstr
+ act: Return on Investment is key for large and small organizations in these
+  risky times. A key mitigator of ROI risk is the avoidance of capital expen
+ diture on IT infrastructure. While traditional Application Service Provider
+  style hosting services do fit this bill\, there is a new service on the ho
+ rizon that has key benefits over the ASP model - cloud computing. Cloud com
+ puting leverages virtualized resources to isolate the developer and user fr
+ om details of the infrastructure\, while spreading infrastructure capital e
+ xpenses over a large number of hosted applications. Bill will discuss the r
+ ealities of hosted applications\, including the current popular ASP models\
+ , and compare them to cloud computing. There will be an overview of cloud c
+ omputing architecture and strategy. He will end with a comparison of variou
+ s commercial cloud services\, including Google AppEngine\, Amazon S3 and Mi
+ crosoft Azure.\n\nPresented By: Bill Sempf\n\nAbout the Speaker: Bill Sempf
+  is an enterprise architect. In 17 years of professional experience he has 
+ participated in the creation of well over 200 applications for large and sm
+ all companies and managed the software infrastructure of two internet servi
+ ce providers. He is the author of Visual Basic for Dummies (2008 and 2005) 
+ and has contributed to numerous other publications. He is a graduate of The
+  Ohio State University with a Bachelor's of Science in Business Administrat
+ ion and has several professional certifications.
+LAST-MODIFIED:20091215T204910Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:The Economics of Cloud Computing (Bill Sempf)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T203500Z
+DTEND:20100115T213500Z
+DTSTAMP:20091218T032634Z
+UID:bsejm22opq3r48lhtokl0qhpms@google.com
+CREATED:20091215T204831Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: An in depth look at emerging features in Silverlight. Specific topi
+ cs will be announced in coming weeks. Target audience is Intermediate Silve
+ rlight 3 Programmers with a working knowledge of: * XAML * Silverlight 3 pr
+ ogramming * C# * RIA Services * Visual Studio 2008 and Expression Blend\n\n
+ Presented By: Jesse Liberty\n\nAbout the Speaker: Jesse Liberty\, Silverlig
+ ht Geek\, is a Developer Community Program Manager for Microsoft Silverligh
+ t.net. His areas of interest include RIA\, C Data and Web Services\, Cross-
+ platform Line of Business programming\, and most of all\, building strong r
+ elationships between the Development Division at Microsoft and software dev
+ elopers world-wide.\nLiberty is a frequent guest on numerous podcasts and h
+ is blog is a required resource for Silverlight programmers. He is the autho
+ r of over two dozen books\, including the forthcoming Programming Silverlig
+ ht 4. His twenty years of programming experience include stints as a Distin
+ guished Software Engineer at AT&T\; Vice President of Human-Computer Intera
+ ction at Citibank and Software Architect at PBS/Learning Link. He can be re
+ ached at jliberty@microsoft.com
+LAST-MODIFIED:20091215T204831Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:What's New in Silverlight (Jesse Liberty)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T203500Z
+DTEND:20100115T213500Z
+DTSTAMP:20091218T032634Z
+UID:0j1cdknr73gldh5b821jbcsn60@google.com
+CREATED:20091215T204758Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Intermediate\n\nAb
+ stract: The SOLID principles are a set of design principles that improve an
+  Object Oriented design. They are:\n\n* Single Responsibility Principle\n* 
+ Open/Closed Princip\n* Liskov Substitution Principle\n* Interface Segregati
+ on Principle\n* Dependency Inversion Principle\n\nThe SOLID principles were
+  written with a statically typed language (such as C++ or Java) in mind. Wh
+ at do the SOLID principles mean to a dynamic/flexible language like Ruby? T
+ his talk will focus on how SOLID and Ruby interact\, how to create well des
+ igned Ruby software\, and to suggest possibilities for new design principle
+ s for dynamic languages.\n\nABSTRACT\n\nThe 5 SOLID design principles form 
+ a great foundation for understanding good Object Oriented design. But the S
+ OLID principles were originally conceived with statically typed OO language
+ s\, such as C++ and Java\, in mind. How well do these principles hold up wh
+ en the implementation language is Ruby? Are the principles just as pertinen
+ t as they were in Java\, or does the dynamic nature of Ruby change what we 
+ mean by good design? In this presentation we will examine the SOLID princip
+ les to understand their core purpose\, and then run them through the "Ruby 
+ Filter" to see if any of these core principles survive. By understanding th
+ ese principles\, we become better Ruby programmers.\n\nPresented By: Jim We
+ irich\n\nAbout the Speaker: Jim Weirich is the Chief Scientist for EdgeCase
+  LLC\, a Rails development firm located in Columbus Ohio. Jim has over twen
+ ty-five years of experience in software development. He has worked with rea
+ l-time data systems for testing jet engines\, networking software for infor
+ mation systems\, and image processing software for the financial industry. 
+ Jim is active in the Ruby community and has contributed to several Ruby pro
+ jects\, including the Rake build system and the RubyGems package software.
+LAST-MODIFIED:20091215T204758Z
+LOCATION:Indogo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:SOLID Ruby (Jim Weirich)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T200000Z
+DTEND:20100115T202000Z
+DTSTAMP:20091218T032634Z
+UID:ad0cvsnh4s8dlkngtbrr2l7lc0@google.com
+CREATED:20091215T204714Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T204714Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:3:00pm - 3:20pm Vendor Sessions
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T184500Z
+DTEND:20100115T194500Z
+DTSTAMP:20091218T032634Z
+UID:u8riomm9hpdm3pauv0bfm74hjo@google.com
+CREATED:20091215T204655Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Intermediate\n\nAb
+ stract: For the last year or so Clojure has quietly been sweeping developer
+ s into a wonderful sea of lisp. But this isn't your grandmother's lisp\, th
+ is is lisp on Power Thirst! Come and see Aaron Bedra take you on a wild rid
+ e of functional\, web driven bliss. You will take a look a a great little f
+ ramework called Compojure. In this session you will learn how to harness th
+ e power of clojure to do your bidding and make your life building web appli
+ cations a breeze. Hold on to your seats as Aaron takes you through lightnin
+ g fast web development with Compojure and shows off the simplicity and eleg
+ ance of this new web framework. You will tour the basic ideas behind Compoj
+ ure including: * Your first "Hello Compojure" app * A short dive into the f
+ ramework internals * Building a web mashup This will be a fire hose style\,
+  no holds barred blast of functional awesomeness leaving you itching to giv
+ e both clojure and Compojure a try.\n\nPresented By: Aaron Bedra\n\nAbout t
+ he Speaker: Aaron brings the ability to quickly ninja any application. His 
+ passion for spreading the security word via his blog is kicking off a new w
+ ave of security consciousness throughout the Ruby community and creating an
+  avalanche of better development practices. His passion for exploring new t
+ echnologies and traveling new roads has quickly shot him up through the Rub
+ y industry and on to the Relevance team.
+LAST-MODIFIED:20091215T204655Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Building Webapps with Compojure (Aaron Bedra)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T184500Z
+DTEND:20100115T194500Z
+DTSTAMP:20091218T032634Z
+UID:j0039df4c86cj07r103vdf31qo@google.com
+CREATED:20091215T204558Z
+DESCRIPTION:Technology/Platform: Python\nDifficulty Level: Intermediate\n\n
+ Abstract: IronPython is Microsoft’s implementation of the Python language a
+ nd it was one of the first dynamic language implementations for the CLR. It
+  is currently nearing full release for the 2.6 implementation.\n\nWe’ll sta
+ rt this session with a brief introduction to Python\, then we’ll go right i
+ nto how to make a new ASP.NET site play well with IronPython. Throughout th
+ is presentation we’ll discuss what benefits we get by using a dynamic langu
+ age and what potential pitfalls you may encounter.\n\nWhen you leave this s
+ ession you should be able to configure an ASP.NET website to work with Iron
+ Python and you'll be able to program basic basic functionality with IronPyt
+ hon in ASP.NET.\n\nPresented By: Chris Sutton\n\nAbout the Speaker: Chris S
+ utton is a software developer and technical trainer in Eastern Iowa and has
+  been working with ASP.NET since 2002. He helps run CRineta.org in Cedar Ra
+ pids\, Iowa and he co-founded the Iowa Code Camp in 2008. Chris is a Micros
+ oft MVP\, a Microsoft Certified Trainer (MCT) and holds the MCPD:Enterprise
+  certification. He has been consulting and speaking on software development
+  topics since 2005 and loves developing for the web.\n\nGetting to spend ti
+ me with his wife and kids makes his tech work worthwhile. He also enjoys hi
+ king and biking in the summer and snowshoeing in the winter.
+LAST-MODIFIED:20091215T204558Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IronPython with ASP.NET (Chris Sutton)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T184500Z
+DTEND:20100115T194500Z
+DTSTAMP:20091218T032634Z
+UID:3ih9rug382433ilf6l0ufs2tig@google.com
+CREATED:20091215T204516Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Beginne
+ r\n\nAbstract: This session is for developers interested in learning about 
+ functional programming and LISP languages. I'll provide a brief introductio
+ n to functional programming and Scheme\, discuss some of our experiences le
+ arning the language\, and show the audience a few examples of simple proble
+ ms done in Java\, Ruby\, and Scheme (for comparison). I will develop one of
+  the solutions "live" before the class.\n\nI am currently heading a study g
+ roup on the SICP book. This session will be based primarily on our first ei
+ ght weeks of learning.\n\nPresented By: Michael J Norton\n\nAbout the Speak
+ er: I am a husband\, father\, developer\, and runner. I've held positions w
+ ith titles such as Manger\, Director\, and CTO for corporations in Ohio\, b
+ ut my true love and passion is Coaching and Development. I'm a ground-and-p
+ ound kind of guy who likes to be in the trenches getting the work done.\n\n
+ I love working in teams and I am an avid agilist.\n\nMy development interes
+ ts are varied. I stick with the Web arena\, but can be found pairing happil
+ y at any layer\; Model\, View\, Controller\, Services\, or the User Interfa
+ ce.
+LAST-MODIFIED:20091215T204516Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:An Introduction to Functional Programming with Scheme (Michael J. N
+ orton)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T184500Z
+DTEND:20100115T194500Z
+DTSTAMP:20091218T032634Z
+UID:75l9bgslp6e278g1ld6ufgi56o@google.com
+CREATED:20091215T204436Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Beginner\n\nAbstra
+ ct: Learn how to leverage the elegance and expressiveness of Ruby to drive 
+ development of a Mac OS X GUI application using its native UI framework\, C
+ ocoa\, with the rapidly-progressing MacRuby implementation. MacRuby is "a v
+ ersion of Ruby 1.9\, ported to run [on] Mac OS X [using] the Objective-C co
+ mmon runtime and garbage collector". As we walk through implementing a desk
+ top client to interface with popular URL shortening services\, we'll cover 
+ how to pull down and build the latest version of MacRuby\, creating and wor
+ king with Ruby domain objects\, the use of Apple's Interface Builder tool t
+ o create the Cocoa GUI components\, and how to use HotCocoa\, a MacRuby DSL
+  designed to create Cocoa interfaces in a much more streamlined manner.\n\n
+ Presented By: Matt Yoho\n\nAbout the Speaker: Matt Yoho is a web-focused de
+ veloper who has built applications for institutions such as universities an
+ d public utilities as well as small businesses and start-ups (including his
+  own) since 2005. He has worked on platforms such as PHP\, ASP.NET\, and Ru
+ by on Rails\, finding the last to yield the most enjoyable development expe
+ rience to date. He is an agile development enthusiast and currently the lea
+ d developer for Toobla\, a central Ohio start-up that aims to change the wa
+ y you think about collecting and sharing content on the web. He has had the
+  good fortune of teaching a project-based course in Ruby and Rails for the 
+ Scholars program of the Ohio State University\, where once upon a time he r
+ eceived a B.S. in Computer Science & Engineering along with one in Psycholo
+ gy. He is a recovering karaoke addict and one fairly hep cat.
+LAST-MODIFIED:20091215T204436Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:MacRuby and Cocoa Applications (Matt Yoho)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T170000Z
+DTEND:20100115T183000Z
+DTSTAMP:20091218T032634Z
+UID:5mqq8t36kvkl0qq0kvqat6qge0@google.com
+CREATED:20091215T204353Z
+DESCRIPTION:Andy Hunt\, a programmer turned consultant\, author and publish
+ er best known for co-founding of the Pragmatic Bookshelf\, co-founding of t
+ he Agile Alliance\, and authoring best-selling books such as "The Pragmatic
+  Programmer" and "Programming Ruby: The Pragmatic Programmer's Guide"\, wil
+ l keynote at CodeMash 2010. He is a frequent global speaker on topics such 
+ as agile software development\, pragmatic programming\, and teamwork.
+LAST-MODIFIED:20091215T204353Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LUNCH + KEYNOTE #2: Andy Hunt
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:dpj82kkotv0orp23isggielam8@google.com
+CREATED:20091215T204312Z
+DESCRIPTION:Technology/Platform: Mobile\nDifficulty Level: Beginner\n\nAbst
+ ract: Tons of developers are sticking their toe in the waters of Cocoa deve
+ lopment hoping to knock out the next hit iPhone app. If you haven't gotten 
+ around to actually getting started\, you may want to consider targeting the
+  desktop instead where there isn't yet "an app for that."\n\nThis session i
+ s for experienced developers in a C-style language who have considered deve
+ loping for the iPhone but haven't yet taken the plunge. We'll look at the c
+ ore Cocoa coding techniques such as delegates\, outlets and actions\, Key v
+ alue coding\, key value observing\, and bindings. You'll get the flavor of 
+ developing in Objective-C using Xcode\, Interface Builder\, and Instruments
+ .\n\nPresented By: Daniel Steinberg\n\nAbout the Speaker: I currently write
+  and edit books for the Pragmatic Programmers. My current book is on Cocoa.
+  I used to edit java.net. I've written a dozen books - some of them are pro
+ bably still on Amazon\, hundreds of articles for everyone from Apple's deve
+ loper site to JavaWorld Magazine\, and have spoken at WWDC\, MacWorld Expo\
+ , Mac Hack\, JavaOne\, SDWest\, and tons of other places. I also co-teach t
+ he iPhone Studio for The Pragmatic Studios.
+LAST-MODIFIED:20091215T204312Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Come for the Phone stay for the Mac (Daniel Steinberg)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:1er2nu7uc5cr74q51mmn9363f4@google.com
+CREATED:20091215T204234Z
+DESCRIPTION:Technology/Platform: Python\nDifficulty Level: Intermediate\n\n
+ Abstract: While the big players like Yahoo\, Twitter\, and Google provide A
+ PI's for their services\, not all sites have seen that light yet. This talk
+  presents a methodology to add and publish a REST API to sites that do not 
+ provide their own. It covers design\, implementation\, testing\, and best p
+ ractices using a case-study. A basic understanding of Django and HTTP will 
+ be helpful.\n\nPresented By: Kevin Dahlhausen\n\nAbout the Speaker: Kevin D
+ ahlhausen is a software developer at Key Bank and an unabashed Python devel
+ oper at night. He holds a Bachelor of Science degree in Computer and Inform
+ ation Science from the College of Engineering at the Ohio State University.
+  In his spare time\, he enjoys rowing and home-brewing.\n
+LAST-MODIFIED:20091215T204234Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:RESTful Interfaces to Third-Party Websites with Python (Kevin Dahlh
+ ausen)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:f3rca15ktc4l9i1neeqebrnn8g@google.com
+CREATED:20091215T204202Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: Fluent NHibernate is a framework\, that sits on top of NHibernate\,
+  which helps to cut down on some of the headaches you will indubitably enco
+ unter with picking up such a mature ORM. We'll be discussing how FNH can he
+ lp cut down the learning curve of using NHibernate as an ORM and how it can
+  benefit existing NHibernate production environments long term by utilizing
+  a convention over configuration approach.\n\nPresented By: Hudson Akridge\
+ n\nAbout the Speaker: I've been involved and active in the .NET community f
+ or a couple years. I've given talks at the Lake County .NET Users Group\, C
+ hicago Alt.NET user group\, Chicago Code Camp\, and in two weeks\, Strange 
+ Loop Conference in St. Louis. (You can watch one of the videos here:\nhttp:
+ //chicagoalt.net/event/July2009Meeting060withFluentNHibernate )\n\nI'm one 
+ of the Developers on the Fluent NHibernate team\, and I maintain Ayende's N
+ Hibernate Query Analyzer (Now somewhat depreciated with the advent of NHibe
+ rnate Profiler).\n\nI currently work in a midsize printing company where I'
+ m on a small team using whatever technologies we feel we need to write good
+  software. Current project is an enterprise level EAV system\, with a stack
+  using NHibernate\, Castle\, RhinoMocks\, and MVC.NET.
+LAST-MODIFIED:20091215T204202Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:0-60 with Fluent NHibernate (Hudson Akridge)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T154500Z
+DTEND:20100115T164500Z
+DTSTAMP:20091218T032634Z
+UID:8ucjgugc0evmsm4i2dc6veofqk@google.com
+CREATED:20091215T204126Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Intermediate\n\nAb
+ stract: What is "Web 2.0" or "Social media"? No one really knows. Ask ten e
+ xperts and you will get ten different answers. And yet with every single da
+ y that passes these terms race closer to ubiquity. Heck\, my grandmother re
+ cently tried to "friend" me on Facebook.\n\nYet despite this popularity\, v
+ ery few people really know what these terms represent. More importantly\, t
+ he underlying concepts they represent when actually building a social appli
+ cation. So\, as businesses choose to build or integrate these social featur
+ es into their products\, designers and developers are faced with a challeng
+ e on where to start.\n\nThis talk is going to walk through the history of t
+ he social software movement and introduce the audience to the core underlyi
+ ng concepts and methodologies for both designing and developing social appl
+ ications. This includes but is not limited to\n\nSocial object theory\nWebb
+  / Butterfield / Smith\nPower laws and Scoble\nCommunities of Practice\nOAu
+ th\nOpenID\nActivityStreams\nXRDS Simple\nPubsubhubbub\n\nWhen done\, the a
+ udience will be able to begin the process of designing and building social 
+ applications\, or\, integrating other social products into theirs.\n\nPrese
+ nted By: Anthony Broad-Crawford\n\nAbout the Speaker: My passion is technol
+ ogy and the creation and application of innovative social software. As such
+ \, I’ve been involved in leading all product development efforts encompassi
+ ng product and technical strategy as well as operations for Cleveland-based
+  start-up company\, Within3. These communities connect health professionals
+  around the world and better enable them to participate\, communicate\, and
+  collaborate on patient cases and latest research\, all while helping to dr
+ ive better medical outcomes for their patients.\n\nMy background in collabo
+ ration\, information management\, data interoperability\, linguistics\, sea
+ rch\, and digital communities has led to my active involvement in several H
+ ealthcare and technology-focused government\, academic\, and industry group
+ s which seek to promote both improved healthcare and the open web (Web 3.0\
+ , 4.0 ... I think ... who’s versioning this thing anyways?). I am currently
+  on the DataPortability Steering Committee and chairing the Healthcare Task
+ force. Additional committee roles include the Health 2.0 accelerator\, The 
+ Open Web Foundation\, Start-up Weekend\, and the OpenSocial Foundation.\n\n
+ Previously as an Enterprise Product Architect for a Fortune 100 company I m
+ anaged high volume\, large scale platforms as I oversaw the direct line of 
+ business in technology strategy\, architecture\, and performance with the g
+ oal of accelerating all product delivery.\n\nIn my spare time I present nat
+ ionally at conferences\, organize conferences like Start-up Weekend\, activ
+ ely host a podcast\, video cast\, write for several blogs all on social sof
+ tware\, technology\, Ruby on Rails\, and entrepreneurship. Additionally\, I
+  donate time to local philanthropic efforts in accelerating their software 
+ development efforts. Last but not least\, you will on occasion see me acros
+ s from you at a local camp ground\, poker table\, state park\, zoo\, or ava
+ nt garde dining location.
+LAST-MODIFIED:20091215T204126Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:WTF 2.0: A Guide to Building Social Applications (Anthony Broad-Cra
+ wford)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:odphs7kj4ct7mk7ovrh7j30l8g@google.com
+CREATED:20091215T203953Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Intermediate\n\nAb
+ stract: This session will be about how we brought Ruby testing into Gap Inc
+  Direct. GID has campuses in Columbus\, San Francisco and offshore. In addi
+ tion to the challenges in a distributed environment\, training QA resources
+  and developers new to Ruby\, Watir\, other libraries\; we'll be talking ab
+ out incremental adoption of Ruby in the Enterprise\, and how it enables us 
+ to move from a Waterfall SDLC into an Agile model.\n\nWe'll be going over l
+ essons learned\, pitfalls and successes. The points of view will be from Ch
+ arley Baker\, who has been responsible for the adoption of Ruby at our San 
+ Francisco campus over the past 4 years\, and Leon Gersing from EdgeCase\, w
+ ho's working with our Columbus distribution IT organization as they adopt A
+ gile practices and using Cucumber have bridged the gap between developers\,
+  QA and product teams.\n\nPresented By: Leon Gersing and Charley Baker\n\nA
+ bout the Speaker: Leon has been bringing value to clients large and small f
+ or over ten years\, and has a passion for technology\, art and community. H
+ e has experience using technologies ranging from ASP.Net and C++\, to Objec
+ tive-C\, Ajax\, and Actionscript – and of course\, Ruby and Rails. A believ
+ er in building strong communities\, Leon spends time presenting on a wide v
+ ariety of development topics at events and user groups in the region. He lo
+ ves nothing more than to be around other developers\, working together to c
+ reate something unique and fresh\; something that has never been done befor
+ e. He believes there is no challenge that can't be overcome with passion an
+ d creativity. He spends his spare time with his wife\, two beautiful girls\
+ , two sweet kitties\, and his ukulele.\n\nCharley is a lead developer on Wa
+ tir\, a web testing tool written in Ruby. He has 15 years of experience in 
+ the IT field\, working as developer\, team lead\, QA Architect and . He has
+  been working in the software and IT industry for 15 years as a developer\,
+  QA Engineer and other roles where necessary. Charley has worked in startup
+ s from small boutiques to large scale as well as enterprise level well esta
+ blished companies\, such as Gap Inc direct where he has been serving the ro
+ le of QA Architect for the past several years. His wide range of experience
+  and interest in technology has afforded him the opportunity to work with C
+ /C++\, Java\, Php\, Perl\, Windows API\, and his current passion - Ruby. As
+  well as Ruby\, Charley's current passions are focused on Agile collaborati
+ on in a distributed Enterprise environment\, open source and delivering hig
+ h value projects. He lives in Denver and loves spending time with his two b
+ oys\, wife\, and dog when he's not traveling.
+LAST-MODIFIED:20091215T204032Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Testing the Enterprise (Leon Gersing and Charlie Baker)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:j8q0313aevp18t46gkchju0288@google.com
+CREATED:20091215T204024Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: “Hello Data” in 3D animated Java-loving glory. Learn to use Processing 
+ – a free Java IDE and library toolset for creating 3D & 2D animated Java ap
+ plets and standalone applications. If you can see your data\, you can know 
+ your data\, and have fun doing it!\n\nPresented By: Wes Faler\n\nAbout the 
+ Speaker: Wes Faler has 10110 years of professional programming experience a
+ nd is a veteran of several commercial grid-computing applications. Wes is c
+ urrently doing grid simulations for the US EPA\, working with cloud computi
+ ng\, and finding every reason possible to use Processing.
+LAST-MODIFIED:20091215T204024Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:See Processing Run. Run Processing Run (Wes Faler)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:qkvqgema5v4tj5nh7s1k18umjs@google.com
+CREATED:20091215T203920Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Advanced\n\nAbstra
+ ct: C# might be looking a little long in the tooth\, but C# 4.0 adds dynami
+ c support to compete with all the young punks. In this session\, based on m
+ aterial from Effective C#\, 2nd edition\, you’ll learn how to mix dynamic f
+ eatures into the safety and performance of static typing. It’s yet another 
+ tool in the toolbox that you can use with C#. You’ll learn techniques that 
+ are easier to implement using dynamic features. You’ll learn how to bridge 
+ the gap between dynamic and static typing. Most of all you’ll learn when dy
+ namic typing is an advantage\, and when static typing provides the best sol
+ ution.\n\n\nPresented By: Bill Wagner\n\nAbout the Speaker: With more than 
+ 20 years experience in software design and engineering\, Bill Wagner has le
+ d the design on many successful engineering and enterprise Microsoft Window
+ s products and adapted legacy systems for Windows.\n\nIn 2000\, he started 
+ using .NET and now spends his time facilitating the adoption of .NET in cli
+ ents’ product and enterprise development. Knowledgeable in all .NET areas\,
+  Bill’s principal strengths include the C# language\, the core framework\, 
+ Smart Clients\, and Service Oriented Architecture and design.\n\nIn additio
+ n to his role at SRT Solutions\, Bill serves as Michigan’s Regional Directo
+ r for Microsoft. In 2005\, Microsoft awarded him “C# Most Valuable Professi
+ onal (MVP)” status. These honorary positions allow Bill previews of upcomin
+ g technologies and help ensure SRT clients the most advanced and cutting-ed
+ ge solutions for their technology projects.\n\nAn internationally recognize
+ d author on the C# language evolution\, Smart Clients and enterprise design
+ \, Bill has been a contributing editor\, editorial board member and regular
+  columnist for over a decade with his tutorials and advanced essays publish
+ ed in MSDN Magazine\, MSDN Online\, .NET Insight\, and .NET DJ. He also wri
+ tes a monthly column for Visual Studio Magazine\, and a monthly column on t
+ he MSDN C# team developer center.\n\nBill’s book\, Effective C#\, was publi
+ shed in 2004. His next book\, More Effective C#\,was publichsed in 2008.
+LAST-MODIFIED:20091215T203920Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Going Dynamic with C# (Bill Wagner)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T143000Z
+DTEND:20100115T153000Z
+DTSTAMP:20091218T032634Z
+UID:06o6ieiqc5f8d48i5v8mo09p9c@google.com
+CREATED:20091215T203836Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Advance
+ d\n\nAbstract: Chances are you code in a language that's either descended f
+ rom C\, inspired by C\, or run in an interpreter that itself is written in 
+ C. Still... do you actually know how to code in C? Despite its long-standin
+ g position as a sort of "lingua franca"\, an agreed-upon common language\, 
+ more and more developers are putting together successful\, satisfying caree
+ rs\, without ever learning this seminal language. But what if you have to c
+ all into C code from your favorite scripting language\, or use APIs like Op
+ enGL that are written to be called from C? Many developers find C very chal
+ lenging\, particularly its manual memory-management and other low-level con
+ cerns. In this session\, we'll show you why you shouldn't be afraid of C\, 
+ how you can use the skills you already have from the languages you code in 
+ today\, and how to master structs\, enums\, typedefs\, malloc()\, free()\, 
+ and the rest of C's sharp edges. Examples will be from the point-of-view of
+  the C-skewing iPhone SDK\, but will be designed to be broadly applicable a
+ nd platform-agnostic.\n\nPresented By: Chris Adamson\n\nAbout the Speaker: 
+ Chris Adamson is an independent writer\, editor\, and developer\, living in
+  Grand Rapids\, Michigan. Now focusing on iPhone and Mac development\, he i
+ s the co-author of iPhone SDK Development. He is also the author of QuickTi
+ me for Java: A Developer's Notebook and co-author of Swing Hacks. He was fo
+ rmerly the editor of java.net\, and of ONJava.com. He consults and publishe
+ s through his corporate identity\, <a href="http://www.subfurther.com/">Sub
+ sequently and Furthermore\, Inc.</a>\, with a focus on user-facing and digi
+ tal media development for Mac and iPhone. He blogs on digital media softwar
+ e development at <a href="http://www.subfurther.com/blog/">[Time code]\;</a
+ >. In a previous career\, he was a Writer / Associate Producer at CNN Headl
+ ine News\, and over the years\, he has managed to own eleven and a half Mac
+ s.
+LAST-MODIFIED:20091215T203836Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Oh Crap! I Forgot (or Never Learned) C! (Chris Adamson)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:hmi989lnufppjdfcr78n1t0bbk@google.com
+CREATED:20091215T203252Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: The Java platform ecosystem harbors many languages besides Java. In tha
+ t vast set of languages there is one that has received the title of “Next G
+ eneration Java” but not because it dismisses Java\, not at all! it is becau
+ se it embraces the language and extends it in a friendly and fluent way. Th
+ at language is Groovy. Testing Java code can be cumbersome\, specially when
+  rigid limits as verbose syntax and static typing get in the way. Groovy ca
+ n help you write less code while retaining the same behavior\, it can also 
+ test your Java production code without any special bridge between languages
+ . Groovy integrates seamlessly with all Java libraries\, testing frameworks
+  and IDEs\, which means you won’t be throwing away your Java knowledge\, yo
+ u’ll just make it groovier.\n\nThis session will demonstrate Groovy aiding 
+ Java tests in key areas as code verbosity\, mocking and producing/consuming
+  XML.\n\nPresented By: Andres Almiray\n\nAbout the Speaker: Andres is a Jav
+ a/Groovy developer with more than 10 years of experience in software design
+  and development. He has been involved in web and desktop application devel
+ opment since the early days of Java. He is a true believer in open source a
+ nd has participated on popular projects like Groovy\, Griffon\, and DbUnit\
+ , as well as starting his own projects (Json-lib\, EZMorph\, GraphicsBuilde
+ r\, JideBuilder). Founding member of the Griffon framework. Andres maintain
+ s a blog at http://jroller.com/aalmiray
+LAST-MODIFIED:20091215T203252Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Testing Java in the Fast Lane (Andres Almiray)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:4ts658aubtpqlmbe78idpcmh08@google.com
+CREATED:20091215T203222Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Intermediate\n\nA
+ bstract: In many companies\, there is a separation of "church and state" be
+ tween engineering and design (visual/interaction). For today's onslaught of
+  rich internet applications\, this separation can cause tension and/or lead
+  to less than ideal applications. How do you work together? How do you get 
+ great and innovative UI design to cleanly pair with great software architec
+ ture and execution? This talk will collect the experiences from my career\,
+  and culminate in a system that works to deliver the best from both worlds.
+ \n\nPresented By: Joe Nuxoll\n\nAbout the Speaker: Joe has a deep passion f
+ or both great user interface design and engineering. He has been involved i
+ n design\, technology\, and business throughout his professional history - 
+ covering a wide range from designing\, architecting\, and coding complex co
+ mmercial software to meeting with executives\, investors\, and the press. H
+ e has run engineering and product design for small companies\, and has been
+  a key contributor for much larger organizations. Joe is also a co-host of 
+ the Java Posse\, the #1 ranked Java technology podcast. Aside from the hust
+ le and bustle of the software design and engineering career\, Joe enjoys ra
+ cing cars\, instructing new race car drivers\, and taking lots of photograp
+ hs of pro soccer and nature.
+LAST-MODIFIED:20091215T203222Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Engineering vs Design - How to Work Together (Joe Nuxoll)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:hti0m7drv1qaq2tsd5t236up14@google.com
+CREATED:20091215T203142Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: In large organizations\, it's common for an application to start ou
+ t as small and "temporary" to morph into some large behemoth that is critic
+ al to a business function. As code is tacked on to this application it beco
+ mes harder and harder to maintain and troubleshoot. Enter Prism\, the Compo
+ site Application Guidance for WPF and Silverlight. Using Prism gives you th
+ e guidance and foundation assemblies that will produce a functionally modul
+ ar application that is testable\, maintainable and evolvable. This talk wil
+ l give an overview of Prism\, benefits of it's use\, and when it makes sens
+ e to use it.\n\nPresented By: Carey Payette\n\nAbout the Speaker: Carey Pay
+ ette is a Senior Software Developer at American Electric Power where she im
+ plements Enterprise Applications using Web Services\, ASP.NET\, and WPF. Ca
+ rey holds a Bachelor of Science in Computer Science from Laurentian Univers
+ ity in Sudbury Ontario. She is the president of the Central Ohio .Net Devel
+ oper's group (www.condg.org) in Columbus Ohio and has a history of speaking
+  at various conferences in the midwest including Codemash\, MSDN Developer'
+ s Conference\, and multiple Day of .Net events. A mother of three boys\, sh
+ e is always on the go\, but still finds time to keep up to speed on the lat
+ est technology trends as an avid magazine and book reader. Carey is also a 
+ Microsoft MVP in Client Application Development. In her spare time\, she en
+ joys playing hockey and going camping with her husband and boys. You can ke
+ ep up with Carey by visiting her blog at http://codingbandit.com/blog or on
+  Twitter at http://twitter.com/careypayette.
+LAST-MODIFIED:20091215T203142Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Coding Rainbows - Enterprise Development with Prism  (Carey Payette
+ )
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:du3qurlr7tpn2a258f1ar5ndkk@google.com
+CREATED:20091215T203000Z
+DESCRIPTION:Technology/Platform: Mobile\nDifficulty Level: Intermediate\n\n
+ Abstract: If you've used iPhone OS applications\, you've no doubt seen a nu
+ mber of common tricks that are in no way obvious from looking at the docume
+ ntation provided in the SDK. In this session\, we'll look at a grab-bag of 
+ some of the most popular and least obvious techniques you'll want in your d
+ eveloper's toolkit. These include:\n* Designing custom table cells visually
+  with Interface Builder\, and using them in your app's tables\n* Using butt
+ ons\, switches and other controls inside table cells\n* Animating changes i
+ n your GUI (rotation resizes\, adding widgets\, etc.)\n* Gracefully handlin
+ g interruptions from incoming calls\n* Alerting the user with vibration\n* 
+ Figuring out if your network connection is wifi or cellular\n* Sharing info
+ rmation between applications you've written\n* Building the "full" and "lit
+ e" versions of your app from the same Xcode project and sources\n* Running 
+ automated nightly builds from the command-line\n\nPresented By: Chris Adams
+ on\n\nAbout the Speaker: Chris Adamson is an independent writer\, editor\, 
+ and developer\, living in Grand Rapids\, Michigan. Now focusing on iPhone a
+ nd Mac development\, he is the co-author of iPhone SDK Development. He is a
+ lso the author of QuickTime for Java: A Developer's Notebook and co-author 
+ of Swing Hacks. He was formerly the editor of java.net\, and of ONJava.com.
+  He consults and publishes through his corporate identity\, <a href="http:/
+ /www.subfurther.com/">Subsequently and Furthermore\, Inc.</a>\, with a focu
+ s on user-facing and digital media development for Mac and iPhone. He blogs
+  on digital media software development at <a href="http://www.subfurther.co
+ m/blog/">[Time code]\;</a>. In a previous career\, he was a Writer / Associ
+ ate Producer at CNN Headline News\, and over the years\, he has managed to 
+ own eleven and a half Macs.
+LAST-MODIFIED:20091215T203048Z
+LOCATION:D
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:How Do You Do That on iPhone? (Chris Adamson)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:cr0j5ac381as7ve5uif8g0b0t8@google.com
+CREATED:20091215T202914Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Intermediate\n\nAb
+ stract: Funky Java\, Objective Scala\n\nSession Title: Funky Java\, Objecti
+ ve Scala\n\nTagline: Polyglot programming is here\, and can improve your st
+ yle. Suggestions on how to inject a little more functional style into your 
+ Java\, and temper Scala with a mix of Object Oriented and Functional style.
+ \n\nAbstract:\n\nRecently\, while the Java platform has been going from str
+ ength to strength\, improving both performance and support for alternative 
+ languages\, the Java language has started to appear less exciting than many
+  of the alternatives that now run on the JVM. There is a lot to be said for
+  the modern features of many of these new alternatives\, but does that mean
+  the fat lady has sung for Java?\n\nNot so\, while we might still not have 
+ closures or properties\, there are many new and interesting libraries and t
+ echniques that can breathe new life and style into your Java source. A stro
+ nger emphasis on immutable value objects\, use of third party libraries lik
+ e the Google collections library\, DSL like fluent interfaces and more radi
+ cal ideas like Project Lombok can all help you improve your style\, reduce 
+ the boilerplate\, reduce errors and be more productive with Java. It will b
+ ring fun back to your Java development.\n\nThe first part of this session w
+ ill look at libraries and techniques that you can use with today's Java 6\,
+  and a peek ahead to Java 7. Topics covered will include:\n\nImmutable valu
+ e classes\nBuilder pattern and fluent APIs\nTypesafe "Multiple returns" wit
+ h Pairs and Triples\nPredicates\, functions\, constraints\, identity maps a
+ nd more with the Google Collections Library\n\nAt the same time\, alternati
+ ve languages that offer much more than Java are emerging on the JVM. Scala 
+ is one interesting option that offers static typing but with the same reduc
+ tion of boilerplate and incidental complexity as many dynamically typed lan
+ guages. Scala has a strong functional heritage\, but also excellent support
+  for Object Orientation\, a fact that can greatly ease the transition to th
+ is new language. By starting with a mix of OO and Functional\, the learning
+  curve is lowered and the results are immediate.\n\nIn the second part of t
+ his session we will look at Scala\, it similarities to Java\, and it's easy
+  access improvements. Along the way\, some functional techniques will be in
+ troduced where they make sense\, and where they make life easier. This is i
+ ntended to be like easing into a warm swimming pool rather than diving in a
+ t the deep end.\n\nAimed at beginner and intermediate developers\, this ses
+ sion aims to help you improve your productivity and coding style.\n\nPresen
+ ted By: Dick Wall\n\nAbout the Speaker: Dick Wall is a veteran Java develop
+ er and a more recent Scala convert. He currently works for Navigenics\, Inc
+ .\, a Bay Area startup specializing in personal genomics\, and co-hosts the
+  Java Posse podcast providing news\, commentary and interviews around the J
+ ava development sphere. In addition\, Dick founded and still runs the Bay A
+ rea Scala Enthusiasts (BASE)\, a Scala oriented user group.
+LAST-MODIFIED:20091215T202914Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Funky Java\, Objective Scala (Dick Wall)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:duojck20ammges1ki2frsst6uo@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T202746Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: A lesser-known feature in Visual Studio\, Text Templating (T4) provides
+  powerful code generation capabilities. We will start by creating a basic T
+ 4 template to explore statements and expressions. Then\, we will dive into 
+ generating domain-specific artifacts based on external business logic. Fina
+ lly\, we will look at custom directive processors and hosts to handle advan
+ ced scenarios.\n\nPresented By: Steve Andrews\n\nAbout the Speaker: Steve A
+ ndrews is a Team System MVP and INETA speaker\, and has been working as a d
+ eveloper for more than 9 years. During this time\, he has designed and deve
+ loped applications in such widely varying areas as trust accounting\, medic
+ al information management\, supply chain management\, and retail systems. S
+ teve is also a MCTS\, ICSOO\, and community fanatic.
+LAST-MODIFIED:20091215T202758Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:T4: Code Generation with Visual Studio 2008 (Steve Andrews)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:40h40j44ncaf2slnv4r52oneh0@google.com
+CREATED:20091215T202713Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: The first book on Domain-Driven Design was published in 2003\, authored
+  by Eric Evans\, who first coined the term and distilled the time-tested pr
+ inciples and patterns that make up the practice of DDD. In recent years\, s
+ implification and increased testability through frameworks like Spring\, Hi
+ bernate\, and others has substantially reduced the complexity of applicatio
+ n infrastructure\, allowing teams to turn their focus to honing their appro
+ ach to software design. Domain-Driven Design meets practitioners in that qu
+ est with principles\, practices\, and process to recapture the spirit of so
+ ftware excellence that has been lost in so many of today's technology pract
+ ices.\n\nThis talk will introduce the foundations of Domain-Driven Design\,
+  and present several facets of DDD in action:\n\n* How models are chosen an
+ d evaluated\n* How multiple models coexist\n* How patterns help to avoid co
+ mmon pitfalls\, such as overly-interconnected models\n* How developers and 
+ domain experts together in a DDD team engage in deeper exploration of their
+  problem domain and make that understanding tangible as a practical softwar
+ e design\n\nPresented By: Barry Hawkins\n\nAbout the Speaker: Barry Hawkins
+  has played various roles in his 13 years in the software industry\, from l
+ one developer to team lead to Agile coach and mentor. Barry is one of the f
+ ew native Atlantans\, currently specializing in coaching and mentoring for 
+ Agile software development. Over the years\, he has developed on several pl
+ atforms\, including Microsoft and Java as well as several other less-annoyi
+ ng technologies. Barry has also participated as a package maintainer for th
+ e Debian GNU/Linux distribution. When not working or doing things with his 
+ family\, he can usually be found playing Lord of The Rings Online\, and for
+ merly\, World of Warcraft. He also sporadically blogs at http://www.yepthat
+ sme.com.\n\nBarry around the Intertubes:\n\nTips for Introducing Change - L
+ ightning Talk at Java Posse Roundup 2009 http://www.youtube.com/watch?v=U6f
+ wxVG0wRI\n\nStaffing Agile Teams - Java Posse Roundup 2009 - A podcoast of 
+ the conversation I convened at this Open Spaces conference: http://javaposs
+ e.com/index.php?post_id=493300\n\nWhy Agile Is Hard - Java Posse Roundup 20
+ 08 - A podcast of the conversation I convened at this Open Spaces conferenc
+ e http://javaposse.com/index.php?post_id=323727
+LAST-MODIFIED:20091215T202713Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Domain-Driven Design: An Introduction (Barry Hawkins)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:7hbe92r4mmbvggbj5qldk7dl0o@google.com
+CREATED:20091215T202634Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Beginner\n\nAbstr
+ act: Many developers find themselves asking "how did I get here?". You feel
+  stuck where you are while everyone around you seems to be doing something 
+ exciting. You want to improve you situation but how? How do you raise a fam
+ ily\, keep up with the industry\, find out about new and exciting things\, 
+ and get ahead? There seems to be too much out there. In this talk I will ta
+ ke you through a step by step approach to refactoring yourself and your car
+ eer. I'll demonstrate strategies for getting caught up\, and keeping up wit
+ h the technical world around you. Strategies for learning and retaining inf
+ ormation. Strategies for how you can concentrate on yourself and your caree
+ r.\n\nPresented By: Joe O'Brien\n\nAbout the Speaker: Joe is a father\, spe
+ aker\, author and developer. Before helping found EdgeCase\, LLC\, Joe was 
+ a developer with ThoughtWorks and spent much of his time working with large
+  J2EE and .NET systems for Fortune 500 companies. He has spent his career a
+ s a developer\, project manager\, and everything in between. Joe is a passi
+ onate member of the open source community. He co-founded the Columbus Ruby 
+ Brigade and helped organize the Chicago Area Ruby Users Group. His passions
+  are Agile Development in the Enterprise\, Ruby\, and demonstrating to the 
+ Fortune 500 the elegance and power of this incredible language.
+LAST-MODIFIED:20091215T202634Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Refactoring the Programmer (Joe O'Brien)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:de0udoo1ejthdflj1omb8h5m2s@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T202516Z
+DESCRIPTION:Technology/Platform: Python\nDifficulty Level: Beginner\n\nAbst
+ ract: Write a document\, just once\, in plain text. Enjoy all plain text's 
+ benefits - speed\, simplicity\, scriptability\, version control. Now\, from
+  this single plain text source\, automatically generate beautifully-formatt
+ ed webpages\, presentations\, .PDFs\, auto-indexed documentation trees\, an
+ d more. It's time to quit slacking on documenting your software. reStructur
+ edText will make you actually enjoy writing docs!\n\nPresented By: Catherin
+ e Devlin\n\nAbout the Speaker: In 1999\, Catherine was working as a secreta
+ ry when a freak accident transformed her into a database administrator. She
+  took up Python programming a few years later and never looked back. She is
+  an active speaker and organizer in the Oracle and Python communities\, mem
+ ber of the Python Software Foundation\, and chair of PyOhio. She grew up in
+  International Falls\, Minnesota\, and doesn't think it's cold outside. She
+  blogs at catherinedevlin.blogspot.com.
+LAST-MODIFIED:20091215T202536Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:reStructuredText: Plain Text Gets Superpowers (Catherine Devlin)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:5qiq5o8mjtpvr9dkfsileelilc@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T202346Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: The Ruby community has always understood the importance of testing.
+  They strive to make applications more testable while improving the approac
+ hes and tools they use. As a result\, they have created some amazing framew
+ orks and best practices to support testing\, both from the developers and t
+ esters point of view. While this is great for Ruby developers\, it also is 
+ extremely beneficial for ASP.net and C# developers. This session provides a
+ n insight into the Ruby world and how you can take advantage of the existin
+ g frameworks to create readable\, maintainable and valuable acceptance test
+ s for ASP.net based web applications testing different parts of the applica
+ tion including the business logic as well as the user interface in an autom
+ ated fashion. The session will explain how frameworks such as RSpec and Cuc
+ umber can be used to verify not only that the application works as expected
+ \, but the customers are receiving the features they require with a correct
+  implementation. Finally\, Ben will look at IronRuby and how that fits into
+  the process of testing C#\\ASP.net applications using the Ruby language.\n
+ \nPresented By: Ben Hall\n\nAbout the Speaker: Ben Hall is a UK C# develope
+ r\\tester with a strong passion for software development and loves writing 
+ code. Ben enjoys exploring different ways of testing software\, including b
+ oth manual and automated testing\, focusing on the best ways to test differ
+ ent types of applications. He also loves developing web applications using 
+ ASP.net and Ruby on Rails. Ben is a C# MVP\, author of the book Testing ASP
+ .net Web Applications and maintains a blog at Blog.BenHall.me.uk.
+LAST-MODIFIED:20091215T202353Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Testing ASP.NET Applications Using Ruby (Ben Hall)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:c05godq39rj0eukuo0omneind0@google.com
+CREATED:20091215T202258Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: Building multi-threaded applications can be hard work. So come lear
+ n a number of techniques for developing software solutions that take advant
+ age of today’s multi-core processors. In true CodeMash fashion\, the sessio
+ n starts by laying a foundation of concurrency basics using C++. The bulk o
+ f the session then looks at all of the various techniques for parallelizing
+  “work” in .NET 3.5 using C#\, while avoiding a number of “gotchas”. Finall
+ y\, the session concludes with how these techniques will make it easy to de
+ velop parallel solutions with the changes coming in Visual Studio 2010\, .N
+ ET 4.0\, and F#.\n\nPresented By: Michael Slade\n\nAbout the Speaker: Micha
+ el Slade is an Applications Programmer – Lead with Progressive Insurance. P
+ rior to joining Progressive\, he was a senior software engineer with ABB\, 
+ where he spent 12 years building real-time\, highly concurrent Windows appl
+ ications for to help ABB customers automate their chemical\, power\, and ma
+ nufacturing plants.
+LAST-MODIFIED:20091215T202258Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Techniques for Programming Parallel Solutions (Michael Slade)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T230000Z
+DTEND:20100115T003000Z
+DTSTAMP:20091218T032634Z
+UID:3kgknb1b0inr1mc43gnd8fvsvo@google.com
+CREATED:20091215T202225Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T202225Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Dinner
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T215000Z
+DTEND:20100114T225000Z
+DTSTAMP:20091218T032634Z
+UID:6h7cnpica62goof1ia8c9b46dc@google.com
+CREATED:20091215T202204Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Intermediate\n\nAb
+ stract: Cucumber is one of the most important tools to come along in the la
+ st several years\, allowing development teams to express the expected behav
+ ior of a system in business-readable plain text. This talk will show some o
+ f the intermediate and advanced aspects of Cucumber including:\n\n- Multili
+ ne step arguments and scenario outlines\n- Tagging\n- Using profiles\n- Tes
+ ting javascript code\n- Extending cucumber\n- Writing steps in Java\n- Runn
+ ing with Spork\n\nPresented By: Mike Doel\n\nAbout the Speaker: Mike is the
+  CTO of VacationView\, Inc. - a Columbus-based startup looking to make it e
+ asier to find\, rent\, and trade vacation property. Prior to that\, Mike sp
+ ent 11+ years with CompuServe and AOL where he led several efforts includin
+ g international web portals\, broadband provisioning\, and online access se
+ rvices. Mike does most of his work in Ruby.
+LAST-MODIFIED:20091215T202204Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Cucumber - Beyond the Basics (Mike Doel)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T203500Z
+DTEND:20100114T213500Z
+DTSTAMP:20091218T032634Z
+UID:tsga3ojqnlg7e08kaanuuuss0o@google.com
+CREATED:20091215T202114Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Beginner\n\nAbstra
+ ct: Cucumber is a tool designed to improve the dialog between Business Anal
+ ysts and Technical Staff. It leverages the flexibility of the Ruby language
+  to allow business and technical users to use a common lexicon to describe 
+ business value with reduced ambiguity which can lead to less confusion on b
+ oth sides of the converstaion and stronger solutions with fewer defects.\n\
+ nIn this discussion we'll go over the high level architecture of cucumber\,
+  what it is and how you may be able to utilize it in your development. We'l
+ l also go over some tips and tricks to help you get started with this new t
+ echnology with the least amount of overhead and friction. Business Analysts
+  and Developers are both encouraged to attend.\n\nPresented By: Leon Gersin
+ g\n\nAbout the Speaker: Leon has been bringing value to clients large and s
+ mall for over ten years\, and has a passion for technology\, art and commun
+ ity. He has experience using technologies ranging from ASP.Net and C++\, to
+  Objective-C\, Ajax\, and Actionscript – and of course\, Ruby and Rails. A 
+ believer in building strong communities\, Leon spends time presenting on a 
+ wide variety of development topics at events and user groups in the region.
+  He loves nothing more than to be around other developers\, working togethe
+ r to create something unique and fresh\; something that has never been done
+  before. He believes there is no challenge that can't be overcome with pass
+ ion and creativity. He spends his spare time with his wife\, two beautiful 
+ girls\, two sweet kitties\, and his ukulele.
+LAST-MODIFIED:20091215T202114Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Introduction to Cucumber (Leon Gersing)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T200000Z
+DTEND:20100114T202000Z
+DTSTAMP:20091218T032634Z
+UID:k0qifd7van9rvt12974iectp60@google.com
+CREATED:20091215T202027Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T202027Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Vendor Sessions
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T171500Z
+DTEND:20100114T183000Z
+DTSTAMP:20091218T032634Z
+UID:sli7urn636ic8c0a860sufvte4@google.com
+CREATED:20091215T201840Z
+DESCRIPTION:Microsoft's Hank Janssen\, one of the driving forces behind Mic
+ rosoft's open source efforts with PHP and Linux\, will keynote at CodeMash 
+ 2010. Hank has been an über geek involved in software development for over 
+ 20 years. He wrote one of the first globally distributed databases\, create
+ d a real-time cell phone activation system\, and still holds Emacs as his f
+ avorite editor. Hank is the Principle Software Design Engineer for Microsof
+ t's Linux kernel integration contributions.
+LAST-MODIFIED:20091215T201929Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LUNCH + KEYNOTE #2: Hank Janssen
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:mim6uud0d0pe0m0likeccf8as4@google.com
+CREATED:20091215T201809Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: Do you think PowerShell is just another command line prompt? Have you u
+ sed PowerShell? Do you even know how to start with PowerShell? Join Aaron L
+ erch and Matt Hester as they discuss 10 things to get you started with Powe
+ rShell. You will learn how PowerShell combined with your applications can h
+ elp save you time and money. Here are few of the topics you will see in the
+  session:\n* It’s all about Objects on the Command Line\n* Automating your 
+ Build Process with Powershell and PSake\n* How I Learned to Stopped Worryin
+ g and Love A Distributed Environment\n\nPresented By: Matt Hester and Aaron
+  Lerch\n\nAbout the Speaker: Matt Hester is a seasoned Information Technolo
+ gy Professional Evangelist for Microsoft. Matt has been involved in the IT 
+ Pro community for over 15 years. Matt is a skilled and experienced evangeli
+ st presenting to audiences nationally and internationally. Prior to joining
+  Microsoft Matt was a highly successful Microsoft Certified Trainer for ove
+ r 8 years. After joining Microsoft\, Matt has continued to be heavily invol
+ ved in IT Pro community as an IT Pro Evangelist. In his role at Microsoft M
+ att has presented to audiences in excess of 5000 and as small as 10. Matt h
+ as also published 4 articles for TechNet magazine and runs a successful blo
+ g with ~350K touches a month. Aaron is a developer and team lead at Interac
+ tive Intelligence\, an ISV that creates large scale "unified communications
+ " IP telephony software for the contact center. A contributor to several op
+ en source projects\, Aaron's interests and experience spread the gamut of .
+ NET software development from Powershell to ASP.NET MVC to Windows Forms an
+ d WPF. But what gets him really excited is learning\, growing\, and improvi
+ ng. Aaron has spoken at several Indianapolis-based developer events\, but y
+ ou can find his thoughts on software development on his blog at aaronlerch.
+ com\, or on twitter at twitter.com/aaronlerch.
+LAST-MODIFIED:20091215T201809Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Powershell: Ten Things You Need to Know (Hester and Lerch)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:5j3jli1b0bn9tuc1tqii8j6bh8@google.com
+CREATED:20091215T201722Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Beginner\n\nAbstr
+ act: I have been practicing and coaching on kanban for 10 months now. I am 
+ passionate about kanban because without a lot of ceremony and time\, I can 
+ get a team to self organize and start communicating. Since constraints beco
+ me visible\, it allows people to be more willing to go out of their comfort
+  zone and thus wear any hat that it takes to produce quality software. Seei
+ ng constraints\, pulling value and eliminating waste is the goal of practic
+ ing kanban. This would be a "kanban explained" session for those who are no
+ t familiar with this practice. I use physical boards to illustrate the conc
+ epts and encourage good dialogue. We will discuss several types of kanban b
+ oards such as WIP\, backlog and retrospectives.\n\nThis presentation has be
+ en tested at many user group meetings\, at clients and in the open space fo
+ rum at Agile 2009. The session takes 1 hour to present\, 1 1/2 hours to hav
+ e good dialogue during the presentation.\n\nKanban\, while not a new concep
+ t\, nor complex - it is often misunderstood by those who don't practice it.
+  Intended audience is for people that understand agile story wall concepts 
+ and whole team. The best audience is a Scrum master who will learn how kanb
+ an can take their craft to the next level of a self organizing teams by see
+ ing\, not hearing about constraints.\n\nPresented By: Jon Stahl\n\nAbout th
+ e Speaker: Jon's passion is eliminating waste\, optimizing the performance 
+ of IT teams and helping organizations become lean and agile. He has worked 
+ directly with leadership teams of Fortune 500 organizations to reduce waste
+  and improve delivery. He was named the agile leader and co-managed the tra
+ nsformation of an organization with over 26 agile teams.\n\nHe is the co-or
+ ganizer of Cleveland events such as Ignite Cleveland\, Cleveland Startup We
+ ekend\, Cleveland Code Retreats\, and Cleveland Give Camp for IT Philanthro
+ py. His company is located on a boat in downtown Cleveland and hosts ~10 te
+ ch meetings a month.\n\nHis goal is to pair with the best in the industry t
+ o improve our craft and improve the credibility of our community.
+LAST-MODIFIED:20091215T201722Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Seeing Constraints: Kanban Explained (Jon Stahl)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:h1t31p3v241cqq5si5da6pf7po@google.com
+CREATED:20091215T201646Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Intermediate\n\nAb
+ stract: Newer JVM languages such as JRuby\, Groovy\, and Scala let you work
+  at a higher level than Java. This talk will show you ScalaTest\, a new tes
+ ting tool that will let you work at a higher level than JUnit and TestNG. Y
+ ou'll learn about high-level features of Scala such as traits and self-type
+ s\, implicit conversions and parameters\, functions and closures\, and inte
+ rnal DSLs\, and see how ScalaTest exploits these features to help you work 
+ more productively. You'll see how you can reduce the lines of test code you
+  write by half and more\, how to mix Scala into your existing JUnit or Test
+ NG infrastructure\, and how to use Scala in various testing styles\, includ
+ ing unit testing\, behavior-driven development\, integration and acceptance
+  testing\, and high-level property-based testing. You need not already know
+  Scala to attend this talk\, as you will be taught just enough Scala to und
+ erstand the examples.\n\nPresented By: Bill Venners\n\nAbout the Speaker: B
+ ill Venners is president of Artima\, Inc.\, publisher of Artima Developer (
+ www.artima.com). He is author of the book\, Inside the Java Virtual Machine
+ \, a programmer-oriented survey of the Java platform's architecture and int
+ ernals. His popular columns in JavaWorld magazine covered Java internals\, 
+ object-oriented design\, and Jini. Active in the Jini Community since its i
+ nception\, Bill led the Jini Community's ServiceUI project\, whose ServiceU
+ I API became the de facto standard way to associate user interfaces to Jini
+  services. Bill is also the lead developer and designer of ScalaTest\, an o
+ pen source testing tool for Scala and Java developers\, and coauthor with M
+ artin Odersky and Lex Spoon of the book\, Programming in Scala.
+LAST-MODIFIED:20091215T201646Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Get Higher with ScalaTest (Bill Venners)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:lliirppcbjqgk1gva4lnm93itc@google.com
+CREATED:20091215T201534Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Beginner\n\nAbstra
+ ct: Ruby is a dynamic object-oriented language offering great expressivenes
+ s. We'll contrast its features and idioms with those of C#\, the premiere s
+ tatically-typed language on the CLR. We'll look at a distinction between ob
+ ject-oriented and class-oriented languages. We will then move on to Rails\,
+  discussing its focus on the essence of web development. We'll see how Rail
+ s removes much of the hassle of implementing verbose patterns and "best pra
+ ctices" used in the Java and .NET communities--approaches such as web MVC\,
+  Object Relational Mapping\, Test/Behavior Driven Development\, and Depende
+ ncy Injection/IOC--in a refreshingly fun way.\n\nPresented By: Matt Yoho\n\
+ nAbout the Speaker: Matt Yoho is a web-focused developer who has built appl
+ ications for institutions such as universities and public utilities as well
+  as small businesses and start-ups (including his own) since 2005. He has w
+ orked on platforms such as PHP\, ASP.NET\, and Ruby on Rails\, finding the 
+ last to yield the most enjoyable development experience to date. He is an a
+ gile development enthusiast and currently the lead developer for Toobla\, a
+  central Ohio start-up that aims to change the way you think about collecti
+ ng and sharing content on the web. He has had the good fortune of teaching 
+ a project-based course in Ruby and Rails for the Scholars program of the Oh
+ io State University\, where once upon a time he received a B.S. in Computer
+  Science & Engineering along with one in Psychology. He is a recovering kar
+ aoke addict and one fairly hep cat.
+LAST-MODIFIED:20091215T201548Z
+LOCATION:Indigo Bay
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Ruby and Rails for the .NET Developer (Matt Yoho)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:tqjmiuhrivek51f65tvufapgl4@google.com
+CREATED:20091215T201454Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Intermediate\n\nAb
+ stract: Come learn about Microsoft's Azure platform (and cloud computing in
+  general) as we look at an application built to assist in the processing an
+ d publishing of large-scale scientific data. We will discuss architecture c
+ hoices\, benchmarking results\, issues faced as well as the work-arounds im
+ plemented. This session will give you insight into the process of developin
+ g for the cloud\, as well as tips and tricks to help you avoid some common 
+ pitfalls.\n\nPresented By: Rob Gillen\n\nAbout the Speaker: Rob is a develo
+ per focused on Microsoft technologies for over ten years working in the ser
+ vice provider (hosting) market place as well as with federal and corporate 
+ customers. Rob specializes in application and service provisioning\, identi
+ ty management\, SharePoint and is currently working on the intersection of 
+ traditional HPC and the commercial “cloud”. Rob has spent the last two year
+ s working on the applications team at Oak Ridge National Laboratory and was
+  one of the team members driving the IT transformation there. Rob is curren
+ tly working in the Computer Science Research Group at ORNL studying the rol
+ e of cloud computing in our portfolio of scientific computing.
+LAST-MODIFIED:20091215T201454Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Azure: Lessons From the Field (Rob Gillen)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:1cn8f6jqslt5h8uebiugiaihls@google.com
+CREATED:20091215T201411Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Interme
+ diate\n\nAbstract: There’s a storm brewing. You may have felt the increased
+  pressure when you last typed “CREATE DATABASE latest_project\;” into your 
+ MySQL console - or you might have been seeding the clouds in an attempt to 
+ bring the thunder on faster.\n\nThe name of that storm? NoSQL.\n\nNew key-v
+ alue stores seem to pop up daily\, document databases like CouchDB and Mong
+ oDB get a great deal of press\, and RDF itself is built as a graph database
+ . Given that\, and the fact that a number of domains just don’t map onto re
+ lational databases very cleanly\, it behooves the development community to 
+ learn about these alternatives. How do they differ from relational database
+ s? In what situations are they best used? How hard is it to split up a doma
+ in model into\, say\, a relational piece and a document piece - and is this
+  ever worthwhile?\n\nI’ll answer those questions in this session\, and I’ll
+  refer to actual problem domains while illustrating the answers. As it turn
+ s out\, a document DB like CouchDB works very well for modeling biological 
+ taxonomy - and a graph DB like Neo4J is a great fit for the (surprisingly c
+ omplex) business of comic books. The NoSQL future is wide\, varied\, and ex
+ citing - and it might even have a place for our old friends\, the relationa
+ l DBs.\n\nPresented By: Ben Scofield\n\nAbout the Speaker: Ben Scofield is 
+ the Technology Director for Viget Labs\, where he uses his experience worki
+ ng with startups like Squidoo and ODEO and his expertise in Ruby\, Rails\, 
+ and other technologies to help new businesses get on the right track. In ad
+ dition to speaking at various conferences (including Rubyconf\, Railsconf\,
+  and Railsconf Europe) and authoring Practical REST on Rails 2 Projects for
+  Apress\, he's one of the primary organizers behind Developer Day - a serie
+ s of local\, technology-agnostic events around the US. When at home\, he re
+ ads voraciously and spends time with his wife and young daughter.
+LAST-MODIFIED:20091215T201411Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NoSQL: Death to Relational Database!(?) (Ben Scofield)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T184500Z
+DTEND:20100114T194500Z
+DTSTAMP:20091218T032634Z
+UID:mjl8igirrqvq09hc4qe4u8bll0@google.com
+CREATED:20091215T201330Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Beginne
+ r\n\nAbstract: This session will walk engineers through the process that we
+ b developers go through when receiving a Photoshop document (PSD) from a de
+ signer - and turning it into real working HTML. This includes the aspects o
+ f cutting graphics out of PSD files and a bit of HTML/CSS to make things lo
+ ok right. The emphasis will be on getting stuff out of Photoshop\, and assu
+ mes some CSS knowledge.\n\nPresented By: Joe Nuxoll\n\nAbout the Speaker: J
+ oe has a deep passion for both great user interface design and engineering.
+  He has been involved in design\, technology\, and business throughout his 
+ professional history - covering a wide range from designing\, architecting\
+ , and coding complex commercial software to meeting with executives\, inves
+ tors\, and the press. He has run engineering and product design for small c
+ ompanies\, and has been a key contributor for much larger organizations. Jo
+ e is also a co-host of the Java Posse\, the #1 ranked Java technology podca
+ st. Aside from the hustle and bustle of the software design and engineering
+  career\, Joe enjoys racing cars\, instructing new race car drivers\, and t
+ aking lots of photographs of pro soccer and nature.
+LAST-MODIFIED:20091215T201330Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Photoshop for Engineers: Going from PSD to HTML (Joe Nuxoll)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:6mfrsehm8d0qu57lv5l4f2ubpo@google.com
+CREATED:20091215T201244Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Beginne
+ r\n\nAbstract: Maybe you've played with jQuery a little bit but still don't
+  feel comfortable with it\, or maybe you've only heard about it. Either way
+ \, it doesn't take long to learn enough to be dangerous. While jQuery can b
+ e intimidating at first\, it's based on some very simple principles. Once y
+ ou grasp those principles\, your JavaScript life will never be the same. By
+  the end of this talk\, you'll be easily navigating and manipulating the DO
+ M\, writing your own plugins\, and of course\, amazing your friends with th
+ e power and elegance of jQuery.\n\nPresented By: Adam McCrea\n\nAbout the S
+ peaker: Adam McCrea is the logician and head of product development at Edge
+ Case in Columbus\, Ohio. A strong believer in the power of small\, he loves
+  working for a small company and working with simple but powerful tools. He
+  has been developing web applications for seven years and has presented on 
+ JavaScript and Ruby on Rails at the Columbus Ruby Brigade and eRubyCon.\n\n
+ Adam's passions include creating intuitive user interfaces\, mastering the 
+ Ruby Way\, and showing fellow developers that JavaScript can be elegant and
+  fun. He is also a husband\, father\, and all-around swell guy.
+LAST-MODIFIED:20091215T201244Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Amaze Your Friends with jQuery (Adam McCrea)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:sqdig9emlp3tllm4as08q3c164@google.com
+CREATED:20091215T201146Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: A number of technologies have been released in recent years which make 
+ building data driven applications easier. Starting with the declarative dat
+ a models in LINQ and the Entity Framework\, we are now able to build more d
+ ynamic applications quicker and easier than ever before. Building on top of
+  LINQ\, we now have the ability to present data dynamically through service
+ s (using ADO.Net Data Services) and web applications (using ASP.Net Dynamic
+  Data). In both of these\, we can consume our data models the way we need t
+ o rather than by needing constantly modify our external contracts (in terms
+  of Stored Procedures or service contracts). The capabilities we have avail
+ able to us are not limited to the base scaffolding\, but allows for signifi
+ cant customization as necessary for our particular business needs. In addit
+ ion\, we can reuse our underlying models to enforce business requirements w
+ hile retaining these dynamic capabilities. In Part 2\, we'll look at the UI
+  portion of our web applications and see how we can take advantage of the f
+ lexabile data structures we built in part 1.\n\nPresented By: Jim Wooley\n\
+ nAbout the Speaker: Jim Wooley is a frequent speaker\, member of the INETA 
+ Speaker Bureau\, MVP\, and author of "LINQ in Action". He is always strivin
+ g to stay at the forefront of technology and enjoys the thrill of a new cha
+ llenge. He has been active evangelizing LINQ since it's announcement in 200
+ 5. In addition\, he attempts to pass on the insights he has gained by being
+  active in the community\, including organizing the Atlanta Code Camp\, lea
+ ding the Microsoft MS Pros and Atlanta VB Study Group and serving as INETA 
+ Membership Manager for the Georgia region. Jim has actively helped to guide
+  Microsoft through Software Design Reviews with product teams and is an act
+ ive Microsoft Data Programmer Insider and Visual Basic Insider. In addition
+  to speaking at numerous user groups and code camps in 7 states\, Jim has p
+ resented at product launch events\, MSDN conferences\, and TechEd. 
+LAST-MODIFIED:20091215T201146Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Building Dynamic Data Driven Applications Part II (Jim Wooley)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:nc8c8f947b48b39o8h7s8u7p6g@google.com
+CREATED:20091215T201029Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Intermediate\n\nAb
+ stract: A large number of Agile adoption initiatives start at a grassroots 
+ level among software developers who have grown uncomfortable with the blata
+ nt inefficiencies of classic approaches to software development. The teams 
+ who succeed often find themselves working more efficiently\, but the impact
+  of their success is hindered. They are still relegated to taking large fun
+ ctional specifications and digesting them into iterations of work\, with li
+ ttle if any feedback from the business side of the house. A series of succe
+ ssful sprints can still be met with the cliche "that's not what we wanted" 
+ response\, leaving development teams relegated to the "well that's what you
+  wrote" response. Until the business people are participating in iterative 
+ feedback and realizing the flexibility and freedom they have in working wit
+ h these Agile teams\, there will always be a ceiling on their success.\n\nA
+ ttendees of this talk will be guided through pragmatic\, proven approaches 
+ for building that bridge to the business representatives. A thorough treatm
+ ent of how user stories can be used as an effective tool that allows busine
+ ss and development sides of the house to meet in the middle\, as well as wh
+ en and how to bend in order to move the adoption process forward. It will a
+ lso cover the sometimes subtle pitfalls and hotspots of promoting a fully A
+ gile process with participating business team members\, and ways to hopeful
+ ly allow good deeds to continue to go unpunished.\n\nPresented By: Barry Ha
+ wkins\n\nAbout the Speaker: Barry Hawkins has played various roles in his 1
+ 3 years in the software industry\, from lone developer to team lead to Agil
+ e coach and mentor. Barry is one of the few native Atlantans\, currently sp
+ ecializing in coaching and mentoring for Agile software development. Over t
+ he years\, he has developed on several platforms\, including Microsoft and 
+ Java as well as several other less-annoying technologies. Barry has also pa
+ rticipated as a package maintainer for the Debian GNU/Linux distribution. W
+ hen not working or doing things with his family\, he can usually be found p
+ laying Lord of The Rings Online\, and formerly\, World of Warcraft. He also
+  sporadically blogs at http://www.yepthatsme.com.\n\nBarry around the Inter
+ tubes:\n\nTips for Introducing Change - Lightning Talk at Java Posse Roundu
+ p 2009 http://www.youtube.com/watch?v=U6fwxVG0wRI\n\nStaffing Agile Teams -
+  Java Posse Roundup 2009 - A podcoast of the conversation I convened at thi
+ s Open Spaces conference: http://javaposse.com/index.php?post_id=493300\n\n
+ Why Agile Is Hard - Java Posse Roundup 2008 - A podcast of the conversation
+  I convened at this Open Spaces conference http://javaposse.com/index.php?p
+ ost_id=323727\n
+LAST-MODIFIED:20091215T201029Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:User Stories: Closing the Agile Loop (Barry Hawkins)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:66v7bcov98q1j53itfv7rh5g8s@google.com
+CREATED:20091215T200814Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Beginner\n\nAbstra
+ ct: Building a desktop application is a hard task\, there are some many thi
+ ngs to keep track of that many projects simply fail to meet their goals. Se
+ tting up the project structure keeping each artifact on a well identified l
+ ocation given its responsibility and type\, defining the base schema for ma
+ naging the application's life cycle\, making sure the build is properly set
+ up\, and more. These are recurring tasks that should be handled by a tool o
+ r better yet\, a framework. Griffon is such a framework. Inspired by the Gr
+ ails framework Griffon aims to bring the same productivity gains to desktop
+  development\, there are so many traits shared by both frameworks that a Gr
+ ails developer should be able to pick up the pace quickly.\n\nPresented By:
+  Andres Almiray\n\nAbout the Speaker: Andres is a Java/Groovy developer wit
+ h more than 10 years of experience in software design and development. He h
+ as been involved in web and desktop application development since the early
+  days of Java. He is a true believer in open source and has participated on
+  popular projects like Groovy\, Griffon\, and DbUnit\, as well as starting 
+ his own projects (Json-lib\, EZMorph\, GraphicsBuilder\, JideBuilder). Foun
+ ding member of the Griffon framework. Andres maintains a blog at http://jro
+ ller.com/aalmiray\n
+LAST-MODIFIED:20091215T200855Z
+LOCATION:Mangrove
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:The Case for Griffon: Developing Desktop Applications for Fun and P
+ rofit (Andres Almiray)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:j154t475haod4hobgtof0d50b8@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T200731Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Interme
+ diate\n\nAbstract: MongoDB is an open-source\, high-performance\, schema-fr
+ ee\, document-oriented database. The goal of the MongoDB project is to brid
+ ge the functionality gap between a key/value store and a traditional RDBMS.
+  This talk will introduce MongoDB and discuss some of the reasons why Mongo
+ DB might be the right fit for your project.\n\nWe'll introduce MongoDB by e
+ xplaining how it compares to traditional relational databases as well as so
+ me other non-relational systems. This will focus on the gains in scalabilit
+ y and flexiblity that make MongoDB an attractive option\, as well as some e
+ xamples of when MongoDB might not be the best fit. Following this introduct
+ ion we will discuss some specific use cases for MongoDB. This will include 
+ examples of interacting with MongoDB from several different languages. We w
+ ill review some of the advanced features of MongoDB and discuss how they ca
+ n be put to good use.\n\nQuestions and discussion will be encouraged throug
+ hout the presentation\, but some time will be allotted at the end specifica
+ lly for Q&A.\n\n\nNotes:\n- I filed this under Architecture and Design\, bu
+ t wasn't really sure where exactly it belonged. If you think it belongs in 
+ a different track feel free to adjust.\n\n- I also filed under Other Langua
+ ges because there was no "All Languages" category. There are MongoDB driver
+ s for all of the listed languages (and more)\, so the talk really applies t
+ o developers working in any of them.\n\nPresented By: Mike Dirolf\n\nAbout 
+ the Speaker: Mike Dirolf is a Software Engineer at 10gen\, where he works o
+ n the MongoDB project. He mainly works on client drivers for Python and Rub
+ y\, but also takes time out to talk about MongoDB - he has presented at Eur
+ oPython\, Strange Loop Conf\, RuPy and RubyConf as well as at meetup groups
+  in New York City\, London\, Washington D.C. and San Francisco. Mike receiv
+ ed a B.S.E. in Computer Science from Princeton University. Born in Albany N
+ Y\, Mike currently resides in New York City.
+LAST-MODIFIED:20091215T200742Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:An Introduction to MongoDB (Mike Dirolf)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:vmu3gmcrlpq2r46kgtn1q2acmk@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T200602Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: Objective\nIntroduce software developers to Microsoft’s ASP.NET MVC fra
+ mework and provide “beyond the bits” guidance to help teams get up to speed
+  on this exciting alternative to WebForms development.\n\nSpecifications\nL
+ evel: 100\n Duration: 60-90 minutes\n Subject Area: ASP.NET\, Web Developme
+ nt\, Patterns and Practices\n\nIntroduction\nModel-view-controller (MVC) is
+  an architectural pattern that has been around for thirty years used to iso
+ late business logic from input and presentation. While there have been open
+ -source MVC frameworks for .NET\, the recently released Microsoft ASP.NET M
+ VC framework implements the MVC pattern using ASP.NET\, making it readily a
+ vailable to all developers on the Microsoft platform.\n\nThis session start
+ s at File - New\, and creates an ASP.NET MVC project. In addition to coveri
+ ng controllers and views\, unit testing (using NUnit)\, dependency injectio
+ n (using StructureMap)\, and data access (using LINQ and NHibernate) will a
+ lso be covered. Best practices will also be presented to help avoid mistake
+ s while adapting to this not-so-new style of web application development.\n
+ \nPresented By: Chris Patterson\n\nAbout the Speaker: I am a Senior Archite
+ ct at RelayHealth and a Microsoft C# MVP. For the past twenty years\, I hav
+ e been building enterprise applications on the Microsoft platform for sever
+ al industries. My primary language is C#\, however\, I am also fluent in C+
+ + and JavaScript. While focused on service-oriented architecture and enterp
+ rise application integration\, I also work on web applications using ASP.NE
+ T\, web services and messaging. With over twelve years of experience in hea
+ lthcare transaction systems\, I have a deep understanding of transaction pr
+ ocessing\, data security\, and application performance tuning.
+LAST-MODIFIED:20091215T200616Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Maintainable ASP.NET MVC (Chris Patterson)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T160000Z
+DTEND:20100114T170000Z
+DTSTAMP:20091218T032634Z
+UID:mcsln4fufsabdqbkfshpo5qng4@google.com
+CREATED:20091215T200514Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Beginner\n\nAbstra
+ ct: The Rails Rumble is a 48-hour innovation competition in which teams of 
+ up to four developers embrace their environmental constraints to create a n
+ umber of compelling microapps with Ruby and Rails. In this panel we’ll talk
+  to a number of Rumble participants and discover the tips\, tricks\, and te
+ chniques they used to successfully launch innovative web properties in an e
+ xtremely short time frame.\n\nPanelists will include a number of winners an
+ d other developers/designers who performed impressive feats during both the
+  2007\, 2008\, and 2009 contests. Questions will be taken before the confer
+ ence starts\, but attendees should come prepared with lots of questions for
+  the panelists\, such as:\n\nHow they leveraged Rails and open source softw
+ are to help them succeed.\nHow they scoped their projects and structured th
+ eir applications to enable them to launch early and iterate often.\nHow the
+ y embraced the mantra of “simplest thing that could possibly work”\, removi
+ ng extraneous features and setting reasonable goals for themselves.\nHow th
+ ey found partners whose skills complemented their own\, and how they organi
+ zed their team.\nGeneral productivity tips and work habit recommendations.\
+ nTheir advice will be applicable to both future innovation competitions (su
+ ch as the upcoming Rails Rumbles) as well as to any project that attendees 
+ may hope to bootstrap in their own copious spare time. We’ll also discuss h
+ ow to get involved with innovation competitions and why their condensed nat
+ ure and marketing opportunities can be a great motivator.\n\nPanelists incl
+ ude:\n\nJonathan Penn - winner 2008\nJim Weirich - participant 2008\nJosh S
+ chramm - participant 2009\nMatt Yoho - participant 2009\n\nModerated by:\n\
+ nJoe Fiorini\nJosh Walsh\n\nPresented By: Joe Fiorini\, Jonathan Penn\, Jos
+ h Schramm\, Matt Yoho\, Jim Weirich\n\nAbout the Speaker: Joe Fiorini has p
+ reviously spoken at a number of conferences\, including Railsconf '09\, Win
+ dy City Rails '08\, and Cleveland Day of .NET. This is his third CodeMash c
+ onference. He is a full time Ruby on Rails developer\, winner of the 2008 R
+ ails Rumble and participant in 2009. He enjoys spending free time with his 
+ wife and Bichon Frise.
+LAST-MODIFIED:20091215T200514Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Lessons from the Rails Rumble - (panel) Starting Up Fast
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:u8aul1uqd9u96ni1n8jdgh06f8@google.com
+CREATED:20091215T200256Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Intermediate\n\nA
+ bstract: The success of an Agile / SCRUM project is a successful start. The
+  first interaction is often referred to as iteration 0. Other iterations ha
+ ve a set of stories with clear acceptance\, certain which establishes the v
+ elocity of the team and its effort. What then is accomplished in iteration 
+ 0? How do we get an Agile process started? This session will outline all th
+ e "pre" activity tasks that lead into an agile development process. As well
+  as the establishment of a task list of iteration 0\, include the establish
+ ment of development environment\, configuration management details. This wi
+ ll include several case histories examples of Iteration 0.\n\nPresented By:
+  Ken Sipe\n\nAbout the Speaker: Ken Sipe is a Technology Director with Perf
+ icient\, Inc. (PRFT)\, IBM's largest service partner\, where he leads multi
+ ple teams in the development of solutions in the SOA\, Web 2.0 and portal d
+ omains\, on both the Java and .Net platforms. Ken was the founder of CodeMe
+ ntor\, where he was the Chief Architect and Mentor\, leading clients in the
+  execution of RUP and Agile methodologies in the delivery of software solut
+ ions. He is a former trainer for Rational in OOAD and RUP\, and a CORBA Vis
+ ibroker trainer for Borland. He continues to enjoy providing training and m
+ entoring in all aspects of software development. Ken has a deep need to be 
+ highly diversified. Ken often works with IT executives on high-level strate
+ gic roadmaps\, currently geared around service-oriented architectures. Ken 
+ also likes to keep his hands "dirty" in the code\, which has him on a regul
+ ar basis\, pairing or otherwise producing code. 
+LAST-MODIFIED:20091215T200410Z
+LOCATION:Portia / Wisteria
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Agile Iteration 0 (Ken Sipe)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:cfs74boci2s1l0h7okkoeuj50s@google.com
+CREATED:20091215T200335Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: A number of technologies have been released in recent years which make 
+ building data driven applications easier. Starting with the declarative dat
+ a models in LINQ and the Entity Framework\, we are now able to build more d
+ ynamic applications quicker and easier than ever before. Building on top of
+  LINQ\, we now have the ability to present data dynamically through service
+ s (using ADO.Net Data Services) and web applications (using ASP.Net Dynamic
+  Data). In both of these\, we can consume our data models the way we need t
+ o rather than by needing constantly modify our external contracts (in terms
+  of Stored Procedures or service contracts). The capabilities we have avail
+ able to us are not limited to the base scaffolding\, but allows for signifi
+ cant customization as necessary for our particular business needs. In addit
+ ion\, we can reuse our underlying models to enforce business requirements w
+ hile retaining these dynamic capabilities. In Part 1\, We'll focus on the d
+ ata and services tiers.\n\nPresented By: Jim Wooley\n\nAbout the Speaker: J
+ im Wooley is a frequent speaker\, member of the INETA Speaker Bureau\, MVP\
+ , and author of "LINQ in Action". He is always striving to stay at the fore
+ front of technology and enjoys the thrill of a new challenge. He has been a
+ ctive evangelizing LINQ since it's announcement in 2005. In addition\, he a
+ ttempts to pass on the insights he has gained by being active in the commun
+ ity\, including organizing the Atlanta Code Camp\, leading the Microsoft MS
+  Pros and Atlanta VB Study Group and serving as INETA Membership Manager fo
+ r the Georgia region. Jim has actively helped to guide Microsoft through So
+ ftware Design Reviews with product teams and is an active Microsoft Data Pr
+ ogrammer Insider and Visual Basic Insider. In addition to speaking at numer
+ ous user groups and code camps in 7 states\, Jim has presented at product l
+ aunch events\, MSDN conferences\, and TechEd. 
+LAST-MODIFIED:20091215T200402Z
+LOCATION:Guava / Tamarind
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Building Dynamic Data Driven Applications\, Part 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:3dfcdbq85p2rujm26rrmar7l4k@google.com
+CREATED:20091215T200218Z
+DESCRIPTION:Technology/Platform: Other Languages\nDifficulty Level: Interme
+ diate\n\nAbstract: Building sexy software that users love is usually a chal
+ lenging endeavor. The open source Flex SDK and your back-end of choice are 
+ a perfect combination of technologies for building rich\, sexy software - f
+ or the web and the desktop. Flex applications can run in the browser using 
+ the ubiquitous Flash Player or on the desktop using Adobe AIR. In both inst
+ ances your back-end of choice can be used for the server-side of the applic
+ ation. The communication between your back-end and Flex front-end can be a 
+ number of different communication protocols including SOAP\, RESTful XML\, 
+ JSON\, and AMF. Using lots of live coding examples and demonstrations this 
+ session will cover the basics of using Flex to build sexy software for the 
+ web and the desktop.\n\nPresented By: James Ward\n\nAbout the Speaker: Jame
+ s Ward is a Technical Evangelist for Flex at Adobe and Adobe's JCP represen
+ tative to JSR 286\, 299\, and 301.\n\nMuch like his love for climbing mount
+ ains he enjoys programming because it provides endless new discoveries\, el
+ egant workarounds\, summits and valleys. His adventures in climbing have ta
+ ken him many places.\n\nLikewise\, technology has brought him many adventur
+ es\, including: Pascal and Assembly back in the early 90's\; Perl\, HTML\, 
+ and JavaScript in the mid 90's\; then Java and many of it's frameworks begi
+ nning in the late 90's.\n\nToday he primarily uses Flex to build beautiful 
+ front-ends for Java based back-ends. Prior to Adobe\, James built a rich ma
+ rketing and customer service portal for Pillar Data Systems. 
+LAST-MODIFIED:20091215T200218Z
+LOCATION:Mangrove
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sexier Software with Flex (James Ward)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:i64fpn9mcf4fbke621793ribk4@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T200126Z
+DESCRIPTION:Technology/Platform: Other\nDifficulty Level: Beginner\n\nAbstr
+ act: Few tools have changed the way I work as much as the git source contro
+ l system. Its distributed nature and lightweight branching and merging have
+  made it possible for me to massage my code base in ways I couldn't have ev
+ en imagined before using git.\n\nHowever\, git has a reputation for being h
+ ard to learn. Because of its rather different approach to source control is
+ sues\, many of the techniques we have learned in other source control syste
+ ms do not translate cleanly when using git.\n\nIn this talk\, we avoid the 
+ whole "fear of git" issue by not talking about git at all. Instead we intro
+ duce the "Custom Source Control" (CSC) system and build it up from first pr
+ inciples. In the end\, we will ahve a completely functional\, distributed s
+ ource control system. And because each step in our journey of building CSC 
+ is simple and straight forward\, we end up with a completely understandable
+  system.\n\nSo\, this talk is not about git. But attendees will end up with
+  a deeper understanding of the principles behind git.\n\nDid I mention this
+  talk is not about git? No\, really! It's not. <wink/>\n\nPresented By: Jim
+  Weirich\n\nAbout the Speaker: Jim Weirich is the Chief Scientist for EdgeC
+ ase LLC\, a Rails development firm located in Columbus Ohio. Jim has over t
+ wenty-five years of experience in software development. He has worked with 
+ real-time data systems for testing jet engines\, networking software for in
+ formation systems\, and image processing software for the financial industr
+ y. Jim is active in the Ruby community and has contributed to several Ruby 
+ projects\, including the Rake build system and the RubyGems package softwar
+ e.
+LAST-MODIFIED:20091215T200136Z
+LOCATION:D
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Source Control for People Who Don't Like Source Control (Jim Weiric
+ h)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:jr24b8cmv0fa19154u39tg2hcc@google.com
+CREATED:20091215T200047Z
+DESCRIPTION:Technology/Platform: Java\nDifficulty Level: Intermediate\n\nAb
+ stract: The JavaFX platform is the new platform of choice for developing ri
+ ch Internet applications for the enterprise. This session builds on instruc
+ tion in the Pro JavaFX Platform book to teach you how to develop rich enter
+ prise applications for desktop and mobile platforms.\n\nPresented By: Jim W
+ eaver\n\nAbout the Speaker: James L. (Jim) Weaver is the Senior VP of Techn
+ ology at VNI Media http://vnimedia.com. He writes books\, speaks for groups
+  and conferences\, and provides training and consulting services on the sub
+ ject of JavaFX. Jim also posts regularly to his blog at http://JavaFXpert.c
+ om whose stated purpose is to help the reader learn JavaFX Script and other
+  JavaFX technologies.
+LAST-MODIFIED:20091215T200047Z
+LOCATION:E
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Developing Enterprise Apps with JavaFX (Jim Weaver)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:3uakfklvbi0b3amr2vnqlvsrl8@google.com
+CREATED:20091215T195945Z
+DESCRIPTION:Technology/Platform: .NET\nDifficulty Level: Beginner\n\nAbstra
+ ct: Silverlight has been advancing so rapidly that it is easy to lose sight
+  of the fact that many programmers are only first approaching Silverlight n
+ ow. This presentation is for you if you have little or no Silverlight Progr
+ amming experience and want to come up the learning curve fast.\n\nAttendees
+  are assumed to have a working knowledge of C# and one of: ASP.NET\, AJAX\,
+  WinForms or WPF.\n\nTopics to be covered include\n\nFirst program\nXaml an
+ d Code\nLayout and Controls\nSilverlight and ASP.NET and HTML\nMulti-page a
+ pplications\nTransforms and Animation\nTemplates and The Visual State Manag
+ er\nData\, Data-binding and Validation\nBasics of Media\n\nPresented By: Je
+ sse Liberty\n\nAbout the Speaker: Jesse Liberty\, Silverlight Geek\, is a D
+ eveloper Community Program Manager for Microsoft Silverlight.net. His areas
+  of interest include RIA\, C Data and Web Services\, Cross-platform Line of
+  Business programming\, and most of all\, building strong relationships bet
+ ween the Development Division at Microsoft and software developers world-wi
+ de.\nLiberty is a frequent guest on numerous podcasts and his blog is a req
+ uired resource for Silverlight programmers. He is the author of over two do
+ zen books\, including the forthcoming Programming Silverlight 4. His twenty
+  years of programming experience include stints as a Distinguished Software
+  Engineer at AT&T\; Vice President of Human-Computer Interaction at Citiban
+ k and Software Architect at PBS/Learning Link. He can be reached at jlibert
+ y@microsoft.com
+LAST-MODIFIED:20091215T195945Z
+LOCATION:Cypress
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Silverlight From Zero (Jesse Liberty)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T144500Z
+DTEND:20100114T154500Z
+DTSTAMP:20091218T032634Z
+UID:pdvo5gk7tv6crn63oufug9eb5c@google.com
+CREATED:20091215T195837Z
+DESCRIPTION:Technology/Platform: Ruby\nDifficulty Level: Beginner\n\nAbstra
+ ct: You have heard about Ruby. You have heard about Ruby on Rails. What you
+  have not seen is how they are different from the tools you are using. This
+  talk is about code. C#\, Java and Ruby\, side-by-side\, solving the same p
+ roblems you face daily. This talk is focused solely on how the languages ar
+ e different - beyond the surface of syntax and into the heart of design. We
+  will show the difference between a purely object-oriented language and a c
+ lass based language. We will show you what problem an IOC container solves\
+ , and why you don't need one in Ruby. This talk is not about selling a lang
+ uage\, but comparing them. This is not about demonstrating features\, but d
+ emonstrating benefits in real world code examples.\n\nPresented By: Joe O'B
+ rien Mark Peabody Leon Gersing\n\nAbout the Speaker: Joe is a father\, spea
+ ker\, author and developer. Before helping found EdgeCase\, LLC\, Joe was a
+  developer with ThoughtWorks and spent much of his time working with large 
+ J2EE and .NET systems for Fortune 500 companies. He has spent his career as
+  a developer\, project manager\, and everything in between. Joe is a passio
+ nate member of the open source community. He co-founded the Columbus Ruby B
+ rigade and helped organize the Chicago Area Ruby Users Group. His passions 
+ are Agile Development in the Enterprise\, Ruby\, and demonstrating to the F
+ ortune 500 the elegance and power of this incredible language.\n\nMarc come
+ s from a deeply rooted background in Java but began his fascination with ot
+ her JVM languages after discovering the power and elegance of Ruby not poss
+ ible in his beloved Java language. He has been exploring new language parad
+ igms ever since.\n\nMarc now sets out to bring the power of the Ruby langua
+ ge to Java enterprises everywhere with the help of his trusty sidekick: JRu
+ by\, the Ruby implementation on the Java platform. Together\, he and JRuby 
+ shall achieve unparalleled prosperity and business value for all who are wi
+ lling to taste the glory of its sweet IT nectar.\n\nLeon has been bringing 
+ value to clients large and small for over ten years\, and has a passion for
+  technology\, art and community. He has experience using technologies rangi
+ ng from ASP.Net and C++\, to Objective-C\, Ajax\, and Actionscript – and of
+  course\, Ruby and Rails. Leon also has high hopes for IronRuby and the muc
+ h needed efficiency and agility that it has the potential to bring to the .
+ Net world.\n\nA believer in building strong communities\, Leon spends time 
+ presenting on a wide variety of development topics at events and user group
+ s in the region. He loves nothing more than to be around other developers\,
+  working together to create something unique and fresh\; something that has
+  never been done before. He believes there is no challenge that can't be ov
+ ercome with passion and creativity. He spends his spare time with his wife\
+ , two beautiful girls\, two sweet kitties\, and his ukulele.
+LAST-MODIFIED:20091215T195837Z
+LOCATION:Indigo Bay
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:What Makes Ruby Different (Joe O'Brien Mark Peabody Leon Gersing)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100115T131500Z
+DTEND:20100115T141500Z
+DTSTAMP:20091218T032634Z
+UID:ef3dokgsa9as4il0698fu9ulq8@google.com
+CREATED:20091215T195645Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T195655Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Breakfast
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T120000Z
+DTEND:20100114T130000Z
+DTSTAMP:20091218T032634Z
+UID:llaje45k4ia5ds5hp99joiil0c@google.com
+CREATED:20091215T195606Z
+DESCRIPTION:
+LAST-MODIFIED:20091215T195615Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Breakfast
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20100114T131500Z
+DTEND:20100114T143000Z
+DTSTAMP:20091218T032634Z
+UID:0rmn30v4kivkd0kinl35ga6u3k@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=CodeMa
+ sh 2010;X-NUM-GUESTS=0:mailto:h6s2ai0gdmaomi2pmlqkjiq4e0@group.calendar.goo
+ gle.com
+CREATED:20091215T194924Z
+DESCRIPTION:Mary Poppendieck\, co-author of the seminal work Lean Software 
+ Development will be a keynoter at CodeMash 2010. Mary\, a frequent speaker 
+ at previous CodeMash events\, will bring her wisdom\, wit\, and insight to 
+ the main stage -- plus she'll be presenting a half-day workshop during the 
+ CodeMash PreCompiler!
+LAST-MODIFIED:20091215T195203Z
+LOCATION:TBD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:KEYNOTE #1: Mary Poppendieck
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
