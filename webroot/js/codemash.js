@@ -1,5 +1,6 @@
 var presentations = [];
 p = {};
+p.id = 'pid1';
 p.title = "JRuby (Nick Sieger)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -14,6 +15,7 @@ tool and JRuby-Rack library for dealing with Java application server deployment.
 presentations.push(p);
 
 p = {};
+p.id = 'pid2';
 p.title = "Credit Crunch Code: Time to Pay Back the Technical Debt (Gary Short)";
 p.startTime = new Date(Date.parse("Fri Jan 15 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 19:45:00 UTC 2010"));
@@ -35,6 +37,7 @@ Difficulty Level: Advanced</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid3';
 p.title = "Looting Design Ideas from the World of Warcraft (Jason Follas)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -52,6 +55,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid4';
 p.title = "Leadership 101 (Jim Holmes)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -69,6 +73,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid5';
 p.title = "An Agile Toolchain for Flex RIAs (James Ward)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -92,6 +97,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid6';
 p.title = "Software Design and Testability (Jeremy D. Miller)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -109,6 +115,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid7';
 p.title = "Being an Evil Genius with F# and .NET (Chris Smith)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -130,6 +137,7 @@ Difficulty Level: Advanced</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid8';
 p.title = "Tapestry 5: Java Power, Scripting Ease (Howard M. Lewis Ship) in Mangrove";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -154,6 +162,7 @@ within reach of Java developers without sacrificing any of Java's inherent speed
 presentations.push(p);
 
 p = {};
+p.id = 'pid9';
 p.title = "4:40 - 5:40 Raffle";
 p.startTime = new Date(Date.parse("Fri Jan 15 21:40:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 22:40:00 UTC 2010"));
@@ -164,6 +173,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid10';
 p.title = "Clojure: Concurrent Functional Programming for the JVM (Howard M. Lewis Ship)";
 p.startTime = new Date(Date.parse("Fri Jan 15 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 21:35:00 UTC 2010"));
@@ -190,6 +200,7 @@ and scalable: a language for the future, today.</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid11';
 p.title = "The Economics of Cloud Computing (Bill Sempf)";
 p.startTime = new Date(Date.parse("Fri Jan 15 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 21:35:00 UTC 2010"));
@@ -207,6 +218,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid12';
 p.title = "What's New in Silverlight (Jesse Liberty)";
 p.startTime = new Date(Date.parse("Fri Jan 15 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 21:35:00 UTC 2010"));
@@ -225,6 +237,7 @@ Liberty is a frequent guest on numerous podcasts and his blog is a required reso
 presentations.push(p);
 
 p = {};
+p.id = 'pid13';
 p.title = "SOLID Ruby (Jim Weirich)";
 p.startTime = new Date(Date.parse("Fri Jan 15 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 21:35:00 UTC 2010"));
@@ -257,6 +270,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid14';
 p.title = "3:00pm - 3:20pm Vendor Sessions";
 p.startTime = new Date(Date.parse("Fri Jan 15 20:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 20:20:00 UTC 2010"));
@@ -267,6 +281,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid15';
 p.title = "Building Webapps with Compojure (Aaron Bedra)";
 p.startTime = new Date(Date.parse("Fri Jan 15 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 19:45:00 UTC 2010"));
@@ -284,6 +299,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid16';
 p.title = "IronPython with ASP.NET (Chris Sutton)";
 p.startTime = new Date(Date.parse("Fri Jan 15 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 19:45:00 UTC 2010"));
@@ -307,6 +323,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid17';
 p.title = "An Introduction to Functional Programming with Scheme (Michael J. Norton)";
 p.startTime = new Date(Date.parse("Fri Jan 15 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 19:45:00 UTC 2010"));
@@ -330,6 +347,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid18';
 p.title = "MacRuby and Cocoa Applications (Matt Yoho)";
 p.startTime = new Date(Date.parse("Fri Jan 15 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 19:45:00 UTC 2010"));
@@ -347,6 +365,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid19';
 p.title = "LUNCH + KEYNOTE #2: Andy Hunt";
 p.startTime = new Date(Date.parse("Fri Jan 15 17:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 18:30:00 UTC 2010"));
@@ -357,6 +376,7 @@ p.description = "<p>Andy Hunt, a programmer turned consultant, author and publis
 presentations.push(p);
 
 p = {};
+p.id = 'pid20';
 p.title = "Come for the Phone stay for the Mac (Daniel Steinberg)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -376,6 +396,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid21';
 p.title = "RESTful Interfaces to Third-Party Websites with Python (Kevin Dahlhausen)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -393,6 +414,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid22';
 p.title = "0-60 with Fluent NHibernate (Hudson Akridge)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -415,6 +437,7 @@ http://chicagoalt.net/event/July2009Meeting060withFluentNHibernate )</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid23';
 p.title = "WTF 2.0: A Guide to Building Social Applications (Anthony Broad-Crawford)";
 p.startTime = new Date(Date.parse("Fri Jan 15 15:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 16:45:00 UTC 2010"));
@@ -454,6 +477,7 @@ Pubsubhubbub</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid24';
 p.title = "Testing the Enterprise (Leon Gersing and Charlie Baker)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -475,6 +499,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid25';
 p.title = "See Processing Run. Run Processing Run (Wes Faler)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -492,6 +517,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid26';
 p.title = "Going Dynamic with C# (Bill Wagner)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -517,6 +543,7 @@ Difficulty Level: Advanced</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid27';
 p.title = "Oh Crap! I Forgot (or Never Learned) C! (Chris Adamson)";
 p.startTime = new Date(Date.parse("Fri Jan 15 14:30:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 15:30:00 UTC 2010"));
@@ -534,6 +561,7 @@ Difficulty Level: Advanced</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid28';
 p.title = "Testing Java in the Fast Lane (Andres Almiray)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -553,6 +581,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid29';
 p.title = "Engineering vs Design - How to Work Together (Joe Nuxoll)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -570,6 +599,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid30';
 p.title = "Coding Rainbows - Enterprise Development with Prism  (Carey Payette)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -587,6 +617,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid31';
 p.title = "How Do You Do That on iPhone? (Chris Adamson)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -613,6 +644,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid32';
 p.title = "Funky Java, Objective Scala (Dick Wall)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -653,6 +685,7 @@ Predicates, functions, constraints, identity maps and more with the Google Colle
 presentations.push(p);
 
 p = {};
+p.id = 'pid33';
 p.title = "T4: Code Generation with Visual Studio 2008 (Steve Andrews)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -670,6 +703,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid34';
 p.title = "Domain-Driven Design: An Introduction (Barry Hawkins)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -705,6 +739,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid35';
 p.title = "Refactoring the Programmer (Joe O'Brien)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -722,6 +757,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid36';
 p.title = "reStructuredText: Plain Text Gets Superpowers (Catherine Devlin)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -739,6 +775,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid37';
 p.title = "Testing ASP.NET Applications Using Ruby (Ben Hall)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -756,6 +793,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid38';
 p.title = "Techniques for Programming Parallel Solutions (Michael Slade)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -773,6 +811,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid39';
 p.title = "Dinner";
 p.startTime = new Date(Date.parse("Thu Jan 14 23:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 00:30:00 UTC 2010"));
@@ -783,6 +822,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid40';
 p.title = "Cucumber - Beyond the Basics (Mike Doel)";
 p.startTime = new Date(Date.parse("Thu Jan 14 21:50:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 22:50:00 UTC 2010"));
@@ -811,6 +851,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid41';
 p.title = "Introduction to Cucumber (Leon Gersing)";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:35:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 21:35:00 UTC 2010"));
@@ -830,6 +871,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid42';
 p.title = "Vendor Sessions";
 p.startTime = new Date(Date.parse("Thu Jan 14 20:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 20:20:00 UTC 2010"));
@@ -840,6 +882,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid43';
 p.title = "LUNCH + KEYNOTE #2: Hank Janssen";
 p.startTime = new Date(Date.parse("Thu Jan 14 17:15:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 18:30:00 UTC 2010"));
@@ -850,6 +893,7 @@ p.description = "<p>Microsoft's Hank Janssen, one of the driving forces behind M
 presentations.push(p);
 
 p = {};
+p.id = 'pid44';
 p.title = "Powershell: Ten Things You Need to Know (Hester and Lerch)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -870,6 +914,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid45';
 p.title = "Seeing Constraints: Kanban Explained (Jon Stahl)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -895,6 +940,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid46';
 p.title = "Get Higher with ScalaTest (Bill Venners)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -912,6 +958,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid47';
 p.title = "Ruby and Rails for the .NET Developer (Matt Yoho)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -929,6 +976,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid48';
 p.title = "Azure: Lessons From the Field (Rob Gillen)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -946,6 +994,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid49';
 p.title = "NoSQL: Death to Relational Database!(?) (Ben Scofield)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -969,6 +1018,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid50';
 p.title = "Photoshop for Engineers: Going from PSD to HTML (Joe Nuxoll)";
 p.startTime = new Date(Date.parse("Thu Jan 14 18:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 19:45:00 UTC 2010"));
@@ -986,6 +1036,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid51';
 p.title = "Amaze Your Friends with jQuery (Adam McCrea)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1005,6 +1056,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid52';
 p.title = "Building Dynamic Data Driven Applications Part II (Jim Wooley)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1022,6 +1074,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid53';
 p.title = "User Stories: Closing the Agile Loop (Barry Hawkins)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1049,6 +1102,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid54';
 p.title = "The Case for Griffon: Developing Desktop Applications for Fun and Profit (Andres Almiray)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1066,6 +1120,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid55';
 p.title = "An Introduction to MongoDB (Mike Dirolf)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1095,6 +1150,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid56';
 p.title = "Maintainable ASP.NET MVC (Chris Patterson)";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1123,6 +1179,7 @@ Model-view-controller (MVC) is an architectural pattern that has been around for
 presentations.push(p);
 
 p = {};
+p.id = 'pid57';
 p.title = "Lessons from the Rails Rumble - (panel) Starting Up Fast";
 p.startTime = new Date(Date.parse("Thu Jan 14 16:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 17:00:00 UTC 2010"));
@@ -1161,6 +1218,7 @@ Josh Walsh</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid58';
 p.title = "Agile Iteration 0 (Ken Sipe)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1178,6 +1236,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid59';
 p.title = "Building Dynamic Data Driven Applications, Part 1";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1195,6 +1254,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid60';
 p.title = "Sexier Software with Flex (James Ward)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1218,6 +1278,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid61';
 p.title = "Source Control for People Who Don't Like Source Control (Jim Weirich)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1243,6 +1304,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid62';
 p.title = "Developing Enterprise Apps with JavaFX (Jim Weaver)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1260,6 +1322,7 @@ Difficulty Level: Intermediate</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid63';
 p.title = "Silverlight From Zero (Jesse Liberty)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1292,6 +1355,7 @@ Liberty is a frequent guest on numerous podcasts and his blog is a required reso
 presentations.push(p);
 
 p = {};
+p.id = 'pid64';
 p.title = "What Makes Ruby Different (Joe O'Brien Mark Peabody Leon Gersing)";
 p.startTime = new Date(Date.parse("Thu Jan 14 14:45:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 15:45:00 UTC 2010"));
@@ -1317,6 +1381,7 @@ Difficulty Level: Beginner</p>\
 presentations.push(p);
 
 p = {};
+p.id = 'pid65';
 p.title = "Breakfast";
 p.startTime = new Date(Date.parse("Fri Jan 15 13:15:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Fri Jan 15 14:15:00 UTC 2010"));
@@ -1327,6 +1392,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid66';
 p.title = "Breakfast";
 p.startTime = new Date(Date.parse("Thu Jan 14 12:00:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 13:00:00 UTC 2010"));
@@ -1337,6 +1403,7 @@ p.description = "";
 presentations.push(p);
 
 p = {};
+p.id = 'pid67';
 p.title = "KEYNOTE #1: Mary Poppendieck";
 p.startTime = new Date(Date.parse("Thu Jan 14 13:15:00 UTC 2010"));
 p.endTime = new Date(Date.parse("Thu Jan 14 14:30:00 UTC 2010"));

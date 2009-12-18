@@ -40,9 +40,15 @@ File.open(File.join(webroot_dir, "js/codemash.js"), "w") do |f|
 
   f.puts "var presentations = [];"
 
+  $event_i = 1
+
   ical.first.events.each do |event|
 
+    id = "pid#{$event_i}"
+    $event_i += 1
+
     f.puts "p = {};"
+    f.puts "p.id = '#{id}';"
     f.puts "p.title = \"#{js_escape(event.summary)}\";"
     f.puts "p.startTime = new Date(Date.parse(\"#{event.dtstart}\"));"
     f.puts "p.endTime = new Date(Date.parse(\"#{event.dtend}\"));"
