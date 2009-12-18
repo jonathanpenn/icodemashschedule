@@ -17,7 +17,7 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
   ical.first.events.each do |event|
 
     result = <<-EOHTML
-      <div room='#{event.location}' startTime='#{event.dtstart}' endTime='#{event.dtend}'>
+      <div class='presentation' room='#{event.location}' startTime='#{event.dtstart}' endTime='#{event.dtend}'>
         <h2>#{to_html(event.summary)}</h2>
         <div class='description'>
           #{to_html(event.description)}
