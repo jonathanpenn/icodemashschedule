@@ -23,16 +23,17 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
     $event_i += 1
 
     result = <<-EOHTML
-      <div id="#{id}" class='presentation'>
+      <div id="#{id}" class='_presentation'>
         <div class="toolbar">
           <h1>Presentation</h1>
           <a class="back" href="#">Back</a>
         </div>
 
         <ul class="rounded">
-          <li>#{event.summary}</li>
-          <li>#{event.location}</li>
-          <li>Start <span>now</span></li>
+          <li class='_title'>#{event.summary}</li>
+          <li class='_location'>#{event.location}</li>
+          <li class='_startTime'>#{event.dtstart}</li>
+          <li class='_endTime'>#{event.dtend}</li>
         </ul>
 
         #{to_html(event.description)}

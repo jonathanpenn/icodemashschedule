@@ -1,12 +1,14 @@
 $(document).ready(function() {
 
   var $element = $("\
-    <div class='presentation'\
-      room='A'\
-      startTime='Wed Dec 31 1969 19:00:01 GMT-0500 (EST)'\
-      endTime='Wed Dec 31 1969 20:00:01 GMT-0500 (EST)'>\
-      <h2>Some Language Kicks Ass</h2>\
-      <div class='description'>Some description</div>\
+    <div id='someid'>\
+      <ul class='rounded'>\
+        <li class='_title'>Title</li>\
+        <li class='_location'>Location</li>\
+        <li class='_startTime'>Fri, Dec 14, 2009 2:00 am EST</li>\
+        <li class='_endTime'>Fri, Dec 14, 2009 3:00 am EST</li>\
+      </ul>\
+      <div class='description'>Description</div>\
     </div>\
   ");
   var presentation;
@@ -22,16 +24,17 @@ $(document).ready(function() {
 
 
   test("initialization with jQuery element", function() {
-    expect(5);
-    ok( presentation.room == "A", "has a presentation room" );
-    ok( presentation.startTime.valueOf() == 1000,
+    expect(6);
+    ok( presentation.id == 'someid', "it has the presentation id" );
+    ok( presentation.title == 'Title', "it has a title" );
+    ok( presentation.location == "Location", "has a presentation location" );
+    ok( presentation.description == 'Description', "it has a description" );
+    ok( presentation.startTime.valueOf() ==
+      Date.parse("Fri, Dec 14, 2009 2:00 am EST").valueOf(),
       "it has a start time as a date object" );
-    ok( presentation.endTime.valueOf() == 3601000,
+    ok( presentation.endTime.valueOf() ==
+      Date.parse("Fri, Dec 14, 2009 3:00 am EST").valueOf(),
       "it has a end time as a date object" );
-    ok( presentation.title == 'Some Language Kicks Ass',
-      "it has a title" );
-    ok( presentation.description == 'Some description',
-      "it has a description" );
   });
 
 });

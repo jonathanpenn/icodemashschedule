@@ -17,12 +17,13 @@ $(document).ready(function() {
 
   $("body").append(schedule);
 
-  $("body > div.presentation").each(function() {
-    var presentation = {};
-    presentation.id = $(this).attr('id');
-    presentation.title = $(this).find("ul > li:first-child").html();
+  $("body > div._presentation").each(function() {
+    console.log("here");
+    var presentation = new Presentation($(this));
     presentations.push(presentation);
   });
+
+  presentations.sort(function(a,b) { return a.startTime > b.startTime ? 1 : -1; });
 
   $.each(presentations, function(index, presentation) {
     $("#scheduleList").append("\
