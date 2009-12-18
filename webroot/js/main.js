@@ -9,29 +9,26 @@ $.jQTouch({
   ]
 });
 
+presentations = [];
+
 $(document).ready(function() {
+  var loader = new DataLoader();
+  var schedule = loader.loadFrom("codemash.html");
 
-  $("#canvas").append("<div id='schedule'></div>");
+  $("body").append(schedule);
 
-  presentations.sort(function(a,b) {
-    return a.startTime > b.startTime ? 1 : -1;
+  $("body > div.presentation").each(function() {
+    var presentation = {};
+    presentation.id = $(this).attr('id');
+    presentation.title = $(this).find("ul > li:first-child").html();
+    presentations.push(presentation);
   });
 
   $.each(presentations, function(index, presentation) {
     $("#scheduleList").append("\
       <li class='arrow'>\
-        <a href='#"+presentation.id+"'>"+presentation.title+" ("+presentation.location+")</a>\
+        <a href='#"+presentation.id+"'>"+presentation.title+"</a>\
       </li>\
-    ");
-
-    $("body").append("\
-      <div id='"+presentation.id+"'>\
-        <div class='toolbar'>\
-          <h1>Presentation</h1>\
-          <a href='#' class='back'>Back</a>\
-        </div>\
-        "+presentation.description+"\
-      </div>\
     ");
   });
 

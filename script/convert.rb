@@ -12,33 +12,8 @@ def to_html(text)
   BlueCloth.new(text).to_html
 end
 
-def js_escape(text)
-  text.gsub("\n", "\\\n").gsub("\"", '\"')
-end
 
-def full_escape(text)
-  js_escape(to_html(text))
-end
-
-$KCODE='u'
-
-def utf8_escape(str)
-  s = ""
-  str.each_char do |c|
-    x = c.unpack("C")[0]
-    if x < 128
-      s << c
-    else
-      s << "\\u%04x" % c.unpack("U")[0]
-    end
-  end
-  s
-end
-
-
-File.open(File.join(webroot_dir, "js/codemash.js"), "w") do |f|
-
-  f.puts "var presentations = [];"
+File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
 
   $event_i = 1
 
@@ -47,18 +22,23 @@ File.open(File.join(webroot_dir, "js/codemash.js"), "w") do |f|
     id = "pid#{$event_i}"
     $event_i += 1
 
-    f.puts "p = {};"
-    f.puts "p.id = '#{id}';"
-    f.puts "p.title = \"#{js_escape(event.summary)}\";"
-    f.puts "p.startTime = new Date(Date.parse(\"#{event.dtstart}\"));"
-    f.puts "p.endTime = new Date(Date.parse(\"#{event.dtend}\"));"
-    f.puts "p.location = \"#{js_escape(event.location)}\";"
+    result = <<-EOHTML
+      <div id="#{id}" class='presentation'>
+        <div class="toolbar">
+          <h1>Presentation</h1>
+          <a class="back" href="#">Back</a>
+        </div>
 
-    f.puts
-    f.puts "p.description = \"#{full_escape(utf8_escape(event.description))}\";"
-    f.puts
-    f.puts "presentations.push(p);"
-    f.puts
+        <ul class="rounded">
+          <li>#{event.summary}</li>
+          <li>#{event.location}</li>
+          <li>Start <span>now</span></li>
+        </ul>
+
+        #{to_html(event.description)}
+      </div>
+    EOHTML
+    f.puts result
 
   end
 
