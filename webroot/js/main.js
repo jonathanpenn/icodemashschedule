@@ -22,14 +22,14 @@ $(document).ready(function() {
     presentations.push(presentation);
   });
 
-  presentations.sort(PresentationSort.byStartTime);
+  presentations = SortPresentations.byStartTime(presentations);
 
-  var presByDays = $.groupBy(presentations, function(p) { return p.dayGroup(); });
+  var presByDays = GroupPresentations.byDayGroup(presentations);
 
   for (day in presByDays) {
     $("#timeList").append("<li class='sep'>"+day+"</li>");
 
-    var presByTime = $.groupBy(presByDays[day], function(p) { return p.timeGroup(); });
+    var presByTime = GroupPresentations.byTimeGroup(presByDays[day]);
 
     for (time in presByTime) {
       var id = domid(day, time);

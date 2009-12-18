@@ -59,16 +59,44 @@ function Presentation($element)
 }
 
 
-PresentationSort = {};
+SortPresentations = {
 
 
-PresentationSort.byStartTime = function(a, b)
-{
-  if (a.startTime > b.startTime) {
-    return 1;
-  } else if (a.startTime < b.startTime) {
-    return -1;
-  } else {
-    return a.title > b.title ? 1 : -1;
+  byStartTime: function(presentations)
+  {
+    return presentations.sort(function(a, b) {
+      if (a.startTime > b.startTime) {
+        return 1;
+      } else if (a.startTime < b.startTime) {
+        return -1;
+      } else {
+        return a.title > b.title ? 1 : -1;
+      }
+    });
   }
-}
+
+
+};
+
+
+GroupPresentations = {
+
+
+  byDayGroup: function(presentations)
+  {
+    return $.groupBy(presentations, function(rec) {
+      return rec.dayGroup();
+    });
+  },
+
+
+  byTimeGroup: function(presentations)
+  {
+    return $.groupBy(presentations, function(rec) {
+      return rec.timeGroup();
+    });
+  }
+
+
+};
+

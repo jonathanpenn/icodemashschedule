@@ -64,10 +64,10 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-  module("PresentationSort");
+  module("SortPresentations");
 
 
-  test("byStartTime", function() {
+  test(".byStartTime(presentations)", function() {
     var presentations = [
       {startTime: 1, title: 'a'},
       {startTime: 3, title: 'a'},
@@ -75,7 +75,7 @@ $(document).ready(function() {
       {startTime: 2, title: 'a'}
     ];
 
-    presentations.sort(PresentationSort.byStartTime);
+    presentations = SortPresentations.byStartTime(presentations);
     expect(6);
     ok( presentations[0].startTime == 1);
     ok( presentations[1].startTime == 2);
@@ -84,5 +84,50 @@ $(document).ready(function() {
     ok( presentations[2].title == 'b');
     ok( presentations[3].startTime == 3);
   });
+
+});
+
+
+
+$(document).ready(function() {
+
+  var oldGroupBy;
+
+
+  function setup()
+  {
+    oldGroupBy = $.groupBy;
+    $.groupBy = function(arr, grouper) {
+      return grouper;
+    };
+  }
+
+
+  function teardown()
+  {
+    $.groupBy = oldGroupBy;
+  }
+
+
+  module("GroupPresentations", {setup: setup, teardown: teardown});
+
+
+  test(".byDayGroup()", function() {
+    var grouper = GroupPresentations.byDayGroup([]);
+    var obj = { dayGroup: function() { return 'yes'; } };
+
+    expect(1);
+    ok( grouper(obj) == 'yes', "the grouper calls dayGroup() on objects" );
+  });
+
+
+  test(".byTimeGroup()", function() {
+    var grouper = GroupPresentations.byTimeGroup([]);
+    var obj = { timeGroup: function() { return 'yes'; } };
+
+    expect(1);
+    ok( grouper(obj) == 'yes', "the grouper calls timeGroup() on objects" );
+  });
+
 
 });
