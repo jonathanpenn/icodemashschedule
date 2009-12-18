@@ -1,4 +1,5 @@
 .DS_Store
+tmp/*
 
 # These are added by bundler
 gems/*
