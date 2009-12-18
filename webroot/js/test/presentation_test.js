@@ -30,11 +30,32 @@ $(document).ready(function() {
     ok( presentation.location == "Location", "has a presentation location" );
     ok( presentation.description == 'Description', "it has a description" );
     ok( presentation.startTime.valueOf() ==
-      Date.parse("Fri, Dec 14, 2009 2:00 am EST").valueOf(),
+      Date.parse("Mon, Dec 14, 2009 2:00 am EST").valueOf(),
       "it has a start time as a date object" );
     ok( presentation.endTime.valueOf() ==
-      Date.parse("Fri, Dec 14, 2009 3:00 am EST").valueOf(),
+      Date.parse("Mon, Dec 14, 2009 3:00 am EST").valueOf(),
       "it has a end time as a date object" );
+  });
+
+
+  test(".dayGroup()", function() {
+    expect(2);
+
+    ok( presentation.dayGroup() == 'Monday' );
+    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 3:00 am EST'));
+    ok( presentation.dayGroup() == 'Tuesday' );
+  });
+
+
+  test(".timeGroup()", function() {
+    expect(3);
+
+    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 2:00 am EST'));
+    ok( presentation.timeGroup() == '2:00 am' );
+    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 3:00 pm EST'));
+    ok( presentation.timeGroup() == '3:00 pm' );
+    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 12:00 pm EST'));
+    ok( presentation.timeGroup() == '12:00 pm' );
   });
 
 });

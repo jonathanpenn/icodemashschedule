@@ -24,10 +24,18 @@ $(document).ready(function() {
 
   presentations.sort(PresentationSort.byStartTime);
 
+
+  var lastSeen = null;
   $.each(presentations, function(index, presentation) {
-    $("#scheduleList").append("\
+
+    if (lastSeen != presentation.dayGroup()) {
+      $("#timeList").append("<li class='sep'>"+presentation.dayGroup()+"</li>");
+      lastSeen = presentation.dayGroup();
+    }
+
+    $("#timeList").append("\
       <li class='arrow'>\
-        <a href='#"+presentation.id+"'>"+presentation.title+"</a>\
+        <a href='#"+presentation.id+"'>"+presentation.timeGroup()+" &gt; </a>\
       </li>\
     ");
   });
