@@ -15,7 +15,6 @@ function Presentation($element)
   this.setBackButtonTitle = function(title)
   {
     this.$element.find("> div.toolbar > a.back").html(title);
-    console.log(this.$element[0]);
   }
 
 
