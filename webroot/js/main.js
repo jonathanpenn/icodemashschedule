@@ -39,24 +39,22 @@ $(document).ready(function() {
         </li>\
       ");
 
-      var $div = $("\
-        <div id='"+id+"'>\
-          <div class='toolbar'>\
-            <h1>"+day+" "+time+"</h1>\
-            <a class='back' href='#'>Back</a>\
-          </div>\
-          <ul class='rounded'></ul>\
-        </div>\
-      ");
-      var $ul = $div.find("ul");
+      var $ul = $("<ul class='rounded'></ul>");
 
       $.each(presByTime[time], function(index, pres) {
         $ul.append("\
           <li class='arrow'><a href='#"+pres.id+"'>"+pres.title+"</a></li>\
         ");
+        pres.setBackButtonTitle(time);
       });
 
-      $("body").append($div);
+      var panel = new Panel({
+        id: id,
+        title: day + " "  + time,
+        content: $ul
+      });
+
+      $("body").append(panel.render());
     }
   }
 
