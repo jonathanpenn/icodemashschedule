@@ -39,19 +39,21 @@ $(document).ready(function() {
         </li>\
       ");
 
-      var $ul = $("<ul class='rounded'></ul>");
+      var list = new MenuList();
 
       $.each(presByTime[time], function(index, pres) {
-        $ul.append("\
-          <li class='arrow'><a href='#"+pres.id+"'>"+pres.title+"</a></li>\
-        ");
+        var item = new MenuListItem({
+          panel: pres.id,
+          title: pres.title
+        });
+        list.items.push(item);
         pres.setBackButtonTitle(time);
       });
 
       var panel = new Panel({
         id: id,
         title: day + " "  + time,
-        content: $ul
+        content: list.$render()
       });
 
       $("body").append(panel.render());
