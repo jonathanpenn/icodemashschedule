@@ -9,6 +9,14 @@ function Presentation($element)
   this.description = $element.find("div.description").html();
   this.startTime = new Date(Date.parse($element.find("li._startTime").html()));
   this.endTime = new Date(Date.parse($element.find("li._endTime").html()));
+  this.$element = $element;
+
+
+  this.setBackButtonTitle = function(title)
+  {
+    this.$element.find("> div.toolbar > a.back").html(title);
+    console.log(this.$element[0]);
+  }
 
 
   this.dayGroup = function()

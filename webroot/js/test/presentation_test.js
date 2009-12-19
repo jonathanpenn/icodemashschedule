@@ -2,6 +2,9 @@ $(document).ready(function() {
 
   var $element = $("\
     <div id='someid'>\
+      <div class='toolbar'>\
+        <a class='back' href='#'>Back</a>\
+      </div>\
       <ul class='rounded'>\
         <li class='_title'>Title</li>\
         <li class='_location'>Location</li>\
@@ -24,7 +27,7 @@ $(document).ready(function() {
 
 
   test("initialization with jQuery element", function() {
-    expect(6);
+    expect(7);
     ok( presentation.id == 'someid', "it has the presentation id" );
     ok( presentation.title == 'Title', "it has a title" );
     ok( presentation.location == "Location", "has a presentation location" );
@@ -35,6 +38,8 @@ $(document).ready(function() {
     ok( presentation.endTime.valueOf() ==
       Date.parse("Mon, Dec 14, 2009 3:00 am EST").valueOf(),
       "it has a end time as a date object" );
+    ok( presentation.$element == $element,
+      "it keeps track of the element initialized" );
   });
 
 
@@ -56,6 +61,14 @@ $(document).ready(function() {
     ok( presentation.timeGroup() == '3:00 pm' );
     presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 12:00 pm EST'));
     ok( presentation.timeGroup() == '12:00 pm' );
+  });
+
+
+  test(".setBackButtonTitle(title)", function() {
+    presentation.setBackButtonTitle('new one');
+    expect(1);
+    ok( presentation.$element.find("a.back").html() == 'new one',
+      "exchanges the old back button title for a new one" );
   });
 
 });
