@@ -32,6 +32,8 @@ $(document).ready(function() {
     createPanelForDay(day, presByDays[day]);
   }
 
+  createUpcomingMenuList();
+
   $("#loading").hide();
 });
 
@@ -110,4 +112,27 @@ function createPresentationList(day, time, presentations)
   });
 
   return presList;
+}
+
+
+function createUpcomingMenuList()
+{
+  var $nextSlot = getNextSlotForDay('Thursday').clone();
+  $nextSlot.find("a").prepend("Thursday ");
+
+  var list = new MenuList();
+
+  var $list = list.$render();
+  $list.append($nextSlot);
+
+  $("#ui > .toolbar").
+    after($list).
+    after("<h2>Next Session</h2>");
+}
+
+
+function getNextSlotForDay(day)
+{
+  var $panel = $("#" + domid(day, 'panel'));
+  return $panel.find("ul > li:nth(0)");
 }
