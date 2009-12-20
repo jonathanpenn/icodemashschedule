@@ -9,8 +9,8 @@ class CacheManifesto
 
   def call(env)
     if env['PATH_INFO'] == '/cache.manifest'
-      # [200, {'Content-Type' => 'text/cache-manifest'}, manifest]
-      [404, {}, '']
+      [200, {'Content-Type' => 'text/cache-manifest'}, manifest]
+      # [404, {}, '']
     elsif env['PATH_INFO'] == '/index.html'
       [200, {}, IndexTemplate.render]
     elsif env['PATH_INFO'] == '/test'
