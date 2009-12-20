@@ -25,8 +25,15 @@ $(document).ready(function() {
     ]
   });
 
+  var aboutMenu = new MenuList({
+    items: [
+      new MenuListItem({ title: 'About this app...', panel: 'about_panel' })
+    ]
+  });
+
   $("#ui").append("<h2>2010 Schedule</h2>");
   $("#ui").append(mainMenu.$render());
+  $("#ui").append(aboutMenu.$render());
 
   for (day in presByDays) {
     createPanelForDay(day, presByDays[day]);
