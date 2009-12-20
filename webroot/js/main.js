@@ -12,17 +12,8 @@ $.jQTouch({
 presentations = [];
 
 $(document).ready(function() {
-  var loader = new DataLoader();
-  var schedule = loader.loadFrom("codemash.html");
-
-  $("body").append(schedule);
-
-  $("body > div._presentation").each(function() {
-    var presentation = new Presentation($(this));
-    presentations.push(presentation);
-  });
-
-  presentations = SortPresentations.byStartTime(presentations);
+  loadAndInsertSchedulePanels();
+  loadPresentationArray();
 
   var presByDays = GroupPresentations.byDayGroup(presentations);
 
@@ -43,6 +34,26 @@ $(document).ready(function() {
 
   $("#loading").hide();
 });
+
+
+function loadAndInsertSchedulePanels()
+{
+  var loader = new DataLoader();
+  var schedule = loader.loadFrom("codemash.html");
+
+  $("body").append(schedule);
+}
+
+
+function loadPresentationArray()
+{
+  $("body > div._presentation").each(function() {
+    var presentation = new Presentation($(this));
+    presentations.push(presentation);
+  });
+
+  presentations = SortPresentations.byStartTime(presentations);
+}
 
 
 function createPanelForDay(day, presentations)
