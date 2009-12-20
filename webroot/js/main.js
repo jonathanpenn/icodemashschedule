@@ -12,7 +12,6 @@ $.jQTouch({
 presentations = [];
 
 $(document).ready(function() {
-  loadAndInsertSchedulePanels();
   loadPresentationArray();
 
   var presByDays = GroupPresentations.byDayGroup(presentations);
@@ -40,15 +39,6 @@ $(document).ready(function() {
 
   $("#loading").hide();
 });
-
-
-function loadAndInsertSchedulePanels()
-{
-  var loader = new DataLoader();
-  var schedule = loader.loadFrom("codemash.html");
-
-  $("body").append(schedule);
-}
 
 
 function loadPresentationArray()
