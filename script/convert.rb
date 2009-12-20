@@ -16,7 +16,7 @@ end
 def toolbar_html
 <<-EOS
 <div class="toolbar">
-    <h1>Presentation</h1>
+    <h1>Session</h1>
     <a class="back" href="#">Back</a>
   </div>
 EOS
@@ -39,7 +39,7 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
     $event_i += 1
 
     result = <<-EOHTML
-<div id="#{id}" class='_presentation'>
+<div id="#{id}" class='session'>
   #{toolbar_html}
   <div class='meta'>
     <h1 class='title'>#{event.summary}</h1>

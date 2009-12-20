@@ -34,6 +34,10 @@ $(document).ready(function() {
 
   createUpcomingMenuList();
 
+  setTimeout(
+    fixShallowMenuItemsIn(["ui", "thursday_panel", "friday_panel"]),
+    10);
+
   $("#loading").hide();
 });
 
@@ -49,7 +53,7 @@ function loadAndInsertSchedulePanels()
 
 function loadPresentationArray()
 {
-  $("body > div._presentation").each(function() {
+  $("body > div.session").each(function() {
     var presentation = new Presentation($(this));
     presentations.push(presentation);
   });
@@ -136,3 +140,19 @@ function getNextSlotForDay(day)
   var $panel = $("#" + domid(day, 'panel'));
   return $panel.find("ul > li:nth(0)");
 }
+
+
+function fixShallowMenuItemsIn(panels)
+{
+  $.each(panels, function(index, panel_id) {
+    $("#" + panel_id).find("> ul li").each(function() {
+      var $firstLi = $(this);
+      var href = $(this).find("> a").attr("href");
+      var $current = $(href).find("> ul > li");
+      if ($current.length == 1) {
+        $firstLi.find("> a").attr("href", $current.find("a").attr("href"));
+      }
+    });
+  });
+}
+
