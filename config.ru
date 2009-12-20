@@ -1,5 +1,4 @@
 require 'rack'
-require 'delivery'
 require 'cache_manifesto'
 
 APP_VERSION = "0.5"
@@ -12,4 +11,4 @@ use CacheManifesto
 
 use Rack::Static, :urls => ['/'], :root => 'webroot'
 
-run Delivery.new
+run proc { [404, {}, ''] }
