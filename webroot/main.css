@@ -6,7 +6,6 @@ body > div > h2 { color: black; }
 
 .session > .meta > .location:before { content: "Where: "; display: block; float: left; width: 70px; font-weight: bold }
 .session > .meta > .author:before { content: "Author: "; display: block; float: left; width: 70px; font-weight: bold }
-.session > .meta > .startTime:before { content: "When: "; display: block; float: left; width: 70px; font-weight: bold }
 .session > .meta > .endTime { display: none; }
 
 .session > .description { padding: 20px; line-height: 1.6em; }
