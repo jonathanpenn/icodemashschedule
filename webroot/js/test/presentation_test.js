@@ -5,11 +5,11 @@ $(document).ready(function() {
       <div class='toolbar'>\
         <a class='back' href='#'>Back</a>\
       </div>\
-      <ul class='rounded'>\
-        <li class='_title'>Title</li>\
-        <li class='_location'>Location</li>\
-        <li class='_startTime'>Fri, Dec 14, 2009 2:00 am EST</li>\
-        <li class='_endTime'>Fri, Dec 14, 2009 3:00 am EST</li>\
+      <div class='meta'>\
+        <h1 class='title'>Title</h1>\
+        <div class='location'>Location</div>\
+        <div class='startTime'>Fri, Dec 14, 2009 2:00 am EST</div>\
+        <div class='endTime'>Fri, Dec 14, 2009 3:00 am EST</div>\
       </ul>\
       <div class='description'>Description</div>\
     </div>\

@@ -1,26 +1,36 @@
-var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wendesday', 'Thursday', 'Friday', 'Saturday'];
+var weekdays = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wendesday',
+  'Thursday',
+  'Friday',
+  'Saturday'];
+
 
 function Presentation($element)
 {
+  var $meta = $element.find("> div.meta");
+  var $toolbar = $element.find("> div.toolbar");
 
   this.id = $element.attr("id");
-  this.title = $element.find("li._title").html();
-  this.location = $element.find("li._location").html();
+  this.title = $meta.find("> h1.title").html();
+  this.location = $meta.find("> div.location").html();
   this.description = $element.find("div.description").html();
-  this.startTime = new Date(Date.parse($element.find("li._startTime").html()));
-  this.endTime = new Date(Date.parse($element.find("li._endTime").html()));
+  this.startTime = new Date(Date.parse($meta.find("> div.startTime").html()));
+  this.endTime = new Date(Date.parse($meta.find("> div.endTime").html()));
   this.$element = $element;
 
 
   this.setBackButtonTitle = function(title)
   {
-    this.$element.find("> div.toolbar > a.back").html(title);
+    $toolbar.find("> a.back").html(title);
   }
 
 
   this.setBackButtonPanel = function(panel_id)
   {
-    this.$element.find("> div.toolbar > a.back").attr('href', '#' + panel_id);
+    $toolbar.find("> a.back").attr('href', '#' + panel_id);
   }
 
 

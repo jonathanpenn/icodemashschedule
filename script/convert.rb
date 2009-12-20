@@ -13,6 +13,16 @@ def to_html(text)
 end
 
 
+def toolbar_html
+<<-EOS
+<div class="toolbar">
+    <h1>Presentation</h1>
+    <a class="back" href="#">Back</a>
+  </div>
+EOS
+end
+
+
 File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
 
   $event_i = 1
@@ -23,24 +33,20 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
     $event_i += 1
 
     result = <<-EOHTML
-      <div id="#{id}" class='_presentation'>
-        <div class="toolbar">
-          <h1>Presentation</h1>
-          <a class="back" href="#">Back</a>
-        </div>
+<div id="#{id}" class='_presentation'>
+  #{toolbar_html}
+  <div class='meta'>
+    <h1 class='title'>#{event.summary}</h1>
+    <div class='location'>#{event.location}</div>
+    <div class='startTime'>#{event.dtstart}</div>
+    <div class='endTime'>#{event.dtend}</div>
+  </div>
 
-        <ul class="rounded">
-          <li class='_title'>#{event.summary}</li>
-          <li class='_location'>#{event.location}</li>
-          <li class='_startTime'>#{event.dtstart}</li>
-          <li class='_endTime'>#{event.dtend}</li>
-        </ul>
-
-        <div class='description'>
-          #{to_html(event.description)}
-        </div>
-      </div>
-    EOHTML
+  <div class='description'>
+    #{to_html(event.description)}
+  </div>
+</div>
+EOHTML
     f.puts result
 
   end
