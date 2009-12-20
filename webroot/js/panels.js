@@ -10,7 +10,7 @@ function Panel(initData)
   this.backButtonTitle = initData.backButtonTitle || 'Back';
 
 
-  this.render = function()
+  this.$render = function()
   {
     var $html = $("\
       <div id='"+this.id+"'>\

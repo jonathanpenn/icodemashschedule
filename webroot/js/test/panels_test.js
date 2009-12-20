@@ -35,7 +35,7 @@ $(document).ready(function() {
   });
 
 
-  test(".render()", function() {
+  test(".$render()", function() {
     var panel = new Panel({
       id: 'butter_id',
       title: 'Panel 1',
@@ -43,7 +43,7 @@ $(document).ready(function() {
       backPanelId: 'panel_0',
       backButtonTitle: 'Go Back'
     });
-    var $panel = panel.render();
+    var $panel = panel.$render();
 
     expect(5);
     ok( $panel.attr('id') == 'butter_id', "sets the dom id for the panel" );
@@ -66,7 +66,7 @@ $(document).ready(function() {
     });
 
     panel.appendContent("<div>another</div>");
-    var $panel = panel.render();
+    var $panel = panel.$render();
 
     expect(1);
     ok( $panel.find('> div.toolbar').next().next().html() == "another",
