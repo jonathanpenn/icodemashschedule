@@ -22,4 +22,9 @@ class IndexTemplate
   def schedule
     @schedule ||= File.read(File.dirname(__FILE__) + "/webroot/codemash.html")
   end
+
+  def build_version
+    APP_VERSION
+  end
+
 end

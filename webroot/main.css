@@ -11,3 +11,5 @@ body > div > h2 { color: black; }
 .session > .description { padding: 20px; line-height: 1.6em; }
 
 div.session .description p { margin-bottom: 1em; }
+
+#version { text-align: center; color: #aaa; text-transform: uppercase; font-size: .7em; }

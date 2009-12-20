@@ -34,6 +34,7 @@ $(document).ready(function() {
   $("#ui").append("<h2>2010 Schedule</h2>");
   $("#ui").append(mainMenu.$render());
   $("#ui").append(aboutMenu.$render());
+  $("#ui").append($("#version"));
 
   for (day in presByDays) {
     createPanelForDay(day, presByDays[day]);
