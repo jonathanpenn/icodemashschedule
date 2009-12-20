@@ -41,7 +41,7 @@ EOM
   def file_list
     path = File.expand_path(File.dirname(__FILE__))
     files = Dir[path+"/webroot/**/*"].reject do |file|
-      File.directory?(file) || file =~ /\/test/
+      File.directory?(file) || file =~ /\/test/ || file =~ /codemash\.html/
     end.map do |file|
       file.gsub(path+"/webroot/",'')
     end
