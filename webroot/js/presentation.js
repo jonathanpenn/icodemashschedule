@@ -18,6 +18,12 @@ function Presentation($element)
   }
 
 
+  this.setBackButtonPanel = function(panel_id)
+  {
+    this.$element.find("> div.toolbar > a.back").attr('href', '#' + panel_id);
+  }
+
+
   this.dayGroup = function()
   {
     return weekdays[this.startTime.getDay()];

@@ -71,6 +71,14 @@ $(document).ready(function() {
       "exchanges the old back button title for a new one" );
   });
 
+
+  test(".setBackButtonPanel(panel_id)", function() {
+    presentation.setBackButtonPanel('some_other_id');
+    expect(1);
+    ok( presentation.$element.find("a.back").attr('href') == '#some_other_id',
+      "sets back href to the new panel id" );
+  });
+
 });
 
 
