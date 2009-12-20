@@ -8,14 +8,18 @@ class CacheManifesto
   end
 
   def call(env)
-    if env['PATH_INFO'] == '/cache.manifest'
-      [200, {'Content-Type' => 'text/cache-manifest'}, manifest]
-      # [404, {}, '']
-    elsif env['PATH_INFO'] == '/index.html'
+    case env['PATH_INFO']
+    when '/cache.manifest'
+      if HTML5_CACHING
+        render_cache_manifest
+      else
+        render_not_found
+      end
+    when '/index.html'
       [200, {}, IndexTemplate.render]
-    elsif env['PATH_INFO'] == '/test'
+    when '/test'
       redirect_to '/test.html'
-    elsif env['PATH_INFO'] == '/'
+    when '/'
       redirect_to '/index.html'
     else
       @app.call(env)
@@ -29,11 +33,21 @@ class CacheManifesto
     [301, {'Location' => url}, text]
   end
 
+  def render_not_found
+    [404, {}, '']
+  end
+
+  def render_cache_manifest
+    [200, {'Content-Type' => 'text/cache-manifest'}, manifest]
+  end
+
+
   def manifest
     <<EOM
 CACHE MANIFEST
 # Version #{APP_VERSION}
 
+index.html
 #{file_list}
 EOM
   end
@@ -41,11 +55,18 @@ EOM
   def file_list
     path = File.expand_path(File.dirname(__FILE__))
     files = Dir[path+"/webroot/**/*"].reject do |file|
-      File.directory?(file) || file =~ /\/test/ || file =~ /codemash\.html/ || file =~ /\.erb$/
+      dont_include?(file)
     end.map do |file|
       file.gsub(path+"/webroot/",'')
     end
     files.join("\n")
+  end
+
+  def dont_include? file
+    File.directory?(file) ||
+      file =~ /\/test/ ||
+      file =~ /codemash\.html/ ||
+      file =~ /\.erb$/
   end
 
 end
