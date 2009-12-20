@@ -47,25 +47,48 @@ $(document).ready(function() {
 
 function createPanelForDay(day, presentations)
 {
-  var presByTime = GroupPresentations.byTimeGroup(presentations);
-  var dayTimeList = new MenuList();
-
-  for (time in presByTime) {
-    var id = domid(day, time);
-    dayTimeList.items.push(new MenuListItem({ title: time, panel: id }));
-    createPanelForTime(day, time, presByTime[time]);
-  }
+  var $content = createDayTimeList(day, GroupPresentations.byTimeGroup(presentations));
 
   var dayPanel = new Panel({
     id: domid(day, 'panel'),
     title: day,
-    content: dayTimeList.$render()
+    content: $content.$render()
   });
+
   $("body").append(dayPanel.$render());
 }
 
 
+function createDayTimeList(day, presentations)
+{
+  var dayTimeList = new MenuList();
+
+  for (time in presentations) {
+    var id = domid(day, time);
+    var item = new MenuListItem({ title: time, panel: id });
+    dayTimeList.items.push(item);
+    createPanelForTime(day, time, presentations[time]);
+  }
+
+  return dayTimeList;
+}
+
+
 function createPanelForTime(day, time, presentations)
+{
+  var $content = createPresentationList(day, time, presentations);
+
+  var panel = new Panel({
+    id: domid(day, time),
+    title: day + " "  + time,
+    content: $content.$render()
+  });
+
+  $("body").append(panel.$render());
+}
+
+
+function createPresentationList(day, time, presentations)
 {
   var presList = new MenuList();
 
@@ -75,11 +98,5 @@ function createPanelForTime(day, time, presentations)
     pres.setBackButtonTitle(time);
   });
 
-  var panel = new Panel({
-    id: domid(day, time),
-    title: day + " "  + time,
-    content: presList.$render()
-  });
-
-  $("body").append(panel.$render());
+  return presList;
 }
