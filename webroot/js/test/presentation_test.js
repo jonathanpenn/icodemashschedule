@@ -44,23 +44,14 @@ $(document).ready(function() {
 
 
   test(".dayGroup()", function() {
-    expect(2);
-
+    expect(1);
     ok( presentation.dayGroup() == 'Monday' );
-    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 3:00 am EST'));
-    ok( presentation.dayGroup() == 'Tuesday' );
   });
 
 
   test(".timeGroup()", function() {
-    expect(3);
-
-    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 2:00 am EST'));
+    expect(1);
     ok( presentation.timeGroup() == '2:00 am' );
-    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 3:00 pm EST'));
-    ok( presentation.timeGroup() == '3:00 pm' );
-    presentation.startTime = new Date(Date.parse('Tue, Dec 15, 2009 12:00 pm EST'));
-    ok( presentation.timeGroup() == '12:00 pm' );
   });
 
 

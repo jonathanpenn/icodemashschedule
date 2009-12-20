@@ -1,13 +1,3 @@
-var weekdays = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wendesday',
-  'Thursday',
-  'Friday',
-  'Saturday'];
-
-
 function Presentation($element)
 {
   var $meta = $element.find("> div.meta");
@@ -36,48 +26,15 @@ function Presentation($element)
 
   this.dayGroup = function()
   {
-    return weekdays[this.startTime.getDay()];
+    return formatting.weekday(this.startTime);
   }
 
 
   this.timeGroup = function()
   {
-    var time = this.startTime;
-    return noMilitary(time) +
-      ":" +
-      leftPadZero(time.getMinutes()) +
-      " " +
-      ampm(time);
+    return formatting.shortTime(this.startTime);
   }
 
-
-  function noMilitary(time)
-  {
-    if (time.getHours() > 12) {
-      return time.getHours() - 12;
-    } else if (time.getHours() == 0) {
-      return 12;
-    }
-    return time.getHours();
-  }
-
-
-  function leftPadZero(num)
-  {
-    if (num < 10) {
-      return "0" + num;
-    }
-    return num + "";
-  }
-
-
-  function ampm(time)
-  {
-    if (time.getHours() >= 12) {
-      return "pm";
-    }
-    return "am";
-  }
 
 }
 
