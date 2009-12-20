@@ -45,7 +45,7 @@ class CodeMash
   def manifest
     <<EOM
 CACHE MANIFEST
-# Version #{APP_VERSION}
+# For version #{APP_VERSION}
 
 index.html
 #{file_list}

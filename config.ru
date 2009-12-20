@@ -1,7 +1,7 @@
 require 'rack'
 require 'code_mash'
 
-APP_VERSION = "0.5"
+APP_VERSION = File.read(File.dirname(__FILE__) + '/VERSION')
 HTML5_CACHING = false
 
 use Rack::ShowExceptions
