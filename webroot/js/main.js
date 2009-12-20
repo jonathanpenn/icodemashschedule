@@ -28,52 +28,58 @@ $(document).ready(function() {
 
   var mainMenu = new MenuList({
     items: [
+      new MenuListItem({ title: 'Wednesday (Precompiler)', panel: 'wednesday_panel' }),
       new MenuListItem({ title: 'Thursday', panel: 'thursday_panel' }),
       new MenuListItem({ title: 'Friday', panel: 'friday_panel' })
     ]
   });
 
+  $("#ui").append("<h2>2010 Schedule</h2>");
   $("#ui").append(mainMenu.$render());
 
   for (day in presByDays) {
-    var presByTime = GroupPresentations.byTimeGroup(presByDays[day]);
-    var dayTimeList = new MenuList();
-
-    for (time in presByTime) {
-      id = domid(day, time);
-      var item = new MenuListItem({
-        title: time,
-        panel: id
-      });
-      dayTimeList.items.push(item);
-
-      var presList = new MenuList();
-
-      $.each(presByTime[time], function(index, pres) {
-        var item = new MenuListItem({
-          panel: pres.id,
-          title: pres.title
-        });
-        presList.items.push(item);
-        pres.setBackButtonTitle(time);
-      });
-
-      var panel = new Panel({
-        id: id,
-        title: day + " "  + time,
-        content: presList.$render()
-      });
-
-      $("body").append(panel.$render());
-    }
-
-    var dayPanel = new Panel({
-      id: domid(day, 'panel'),
-      title: day,
-      content: dayTimeList.$render()
-    });
-    $("body").append(dayPanel.$render());
+    createPanelForDay(day, presByDays[day]);
   }
 
   $("#loading").hide();
 });
+
+
+function createPanelForDay(day, presentations)
+{
+  var presByTime = GroupPresentations.byTimeGroup(presentations);
+  var dayTimeList = new MenuList();
+
+  for (time in presByTime) {
+    var id = domid(day, time);
+    dayTimeList.items.push(new MenuListItem({ title: time, panel: id }));
+    createPanelForTime(day, time, presByTime[time]);
+  }
+
+  var dayPanel = new Panel({
+    id: domid(day, 'panel'),
+    title: day,
+    content: dayTimeList.$render()
+  });
+  $("body").append(dayPanel.$render());
+}
+
+
+function createPanelForTime(day, time, presentations)
+{
+  var presList = new MenuList();
+
+  $.each(presentations, function(index, pres) {
+    var item = new MenuListItem({ panel: pres.id, title: pres.title });
+    presList.items.push(item);
+    pres.setBackButtonTitle(time);
+  });
+
+  var panel = new Panel({
+    id: domid(day, time),
+    title: day + " "  + time,
+    content: presList.$render()
+  });
+
+  $("body").append(panel.$render());
+}
