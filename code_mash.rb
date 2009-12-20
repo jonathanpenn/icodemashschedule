@@ -1,7 +1,7 @@
 require 'index_template'
 
 
-class CacheManifesto
+class CodeMash
 
   def initialize app, options={}
     @app = app
