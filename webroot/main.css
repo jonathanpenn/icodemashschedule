@@ -8,10 +8,10 @@ body > div > h2 { color: black; }
 .session > .meta > .author:before { content: "Author: "; display: block; float: left; width: 70px; font-weight: bold }
 .session > .meta > .endTime { display: none; }
 
-.session > .description { padding: 20px; line-height: 1.6em; }
-
 div.session .description p { margin-bottom: 1em; }
 
-#version { text-align: center; color: #aaa; text-transform: uppercase; font-size: .7em; }
+#version { text-align: center; color: #aaa; padding-bottom: 20px; text-transform: uppercase; font-size: .7em; }
 
-body > div > .content { padding: 20px; }
+body > div > .description { padding: 20px; line-height: 1.6em; }
+body > div > .description ul { background: none; border: none; line-height: 1.6em; }
+body > div > .description ul li { list-style-type: disc; overflow: visible; background: none; border: none; padding: 0px; margin: 0px 0px 0px 10px; color: white; font-weight: normal; font-size: 1em; }
