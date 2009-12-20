@@ -135,14 +135,19 @@ function getNextSlotForDay(day)
 function fixShallowMenuItemsIn(panels)
 {
   $.each(panels, function(index, panel_id) {
+
     $("#" + panel_id).find("> ul li").each(function() {
       var $firstLi = $(this);
       var href = $(this).find("> a").attr("href");
       var $current = $(href).find("> ul > li");
       if ($current.length == 1) {
-        $firstLi.find("> a").attr("href", $current.find("a").attr("href"));
+        var $a = $current.find("a");
+        $firstLi.find("> a").
+          attr("href", $a.attr("href")).
+          append(' - ' + $a.html());
       }
     });
+
   });
 }
 
