@@ -4,8 +4,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <link rel="apple-touch-startup-image" href="img/default.png">
-
     <script src="js/lib/jquery.js" type="text/javascript"></script>
     <script src="jqtouch/jqtouch.min.js" type="application/x-javascript" charset="utf-8"></script>
     <style type="text/css" media="screen">@import "jqtouch/jqtouch.min.css";</style>

@@ -1,6 +1,7 @@
 $.jQTouch({
   icon: 'img/icon.png',
   statusBar: 'black',
+  startupScreen: 'img/splash.png',
   preloadImages: [
     'themes/jqt/img/chevron_white.png',
     'themes/jqt/img/bg_row_select.gif',
