@@ -23,6 +23,12 @@ EOS
 end
 
 
+def time_out(time)
+  new_time = time - (60 * 60 * 5)
+  new_time.strftime("%a %b %d %H:%M:%S EST 2010")
+end
+
+
 File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
 
   $event_i = 1
@@ -38,8 +44,8 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
   <div class='meta'>
     <h1 class='title'>#{event.summary}</h1>
     <div class='location'>#{event.location}</div>
-    <div class='startTime'>#{event.dtstart}</div>
-    <div class='endTime'>#{event.dtend}</div>
+    <div class='startTime'>#{time_out(event.dtstart)}</div>
+    <div class='endTime'>#{time_out(event.dtend)}</div>
   </div>
 
   <div class='description'>
