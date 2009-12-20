@@ -56,6 +56,8 @@ function loadPresentationArray()
   $("body > div.session").each(function() {
     var presentation = new Presentation($(this));
     presentations.push(presentation);
+    $(this).bind("pageAnimationStart", formatSessionDates).
+      data("presentation", presentation);
   });
 
   presentations = SortPresentations.byStartTime(presentations);
@@ -156,3 +158,21 @@ function fixShallowMenuItemsIn(panels)
   });
 }
 
+
+function formatSessionDates(event, info)
+{
+  var shortTime = formatting.shortTime;
+  var weekday = formatting.weekday;
+
+  if (info['direction'] == 'in' && !$(this).data('alreadyFormatted')) {
+    $(this).data('alreadyFormatted', true);
+    var $meta = $(this).find("> .meta");
+    var $startElm = $meta.find(".startTime");
+    var presentation = $(this).data("presentation");
+    $startElm.html("\
+      "+weekday(presentation.startTime)+"\
+      "+shortTime(presentation.startTime)+" - \
+      "+shortTime(presentation.endTime)+"\
+    ");
+  }
+}
