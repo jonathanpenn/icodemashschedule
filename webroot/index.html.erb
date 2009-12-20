@@ -25,12 +25,31 @@
     <div class="toolbar">
       <h1>iCodeMash</h1>
     </div>
+
+    <h2>Next Session</h2>
+    <ul id='nextSession'></ul>
+
+    <h2>2010 Schedule</h2>
+    <ul id='startingSchedule'></ul>
+
+    <ul class='rounded'>
+      <li class='arrow'><a href='#aboutThisApp'>About this app</a></li>
+    </ul>
+
+    <div id="version">
+      Offline Cached Version <%= build_version %>
+    </div>
   </div>
 
-  <div id="version">
-    Offline Cached Version <%= build_version %>
-  </div>
+  <div id='aboutThisApp'>
+    <div class="toolbar">
+      <h1>About</h1>
+    </div>
 
+    <div class='description'>
+      Yup, here's where stuff goes.
+    </div>
+  </div>
 
   <%= schedule %>
 </body>

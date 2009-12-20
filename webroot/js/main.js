@@ -25,16 +25,7 @@ $(document).ready(function() {
     ]
   });
 
-  var aboutMenu = new MenuList({
-    items: [
-      new MenuListItem({ title: 'About this app...', panel: 'about_panel' })
-    ]
-  });
-
-  $("#ui").append("<h2>2010 Schedule</h2>");
-  $("#ui").append(mainMenu.$render());
-  $("#ui").append(aboutMenu.$render());
-  $("#ui").append($("#version"));
+  $("#startingSchedule").replaceWith(mainMenu.$render());
 
   for (day in presByDays) {
     createPanelForDay(day, presByDays[day]);
@@ -130,9 +121,7 @@ function createUpcomingMenuList()
   var $list = list.$render();
   $list.append($nextSlot);
 
-  $("#ui > .toolbar").
-    after($list).
-    after("<h2>Next Session</h2>");
+  $("#nextSession").replaceWith($list);
 }
 
 
