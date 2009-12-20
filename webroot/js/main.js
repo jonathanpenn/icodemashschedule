@@ -97,7 +97,7 @@ function createPanelForTime(day, time, presentations)
 
   var panel = new Panel({
     id: domid(day, time),
-    title: day + " "  + time,
+    title: day.slice(0,3) + " "  + time,
     content: $content.$render()
   });
 
