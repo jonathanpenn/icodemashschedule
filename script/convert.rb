@@ -52,6 +52,10 @@ File.open(File.join(webroot_dir, "codemash.html"), "w") do |f|
     #{to_html(event.description)}
   </div>
 </div>
+
+
+
+
 EOHTML
     f.puts result
 
