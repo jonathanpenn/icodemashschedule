@@ -111,8 +111,8 @@ function createPresentationList(day, time, presentations)
 
 function createUpcomingMenuList()
 {
-  var $nextSlot = getNextSlotForDay('Thursday').clone();
-  $nextSlot.find("a").prepend("Thursday ");
+  var $nextSlot = getNextSlotForDay('Wednesday').clone();
+  $nextSlot.find("a").prepend("Wednesday ").attr('href', '#pid68');
 
   var list = new MenuList();
 
