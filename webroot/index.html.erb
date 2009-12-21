@@ -14,6 +14,7 @@
     <script src='js/panels.js' type="text/javascript"></script>
     <script src='js/menu_list.js' type="text/javascript"></script>
     <script src='js/formatting.js' type="text/javascript"></script>
+    <script src='js/cache_manager.js' type="text/javascript"></script>
     <script src='js/main.js' type="text/javascript"></script>
 
     <style type="text/css" media="screen">@import "main.css";</style>
@@ -27,14 +28,19 @@
     </div>
 
     <h2>Next Session</h2>
-    <ul id='nextSession'></ul>
+    <ul id='nextSession' class='rounded'>
+      <li>Loading...</li>
+    </ul>
 
     <h2>2010 Schedule</h2>
-    <ul id='startingSchedule'></ul>
+    <ul id='startingSchedule' class='rounded'>
+      <li>Loading...</li>
+      <li>Loading...</li>
+      <li>Loading...</li>
+    </ul>
 
     <ul class='rounded'>
       <li class='arrow'><a href='#aboutThisApp'>About this app</a></li>
-      <li class='arrow'><a href='#changeLog'>Change Log</a></li>
     </ul>
 
     <div id="version">
@@ -51,6 +57,10 @@
     <div class='description'>
       Yup, here's where stuff goes.
     </div>
+
+    <ul class='rounded'>
+      <li class='arrow'><a href='#changeLog'>Change Log</a></li>
+    </ul>
   </div>
 
   <div id='changeLog'>

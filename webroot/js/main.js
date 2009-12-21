@@ -13,29 +13,27 @@ $.jQTouch({
 presentations = [];
 
 $(document).ready(function() {
-  loadPresentationArray();
+  setTimeout(function() {
+    loadPresentationArray();
 
-  var presByDays = GroupPresentations.byDayGroup(presentations);
+    var presByDays = GroupPresentations.byDayGroup(presentations);
 
-  var mainMenu = new MenuList({
-    items: [
-      new MenuListItem({ title: 'Wednesday (Precompiler)', panel: 'wednesday_panel' }),
-      new MenuListItem({ title: 'Thursday', panel: 'thursday_panel' }),
-      new MenuListItem({ title: 'Friday', panel: 'friday_panel' })
-    ]
-  });
+    var mainMenu = new MenuList({
+      items: [
+        new MenuListItem({ title: 'Wednesday (Precompiler)', panel: 'wednesday_panel' }),
+        new MenuListItem({ title: 'Thursday', panel: 'thursday_panel' }),
+        new MenuListItem({ title: 'Friday', panel: 'friday_panel' })
+      ]
+    });
 
-  $("#startingSchedule").replaceWith(mainMenu.$render());
+    $("#startingSchedule").replaceWith(mainMenu.$render());
 
-  for (day in presByDays) {
-    createPanelForDay(day, presByDays[day]);
-  }
-
-  createUpcomingMenuList();
-
-  setTimeout(
-    fixShallowMenuItemsIn(["ui", "thursday_panel", "friday_panel"]),
-    10);
+    for (day in presByDays) {
+      createPanelForDay(day, presByDays[day]);
+    }
+    createUpcomingMenuList();
+    fixShallowMenuItemsIn(["wednesday_panel", "thursday_panel", "friday_panel"]);
+  }, 10);
 
   $("#loading").hide();
 });
