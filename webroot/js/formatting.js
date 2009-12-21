@@ -4,7 +4,7 @@
     'Sunday',
     'Monday',
     'Tuesday',
-    'Wendesday',
+    'Wednesday',
     'Thursday',
     'Friday',
     'Saturday'];
