@@ -8,14 +8,15 @@ body > div > h2 { color: black; }
 .session > .meta > .speaker:before { content: "Speaker: "; color: #fff; display: block; float: left; width: 80px; font-weight: bold }
 .session > .meta > .endTime { display: none; }
 
-div.session .description p { margin-bottom: 1em; }
-div.session .description b { color: #fff; }
-
 #version { text-align: center; color: #aaa; padding-bottom: 20px; text-transform: uppercase; font-size: .7em; }
 
 body > div > .description { padding: 20px; line-height: 1.6em; }
 body > div > .description ul { background: none; border: none; line-height: 1.6em; }
 body > div > .description ul li { list-style-type: disc; overflow: visible; background: none; border: none; padding: 0px; margin: 0px 0px 0px 15px; color: white; font-weight: normal; font-size: .9em; }
+body > div > .description p { margin-bottom: 1em; }
+body > div > .description b { color: #fff; }
+body > div > .description a { color: lightblue; }
+
 
 
 #version.updating { color: yellow; }
