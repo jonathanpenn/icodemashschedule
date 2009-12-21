@@ -46,8 +46,6 @@ class CodeMash
     <<EOM
 CACHE MANIFEST
 # For version #{APP_VERSION}
-
-index.html
 #{file_list}
 EOM
   end
@@ -66,7 +64,10 @@ EOM
     File.directory?(file) ||
       file =~ /\/test/ ||
       file =~ /codemash\.html/ ||
-      file =~ /\.erb$/
+      file =~ /\.erb$/ ||
+      file =~ /qunit/ ||
+      file =~ /jqtouch\.(js|css)/ ||
+      file =~ /theme\.css/
   end
 
 end
