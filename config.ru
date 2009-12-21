@@ -6,9 +6,7 @@ HTML5_CACHING = true
 
 use Rack::ShowExceptions
 use Rack::ContentType, 'text/html'
-
 use CodeMash
-
 use Rack::Static, :urls => ['/'], :root => 'webroot'
-
+use Rack::Deflater
 run proc { [404, {}, ''] }
