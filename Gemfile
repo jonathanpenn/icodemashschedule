@@ -1,4 +1,3 @@
-disable_system_gems
 clear_sources
 bundle_path 'gems'
 
