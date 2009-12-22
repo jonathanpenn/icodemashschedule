@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
   var cache = window.applicationCache;
+  if (!cache) { return; }
+
   var $status = $("#version");
 
   function checkOnError()
