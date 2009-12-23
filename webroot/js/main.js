@@ -11,6 +11,7 @@ $.jQTouch({
 });
 
 $(document).ready(function() {
+  sessions = SortSessions.byStartTime(sessions);
   var sessionsByDay = GroupSessions.byDayGroup(sessions);
 
   var mainMenu = new MenuList();
