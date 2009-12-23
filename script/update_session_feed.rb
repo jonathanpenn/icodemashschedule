@@ -11,12 +11,14 @@ def main
 
   doc = Nokogiri(open(session_feed).read)
 
+  puts "(function() {"
+  puts "var ses = [];"
   (doc/'Session').each do |node|
     session = Session.new(node)
-    session.to_html
+    puts session.to_js
   end
-
-  puts "Win condition acquired."
+  puts "window.sessions = ses;"
+  puts "})();"
 end
 
 
@@ -67,21 +69,26 @@ class Session
   end
 
 
-  def to_html
-    <<-EOHTML
-<div id="session_#{id}" class='session'>
-<div class='content'>
-<h1 class='title'>#{title}</h1>
-<div class='speakerName'>#{speaker_name}</div>
-<div class='room'>#{room}</div>
-<div class='start'>#{start}</div>
-<div class='difficulty'>#{difficulty}</div>
-<div class='technology'>#{technology}</div>
-<div class='track'>#{track}</div>
-<div class='description'>#{abstract}</div>
-</div>
-</div>
-EOHTML
+  def to_js
+    %{ses.push(new Session({id:"session_#{j(id)}",title:"#{j(title)}",speaker:"#{j(speaker_name)}",start:"#{j(start)}",room:"#{j(room)})",difficulty:"#{j(difficulty)}",technology:"#{j(technology)}",track:"#{j(track)}",description:"#{j(abstract)}"}));}
+  end
+
+
+  JS_ESCAPE_MAP = {
+    '\\'    => '\\\\',
+    '</'    => '<\/',
+    "\r\n"  => '\n',
+    "\n"    => '\n',
+    "\r"    => '\n',
+    '"'     => '\\"',
+    "'"     => "\\'" }
+
+  def j(javascript)
+    if javascript
+      javascript.gsub(/(\\|<\/|\r\n|[\n\r"'])/) { JS_ESCAPE_MAP[$1] }
+    else
+      ''
+    end
   end
 
 end
