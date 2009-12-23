@@ -11,15 +11,15 @@ $.jQTouch({
 });
 
 $(document).ready(function() {
-  var sessionsByDays = GroupSessions.byDayGroup(sessions);
+  var sessionsByDay = GroupSessions.byDayGroup(sessions);
 
-  var mainMenu = new MenuList({
-    items: [
-      new MenuListItem({ title: 'Wednesday (Precompiler)', panel: 'wednesday_panel' }),
-      new MenuListItem({ title: 'Thursday', panel: 'thursday_panel' }),
-      new MenuListItem({ title: 'Friday', panel: 'friday_panel' })
-    ]
-  });
+  var mainMenu = new MenuList();
+
+  for(day in sessionsByDay) {
+    mainMenu.items.push(
+      new MenuListItem({title: day})
+    );
+  }
 
   $("#startingSchedule").replaceWith(mainMenu.$render());
 
