@@ -75,7 +75,7 @@ class Session
 
 
   def to_js
-    %{ses.push(new Session({id:"session_#{j(id)}",title:"#{j(title)}",speaker:"#{j(speaker_name)}",start:#{(start_js)},room:"#{j(room)})",difficulty:"#{j(difficulty)}",technology:"#{j(technology)}",track:"#{j(track)}",description:"#{j(abstract)}"}));}
+    %{ses.push(new Session({id:"session_#{j(id)}",title:"#{j(title)}",speaker:"#{j(speaker_name)}",start:#{(start_js)},room:"#{j(room)})",difficulty:"#{j(difficulty)}",technology:"#{j(technology)}",track:"#{j(track)}",abstract:"#{j(abstract)}"}));}
   end
 
 
