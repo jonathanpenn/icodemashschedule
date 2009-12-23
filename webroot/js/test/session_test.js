@@ -54,25 +54,25 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-  module("SortPresentations");
+  module("SortSessions");
 
 
-  test(".byStartTime(presentations)", function() {
-    var presentations = [
+  test(".byStartTime(sessions)", function() {
+    var sessions = [
       {startTime: 1, title: 'a'},
       {startTime: 3, title: 'a'},
       {startTime: 2, title: 'b'},
       {startTime: 2, title: 'a'}
     ];
 
-    presentations = SortPresentations.byStartTime(presentations);
+    sessions = SortSessions.byStartTime(sessions);
     expect(6);
-    ok( presentations[0].startTime == 1);
-    ok( presentations[1].startTime == 2);
-    ok( presentations[1].title == 'a');
-    ok( presentations[2].startTime == 2);
-    ok( presentations[2].title == 'b');
-    ok( presentations[3].startTime == 3);
+    ok( sessions[0].startTime == 1);
+    ok( sessions[1].startTime == 2);
+    ok( sessions[1].title == 'a');
+    ok( sessions[2].startTime == 2);
+    ok( sessions[2].title == 'b');
+    ok( sessions[3].startTime == 3);
   });
 
 });
@@ -99,11 +99,11 @@ $(document).ready(function() {
   }
 
 
-  module("GroupPresentations", {setup: setup, teardown: teardown});
+  module("GroupSessions", {setup: setup, teardown: teardown});
 
 
   test(".byDayGroup()", function() {
-    var grouper = GroupPresentations.byDayGroup([]);
+    var grouper = GroupSessions.byDayGroup([]);
     var obj = { dayGroup: function() { return 'yes'; } };
 
     expect(1);
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
 
   test(".byTimeGroup()", function() {
-    var grouper = GroupPresentations.byTimeGroup([]);
+    var grouper = GroupSessions.byTimeGroup([]);
     var obj = { timeGroup: function() { return 'yes'; } };
 
     expect(1);

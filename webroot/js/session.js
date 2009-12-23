@@ -17,11 +17,11 @@ function Session(initData)
 }
 
 
-SortPresentations = {
+SortSessions = {
 
-  byStartTime: function(presentations)
+  byStartTime: function(sessions)
   {
-    return presentations.sort(function(a, b) {
+    return sessions.sort(function(a, b) {
       if (a.startTime > b.startTime) {
         return 1;
       } else if (a.startTime < b.startTime) {
@@ -35,18 +35,18 @@ SortPresentations = {
 };
 
 
-GroupPresentations = {
+GroupSessions = {
 
-  byDayGroup: function(presentations)
+  byDayGroup: function(sessions)
   {
-    return $.groupBy(presentations, function(rec) {
+    return $.groupBy(sessions, function(rec) {
       return rec.dayGroup();
     });
   },
 
-  byTimeGroup: function(presentations)
+  byTimeGroup: function(sessions)
   {
-    return $.groupBy(presentations, function(rec) {
+    return $.groupBy(sessions, function(rec) {
       return rec.timeGroup();
     });
   }
