@@ -19,10 +19,6 @@ class IndexTemplate
     @template_data ||= File.read(File.dirname(__FILE__) + "/webroot/index.html.erb")
   end
 
-  def schedule
-    @schedule ||= File.read(File.dirname(__FILE__) + "/webroot/codemash.html")
-  end
-
   def build_version
     APP_VERSION
   end
