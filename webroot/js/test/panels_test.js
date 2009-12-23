@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   module("Panel object");
 
 
@@ -73,5 +72,58 @@ $(document).ready(function() {
       "it adds content at the end of the panel div" );
   });
 
+
+});
+
+
+$(document).ready(function() {
+
+  var session, panel;
+
+  function setup()
+  {
+    session = new Session({
+      id:"session_1",
+      title:"Some Session",
+      speaker:"Johnny Fedora",
+      room:"Bathroom",
+      start: new Date(43215),
+      difficulty:"Beginner",
+      technology:"Java",
+      track:"Web Frameworks",
+      abstract:"We'll Learn Stuff"
+    });
+
+    panel = Panel.generateFromSession(session);
+  }
+
+  module("Panel.generateFromSession(session)", {setup:setup});
+
+  test("renders expected html", function() {
+    var $html = panel.$render();
+
+    expect(11);
+    ok( $html.find(".toolbar h1").html() == 'Session',
+      "Sets the panel title to 'Session'" );
+    ok( $html.find(".toolbar + .content").length == 1,
+      "adds a content element after the toolbar" );
+    ok( $html.find(".content > h1").html() == 'Some Session',
+      "has the title" );
+    ok( $html.find(".content > div.speaker").html() == 'Johnny Fedora',
+      "has the speaker name" );
+    ok( $html.find(".content > div.room").html() == 'Bathroom',
+      "has the room" );
+    ok( $html.find(".content > div.start").html() == 'Wednesday 7:00 pm',
+      "has the start time" );
+    ok( $html.find(".content > div.difficulty").html() == 'Beginner',
+      "has the difficulty" );
+    ok( $html.find(".content > div.technology").html() == 'Java',
+      "has the technology" );
+    ok( $html.find(".content > div.track").html() == 'Web Frameworks',
+      "has the track" );
+    ok( $html.find(".content > div.abstract").html() == "We'll Learn Stuff",
+      "has the abstract" );
+    ok( $html.data("session") == session, "it stores the session as data" );
+  });
 
 });

@@ -45,3 +45,38 @@ Panel.generateId = function()
 {
   return "panel_" + Panel.id_counter++;
 }
+
+
+Panel.generateFromSession = function(session)
+{
+  var panel = new Panel({
+    title: "Session"
+  });
+
+  var formattedTime = formatting.weekday(session.start) +
+    " " + formatting.shortTime(session.start);
+
+  panel.content = "\
+    <div class='content'>\
+      <h1>"+session.title+"</h1>\
+      <div class='speaker'>"+session.speaker+"</div>\
+      <div class='room'>"+session.room+"</div>\
+      <div class='start'>"+formattedTime+"</div>\
+      <div class='difficulty'>"+session.difficulty+"</div>\
+      <div class='technology'>"+session.technology+"</div>\
+      <div class='track'>"+session.track+"</div>\
+      <div class='abstract'>"+session.abstract+"</div>\
+    </div>\
+  ";
+
+  var old$render = panel.$render;
+
+  panel.$render = function()
+  {
+    var $html = old$render.call(panel);
+    $html.data('session', session);
+    return $html;
+  }
+
+  return panel;
+}
