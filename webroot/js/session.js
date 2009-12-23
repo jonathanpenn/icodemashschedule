@@ -22,9 +22,9 @@ SortSessions = {
   byStartTime: function(sessions)
   {
     return sessions.sort(function(a, b) {
-      if (a.startTime > b.startTime) {
+      if (a.start > b.start) {
         return 1;
-      } else if (a.startTime < b.startTime) {
+      } else if (a.start < b.start) {
         return -1;
       } else {
         return a.title > b.title ? 1 : -1;

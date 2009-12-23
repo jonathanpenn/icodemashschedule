@@ -59,20 +59,20 @@ $(document).ready(function() {
 
   test(".byStartTime(sessions)", function() {
     var sessions = [
-      {startTime: 1, title: 'a'},
-      {startTime: 3, title: 'a'},
-      {startTime: 2, title: 'b'},
-      {startTime: 2, title: 'a'}
+      {start: 1, title: 'a'},
+      {start: 3, title: 'a'},
+      {start: 2, title: 'b'},
+      {start: 2, title: 'a'}
     ];
 
     sessions = SortSessions.byStartTime(sessions);
     expect(6);
-    ok( sessions[0].startTime == 1);
-    ok( sessions[1].startTime == 2);
+    ok( sessions[0].start == 1);
+    ok( sessions[1].start == 2);
     ok( sessions[1].title == 'a');
-    ok( sessions[2].startTime == 2);
+    ok( sessions[2].start == 2);
     ok( sessions[2].title == 'b');
-    ok( sessions[3].startTime == 3);
+    ok( sessions[3].start == 3);
   });
 
 });
