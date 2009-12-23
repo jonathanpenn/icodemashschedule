@@ -2,6 +2,7 @@ require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
 require 'digest'
+require 'time'
 
 def main
 
@@ -41,7 +42,7 @@ class Session
   end
 
   def start
-    (@node/'Start').inner_html
+    "new Date("+(Time.parse((@node/'Start').inner_html).to_i.to_s)+"000)"
   end
 
   def room
@@ -70,7 +71,7 @@ class Session
 
 
   def to_js
-    %{ses.push(new Session({id:"session_#{j(id)}",title:"#{j(title)}",speaker:"#{j(speaker_name)}",start:"#{j(start)}",room:"#{j(room)})",difficulty:"#{j(difficulty)}",technology:"#{j(technology)}",track:"#{j(track)}",description:"#{j(abstract)}"}));}
+    %{ses.push(new Session({id:"session_#{j(id)}",title:"#{j(title)}",speaker:"#{j(speaker_name)}",start:#{(start)},room:"#{j(room)})",difficulty:"#{j(difficulty)}",technology:"#{j(technology)}",track:"#{j(track)}",description:"#{j(abstract)}"}));}
   end
 
 
