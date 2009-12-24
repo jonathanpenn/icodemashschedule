@@ -50,6 +50,7 @@ Panel.generateId = function()
 Panel.generateFromSession = function(session)
 {
   var panel = new Panel({
+    id: session.id,
     title: "Session"
   });
 

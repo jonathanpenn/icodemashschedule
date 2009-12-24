@@ -94,6 +94,7 @@ $(document).ready(function() {
       abstract:"We'll Learn Stuff"
     });
 
+    console.log("before render");
     panel = Panel.generateFromSession(session);
   }
 
@@ -102,7 +103,8 @@ $(document).ready(function() {
   test("renders expected html", function() {
     var $html = panel.$render();
 
-    expect(11);
+    expect(12);
+    ok( $html.attr("id") == session.id, "sets session id" );
     ok( $html.find(".toolbar h1").html() == 'Session',
       "Sets the panel title to 'Session'" );
     ok( $html.find(".toolbar + .content").length == 1,
