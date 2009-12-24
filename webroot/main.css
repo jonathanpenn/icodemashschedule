@@ -22,6 +22,10 @@ body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; 
 .session > .content > .abstract { margin-top: 1em; }
 
 
+.session .favStar { float: right; padding: 20px; }
+.session.favorite .favStar { background-color: white; }
+
+
 #version.updating { color: yellow; }
 #version.error { color: #FF6F6F; }
 

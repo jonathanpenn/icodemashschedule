@@ -102,3 +102,14 @@ $(document).ready(function() {
   }
 
 });
+
+
+$(document).ready(function() {
+  $(".session").each(function() {
+    var $session = $(this);
+    $session.find("> .content h1").after("<div class='favStar'>x</div>").
+      next().bind('click', function() {
+        $session.toggleClass('favorite');
+      });
+  });
+});
