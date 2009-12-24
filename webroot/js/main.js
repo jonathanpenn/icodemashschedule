@@ -93,62 +93,12 @@ function renderSessionPanel(session)
 
 $(document).ready(function() {
 
-  var NEXT_SESSION_WINDOW = 10;   // minutes
-  var now = new Date();
-  var threshold = new Date(now.valueOf() - NEXT_SESSION_WINDOW * 60000);
-
-  function showNextSessionSlot()
-  {
-    var slots = getSlots();
-    var nextSlot = getNextSlot(slots);
-
-    if (nextSlot) {
-      $("#nextSession").html("\
-        <li class='arrow'>\
-          <a href='"+slotPanelId(nextSlot)+"'>"+slotDisplayName(nextSlot)+"</a>\
-        </li>\
-      ");
-    } else {
-      $("#nextSession").hide().prev().hide();
-    }
+  var next = new NextSlot(sessions);
+  var $html = next.$renderSince(new Date());
+  if ($html) {
+    $("#nextSession").html($html);
+  } else {
+    $("#nextSession").hide().prev().hide();
   }
-
-  function slotPanelId(slot)
-  {
-    return '#' + domid(formatting.weekday(slot), formatting.shortTime(slot));
-  }
-
-  function slotDisplayName(slot)
-  {
-    return formatting.weekday(slot) + " " + formatting.shortTime(slot);
-  }
-
-  function getSlots()
-  {
-    var sessionsBySlot = GroupSessions.bySlotGroup(sessions);
-    var slots = [];
-    for (slot in sessionsBySlot) {
-      slots.push(slot-0);
-    }
-    return slots;
-  }
-
-  function getNextSlot(slots)
-  {
-    var next;
-
-    $.each(slots, function(index, slot) {
-      slot = new Date(slot-0);
-
-      if (slot > threshold) {
-        next = slot;
-        return false;
-      }
-    });
-
-    return next;
-  }
-
-  showNextSessionSlot();
 
 });
