@@ -16,8 +16,7 @@ $(document).ready(function(){
 
   test("initialization with no data", function() {
     var favs = new Favorites();
-    expect(1);
-    ok( favs.ids.length == 0, "has empty items array" );
+    expect(0);
   });
 
   test("addSession(session)", function() {

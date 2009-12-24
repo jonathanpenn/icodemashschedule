@@ -1,33 +1,24 @@
 function Favorites(serializedData)
 {
+  var sessions = {};
 
   if (serializedData) {
-    this.ids = serializedData.split(",");
-  } else {
-    this.ids = [];
+    sessions = deserialize(serializedData);
   }
 
   this.addSession = function(session)
   {
-    this.ids.push(session.id);
+    sessions[session.id] = true;
   }
 
   this.removeSession = function(session)
   {
-    var newarray = [];
-    for (k in this.ids) {
-      if (this.ids[k] != session.id) { newarray.push(this.ids[k]); }
-    }
-
-    this.ids = newarray;
+    delete sessions[session.id];
   }
 
   this.hasSession = function(session)
   {
-    for (k in this.ids) {
-      if (this.ids[k] == session.id) { return true; }
-    }
-    return false;
+    return sessions[session.id];
   }
 
   this.toggleSession = function(session)
@@ -41,7 +32,22 @@ function Favorites(serializedData)
 
   this.serialize = function()
   {
-    return this.ids.join(',');
+    var keys = [];
+    for (k in sessions) {
+      keys.push(k);
+    }
+    return keys.join(',');
+  }
+
+  function deserialize(data)
+  {
+    var arr = data.split(',');
+    var sessions = {};
+    for (i in arr) {
+      sessions[arr[i]] = true;
+    }
+
+    return sessions;
   }
 
 }
@@ -87,7 +93,7 @@ function SetupSessionsForFavorites()
     event.preventDefault();
     var $session = $(this).closest('.session');
     toggleGraphics($session);
-    favorites.addSession($session.data('session'));
+    favorites.toggleSession($session.data('session'));
     SaveFavorites();
   }
 
