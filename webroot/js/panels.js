@@ -58,11 +58,11 @@ Panel.generateFromSession = function(session)
     " " + formatting.shortTime(session.start);
 
   panel.content = "\
-    <div class='content'>\
+    <div class='content' class='session'>\
       <h1>"+session.title+"</h1>\
+      <div class='start'>"+formattedTime+"</div>\
       <div class='speaker'>"+session.speaker+"</div>\
       <div class='room'>"+session.room+"</div>\
-      <div class='start'>"+formattedTime+"</div>\
       <div class='difficulty'>"+session.difficulty+"</div>\
       <div class='technology'>"+session.technology+"</div>\
       <div class='track'>"+session.track+"</div>\
@@ -75,7 +75,8 @@ Panel.generateFromSession = function(session)
   panel.$render = function()
   {
     var $html = old$render.call(panel);
-    $html.data('session', session);
+    $html.data('session', session).
+      addClass('session');
     return $html;
   }
 

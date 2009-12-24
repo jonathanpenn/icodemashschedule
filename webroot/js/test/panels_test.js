@@ -103,8 +103,9 @@ $(document).ready(function() {
   test("renders expected html", function() {
     var $html = panel.$render();
 
-    expect(12);
+    expect(13);
     ok( $html.attr("id") == session.id, "sets session id" );
+    ok( $html.hasClass("session"), "panel has class 'session'" );
     ok( $html.find(".toolbar h1").html() == 'Session',
       "Sets the panel title to 'Session'" );
     ok( $html.find(".toolbar + .content").length == 1,
