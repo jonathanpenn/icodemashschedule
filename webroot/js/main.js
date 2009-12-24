@@ -93,10 +93,10 @@ function renderSessionPanel(session)
 
 $(document).ready(function() {
 
-  var next = new NextSlot(sessions);
-  var $html = next.$renderSince(new Date());
-  if ($html) {
-    $("#nextSession").html($html);
+  var finder = new NextSlotFinder(sessions);
+  var slot = finder.nextSince(new Date());
+  if (slot) {
+    $("#nextSession").html($RenderTimeSlot(slot));
   } else {
     $("#nextSession").hide().prev().hide();
   }

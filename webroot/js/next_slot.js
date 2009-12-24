@@ -1,28 +1,35 @@
-function NextSlot(sessions)
+function $RenderTimeSlot(slot)
+{
+  var weekday = formatting.weekday;
+  var shortTime = formatting.shortTime;
+
+  var slot = new Date(slot-0);
+  var panelId = '#' + domid(weekday(slot), shortTime(slot));
+  var displayName = weekday(slot) + " "  + shortTime(slot);
+
+  return $("\
+    <li class='arrow'>\
+      <a href='"+panelId+"'>"+displayName+"</a>\
+    </li>\
+  ");
+}
+
+
+function NextSlotFinder(sessions)
 {
 
-  this.sessions = sessions;
-  this.NEXT_SESSION_WINDOW = 10;   // minutes
+  this.NEXT_SESSION_WINDOW = 10;  // In minutes
 
+  this.nextSince = function(date)
+  {
+    return getNextSlotSince(getSlotsFromSessions(sessions),
+      this.threshold(date));
+  }
 
   this.threshold = function(date)
   {
     return date.valueOf() - (this.NEXT_SESSION_WINDOW * 60000);
   }
-
-
-  this.$renderSince = function(date)
-  {
-    var slots = getSlotsFromSessions(sessions);
-    var next = getNextSlotSince(slots, this.threshold(date));
-    if (!next) { return null; }
-    return $("\
-      <li class='arrow'>\
-        <a href='"+slotPanelId(next)+"'>"+slotDisplayName(next)+"</a>\
-      </li>\
-    ");
-  }
-
 
   function getSlotsFromSessions(sessions)
   {
@@ -36,7 +43,6 @@ function NextSlot(sessions)
     return slots;
   }
 
-
   function getNextSlotSince(slots, since)
   {
     var next;
@@ -48,20 +54,6 @@ function NextSlot(sessions)
       }
     });
     return next;
-  }
-
-
-  function slotPanelId(slot)
-  {
-    slot = new Date(slot -0 );
-    return '#' + domid(formatting.weekday(slot), formatting.shortTime(slot));
-  }
-
-
-  function slotDisplayName(slot)
-  {
-    slot = new Date(slot);
-    return formatting.weekday(slot) + " " + formatting.shortTime(slot);
   }
 
 }
