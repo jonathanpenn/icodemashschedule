@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  module("Session", {setup:setup});
+
   var session;
 
   function setup()
@@ -16,9 +18,6 @@ $(document).ready(function() {
       abstract:"We'll Learn Stuff"
     });
   }
-
-
-  module("Session", {setup:setup});
 
 
   test("initialization", function() {
@@ -53,7 +52,6 @@ $(document).ready(function() {
     ok( session.slotGroup() == session.start.valueOf() );
   });
 
-
 });
 
 
@@ -87,8 +85,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
-  var oldGroupBy;
+  module("GroupSessions", {setup: setup, teardown: teardown});
 
+  var oldGroupBy;
 
   function setup()
   {
@@ -98,14 +97,10 @@ $(document).ready(function() {
     };
   }
 
-
   function teardown()
   {
     $.groupBy = oldGroupBy;
   }
-
-
-  module("GroupSessions", {setup: setup, teardown: teardown});
 
 
   test(".byDayGroup()", function() {
@@ -133,6 +128,5 @@ $(document).ready(function() {
     expect(1);
     ok( grouper(obj) == 'yes', "the grouper calls slotGroup() on objects" );
   });
-
 
 });

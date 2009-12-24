@@ -78,6 +78,8 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
+  module("Panel.generateFromSession(session)", {setup:setup});
+
   var session, panel;
 
   function setup()
@@ -96,8 +98,6 @@ $(document).ready(function() {
 
     panel = Panel.generateFromSession(session);
   }
-
-  module("Panel.generateFromSession(session)", {setup:setup});
 
   test("renders expected html", function() {
     var $html = panel.$render();

@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   module("Utility methods");
 
 
@@ -24,6 +23,5 @@ $(document).ready(function() {
     ok( domid('Some') == 'some' );
     ok( domid('one', 'two') == 'one_two' );
   });
-
 
 });

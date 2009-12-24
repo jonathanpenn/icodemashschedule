@@ -1,15 +1,9 @@
 $(document).ready(function() {
 
+  module("MenuList", {setup:setup});
+
+
   var menu;
-
-  function MockMenuListItem(renderResult)
-  {
-    this.$render = function()
-    {
-      return $("<li></li>").append(renderResult);
-    }
-  }
-
 
   function setup()
   {
@@ -21,8 +15,13 @@ $(document).ready(function() {
     });
   }
 
-
-  module("MenuList", {setup:setup});
+  function MockMenuListItem(renderResult)
+  {
+    this.$render = function()
+    {
+      return $("<li></li>").append(renderResult);
+    }
+  }
 
 
   test("initialiation", function() {
@@ -43,14 +42,14 @@ $(document).ready(function() {
       "calls $render on the second menu item" );
   });
 
-
 });
 
 
 $(document).ready(function() {
 
-  var item;
+  module("MenuListItem", {setup:setup});
 
+  var item;
 
   function setup()
   {
@@ -59,9 +58,6 @@ $(document).ready(function() {
       panel: "go_here"
     });
   }
-
-
-  module("MenuListItem", {setup:setup});
 
 
   test("initialization", function() {
@@ -79,6 +75,5 @@ $(document).ready(function() {
     ok( $html.find("> a").html() == "title to click", "link has given title" );
     ok( $html.find("> a").attr('href') == "#go_here", "links to panel" );
   });
-
 
 });
