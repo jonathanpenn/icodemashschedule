@@ -94,7 +94,6 @@ $(document).ready(function() {
       abstract:"We'll Learn Stuff"
     });
 
-    console.log("before render");
     panel = Panel.generateFromSession(session);
   }
 
