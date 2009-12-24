@@ -48,6 +48,12 @@ $(document).ready(function() {
   });
 
 
+  test(".slotGroup()", function() {
+    expect(1);
+    ok( session.slotGroup() == session.start.valueOf() );
+  });
+
+
 });
 
 
@@ -117,6 +123,15 @@ $(document).ready(function() {
 
     expect(1);
     ok( grouper(obj) == 'yes', "the grouper calls timeGroup() on objects" );
+  });
+
+
+  test(".bySlotGroup()", function() {
+    var grouper = GroupSessions.bySlotGroup([]);
+    var obj = { slotGroup: function() { return 'yes'; } };
+
+    expect(1);
+    ok( grouper(obj) == 'yes', "the grouper calls slotGroup() on objects" );
   });
 
 

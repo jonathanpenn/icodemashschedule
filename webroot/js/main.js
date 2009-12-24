@@ -27,6 +27,8 @@ $(document).ready(function() {
 
   $("#startingSchedule").replaceWith(mainMenu.$render());
 
+  showNextSessionSlot();
+
   $("#loading").hide();
 });
 
@@ -88,4 +90,60 @@ function renderSessionPanelForTime(panel_id, day, time, sessions)
 function renderSessionPanel(session)
 {
   $("body").append(Panel.generateFromSession(session).$render());
+}
+
+
+var NEXT_SESSION_WINDOW = 30;   // minutes
+var now = new Date(Date.parse("1/14/2010 12:30 pm"));
+
+function showNextSessionSlot()
+{
+  var slots = getSlots();
+  var nextSlot = getNextSlot(slots);
+
+  if (nextSlot) {
+    $("#nextSession").html("\
+      <li class='arrow'>\
+        <a href='"+slotPanelId(nextSlot)+"'>"+slotDisplayName(nextSlot)+"</a>\
+      </li>\
+    ");
+  } else {
+    $("#nextSession").hide().prev().hide();
+  }
+}
+
+function slotPanelId(slot)
+{
+  return '#' + domid(formatting.weekday(slot), formatting.shortTime(slot));
+}
+
+function slotDisplayName(slot)
+{
+  return formatting.weekday(slot) + " " + formatting.shortTime(slot);
+}
+
+function getSlots()
+{
+  var sessionsBySlot = GroupSessions.bySlotGroup(sessions);
+  var slots = [];
+  for (slot in sessionsBySlot) {
+    slots.push(slot-0);
+  }
+  return slots;
+}
+
+function getNextSlot(slots)
+{
+  var next;
+
+  $.each(slots, function(index, slot) {
+    slot = new Date(slot-0);
+
+    if (slot > now) {
+      next = slot;
+      return false;
+    }
+  });
+
+  return next;
 }

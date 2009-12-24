@@ -14,6 +14,11 @@ function Session(initData)
     return formatting.shortTime(this.start);
   }
 
+  this.slotGroup = function()
+  {
+    return this.start.valueOf();
+  }
+
 }
 
 
@@ -48,6 +53,14 @@ GroupSessions = {
   {
     return $.groupBy(sessions, function(rec) {
       return rec.timeGroup();
+    });
+  },
+
+
+  bySlotGroup: function(sessions)
+  {
+    return $.groupBy(sessions, function(rec) {
+      return rec.slotGroup();
     });
   }
 
