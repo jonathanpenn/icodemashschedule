@@ -26,6 +26,7 @@ end
 def scrub session
   # A list of special cases to clean session ifo
   unescape_br_tags_in_abstract(session)
+  unescape_html_quotes(session)
   session
 end
 
@@ -86,6 +87,7 @@ end
 
 def unescape_html_quotes session
   session.abstract = session.abstract.gsub('&quot;', '"')
+  session.abstract = session.abstract.gsub('&amp;quot;', '"')
 end
 
 
