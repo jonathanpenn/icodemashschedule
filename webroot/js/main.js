@@ -11,17 +11,81 @@ $.jQTouch({
 });
 
 $(document).ready(function() {
+  sessions = SortSessions.byStartTime(sessions);
   var sessionsByDay = GroupSessions.byDayGroup(sessions);
 
   var mainMenu = new MenuList();
 
   for(day in sessionsByDay) {
+    var id = domid(day, "panel")
     mainMenu.items.push(
-      new MenuListItem({title: day})
+      new MenuListItem({title: day, panel: id})
     );
+
+    renderSessionPanelForDay(id, day, sessionsByDay[day]);
   }
 
   $("#startingSchedule").replaceWith(mainMenu.$render());
 
   $("#loading").hide();
 });
+
+
+function renderSessionPanelForDay(day_id, day, sessions)
+{
+  var sessionsByTime = GroupSessions.byTimeGroup(sessions);
+
+  var menu = new MenuList();
+
+  for (time in sessionsByTime) {
+    var id = domid(day, time);
+
+    menu.items.push(
+      new MenuListItem({
+        title: time,
+        panel: id
+      })
+    );
+
+    renderSessionPanelForTime(id, day, time, sessionsByTime[time]);
+  }
+
+  var panel = new Panel({
+    id: day_id,
+    title: day,
+    content: menu.$render()
+  });
+
+  $("body").append(panel.$render());
+}
+
+
+function renderSessionPanelForTime(panel_id, day, time, sessions)
+{
+  var menu = new MenuList();
+
+  for (k in sessions) {
+    menu.items.push(
+      new MenuListItem({
+        title: sessions[k].title,
+        panel: sessions[k].id
+      })
+    );
+
+    renderSessionPanel(sessions[k]);
+  }
+
+  var panel = new Panel({
+    id: panel_id,
+    title: day + " " + time,
+    content: menu.$render()
+  });
+
+  $("body").append(panel.$render());
+}
+
+
+function renderSessionPanel(session)
+{
+  $("body").append(Panel.generateFromSession(session).$render());
+}
