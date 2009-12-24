@@ -24,7 +24,7 @@ body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; 
 
 .session .favStar { float: right; width: 43px; height: 43px; background-image: url(img/fav_off.png); }
 .session.favorite .favStar { background-image: url(img/fav_on.png); }
-a.favorite { background: no-repeat top left url(img/fav_on.png); padding-left: 43px; }
+a.favorite { background: no-repeat top left url(img/fav_on.png); padding-left: 43px; display: block; }
 
 
 #version.updating { color: yellow; }

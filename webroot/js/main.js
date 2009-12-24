@@ -107,11 +107,27 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(".session").each(function() {
     var $session = $(this);
-    $session.find("> .content h1").after("<div class='favStar'></div>").
-      next().bind('click', function() {
-        $session.toggleClass('favorite');
-        var id = $session.data('session').id;
-        $("a[href=#"+id+"]").toggleClass('favorite');
-      });
+    var $a = $session.find("> .content h1").
+      after("<a href='#' class='favStar'></a>").next();
+
+    // If on Mobile Safari, use the tap event.
+    // Click events on links can take up to 300ms to register
+    // because Mobile Safari has to wait to see if you are
+    // double clicking to zoom.
+    if ($.support.touch) {
+      $a.bind('tap', toggleFavorite);
+    } else {
+      $a.bind('click', toggleFavorite);
+    }
   });
+
+  function toggleFavorite(event)
+  {
+    var $session = $(this).closest(".session");
+    event.preventDefault();
+    $session.toggleClass('favorite');
+    var id = $session.data('session').id;
+    $("a[href=#"+id+"]").toggleClass('favorite');
+  }
+
 });
