@@ -5,7 +5,6 @@ $(document).ready(function() {
     var $html = $RenderTimeSlot(slot);
 
     expect(4);
-    console.log($html[0]);
     ok( $html[0].tagName == 'LI', "it renders as an LI tag" );
     ok( $html.hasClass('arrow'), "it has the class .arrow" );
     ok( $html.find("> a").html() == "Tuesday 7:54 am",
