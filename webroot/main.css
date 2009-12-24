@@ -22,9 +22,9 @@ body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; 
 .session > .content > .abstract { margin-top: 1em; }
 
 
-.session .favStar { float: right; width: 43px; height: 43px; background-image: url(img/fav_off.png); }
+.session a.favStar { float: right; width: 43px; height: 43px; background-image: url(img/fav_off.png); display: block; z-index: 9999; }
 .session.favorite .favStar { background-image: url(img/fav_on.png); }
-a.favorite { background: no-repeat top left url(img/fav_on.png); padding-left: 43px; display: block; }
+a.favorite { background: no-repeat top left url(img/fav_on.png); padding-left: 43px; }
 
 
 #version.updating { color: yellow; }
