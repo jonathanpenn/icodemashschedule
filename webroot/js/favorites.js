@@ -59,6 +59,8 @@ function initializeFavorites()
   if (!window.favorites) { window.favorites = new Favorites(); }
   loadFavorites();
 
+  updateFavoritesPanel();
+
   $(".session").each(function() {
     var $session = $(this);
     var session = $session.data('session');
@@ -70,9 +72,9 @@ function initializeFavorites()
     // because Mobile Safari has to wait to see if you are
     // double clicking to zoom.
     if ($.support.touch) {
-      $a.bind('tap', toggleFavorite);
+      $a.bind('tap', favoriteTapped);
     } else {
-      $a.bind('click', toggleFavorite);
+      $a.bind('click', favoriteTapped);
     }
 
     if (window.favorites.hasSession(session)) {
@@ -80,13 +82,14 @@ function initializeFavorites()
     }
   });
 
-  function toggleFavorite(event)
+  function favoriteTapped(event)
   {
     event.preventDefault();
     var $session = $(this).closest('.session');
     toggleGraphics($session);
     favorites.toggleSession($session.data('session'));
     saveFavorites();
+    updateFavoritesPanel();
   }
 
   function toggleGraphics($session)
@@ -104,6 +107,27 @@ function initializeFavorites()
   function loadFavorites()
   {
     window.favorites = new Favorites(window.localStorage.favorites);
+  }
+
+  function updateFavoritesPanel()
+  {
+    $("#favorites").find("> .toolbar").nextAll().remove();
+    $("#favListLink").find("li").html("\
+      <a href='#favorites'>"+favorites.ids().length+" Favorites</a>\
+    ");
+    console.log("here");
+
+    if (favorites.ids().length > 0) {
+      var favlist = new FavoritesList(sessions, favorites);
+      $("#favorites").find("> .toolbar").after(favlist.$render());
+    } else {
+      $("#favorites").find("> .toolbar").after("\
+        <p style='margin-top: 30px; text-align: center'>\
+          No sessions marked\
+        </p>\
+      ");
+    }
+
   }
 }
 
@@ -134,7 +158,6 @@ function FavoritesList(sessions, favorites)
       $html.append($ul);
     }
 
-    console.log($html[0]);
     return $html.children();
   }
 
