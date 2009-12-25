@@ -59,8 +59,6 @@ function initializeFavorites()
   if (!window.favorites) { window.favorites = new Favorites(); }
   loadFavorites();
 
-  updateFavoritesPanel();
-
   $(".session").each(function() {
     var $session = $(this);
     var session = $session.data('session');
@@ -81,6 +79,9 @@ function initializeFavorites()
       toggleGraphics($session);
     }
   });
+
+  updateFavoritesPanel();
+
 
   function favoriteTapped(event)
   {
