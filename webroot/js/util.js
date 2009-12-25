@@ -14,6 +14,14 @@ $.groupBy = function(arr, grouper)
 }
 
 
+$.keys = function(hash)
+{
+  var keys = [];
+  for (key in hash) { keys.push(key); }
+  return keys;
+}
+
+
 function domid()
 {
   var arr = [];
