@@ -6,6 +6,11 @@ function Favorites(serializedData)
     sessions = deserialize(serializedData);
   }
 
+  this.ids = function()
+  {
+    return $.keys(sessions);
+  }
+
   this.addSession = function(session)
   {
     sessions[session.id] = true;
@@ -101,4 +106,48 @@ function initializeFavorites()
     window.favorites = new Favorites(window.localStorage.favorites);
   }
 }
+
+
+function FavoritesList(sessions, favorites)
+{
+  var weekday = formatting.weekday;
+  var shortTime = formatting.shortTime;
+
+  this.$render = function()
+  {
+    var favsessions = SortSessions.byStartTime(getFavSessions());
+    var grouped = GroupSessions.bySlotGroup(favsessions);
+    var $html = $("<div></div>");
+
+    for (slot in grouped) {
+      var date = new Date(slot-0);
+      var displayName = weekday(date) + " "  + shortTime(date);
+      $html.append("<h2>"+displayName+"</h2>");
+      var $ul = $("<ul class='rounded'></ul>");
+
+      $.each(grouped[slot], function(index, session) {
+        var $li = $("<li class='arrow'><a href='#"+session.id+"'></a></li>");
+        $li.find("a").html(session.title);
+        $ul.append($li);
+      });
+
+      $html.append($ul);
+    }
+
+    console.log($html[0]);
+    return $html.children();
+  }
+
+  function getFavSessions()
+  {
+    var favs = [];
+    var finder = new FindsSession(sessions);
+    $.each(favorites.ids(), function(index, id) {
+      var session = finder.byId(id);
+      if (session) { favs.push(session); }
+    });
+
+    return favs;
+  }
+
 }
