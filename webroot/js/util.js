@@ -22,6 +22,14 @@ $.keys = function(hash)
 }
 
 
+$.values = function(hash)
+{
+  var values = [];
+  for (key in hash) { values.push(hash[key]); }
+  return values;
+}
+
+
 function domid()
 {
   var arr = [];

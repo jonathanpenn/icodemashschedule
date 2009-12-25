@@ -26,6 +26,15 @@ $(document).ready(function() {
   });
 
 
+  test("$.values(hash)", function() {
+    var values = $.values({a:1, b:2, c:3});
+    expect(3);
+    ok( values[0] == 1, "has first value" );
+    ok( values[1] == 2, "has second value" );
+    ok( values[2] == 3, "has third value" );
+  });
+
+
   test("domid(timestr)", function() {
     expect(3);
     ok( domid('2:00 am') == '200am' );
