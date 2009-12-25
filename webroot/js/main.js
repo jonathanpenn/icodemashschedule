@@ -105,5 +105,5 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-  SetupSessionsForFavorites();
+  initializeFavorites();
 });

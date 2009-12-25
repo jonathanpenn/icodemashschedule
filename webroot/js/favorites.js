@@ -48,20 +48,11 @@ function Favorites(serializedData)
 
 }
 
-function SaveFavorites()
-{
-  window.localStorage.favorites = window.favorites.serialize();
-}
 
-function LoadFavorites()
-{
-  window.favorites = new Favorites(window.localStorage.favorites);
-}
-
-function SetupSessionsForFavorites()
+function initializeFavorites()
 {
   if (!window.favorites) { window.favorites = new Favorites(); }
-  LoadFavorites();
+  loadFavorites();
 
   $(".session").each(function() {
     var $session = $(this);
@@ -90,7 +81,7 @@ function SetupSessionsForFavorites()
     var $session = $(this).closest('.session');
     toggleGraphics($session);
     favorites.toggleSession($session.data('session'));
-    SaveFavorites();
+    saveFavorites();
   }
 
   function toggleGraphics($session)
@@ -99,4 +90,15 @@ function SetupSessionsForFavorites()
     var id = $session.data('session').id;
     $("a[href=#"+id+"]").toggleClass('favorite');
   }
+
+  function saveFavorites()
+  {
+    window.localStorage.favorites = window.favorites.serialize();
+  }
+
+  function loadFavorites()
+  {
+    window.favorites = new Favorites(window.localStorage.favorites);
+  }
+}
 }
