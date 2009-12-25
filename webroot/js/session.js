@@ -66,3 +66,17 @@ GroupSessions = {
 
 };
 
+
+function FindsSession(sessions)
+{
+
+  this.byId = function(id)
+  {
+    for (key in sessions) {
+      if (sessions[key].id == id) {
+        return sessions[key];
+      }
+    }
+  }
+
+}

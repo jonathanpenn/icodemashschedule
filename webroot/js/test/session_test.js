@@ -130,3 +130,27 @@ $(document).ready(function() {
   });
 
 });
+
+
+$(document).ready(function() {
+
+  module("FindsSession", {setup:setup});
+
+  var finder;
+  var sessions = [
+    {id: 'ses1', title: 'a'},
+    {id: 'ses2', title: 'b'}
+  ];
+
+  function setup()
+  {
+    finder = new FindsSession(sessions);
+  }
+
+
+  test(".byId(id)", function() {
+    expect(2);
+    ok( finder.byId('ses1').title == 'a', "finds session by id" );
+    ok( finder.byId('none') == undefined, "returns undefined if not found" );
+  });
+});
