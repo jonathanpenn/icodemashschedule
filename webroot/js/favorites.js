@@ -32,11 +32,7 @@ function Favorites(serializedData)
 
   this.serialize = function()
   {
-    var keys = [];
-    for (k in sessions) {
-      keys.push(k);
-    }
-    return keys.join(',');
+    return $.keys(sessions).join(',');
   }
 
   function deserialize(data)
