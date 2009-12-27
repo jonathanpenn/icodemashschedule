@@ -113,7 +113,7 @@ function initializeFavorites()
   function updateFavoritesPanel()
   {
     $("#favorites").find("> .toolbar").nextAll().remove();
-    $("#favListLink").find("a").html(favorites.ids().length+" Favorites");
+    $("#favListLink").find(".counter").html(favorites.ids().length);
 
     if (favorites.ids().length > 0) {
       var favlist = new FavoritesList(sessions, favorites);
