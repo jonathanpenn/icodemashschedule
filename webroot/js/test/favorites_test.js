@@ -194,7 +194,6 @@ $(document).ready(function(){
 
     $div.find("a").removeClass("favorite");
     ShowFavoritesCounter($li);
-    console.log($div[0]);
     ok( $li.find("a + small.counter").length == 0,
       "and if there are zero, it removes the counter element" );
   });
