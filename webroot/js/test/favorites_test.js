@@ -134,6 +134,69 @@ $(document).ready(function(){
 
     $next = $next.next();
     ok( $next.length == 0, "should be no more elements" );
+
+    ok( $html.find("a").hasClass("favorite"),
+      "all links have .favorite class" );
+  });
+
+});
+
+
+$(document).ready(function(){
+
+  module("ShowFavoritesCounter($li)", {setup:setup, teardown:teardown});
+
+  var $div, $li;
+
+  function setup()
+  {
+    $("#scratch").html("\
+      <div id='some_panel'>\
+        <ul>\
+          <li><a class='favorite'></a></li>\
+          <li><a class='favorite'></a></li>\
+        </ul>\
+      </div>\
+    ");
+    $("#scratch").append("<li><a href='#some_panel'>Link To Panel></a></li>");
+    $div = $("#some_panel");
+    $li = $div.next();
+  }
+
+  function teardown()
+  {
+    $("#scratch").html('');
+  }
+
+
+  test("when there are favorites in the panel", function() {
+    ShowFavoritesCounter($li);
+    ok( $li.find("a + small.counter").html() == "2",
+      "it knows that there are two favorites" );
+  });
+
+  test("when there are no favorites in the panel", function() {
+    $div.find("a").removeClass("favorite");
+    ShowFavoritesCounter($li);
+    ok( $li.find("a + small.counter").length == 0,
+      "it doesn't have the counter element" );
+  });
+
+  test("when re-running after favorite status changes", function() {
+    ShowFavoritesCounter($li);
+    ok( $li.find("a + small.counter").html() == "2",
+      "it starts off with two favorites in the counter" );
+
+    $div.find("a").eq(0).removeClass("favorite");
+    ShowFavoritesCounter($li);
+    ok( $li.find("a + small.counter").html() == '1',
+      "it should now find just 1" );
+
+    $div.find("a").removeClass("favorite");
+    ShowFavoritesCounter($li);
+    console.log($div[0]);
+    ok( $li.find("a + small.counter").length == 0,
+      "and if there are zero, it removes the counter element" );
   });
 
 });

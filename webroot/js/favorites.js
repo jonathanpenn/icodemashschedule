@@ -81,6 +81,7 @@ function initializeFavorites()
   });
 
   updateFavoritesPanel();
+  updateFavoriteCounters();
 
 
   function favoriteTapped(event)
@@ -91,6 +92,7 @@ function initializeFavorites()
     favorites.toggleSession($session.data('session'));
     saveFavorites();
     updateFavoritesPanel();
+    updateFavoriteCounters();
   }
 
   function toggleGraphics($session)
@@ -113,7 +115,6 @@ function initializeFavorites()
   function updateFavoritesPanel()
   {
     $("#favorites").find("> .toolbar").nextAll().remove();
-    $("#favListLink").find(".counter").html(favorites.ids().length);
 
     if (favorites.ids().length > 0) {
       var favlist = new FavoritesList(sessions, favorites);
@@ -125,7 +126,12 @@ function initializeFavorites()
         </p>\
       ");
     }
+  }
 
+  function updateFavoriteCounters()
+  {
+    ShowFavoritesCounter($("#favListLink li"));
+    ShowFavoritesCounter($("#nextSession li"));
   }
 }
 
@@ -149,7 +155,7 @@ function FavoritesList(sessions, favorites)
 
       $.each(grouped[slot], function(index, session) {
         var $li = $("<li class='arrow'><a href='#"+session.id+"'></a></li>");
-        $li.find("a").html(session.title);
+        $li.find("a").html(session.title).addClass('favorite');
         $ul.append($li);
       });
 
@@ -171,4 +177,17 @@ function FavoritesList(sessions, favorites)
     return favs;
   }
 
+}
+
+
+function ShowFavoritesCounter($li)
+{
+  $li.find("> a:first + small.counter").remove();
+  var $a = $li.find("> a:first");
+  var panelId = $a.attr('href');
+  var $panel = $(panelId);
+  var favoritesCount = $panel.find("ul > li > a.favorite").length;
+  if (favoritesCount > 0) {
+    $a.after("<small class='counter'>"+favoritesCount+"</small>");
+  }
 }
