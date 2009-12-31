@@ -9,38 +9,27 @@
     }
   </script>
 
-  <style type="text/css">
-    body { background-color: #333; color: #eee; font-family: Helvetica, sans-serif; }
-    body { background: -webkit-gradient(linear, 0% 0%, 0% 140%, from(#111), to(#5e5e65)); }
-    h1 { font: bold 18px Helvetica; text-shadow: rgba(255,255,255,.2) 0 1px 1px; color: #aaa; margin: 10px 20px 15px 0px; }
-    #noWebKit { margin: 0px auto; padding: 3em; width: 780px; font-size: 15px; }
-    #noWebKit img { margin: 10px 0 0 40px; float: right; -webkit-border-radius: 5px; }
-    #noWebKit > div { width: 420px; }
-    p { margin-bottom: 1em; line-height: 1.5em; }
-    a { color: lightblue; }
-    a, a img { border: none; }
+  <style type="text/css" media="screen">@import "/nocache/index.css";</style>
 
-    .alert { width: 600px; margin: 0 auto; line-height: 1.5em; font-size: 14px; text-align: center; background-color: #633; padding: 20px 60px; }
-    .aligncenter { text-align: center; }
-    .alignright { text-align: right; }
-  </style>
 </head>
 
 <body>
   <div class='alert'>
-    You are seeing this page because you're not viewing it on an iPhone or iPod touch.<br>
+    You are seeing this page because you're not viewing with an iPhone or iPod touch.<br>
     To view the CodeMash schedule app anyway, click <a href="/app.html">here</a>.
   </div>
   <div id="noWebKit">
-    <a href="/app.html"><img src='/img/splash.png' alt='iCodeMash 2010'></a>
+    <a href="/app.html"><img src='/nocache/demo.jpg' alt='iCodeMash 2010'></a>
     <div>
       <h1>iCodeMash Schedule 2010</h1>
       <p>If you're like me, you may be overwhelmed by all the <b>great</b> sessions planned for this year's <a href="http://www.codemash.org">CodeMash</a>. Last year, I found myself picking sessions to attend at the very last minute. I'd flip through the paper schedule to see what's next, what it's about, and where to find it.</p>
       <p class='aligncenter'>Hey, it's 2010! Paper schedules are <i>so last decade</i>.</p>
+      <p>I'm pulling the data in from the <a href="http://www.codemash.org/rest">CodeMash API</a>. Soon, they'll add in the precompiler sessions and they even said they were going to include the open spaces!</p>
       <p>This web app can be run offline and installed to your iPhone/iPod Touch home screen by using the "+" button at the bottom of Mobile Safari.
       You might be able to get this to work on other WebKit based browsers, but I haven't tested it.
       The app can tell if it's been updated and will automatically download new versions of itself.</p>
-      <p>You're using an <a href="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html" rel='external'>HTML5 Offline</a> Web application customized for the iPhone/iPod Touch by the <a href="http://www.jqtouch.com/">jQTouch</a> plugin for <a href="http://www.jquery.com">jQuery</a>.
+
+      <p>It's built with <a href="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/OfflineApplicationCache/OfflineApplicationCache.html" rel='external'>HTML5</a> and customized for the iPhone/iPod Touch by the <a href="http://www.jqtouch.com/">jQTouch</a> plugin for <a href="http://www.jquery.com">jQuery</a>.
         It's served up to you by a <a href="http://rack.rubyforge.org/" rel='external'>Ruby/Rack</a> application on <a href="http://heroku.com" rel='external'>Heroku</a>.</p>
       <p>You can get the source code on <a href="http://github.com/jonathanpenn/icodemashschedule" rel='external'>github</a>.</p>
       <p>Feel free to contact me if you have any questions or if you notice anything amiss.</p>
