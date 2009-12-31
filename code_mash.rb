@@ -1,4 +1,4 @@
-require 'index_template'
+require 'app_template'
 
 
 class CodeMash
@@ -15,8 +15,8 @@ class CodeMash
       else
         render_not_found
       end
-    when '/index.html'
-      [200, {}, IndexTemplate.render]
+    when '/app.html'
+      [200, {}, AppTemplate.render]
     when '/test'
       redirect_to '/test.html'
     when '/'

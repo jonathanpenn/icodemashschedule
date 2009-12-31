@@ -1,7 +1,7 @@
 require 'erb'
 
 
-class IndexTemplate
+class AppTemplate
 
   def self.render
     self.new.to_html
@@ -16,7 +16,7 @@ class IndexTemplate
   end
 
   def template_data
-    @template_data ||= File.read(File.dirname(__FILE__) + "/webroot/index.html.erb")
+    @template_data ||= File.read(File.dirname(__FILE__) + "/webroot/app.html.erb")
   end
 
   def build_version
