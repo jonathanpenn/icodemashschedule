@@ -31,10 +31,3 @@ $(document).ready(function() {
 
 });
 
-
-$(document).bind("sessions.loaded", function() {
-  $("body > div.session a.room").tap(function(event) {
-    event.preventDefault();
-    $.jQTouch().goTo('#conferenceMap', 'slide');
-  });
-});
