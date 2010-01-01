@@ -37,8 +37,17 @@ $(document).ready(function() {
     }).animate({
       opacity: buttonOpacity
     }, 800);
+
+    $("#coords").html(nowX + ", " + nowY).css({
+      top: nowY + topDelta + 30 + "px",
+      left: nowX + leftDelta + "px"
+    });
   }
 
 
+  $mapPanel.append('<div id="coords"></div>').find("#coords").css({
+    position: 'absolute',
+    color: 'red'
+  });
 });
 
