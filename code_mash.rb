@@ -15,8 +15,8 @@ class CodeMash
       else
         render_not_found
       end
-    when '/app.html'
-      [200, {}, AppTemplate.render]
+    when /\/(index|app)\.html/
+      [200, {}, AppTemplate.render($1)]
     when '/test'
       redirect_to '/test.html'
     when '/'
