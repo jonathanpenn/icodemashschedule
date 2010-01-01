@@ -51,3 +51,26 @@ $(document).ready(function() {
   });
 });
 
+
+$(document).bind('sessions.loaded', function() {
+
+  var mapCoordinates = {
+    'Portia/Wisteria': [205, 291]
+  };
+  var $mapPanel = $("#conferenceMap");
+  $mapPanel.bind("pageAnimationEnd", function(event, info) {
+    if (info.direction != 'in') { return; }
+
+    var scrollMapTo = $mapPanel.data('referrer').text();
+
+    var coords = mapCoordinates[scrollMapTo];
+    if (!coords) { return; }
+
+    var x = coords[0]-0;
+    var y = coords[1]-0;
+
+    setTimeout(function() {
+      scrollTo(x, y);
+    }, 200);
+  });
+});
