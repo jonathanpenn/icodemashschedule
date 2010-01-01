@@ -34,7 +34,7 @@ body.fullscreen.black-translucent > * {
     min-height: 480px !important;
 }
 body.landscape > * {
-    min-height: 320px;
+    min-height: 320px !important;
 }
 body > .current {
     display: block !important;

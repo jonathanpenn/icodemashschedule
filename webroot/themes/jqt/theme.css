@@ -66,6 +66,10 @@ body.landscape .toolbar > h1 {
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
 }
+.button.active, .cancel.active, .add.active {
+    -webkit-border-image: url(img/button_clicked.png) 0 5 0 5;
+    color: #aaa;
+}
 .blueButton {
     -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
     border-width: 0 5px;
@@ -92,7 +96,7 @@ body.landscape .toolbar > h1 {
     font-weight: bold;
 }
 .whiteButton,
-.grayButton {
+.grayButton, .redButton, .blueButton, .greenButton {
     display: block;
     border-width: 0 12px;
     padding: 10px;
@@ -102,6 +106,12 @@ body.landscape .toolbar > h1 {
     text-decoration: inherit;
     color: inherit;
 }
+
+.whiteButton.active,
+.grayButton.active, .redButton.active, .blueButton.active, .greenButton.active, .whiteButton:active,
+.grayButton:active, .redButton:active, .blueButton:active, .greenButton:active {
+    -webkit-border-image: url(img/activeButton.png) 0 12 0 12;
+}
 .whiteButton {
     -webkit-border-image: url(img/whiteButton.png) 0 12 0 12;
     text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0;
@@ -110,6 +120,18 @@ body.landscape .toolbar > h1 {
     -webkit-border-image: url(img/grayButton.png) 0 12 0 12;
     color: #FFFFFF;
 }
+
+.redButton {
+    -webkit-border-image: url(img/redButton.png) 0 12 0 12;
+    color: #FFFFFF;
+}
+
+.greenButton {
+    -webkit-border-image: url(img/greenButton.png) 0 12 0 12;
+    color: #FFFFFF;
+}
+
+
 /* @end */
 /* @group Lists */
 h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul {
@@ -149,6 +171,11 @@ ul li.arrow {
     background-position: right center;
     background-repeat: no-repeat;
 }
+
+ul li.arrow a { 
+	padding: 12px 22px 12px 10px;
+}
+
 ul li.forward {
     background-image: url(img/chevron_circle.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
     background-position: right center;
@@ -244,7 +271,7 @@ ul.form li.error {
 ul.form li.error + li.error {
     border-top: 0;
 }
-ul li input[type="text"], ul li input[type="password"], ul li textarea, ul li select {
+ul li input[type="text"], ul li input[type="password"], ul li input[type="tel"], ul li input[type="number"], ul li input[type="search"], ul li input[type="email"], ul li input[type="url"], ul li textarea, ul li select {
     color: #777;
     background: transparent url(../.png);
     border: 0;
