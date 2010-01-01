@@ -24,6 +24,7 @@ $(document).ready(function() {
 
     renderSessionPanelForDay(id, day, sessionsByDay[day]);
   }
+  $(document).trigger("sessions.loaded");
 
   $("#startingSchedule").replaceWith(mainMenu.$render());
 
