@@ -66,8 +66,6 @@ EOM
       file =~ /codemash\.html/ ||
       file =~ /\.erb$/ ||
       file =~ /qunit/ ||
-      file =~ /jqtouch\.(js|css)/ ||
-      file =~ /theme\.css/ ||
       file =~ /index\.html/ ||
       file =~ /nocache/
   end
