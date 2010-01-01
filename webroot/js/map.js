@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  var mapCoordinates = {
+    'Portia/Wisteria':  {x:359, y:501},
+    'Cypress':          {x:762, y:304},
+    'D':                {x:613, y:353},
+    'E':                {x:619, y:266},
+    'Mangrove':         {x:407, y:598},
+    'Indigo Bay':       {x:242, y:299},
+    'Guava/Tamarind':   {x:462, y:504}
+  };
+
   var $mapPanel = $("#conferenceMap");
   var $toolbar = $mapPanel.find(".toolbar");
   var positionTimer;
@@ -33,70 +43,58 @@ $(document).ready(function() {
 
     lastY = nowY;
     lastX = nowX;
-
-    $toolbar.stop().css({
-      top: nowY + "px",
-      left: nowX + "px",
-      opacity: '0'
-    }).animate({ opacity: buttonOpacity }, 300);
+    repositionToolBar();
   }
 
-
-  $mapPanel.bind('mousedown', function(event) {
-    $("#coords").html(event.clientX + ", " + event.clientY).css({
-      top: lastY + 40 + "px",
-      left: lastX + "px"
-    });
-  }).append('<div id="coords"></div>').find("#coords").css({
-    position: 'absolute',
-    color: 'red'
-  });
-
-});
-
-
-$(document).bind('sessions.loaded', function() {
-
-  var mapCoordinates = {
-    'Portia/Wisteria': [359, 501],
-    'Cypress': [762, 304],
-    'D': [613, 353],
-    'E': [619, 266],
-    'Mangrove': [407, 598],
-    'Indigo Bay': [242, 299],
-    'Guava/Tamarind': [462, 504]
-  };
-
-  var $mapPanel = $("#conferenceMap");
-  $mapPanel.bind("pageAnimationEnd", function(event, info) {
-    if (info.direction != 'in') { return; }
-
-    var scrollMapTo = $mapPanel.data('referrer').text();
-    $mapPanel.find("h1").html(scrollMapTo);
-
-    var coords = mapCoordinates[scrollMapTo];
-    if (!coords) { coords = [0, 0]; }
-    else { coords = adjustCoordsForViewPort(coords); }
-
-    var x = coords[0]-0;
-    var y = coords[1]-0;
-
-    setTimeout(function() {
-      $mapPanel.animate({ opacity: '1' });
-      scrollTo(x, y);
-    }, 200);
-  });
-
+  function repositionToolBar()
+  {
+    $toolbar.stop().animate({
+      top: lastY + "px",
+      left: lastX + "px",
+      opacity: buttonOpacity
+    }, 300);
+  }
 
   function adjustCoordsForViewPort(coords)
   {
-    var viewPortWidth = $(window).width();
-    var viewPortHeight = $(window).height();
-
-    coords = [
-      coords[0] - viewPortWidth/2,
-      coords[1] - viewPortHeight/2
-    ];
-    return coords;
+    return {
+      x: coords.x - $(window).width()/2,
+      y: coords.y - $(window).height()/2
+    };
   }
+
+  $(document).bind('sessions.loaded', function() {
+    var $mapPanel = $("#conferenceMap");
+    $mapPanel.bind("pageAnimationEnd", function(event, info) {
+      if (info.direction != 'in') { return; }
+
+      var scrollMapTo = $mapPanel.data('referrer').text();
+      $mapPanel.find("h1").html(scrollMapTo);
+
+      var coords = mapCoordinates[scrollMapTo];
+      if (!coords) { coords = {x:0, y:0}; }
+      else { coords = adjustCoordsForViewPort(coords); }
+
+      setTimeout(function() {
+        scrollTo(coords.x, coords.y);
+        $mapPanel.animate({ opacity: '1' });
+      }, 200);
+    });
+  });
+
+  // This event handler is for displaying coordinates when clicked on the map.
+  // It helps me make the room coordinate array below.
+  //
+  // $mapPanel.bind('mousedown', function(event) {
+  //   $("#coords").html(event.clientX + ", " + event.clientY).css({
+  //     top: lastY + 40 + "px",
+  //     left: lastX + "px"
+  //   });
+  // }).append('<div id="coords"></div>').find("#coords").css({
+  //   position: 'absolute',
+  //   color: 'red'
+  // });
+
 });
+
+
