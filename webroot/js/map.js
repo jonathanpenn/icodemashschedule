@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
   var $mapPanel = $("#conferenceMap");
-  var $back = $mapPanel.find("a.back");
-  var leftDelta = 8, topDelta = 8;
+  var $toolbar = $mapPanel.find(".toolbar");
   var positionTimer;
   var lastX, lastY;
   var buttonOpacity = '0.9';
@@ -10,7 +9,7 @@ $(document).ready(function() {
   $mapPanel.bind("pageAnimationStart", function(event, info) {
     if (info.direction == 'in') {
       lastX = lastY = null;
-      $back.css({ opacity: '0' });
+      $toolbar.css({ opacity: '0' });
       $mapPanel.css({ opacity: '0' });
     } else {
       $mapPanel.css({ opacity: '0' });
@@ -35,18 +34,18 @@ $(document).ready(function() {
     lastY = nowY;
     lastX = nowX;
 
-    $back.stop().css({
-      top: nowY + topDelta + "px",
-      left: nowX + leftDelta + "px",
+    $toolbar.stop().css({
+      top: nowY + "px",
+      left: nowX + "px",
       opacity: '0'
-    }).animate({ opacity: buttonOpacity }, 800);
+    }).animate({ opacity: buttonOpacity }, 300);
   }
 
 
   $mapPanel.bind('mousedown', function(event) {
     $("#coords").html(event.clientX + ", " + event.clientY).css({
-      top: lastY + topDelta + 30 + "px",
-      left: lastX + leftDelta + "px"
+      top: lastY + 40 + "px",
+      left: lastX + "px"
     });
   }).append('<div id="coords"></div>').find("#coords").css({
     position: 'absolute',
@@ -59,13 +58,13 @@ $(document).ready(function() {
 $(document).bind('sessions.loaded', function() {
 
   var mapCoordinates = {
-    'Portia/Wisteria': [359, 459],
-    'Cypress': [762, 256],
-    'D': [613, 306],
-    'E': [619, 216],
-    'Mangrove': [407, 561],
-    'Indigo Bay': [242, 256],
-    'Guava/Tamarind': [462, 460]
+    'Portia/Wisteria': [359, 501],
+    'Cypress': [762, 304],
+    'D': [613, 353],
+    'E': [619, 266],
+    'Mangrove': [407, 598],
+    'Indigo Bay': [242, 299],
+    'Guava/Tamarind': [462, 504]
   };
 
   var $mapPanel = $("#conferenceMap");
@@ -73,6 +72,7 @@ $(document).bind('sessions.loaded', function() {
     if (info.direction != 'in') { return; }
 
     var scrollMapTo = $mapPanel.data('referrer').text();
+    $mapPanel.find("h1").html(scrollMapTo);
 
     var coords = mapCoordinates[scrollMapTo];
     if (!coords) { coords = [0, 0]; }
