@@ -13,12 +13,11 @@ $(document).ready(function() {
   var $mapPanel = $("#conferenceMap");
   var $toolbar = $mapPanel.find(".toolbar");
   var positionTimer;
-  var lastX, lastY;
+  var lastX = 0, lastY = 0;
   var buttonOpacity = '0.9';
 
   $mapPanel.bind("pageAnimationStart", function(event, info) {
     if (info.direction == 'in') {
-      lastX = lastY = null;
       $toolbar.css({ opacity: '0' });
       $mapPanel.css({ opacity: '0' });
     } else {
@@ -28,6 +27,7 @@ $(document).ready(function() {
     }
   }).bind("pageAnimationEnd", function(event, info) {
     if (info.direction == 'in') {
+      scrollTo(lastX, lastY);
       scrolling();
     }
   });
@@ -39,10 +39,11 @@ $(document).ready(function() {
     var nowY = $(document).scrollTop();
     var nowX = $(document).scrollLeft();
 
-    if (nowY == lastY && nowX == lastX) { return; }
+    if (nowY != lastY || nowX != lastX) {
+      lastY = nowY;
+      lastX = nowX;
+    }
 
-    lastY = nowY;
-    lastX = nowX;
     repositionToolBar();
   }
 
@@ -72,7 +73,7 @@ $(document).ready(function() {
       $mapPanel.find("h1").html(scrollMapTo);
 
       var coords = mapCoordinates[scrollMapTo];
-      if (!coords) { coords = {x:0, y:0}; }
+      if (!coords) { coords = {x:lastX, y:lastY}; }
       else { coords = adjustCoordsForViewPort(coords); }
 
       setTimeout(function() {
