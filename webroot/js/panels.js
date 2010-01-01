@@ -58,11 +58,13 @@ Panel.generateFromSession = function(session)
     " " + formatting.shortTime(session.start);
 
   panel.content = "\
+    <ul class='rounded'>\
+      <li class='arrow'><a href='#conferenceMap'>"+session.room+"</a></li>\
+    </ul>\
     <div class='content' class='session'>\
       <h1>"+session.title+"</h1>\
       <div class='start'>"+formattedTime+"</div>\
       <div class='speaker'>"+session.speaker+"</div>\
-      <a class='room' href='#'>"+session.room+"</a>\
       <div class='difficulty'>"+session.difficulty+"</div>\
       <div class='technology'>"+session.technology+"</div>\
       <div class='track'>"+session.track+"</div>\

@@ -107,14 +107,14 @@ $(document).ready(function() {
     ok( $html.hasClass("session"), "panel has class 'session'" );
     ok( $html.find(".toolbar h1").html() == 'Session',
       "Sets the panel title to 'Session'" );
-    ok( $html.find(".toolbar + .content").length == 1,
-      "adds a content element after the toolbar" );
+    ok( $html.find(".toolbar + ul > li > a[href=#conferenceMap]").length == 1,
+      "adds a link to the conference map" );
+    ok( $html.find(".toolbar + ul + .content").length == 1,
+      "adds the content after the map link" );
     ok( $html.find(".content > h1").html() == 'Some Session',
       "has the title" );
     ok( $html.find(".content > div.speaker").html() == 'Johnny Fedora',
       "has the speaker name" );
-    ok( $html.find(".content > a.room").html() == 'Bathroom',
-      "has the room" );
     ok( $html.find(".content > div.start").html() == 'Wednesday 7:00 pm',
       "has the start time" );
     ok( $html.find(".content > div.difficulty").html() == 'Beginner',
