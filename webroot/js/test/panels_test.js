@@ -113,7 +113,7 @@ $(document).ready(function() {
       "has the title" );
     ok( $html.find(".content > div.speaker").html() == 'Johnny Fedora',
       "has the speaker name" );
-    ok( $html.find(".content > div.room").html() == 'Bathroom',
+    ok( $html.find(".content > a.room").html() == 'Bathroom',
       "has the room" );
     ok( $html.find(".content > div.start").html() == 'Wednesday 7:00 pm',
       "has the start time" );

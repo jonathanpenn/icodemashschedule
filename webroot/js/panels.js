@@ -62,7 +62,7 @@ Panel.generateFromSession = function(session)
       <h1>"+session.title+"</h1>\
       <div class='start'>"+formattedTime+"</div>\
       <div class='speaker'>"+session.speaker+"</div>\
-      <div class='room'>"+session.room+"</div>\
+      <a class='room' href='#'>"+session.room+"</a>\
       <div class='difficulty'>"+session.difficulty+"</div>\
       <div class='technology'>"+session.technology+"</div>\
       <div class='track'>"+session.track+"</div>\
