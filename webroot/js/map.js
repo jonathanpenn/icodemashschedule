@@ -21,10 +21,10 @@ $(document).ready(function() {
 
   function scrolling()
   {
-    $back.css({
+    $back.stop().animate({
       top: $(document).scrollTop() + topDelta + "px",
       left: $(document).scrollLeft() + leftDelta + "px"
-    });
+    }, 300);
     positionTimer = setTimeout(scrolling, 500);
   }
 
