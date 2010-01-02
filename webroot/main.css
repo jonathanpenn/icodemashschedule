@@ -1,6 +1,6 @@
 body > div > h2 { color: black; }
 
-#version { text-align: center; color: #aaa; padding-bottom: 20px; text-transform: uppercase; font-size: .7em; }
+#version { text-align: center; color: #aaa; padding-bottom: 15px; text-transform: uppercase; font-size: .7em; }
 
 body > div > .content * { margin: 0px; padding: 0px; }
 body > div > .content { padding: 20px; line-height: 1.6em; }
@@ -8,7 +8,7 @@ body > div > .content ul { background: none; border: none; line-height: 1.6em; }
 body > div > .content ul li { list-style-type: disc; overflow: visible; background: none; border: none; padding: 0px; margin: 0px 0px 0px 20px; color: white; font-weight: normal; font-size: .9em; }
 body > div > .content p { margin-bottom: 1em; }
 body > div > .content b { color: #fff; }
-body > div > .content a { color: #FF782E; }
+body > div > .content a { color: #FFA668; }
 body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; }
 
 .session > .content > * { clear: left; position: relative; }
@@ -20,12 +20,18 @@ body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; 
 
 .session > .content > .abstract { margin-top: 1em; }
 
+.content p.meta > span { display: block; float: left; width: 80px; }
+.content p br { clear: both; }
+
 
 .session a.favStar { float: right; width: 43px; height: 43px; background-image: url(img/fav_off.png); display: block; z-index: 9999; }
 .session.favorite .favStar { background-image: url(img/fav_on.png); }
 ul li.arrow a.favorite { background-repeat: no-repeat; background-image: url(img/fav_on.png); padding-left: 43px; }
 
 #conferenceMap img.dot { position: absolute; top: 0px; left: 0px; }
+
+.navellogo { text-align: center; padding-bottom: 15px; }
+.navellogo img { opacity: 0.7; }
 
 
 #version.updating { color: yellow; }
