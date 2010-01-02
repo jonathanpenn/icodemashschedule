@@ -107,7 +107,7 @@ $(document).ready(function() {
     ok( $html.hasClass("session"), "panel has class 'session'" );
     ok( $html.find(".toolbar h1").html() == 'Session',
       "Sets the panel title to 'Session'" );
-    ok( $html.find(".toolbar + ul > li > a[href=#conferenceMap]").length == 1,
+    ok( $html.find(".toolbar + ul > li > a.room[href=#conferenceMap]").length == 1,
       "adds a link to the conference map" );
     ok( $html.find(".toolbar + ul + .content").length == 1,
       "adds the content after the map link" );

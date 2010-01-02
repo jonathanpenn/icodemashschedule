@@ -13,7 +13,6 @@ body > div > .content h1 { color: white; margin-bottom: 1em; text-shadow: none; 
 
 .session > .content > * { clear: left; position: relative; }
 .session > .content > .start { margin-bottom: 0.5em;  }
-.session > .content > .room:before { content: "Where: "; text-transform: uppercase; font-size: .7em; color: #fff; display: block; float: left; width: 65px; }
 .session > .content > .speaker:before { content: "Speaker: "; text-transform: uppercase; font-size: .7em; color: #fff; display: block; float: left; width: 65px; }
 .session > .content > .difficulty:before { content: "Level: "; text-transform: uppercase; font-size: .7em; color: #fff; display: block; float: left; width: 65px; }
 .session > .content > .technology:before { content: "Tech: "; text-transform: uppercase; font-size: .7em; color: #fff; display: block; float: left; width: 65px; }
