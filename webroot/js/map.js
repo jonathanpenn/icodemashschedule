@@ -1,40 +1,55 @@
 $(document).ready(function() {
 
   var mapCoordinates = {
-    'Portia/Wisteria':  {x:359, y:501},
-    'Cypress':          {x:762, y:304},
-    'D':                {x:613, y:353},
-    'E':                {x:619, y:266},
-    'Mangrove':         {x:407, y:598},
-    'Indigo Bay':       {x:242, y:299},
-    'Guava/Tamarind':   {x:462, y:504}
+    'Portia/Wisteria':  {x:355, y:452},
+    'Guava/Tamarind':   {x:452, y:452},
+    'Cypress':          {x:759, y:283},
+    'A':                {x:382, y:327},
+    'B':                {x:450, y:327},
+    'C':                {x:540, y:327},
+    'D':                {x:610, y:327},
+    'E':                {x:610, y:241},
+    'F':                {x:540, y:241},
+    'G':                {x:450, y:241},
+    'H':                {x:382, y:241},
+    'Mangrove':         {x:405, y:573},
+    'Indigo Bay':       {x:238, y:278}
   };
 
   var $mapPanel = $("#conferenceMap");
-  var $toolbar = $mapPanel.find(".toolbar");
+  var $backButton = $mapPanel.find("a.back");
+  var $dot = $mapPanel.find('img.dot');
   var positionTimer;
   var lastX = 0, lastY = 0;
-  var buttonOpacity = '0.9';
+  var buttonOpacity = 0.9;
+
+  $dot.hide();
 
   $mapPanel.bind("pageAnimationStart", function(event, info) {
     if (info.direction == 'in') {
-      $toolbar.css({ opacity: '0' });
-      $mapPanel.css({ opacity: '0' });
+      $backButton.css({ opacity: 0 });
+      $mapPanel.css({ opacity: 0 });
     } else {
-      $mapPanel.css({ opacity: '0' });
+      $mapPanel.css({ opacity: 0 });
       clearTimeout(positionTimer);
       positionTimer = null;
     }
   }).bind("pageAnimationEnd", function(event, info) {
     if (info.direction == 'in') {
+      $backButton.css({ opacity: buttonOpacity });
       scrollTo(lastX, lastY);
       scrolling();
     }
   });
 
+  function positionDot(x, y)
+  {
+    $dot.show().css({ left: x, top: y });
+  }
+
   function scrolling()
   {
-    positionTimer = setTimeout(scrolling, 200);
+    positionTimer = setTimeout(scrolling, 100);
 
     var nowY = $(document).scrollTop();
     var nowX = $(document).scrollLeft();
@@ -42,16 +57,17 @@ $(document).ready(function() {
     if (nowY != lastY || nowX != lastX) {
       lastY = nowY;
       lastX = nowX;
+      repositionToolBar();
     }
-
-    repositionToolBar();
   }
 
   function repositionToolBar()
   {
-    $toolbar.stop().animate({
-      top: lastY + "px",
-      left: lastX + "px",
+    $backButton.stop().css({
+      top: lastY + 8 + "px",
+      left: lastX + 10 + "px",
+      opacity: 0
+    }).animate({
       opacity: buttonOpacity
     }, 300);
   }
@@ -74,18 +90,22 @@ $(document).ready(function() {
 
       var coords = mapCoordinates[scrollMapTo];
       if (!coords) { coords = {x:lastX, y:lastY}; }
-      else { coords = adjustCoordsForViewPort(coords); }
+      else {
+        positionDot(coords.x, coords.y);
+        coords = adjustCoordsForViewPort(coords);
+      }
 
       setTimeout(function() {
         scrollTo(coords.x, coords.y);
-        $mapPanel.animate({ opacity: '1' });
+        $mapPanel.animate({ opacity: 1 });
       }, 200);
     });
   });
 
+
   // This event handler is for displaying coordinates when clicked on the map.
   // It helps me make the room coordinate array below.
-  //
+
   // $mapPanel.bind('mousedown', function(event) {
   //   $("#coords").html(event.clientX + ", " + event.clientY).css({
   //     top: lastY + 40 + "px",
