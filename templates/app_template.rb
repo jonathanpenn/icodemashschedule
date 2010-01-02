@@ -18,7 +18,7 @@ class AppTemplate
 
   def template_data
     @template_data ||= File.read(File.dirname(__FILE__) +
-                                 "/webroot/%s.html.erb" % [@file])
+                                 "/%s.html.erb" % [@file])
   end
 
   def build_version
@@ -27,7 +27,7 @@ class AppTemplate
 
   def about_content
     @about_content ||= File.read(File.dirname(__FILE__) +
-                                 "/webroot/nocache/_about_content.html")
+                                 "/../webroot/nocache/_about_content.html")
   end
 
 end

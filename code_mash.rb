@@ -1,4 +1,4 @@
-require 'app_template'
+require 'templates/app_template'
 
 
 class CodeMash
@@ -63,10 +63,7 @@ EOM
   def dont_include? file
     File.directory?(file) ||
       file =~ /\/test/ ||
-      file =~ /codemash\.html/ ||
-      file =~ /\.erb$/ ||
       file =~ /qunit/ ||
-      file =~ /index\.html/ ||
       file =~ /nocache/
   end
 
