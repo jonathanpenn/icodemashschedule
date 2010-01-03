@@ -8,11 +8,11 @@ $(document).ready(function() {
 
     expect(3);
     time = new Date(Date.parse('Tue, Dec 15, 2009 2:00 am EST'));
-    ok( shortTime(time) == '2:00 am', "displays 2:00 am" );
+    equals( shortTime(time), '2:00 am' );
     time = new Date(Date.parse('Tue, Dec 15, 2009 3:00 pm EST'));
-    ok( shortTime(time) == '3:00 pm', "displays 3:00 pm" );
+    equals( shortTime(time), '3:00 pm' );
     time = new Date(Date.parse('Tue, Dec 15, 2009 12:00 pm EST'));
-    ok( shortTime(time) == '12:00 pm', "displays 12:00 pm" );
+    equals( shortTime(time), '12:00 pm' );
   });
 
 
@@ -21,9 +21,9 @@ $(document).ready(function() {
 
     expect(2);
     var time = new Date(Date.parse("Fri, Dec 14, 2009 2:00 am EST"));
-    ok( weekday(time) == 'Monday' );
+    equals( weekday(time), 'Monday' );
     time = new Date(Date.parse('Tue, Dec 15, 2009 3:00 am EST'));
-    ok( weekday(time) == 'Tuesday' );
+    equals( weekday(time), 'Tuesday' );
   });
 
 
