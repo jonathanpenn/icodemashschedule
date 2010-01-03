@@ -22,34 +22,34 @@ $(document).ready(function() {
 
   test("initialization", function() {
     expect(9);
-    ok( session.id == 'session_1', "it has the session id" );
-    ok( session.title == 'Some Session', "it has a title" );
-    ok( session.speaker == 'Johnny Fedora', "it has a speaker" );
-    ok( session.room == "Bathroom", "has a room" );
-    ok( session.start.valueOf() == (new Date(43215)).valueOf(),
+    equals( session.id, 'session_1', "it has the session id" );
+    equals( session.title, 'Some Session', "it has a title" );
+    equals( session.speaker, 'Johnny Fedora', "it has a speaker" );
+    equals( session.room, "Bathroom", "has a room" );
+    equals( session.start.valueOf(), (new Date(43215)).valueOf(),
       "it has a start date" );
-    ok( session.difficulty == "Beginner", "it has a difficulty" );
-    ok( session.technology == "Java", "it has a technology" );
-    ok( session.track == "Web Frameworks", "it has a track" );
-    ok( session.abstract == "We'll Learn Stuff", "it has an abstract" );
+    equals( session.difficulty, "Beginner", "it has a difficulty" );
+    equals( session.technology, "Java", "it has a technology" );
+    equals( session.track, "Web Frameworks", "it has a track" );
+    equals( session.abstract, "We'll Learn Stuff", "it has an abstract" );
   });
 
 
   test(".dayGroup()", function() {
     expect(1);
-    ok( session.dayGroup() == 'Wednesday' );
+    equals( session.dayGroup(), 'Wednesday' );
   });
 
 
   test(".timeGroup()", function() {
     expect(1);
-    ok( session.timeGroup() == '7:00 pm' );
+    equals( session.timeGroup(), '7:00 pm' );
   });
 
 
   test(".slotGroup()", function() {
     expect(1);
-    ok( session.slotGroup() == session.start.valueOf() );
+    equals( session.slotGroup(), session.start.valueOf() );
   });
 
 });
@@ -71,12 +71,12 @@ $(document).ready(function() {
 
     sessions = SortSessions.byStartTime(sessions);
     expect(6);
-    ok( sessions[0].start == 1);
-    ok( sessions[1].start == 2);
-    ok( sessions[1].title == 'a');
-    ok( sessions[2].start == 2);
-    ok( sessions[2].title == 'b');
-    ok( sessions[3].start == 3);
+    equals( sessions[0].start, 1);
+    equals( sessions[1].start, 2);
+    equals( sessions[1].title, 'a');
+    equals( sessions[2].start, 2);
+    equals( sessions[2].title, 'b');
+    equals( sessions[3].start, 3);
   });
 
 });
@@ -108,7 +108,7 @@ $(document).ready(function() {
     var obj = { dayGroup: function() { return 'yes'; } };
 
     expect(1);
-    ok( grouper(obj) == 'yes', "the grouper calls dayGroup() on objects" );
+    equals( grouper(obj), 'yes', "the grouper calls dayGroup() on objects" );
   });
 
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
     var obj = { timeGroup: function() { return 'yes'; } };
 
     expect(1);
-    ok( grouper(obj) == 'yes', "the grouper calls timeGroup() on objects" );
+    equals( grouper(obj), 'yes', "the grouper calls timeGroup() on objects" );
   });
 
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
     var obj = { slotGroup: function() { return 'yes'; } };
 
     expect(1);
-    ok( grouper(obj) == 'yes', "the grouper calls slotGroup() on objects" );
+    equals( grouper(obj), 'yes', "the grouper calls slotGroup() on objects" );
   });
 
 });
@@ -150,7 +150,7 @@ $(document).ready(function() {
 
   test(".byId(id)", function() {
     expect(2);
-    ok( finder.byId('ses1').title == 'a', "finds session by id" );
-    ok( finder.byId('none') == undefined, "returns undefined if not found" );
+    equals( finder.byId('ses1').title, 'a', "finds session by id" );
+    equals( finder.byId('none'), undefined, "returns undefined if not found" );
   });
 });
