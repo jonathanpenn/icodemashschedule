@@ -10,36 +10,36 @@ $(document).ready(function() {
     });
 
     expect(4);
-    ok( grouped['a'][0] == 'ab' );
-    ok( grouped['a'][1] == 'ac' );
-    ok( grouped['c'][0] == 'cc' );
-    ok( grouped['c'][1] == 'cd' );
+    equals( grouped['a'][0], 'ab' );
+    equals( grouped['a'][1], 'ac' );
+    equals( grouped['c'][0], 'cc' );
+    equals( grouped['c'][1], 'cd' );
   });
 
 
   test("$.keys(hash)", function() {
     var keys = $.keys({a:1, b:2, c:3});
     expect(3);
-    ok( keys[0] == 'a', "has first key" );
-    ok( keys[1] == 'b', "has second key" );
-    ok( keys[2] == 'c', "has third key" );
+    equals( keys[0], 'a', "has first key" );
+    equals( keys[1], 'b', "has second key" );
+    equals( keys[2], 'c', "has third key" );
   });
 
 
   test("$.values(hash)", function() {
     var values = $.values({a:1, b:2, c:3});
     expect(3);
-    ok( values[0] == 1, "has first value" );
-    ok( values[1] == 2, "has second value" );
-    ok( values[2] == 3, "has third value" );
+    equals( values[0], 1, "has first value" );
+    equals( values[1], 2, "has second value" );
+    equals( values[2], 3, "has third value" );
   });
 
 
   test("domid(timestr)", function() {
     expect(3);
-    ok( domid('2:00 am') == '200am' );
-    ok( domid('Some') == 'some' );
-    ok( domid('one', 'two') == 'one_two' );
+    equals( domid('2:00 am'), '200am' );
+    equals( domid('Some'), 'some' );
+    equals( domid('one', 'two'), 'one_two' );
   });
 
 });
