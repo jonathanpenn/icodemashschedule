@@ -14,16 +14,11 @@ $(document).ready(function(){
     ok( favs.hasSession(session3), "has the third session" );
   });
 
-  test("initialization with no data", function() {
-    var favs = new Favorites();
-    expect(0);
-  });
-
   test("ids()", function() {
     var favs = new Favorites('id1,id2');
     expect(2);
-    ok( favs.ids()[0] == 'id1', "has first id" );
-    ok( favs.ids()[1] == 'id2', "has second id" );
+    equals( favs.ids()[0], 'id1' );
+    equals( favs.ids()[1], 'id2' );
   });
 
   test("addSession(session)", function() {
@@ -65,7 +60,7 @@ $(document).ready(function(){
     favs.addSession(session1);
     favs.addSession(session3);
     expect(1);
-    ok( favs.serialize() == 'id1,id3', "serializes ids to comma separated string" );
+    equals( favs.serialize(), 'id1,id3' );
   });
 
 });
@@ -96,44 +91,44 @@ $(document).ready(function(){
     var $next, $html = favlist.$render();
 
     var $next = $html.eq(0);
-    ok( $next[0].tagName == 'H2', "renders group title as h2 tag" );
-    ok( $next.html() == 'Sunday 1:45 pm',
+    equals( $next[0].tagName, 'H2', "renders group title as h2 tag" );
+    equals( $next.html(), 'Sunday 1:45 pm',
       "renders first day/time as group title" );
 
     $next = $next.next();
-    ok( $next[0].tagName == 'UL', "followed by an unordered list" );
+    equals( $next[0].tagName, 'UL', "followed by an unordered list" );
     ok( $next.hasClass('rounded'), "that has the class .rounded" );
     ok( $next.find("> li:first-child").hasClass('arrow'),
       "and the first list item has the class .arrow" );
-    ok( $next.find("> li:first-child a").html() == 'Session 1',
+    equals( $next.find("> li:first-child a").html(), 'Session 1',
       "and has an A tag with session 1 title" );
-    ok( $next.find("> li:first-child a").attr('href') == '#s1',
+    equals( $next.find("> li:first-child a").attr('href'), '#s1',
       "and the a tag has href to #s1" );
 
     ok( $next.find("> li:nth(1)").hasClass('arrow'),
       "and the second list item has the class .arrow" );
-    ok( $next.find("> li:nth(1) a").html() == 'Session 2',
+    equals( $next.find("> li:nth(1) a").html(), 'Session 2',
       "and has an A tag with session 1 title" );
-    ok( $next.find("> li:nth(1) a").attr('href') == '#s2',
+    equals( $next.find("> li:nth(1) a").attr('href'), '#s2',
       "and the a tag has href to #s1" );
 
     $next = $next.next();
-    ok( $next[0].tagName == 'H2', "renders group title as h2 tag" );
-    ok( $next.html() == 'Sunday 3:45 pm',
+    equals( $next[0].tagName, 'H2', "renders group title as h2 tag" );
+    equals( $next.html(), 'Sunday 3:45 pm',
       "renders first day/time as group title" );
 
     $next = $next.next();
-    ok( $next[0].tagName == 'UL', "followed by an unordered list" );
+    equals( $next[0].tagName, 'UL', "followed by an unordered list" );
     ok( $next.hasClass('rounded'), "that has the class .rounded" );
     ok( $next.find("> li:first-child").hasClass('arrow'),
       "and the first list item has the class .arrow" );
-    ok( $next.find("> li:first-child a").html() == 'Session 3',
+    equals( $next.find("> li:first-child a").html(), 'Session 3',
       "and has an A tag with session 3 title" );
-    ok( $next.find("> li:first-child a").attr('href') == '#s3',
+    equals( $next.find("> li:first-child a").attr('href'), '#s3',
       "and the a tag has href to #s3" );
 
     $next = $next.next();
-    ok( $next.length == 0, "should be no more elements" );
+    equals( $next.length, 0, "should be no more elements" );
 
     ok( $html.find("a").hasClass("favorite"),
       "all links have .favorite class" );
@@ -171,30 +166,30 @@ $(document).ready(function(){
 
   test("when there are favorites in the panel", function() {
     ShowFavoritesCounter($li);
-    ok( $li.find("a + small.counter").html() == "2",
+    equals( $li.find("a + small.counter").html(), "2",
       "it knows that there are two favorites" );
   });
 
   test("when there are no favorites in the panel", function() {
     $div.find("a").removeClass("favorite");
     ShowFavoritesCounter($li);
-    ok( $li.find("a + small.counter").length == 0,
+    equals( $li.find("a + small.counter").length, 0,
       "it doesn't have the counter element" );
   });
 
   test("when re-running after favorite status changes", function() {
     ShowFavoritesCounter($li);
-    ok( $li.find("a + small.counter").html() == "2",
+    equals( $li.find("a + small.counter").html(), "2",
       "it starts off with two favorites in the counter" );
 
     $div.find("a").eq(0).removeClass("favorite");
     ShowFavoritesCounter($li);
-    ok( $li.find("a + small.counter").html() == '1',
+    equals( $li.find("a + small.counter").html(), '1',
       "it should now find just 1" );
 
     $div.find("a").removeClass("favorite");
     ShowFavoritesCounter($li);
-    ok( $li.find("a + small.counter").length == 0,
+    equals( $li.find("a + small.counter").length, 0,
       "and if there are zero, it removes the counter element" );
   });
 
