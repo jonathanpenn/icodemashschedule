@@ -9,10 +9,10 @@ $(document).ready(function() {
     var panel = new Panel();
     expect(4);
 
-    ok( panel.id == 'panel_1', "defaults panel id" );
-    ok( (new Panel()).id == "panel_2", "increments the panel id counter" );
-    ok( panel.backPanelId == '', "back button just goes back to previous id" );
-    ok( panel.backButtonTitle == 'Back', "back button title" );
+    equals( panel.id, 'panel_1', "defaults panel id" );
+    equals( (new Panel()).id, "panel_2", "increments the panel id counter" );
+    equals( panel.backPanelId, '', "back button just goes back to previous id" );
+    equals( panel.backButtonTitle, 'Back', "back button title" );
   });
 
 
@@ -26,11 +26,11 @@ $(document).ready(function() {
     });
 
     expect(5);
-    ok( panel.id == 'new_id', "initializes the id" );
-    ok( panel.title == 'Panel 1', "initializes the title" );
-    ok( panel.content == 'Butterscotch', "initializes the content" );
-    ok( panel.backPanelId == 'panel_0', "initializes the back panel id" );
-    ok( panel.backButtonTitle == 'Go Back', "initializes back button title" );
+    equals( panel.id, 'new_id', "initializes the id" );
+    equals( panel.title, 'Panel 1', "initializes the title" );
+    equals( panel.content, 'Butterscotch', "initializes the content" );
+    equals( panel.backPanelId, 'panel_0', "initializes the back panel id" );
+    equals( panel.backButtonTitle, 'Go Back', "initializes back button title" );
   });
 
 
@@ -45,12 +45,12 @@ $(document).ready(function() {
     var $panel = panel.$render();
 
     expect(5);
-    ok( $panel.attr('id') == 'butter_id', "sets the dom id for the panel" );
-    ok( $panel.find('> div.toolbar > h1').text() == 'Panel 1',
+    equals( $panel.attr('id'), 'butter_id', "sets the dom id for the panel" );
+    equals( $panel.find('> div.toolbar > h1').text(), 'Panel 1',
       "has h1 for title inside a toolbar div" );
-    ok( $panel.find("> div.toolbar").next().html() == "Butterscotch",
+    equals( $panel.find("> div.toolbar").next().html(), "Butterscotch",
       "appends content after toolbar" );
-    ok( $panel.find("> div.toolbar > a.back").attr('href') == "#panel_0",
+    equals( $panel.find("> div.toolbar > a.back").attr('href'), "#panel_0",
       "href for back button is the back panel id" );
     ok( $panel.find("> div.toolbar > a.back").text().indexOf("Go Back") >= 0,
       "title of backbutton is set" );
@@ -68,7 +68,7 @@ $(document).ready(function() {
     var $panel = panel.$render();
 
     expect(1);
-    ok( $panel.find('> div.toolbar').next().next().html() == "another",
+    equals( $panel.find('> div.toolbar').next().next().html(), "another",
       "it adds content at the end of the panel div" );
   });
 
@@ -103,29 +103,29 @@ $(document).ready(function() {
     var $html = panel.$render();
 
     expect(13);
-    ok( $html.attr("id") == session.id, "sets session id" );
+    equals( $html.attr("id"), session.id, "sets session id" );
     ok( $html.hasClass("session"), "panel has class 'session'" );
-    ok( $html.find(".toolbar h1").html() == 'Session',
+    equals( $html.find(".toolbar h1").html(), 'Session',
       "Sets the panel title to 'Session'" );
-    ok( $html.find(".toolbar + ul > li > a.room[href=#conferenceMap]").length == 1,
+    equals( $html.find(".toolbar + ul > li > a.room[href=#conferenceMap]").length, 1,
       "adds a link to the conference map" );
-    ok( $html.find(".toolbar + ul + .content").length == 1,
+    equals( $html.find(".toolbar + ul + .content").length, 1,
       "adds the content after the map link" );
-    ok( $html.find(".content > h1").html() == 'Some Session',
+    equals( $html.find(".content > h1").html(), 'Some Session',
       "has the title" );
-    ok( $html.find(".content > div.speaker").html() == 'Johnny Fedora',
+    equals( $html.find(".content > div.speaker").html(), 'Johnny Fedora',
       "has the speaker name" );
-    ok( $html.find(".content > div.start").html() == 'Wednesday 7:00 pm',
+    equals( $html.find(".content > div.start").html(), 'Wednesday 7:00 pm',
       "has the start time" );
-    ok( $html.find(".content > div.difficulty").html() == 'Beginner',
+    equals( $html.find(".content > div.difficulty").html(), 'Beginner',
       "has the difficulty" );
-    ok( $html.find(".content > div.technology").html() == 'Java',
+    equals( $html.find(".content > div.technology").html(), 'Java',
       "has the technology" );
-    ok( $html.find(".content > div.track").html() == 'Web Frameworks',
+    equals( $html.find(".content > div.track").html(), 'Web Frameworks',
       "has the track" );
-    ok( $html.find(".content > div.abstract").html() == "We'll Learn Stuff",
+    equals( $html.find(".content > div.abstract").html(), "We'll Learn Stuff",
       "has the abstract" );
-    ok( $html.data("session") == session, "it stores the session as data" );
+    equals( $html.data("session"), session, "it stores the session as data" );
   });
 
 });
