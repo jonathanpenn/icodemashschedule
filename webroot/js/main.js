@@ -17,6 +17,9 @@ $(document).ready(function() {
   var mainMenu = new MenuList();
 
   for(day in sessionsByDay) {
+    // Use this to skip "all day" events
+    if (day == 'Monday') { continue; }
+
     var id = domid(day, "panel")
     mainMenu.items.push(
       new MenuListItem({title: day, panel: id})
