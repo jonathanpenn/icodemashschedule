@@ -15,7 +15,7 @@ def main
   puts "(function() {"
   puts "var s = [];"
   sessions = (doc/'Session').map {|node| scrub(Session.new(node)) }
-  sessions.sort_by{|s| s.start}.each do |session|
+  sessions.sort_by{|s| s.start.to_i.to_s + s.title}.each do |session|
     puts session.to_js
   end
   puts "window.sessions = s;"
