@@ -13,7 +13,9 @@ $(document).ready(function() {
     'G':                {x:450, y:241},
     'H':                {x:382, y:241},
     'Mangrove':         {x:405, y:573},
-    'Indigo Bay':       {x:238, y:278}
+    'Indigo Bay':       {x:238, y:278},
+    'Banyan':           {x:168, y:364},
+    'Ironwood':         {x:172, y:438}
   };
 
   var $mapPanel = $("#conferenceMap");
