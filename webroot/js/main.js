@@ -18,21 +18,68 @@ $(document).ready(function() {
 
   for(day in sessionsByDay) {
     // Use this to skip "all day" events
-    if (day == 'Monday') { continue; }
+    if (day == 'Monday') {
+      var id = domid('all_week', "panel")
+      mainMenu.items.push(
+        new MenuListItem({title: 'All Week', panel: id})
+      );
 
-    var id = domid(day, "panel")
-    mainMenu.items.push(
-      new MenuListItem({title: day, panel: id})
-    );
+      renderSessionPanelForAllWeek(id, sessionsByDay[day]);
+    } else {
+      var id = domid(day, "panel")
+      mainMenu.items.push(
+        new MenuListItem({title: day, panel: id})
+      );
 
-    renderSessionPanelForDay(id, day, sessionsByDay[day]);
+      renderSessionPanelForDay(id, day, sessionsByDay[day]);
+    }
   }
   $(document).trigger("sessions.loaded");
 
   $("#startingSchedule").replaceWith(mainMenu.$render());
 
   $("#loading").hide();
+
+  setTimeout(hideTimeForAllWeekSessions, 1);
+  setTimeout(hideSpeakerForAllWeekSessions, 1);
 });
+
+
+function hideTimeForAllWeekSessions()
+{
+  $("div.start:contains(Monday 12:00 am)").hide();
+}
+
+
+function hideSpeakerForAllWeekSessions()
+{
+  $("div.speaker:contains(N/A)").hide();
+}
+
+
+function renderSessionPanelForAllWeek(id, sessions)
+{
+  var menu = new MenuList();
+
+  for (k in sessions) {
+    menu.items.push(
+      new MenuListItem({
+        title: sessions[k].title,
+        panel: sessions[k].id
+      })
+    );
+
+    renderSessionPanel(sessions[k]);
+  }
+
+  var panel = new Panel({
+    id: id,
+    title: 'All Week',
+    content: menu.$render()
+  });
+
+  $("body").append(panel.$render());
+}
 
 
 function renderSessionPanelForDay(day_id, day, sessions)
