@@ -150,6 +150,12 @@ function FavoritesList(sessions, favorites)
     for (slot in grouped) {
       var date = new Date(slot-0);
       var displayName = weekday(date) + " "  + shortTime(date);
+
+      // Hack to deal with all week sessions marked as Monday
+      if (displayName == 'Monday 12:00 am') {
+        displayName = 'All Week';
+      }
+
       $html.append("<h2>"+displayName+"</h2>");
       var $ul = $("<ul class='rounded'></ul>");
 
