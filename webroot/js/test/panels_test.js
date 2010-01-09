@@ -102,13 +102,15 @@ $(document).ready(function() {
   test("renders expected html", function() {
     var $html = panel.$render();
 
-    expect(13);
+    expect(14);
     equals( $html.attr("id"), session.id, "sets session id" );
     ok( $html.hasClass("session"), "panel has class 'session'" );
     equals( $html.find(".toolbar h1").html(), 'Session',
       "Sets the panel title to 'Session'" );
-    equals( $html.find(".toolbar + ul > li > a.room[href=#conferenceMap]").length, 1,
-      "adds a link to the conference map" );
+    equals( $html.find(".toolbar + ul a.room[href=#conferenceMap]").html(),
+      "Room: Bathroom", "adds a link to the conference map" );
+    equals( $html.find(".toolbar + ul a.room[href=#conferenceMap]").attr('data-room'),
+      "Bathroom", "link has session room as data attribute" );
     equals( $html.find(".toolbar + ul + .content").length, 1,
       "adds the content after the map link" );
     equals( $html.find(".content > h1").html(), 'Some Session',

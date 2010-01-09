@@ -60,7 +60,7 @@ Panel.generateFromSession = function(session)
   panel.content = "\
     <ul class='rounded'>\
       <li class='arrow'>\
-        <a class='room' href='#conferenceMap'>"+session.room+"</a>\
+        <a class='room' data-room='"+session.room+"' href='#conferenceMap'>Room: "+session.room+"</a>\
       </li>\
     </ul>\
     <div class='content' class='session'>\

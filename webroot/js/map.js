@@ -88,8 +88,7 @@ $(document).ready(function() {
     $mapPanel.bind("pageAnimationEnd", function(event, info) {
       if (info.direction != 'in') { return; }
 
-      var scrollMapTo = $mapPanel.data('referrer').text();
-      $mapPanel.find("h1").html(scrollMapTo);
+      var scrollMapTo = $mapPanel.data('referrer').attr('data-room');
 
       var coords = mapCoordinates[scrollMapTo];
       if (!coords) { coords = {x:lastX, y:lastY}; }
