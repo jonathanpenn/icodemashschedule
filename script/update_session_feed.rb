@@ -4,22 +4,24 @@ require 'open-uri'
 require 'digest'
 require 'time'
 
-def main
+OUTFILE = File.expand_path(File.join(File.dirname(__FILE__), '..', 'webroot', 'js', 'schedule.js'))
 
-  data_dir = File.join(File.dirname(File.dirname(__FILE__)), "data")
+def main
 
   session_feed = 'http://www.codemash.org/rest/sessions.xml'
 
   doc = Nokogiri(open(session_feed).read)
 
-  puts "(function() {"
-  puts "var s = [];"
-  sessions = (doc/'Session').map {|node| scrub(Session.new(node)) }
-  sessions.sort_by{|s| s.start.to_i.to_s + s.title}.each do |session|
-    puts session.to_js
+  File.open(OUTFILE, "w") do |f|
+    f.puts "(function() {"
+    f.puts "var s = [];"
+    sessions = (doc/'Session').map {|node| scrub(Session.new(node)) }
+    sessions.sort_by{|s| s.start.to_i.to_s + s.title}.each do |session|
+      f.puts session.to_js
+    end
+    f.puts "window.sessions = s;"
+    f.puts "})();"
   end
-  puts "window.sessions = s;"
-  puts "})();"
 end
 
 
