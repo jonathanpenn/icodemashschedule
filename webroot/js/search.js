@@ -1,3 +1,0 @@
-function Searcher(sessions)
-{
-}
