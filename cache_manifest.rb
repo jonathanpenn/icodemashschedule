@@ -16,7 +16,6 @@ class CacheManifest
     <<EOM
 CACHE MANIFEST
 # For version #{APP_VERSION}
-
 #{file_list}
 EOM
   end
