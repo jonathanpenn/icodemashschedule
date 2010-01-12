@@ -131,12 +131,12 @@ $(document).ready(function() {
   {
     $searchBox.addClass('searching');
     searcherTimer = setTimeout(function() {
-      var results = searcher.filter($searchBox.val());
-      renderSearchResults(results);
       clearScheduledSearch();
+      var results = searcher.filter($searchBox.val());
+      $results.show();
+      $resultsHeader.show();
+      renderSearchResults(results);
     }, 1000);
-    $results.show();
-    $resultsHeader.show();
   }
 
 });
