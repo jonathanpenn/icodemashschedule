@@ -6,12 +6,12 @@ $(document).ready(function() {
   function setup()
   {
     var sessions = [
-      {title: 'First One'},
-      {title: 'Only One'},
-      {title: 'Another One to go'},
-      {title: 'Check with, punctuation'},
-      {title: 'non-adjacent words to find'},
-      {title: 'cAsE inSensiTivIty!'}
+      {title: 'First One', author: 'John Doe'},
+      {title: 'Only One', author: 'Jane Doe'},
+      {title: 'Another One to go', author: 'Jane Doe'},
+      {title: 'Check with, punctuation', author: 'Jim Doe'},
+      {title: 'non-adjacent words to find', author: 'Jane Doe'},
+      {title: 'cAsE inSensiTivIty!', author: 'Jane Doe'}
     ];
     searcher = new Searcher(sessions);
   }
@@ -101,6 +101,10 @@ $(document).ready(function() {
     equals( preparedKeywords.length, 2 );
     equals( preparedKeywords[0], 'dont' );
     equals( preparedKeywords[1], 'include' );
+  });
+
+
+  test("it also searches by author name", function() {
   });
 
 
