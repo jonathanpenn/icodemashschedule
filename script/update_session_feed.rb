@@ -97,6 +97,7 @@ end
 def strip_bad_html_entities session
   session.abstract = session.abstract.gsub('&lt;div&gt;', '')
   session.abstract = session.abstract.gsub('&lt;/div&gt;', '')
+  session.abstract = session.abstract.gsub('&amp;lt;wink/&amp;gt;', '<wink/>')
 end
 
 
