@@ -10,6 +10,9 @@ p br { clear: both; }
 a { color: #FF782E; }
 a, a img { border: none; }
 
+ul { margin-bottom: 2em; }
+ul li { margin-bottom: .5em; }
+
 .alert { width: 600px; margin: 0 auto; line-height: 1.5em; font-size: 14px; text-align: center; background-color: #633; padding: 20px 60px; }
 .aligncenter { text-align: center; }
 .alignright { text-align: right; }
