@@ -78,15 +78,16 @@ $(document).ready(function() {
 
   if (!window.sessions) { return; }
 
+  var $searchResults = $("#searchResults");
+  var $searchBox = $("#searchBox");
   var searcher = new Searcher(sessions);
+  var searcherTimer;
 
-  $("#searchBox").keydown(function() {
-    var results = searcher.filter($(this).val());
-    renderSearchResults(results);
+  $searchBox.keydown(function() {
+    clearScheduledSearch();
+    scheduleSearch();
   });
 
-
-  var $searchResults = $("#searchResults");
 
   function clearSearchResults()
   {
@@ -107,6 +108,22 @@ $(document).ready(function() {
     }
 
     $searchResults.html(menu.$render());
+  }
+
+  function clearScheduledSearch()
+  {
+    if (searcherTimer) {
+      clearTimeout(searcherTimer);
+      searcherTimer = null;
+    }
+  }
+
+  function scheduleSearch()
+  {
+    searcherTimer = setTimeout(function() {
+      var results = searcher.filter($searchBox.val());
+      renderSearchResults(results);
+    }, 1000);
   }
 
 });
