@@ -122,7 +122,9 @@ function initializeFavorites()
     } else {
       $("#favorites").find("> .toolbar").after("\
         <p style='margin-top: 30px; text-align: center'>\
-          No sessions marked. When viewing session details, tap the hollow star\
+          No sessions marked.<br>\
+          When viewing session details,<br>\
+          tap the hollow star<br>\
           to record it in this list.\
         </p>\
       ");
