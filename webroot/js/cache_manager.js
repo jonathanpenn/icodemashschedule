@@ -19,6 +19,12 @@ $(document).ready(function() {
       removeClass("opacityPulse");
   }
 
+  function moveStatusToTop()
+  {
+    $status.closest("body > div").find(".toolbar").after($status);
+
+  }
+
   function check()
   {
     switch(cache.status) {
@@ -32,6 +38,7 @@ $(document).ready(function() {
         finish();
         break;
       case cache.DOWNLOADING:
+        moveStatusToTop();
         $status.
           html("Updating application...").
           addClass("updating").

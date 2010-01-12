@@ -1,7 +1,5 @@
 body > div > h2 { color: black; }
 
-#version { text-align: center; color: #aaa; padding-bottom: 15px; text-transform: uppercase; font-size: .7em; }
-
 body > div > .content * { margin: 0px; padding: 0px; }
 body > div > .content { padding: 20px; line-height: 1.6em; }
 body > div > .content ul { background: none; border: none; line-height: 1.6em; }
@@ -38,6 +36,7 @@ ul li.arrow a.favorite { background-repeat: no-repeat; background-image: url(../
 #search h2, #search .results { display: none; }
 
 
+#version { text-align: center; color: #aaa; padding-top: 15px; padding-bottom: 15px; text-transform: uppercase; font-size: .7em; }
 #version.updating { color: yellow; }
 #version.error { color: #FF6F6F; }
 
