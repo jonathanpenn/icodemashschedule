@@ -112,6 +112,7 @@ $(document).ready(function() {
 
   function clearScheduledSearch()
   {
+    $searchBox.removeClass('searching');
     if (searcherTimer) {
       clearTimeout(searcherTimer);
       searcherTimer = null;
@@ -120,9 +121,11 @@ $(document).ready(function() {
 
   function scheduleSearch()
   {
+    $searchBox.addClass('searching');
     searcherTimer = setTimeout(function() {
       var results = searcher.filter($searchBox.val());
       renderSearchResults(results);
+      clearScheduledSearch();
     }, 1000);
   }
 

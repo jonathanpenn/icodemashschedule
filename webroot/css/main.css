@@ -35,6 +35,7 @@ ul li.arrow a.favorite { background-repeat: no-repeat; background-image: url(../
 
 #searchBoxContainer { padding: 10px; }
 #searchBox { width: 100%; padding: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+#searchBox.searching { background-repeat: no-repeat; background-position: center right; background-image: url(../img/ajax-loader.gif) };
 
 
 #version.updating { color: yellow; }

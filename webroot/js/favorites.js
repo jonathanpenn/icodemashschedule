@@ -130,7 +130,7 @@ function initializeFavorites()
 
   function updateFavoriteCounters()
   {
-    ShowFavoritesCounter($("#favListLink li"));
+    ShowFavoritesCounter($("#favListLink li:first"));
     ShowFavoritesCounter($("#nextSession li"));
   }
 }
