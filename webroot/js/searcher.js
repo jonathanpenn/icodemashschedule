@@ -117,10 +117,14 @@ $(document).ready(function() {
     var menu = new MenuList();
 
     for (k in sessions) {
+      var session = sessions[k];
+      var htmlClass = favorites.hasSession(session) ? 'favorite' : '';
+
       menu.items.push(
         new MenuListItem({
-          title: sessions[k].title,
-          panel: sessions[k].id
+          title: session.title,
+          panel: session.id,
+          htmlClasses: htmlClass
         })
       );
     }
