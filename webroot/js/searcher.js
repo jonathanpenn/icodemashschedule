@@ -26,15 +26,29 @@ function Searcher(sessions)
 
   function sessionMatches(session, keywords)
   {
+    return titleMatches(session, keywords) || speakerMatches(session, keywords);
+  }
+
+
+  function titleMatches(session, keywords)
+  {
     var found = 0;
     var title = session.title.toLowerCase();
-
     for (i in keywords) {
       if (title.indexOf(keywords[i]) >= 0) {
         found++;
       }
     }
+    return found == keywords.length;
+  }
 
+  function speakerMatches(session, keywords)
+  {
+    var found = 0;
+    var speaker = session.speaker.toLowerCase();
+    for (i in keywords) {
+      if (speaker.indexOf(keywords[i]) >= 0) { found ++; }
+    }
     return found == keywords.length;
   }
 
