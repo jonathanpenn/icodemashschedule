@@ -33,7 +33,7 @@ ul li.arrow a.favorite { background-repeat: no-repeat; background-image: url(../
 .navellogo { text-align: center; padding-bottom: 15px; }
 .navellogo img { opacity: 0.7; }
 
-#search li.search { background-image: url(../img/search.png); padding-left: 30px; background-repeat: no-repeat; background-position: 10px center; }
+#search li.search, #searchMenuLink { background-image: url(../img/search.png); padding-left: 43px; background-repeat: no-repeat; background-position: 15px center; }
 #searchBox.searching { background-repeat: no-repeat; background-position: center right; background-image: url(../img/ajax-loader.gif) };
 #search h2, #search .results { display: none; }
 
