@@ -123,7 +123,7 @@ function initializeFavorites()
       $("#favorites").find("> .toolbar").after("\
         <p style='margin-top: 30px; text-align: center'>\
           No sessions marked. When viewing session details, tap the hollow star\
-          to record it in this list.
+          to record it in this list.\
         </p>\
       ");
     }
