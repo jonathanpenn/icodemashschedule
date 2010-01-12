@@ -24,13 +24,14 @@ function MenuListItem(initData)
 
   this.title = initData.title;
   this.panel = initData.panel;
+  this.htmlClasses = initData.htmlClasses;
 
 
   this.$render = function()
   {
     return $("\
       <li class='arrow'>\
-        <a href='#"+this.panel+"'>"+this.title+"</a>\
+        <a href='#"+this.panel+"' class='"+this.htmlClasses+"'>"+this.title+"</a>\
       </li>\
     ");
   }

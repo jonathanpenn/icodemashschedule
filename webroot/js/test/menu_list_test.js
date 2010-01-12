@@ -55,13 +55,13 @@ $(document).ready(function() {
   {
     item = new MenuListItem({
       title: "title to click",
-      panel: "go_here"
+      panel: "go_here",
+      htmlClasses: "someclass"
     });
   }
 
 
   test("initialization", function() {
-    expect(2);
     equals( item.title, 'title to click', "has the title" );
     equals( item.panel, 'go_here', "has the panel id" );
   });
@@ -69,11 +69,11 @@ $(document).ready(function() {
 
   test(".$render() as a link", function() {
     var $html = item.$render();
-    expect(4);
     equals( $html[0].tagName, 'LI', "is a list item" );
     ok( $html.hasClass("arrow"), "with the class .arrow" );
     equals( $html.find("> a").html(), "title to click", "link has given title" );
     equals( $html.find("> a").attr('href'), "#go_here", "links to panel" );
+    ok( $html.find("> a").hasClass("someclass"), "should have html classes" );
   });
 
 });
