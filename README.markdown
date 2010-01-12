@@ -31,7 +31,7 @@ Then clone a copy of the repository, enter the repo directory, and type:
 
 All the gem dependencies will be downloaded and installed for you locally in the repo directory. Once it's complete you can spin up rack by typing:
 
-    rackup -p 3000
+    ./bin/rackup -p 3000
 
 Now, you have an HTTP server running on localhost at port 3000. Visit `http://localhost:3000` to see the app. (And check out `http://localhost:3000/test` for the Javascript test suite)
 
@@ -39,7 +39,7 @@ By default, the rack app uses HTML5 offline caching which means that the browser
 
 If you are developing, I created a simple environment flag to turn off the caching:
 
-    caching=false rackup -p 3000
+    caching=false ./bin/rackup -p 3000
 
 That makes `/cache.manifest` return a 404 which will make the browser always invalidate the cache and redownload the files on every refresh.
 

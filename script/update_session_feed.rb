@@ -1,3 +1,4 @@
+require File.join(File.dirname(__FILE__), '..', 'gems', 'environment')
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
