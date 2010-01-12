@@ -7,15 +7,15 @@ This year, they put their entire session calendar information online as an xml f
 
 It's currently running as a Ruby Rack app on Heroku here:
 
-http://icodemashschedule.heroku.com
+<http://icodemashschedule.heroku.com>
 
 It runs on jQuery/jQTouch in the browser and is fully open source.  Enjoy!
 
-Jonathan Penn
-http://wavethenavel.com
+Jonathan Penn  
+<http://wavethenavel.com>
 
-Navel Labs
-http://navel-labs.com
+Navel Labs  
+<http://navel-labs.com>
 
 
 Setup
