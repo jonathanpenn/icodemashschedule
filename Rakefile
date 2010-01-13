@@ -10,6 +10,11 @@ namespace :version do
 
 end
 
+desc "Fetch new sessions to webroot/js/schedule.js"
+task :fetch_schedule do
+  `ruby script/update_session_feed.rb`
+end
+
 
 class Version
   attr_reader :version
