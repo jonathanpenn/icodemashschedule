@@ -40,20 +40,3 @@ ul li.arrow a.favorite { background-repeat: no-repeat; background-image: url(../
 #version.updating { color: yellow; }
 #version.error { color: #FF6F6F; }
 
-
-@-webkit-keyframes opacityPulse {
- 0% {
-   opacity: 0.2;
- }
- 100% {
-   opacity: 1.0;
- }
-}
-
-.opacityPulse {
- -webkit-animation-name: opacityPulse;
- -webkit-animation-duration: 1s;
- -webkit-animation-iteration-count: 90;
- -webkit-animation-direction: alternate;
-}
-

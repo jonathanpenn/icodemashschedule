@@ -9,14 +9,12 @@ $(document).ready(function() {
   {
     $status.html("Network error checking for updates").
       addClass("error").
-      removeClass("updating").
-      removeClass("opacityPulse");
+      removeClass("updating");
   }
 
   function finish()
   {
-    $status.html("Update complete. Restart app to finish.").
-      removeClass("opacityPulse");
+    $status.html("Update complete. Restart app to finish.");
   }
 
 
