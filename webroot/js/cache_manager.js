@@ -19,41 +19,23 @@ $(document).ready(function() {
       removeClass("opacityPulse");
   }
 
-  function moveStatusToTop()
-  {
-    $status.closest("body > div").find(".toolbar").after($status);
 
-  }
-
-  function check()
+  var moved = false;
+  var count = 0;
+  var numFiles = 48;
+  function progressUpdate()
   {
-    switch(cache.status) {
-      case cache.CHECKING:
-        $status.
-          addClass("updating").
-          addClass("opacityPulse").
-          html("Checking for updates...");
-        break;
-      case cache.UPDATEREADY:
-        finish();
-        break;
-      case cache.DOWNLOADING:
-        moveStatusToTop();
-        $status.
-          html("Updating application...").
-          addClass("updating").
-          addClass("opacityPulse");
-        break;
-      case cache.UNCACHED:
-        $status.html("Application is not cached offline");
-        break;
+    if (!moved) {
+      $status.closest("body > div").find(".toolbar").after($status);
+      $status.addClass("updating").html('Updating application...<span></span>');;
+      moved = true;
     }
+    count++;
+    $status.find('span').text((count/numFiles*100).toFixed(0)+'%');
   }
 
   cache.addEventListener('error', checkOnError, false);
-  cache.addEventListener('updateready', check, false);
-  cache.addEventListener('downloading', check, false);
-  cache.addEventListener('noupdate', check, false);
-  cache.addEventListener('checking', check, false);
+  cache.addEventListener('updateready', finish, false);
+  cache.addEventListener('progress', progressUpdate, false);
 
 });
