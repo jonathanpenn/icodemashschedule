@@ -1,11 +1,8 @@
-clear_sources
-bundle_path 'gems'
+source :rubyforge
 
-source 'http://gemcutter.org'
+gem 'rack'
+gem 'rack-contrib'
+gem 'rack-rewrite'
 
-gem 'rack',             '1.0.1'
-gem 'rack-contrib',     '0.9.2'
-gem 'rack-rewrite',     '0.1.2'
-
-gem 'activesupport',    '2.3.4'
-gem 'nokogiri',         '1.3.3'
+gem 'activesupport'
+gem 'nokogiri'
