@@ -17,6 +17,11 @@ $(document).ready(function() {
     $status.html("Update complete. Restart app to finish.");
   }
 
+  function firstCached()
+  {
+    $status.html("Schedule is now available offline.");
+  }
+
 
   var moved = false;
   var count = 0;
@@ -34,6 +39,7 @@ $(document).ready(function() {
 
   cache.addEventListener('error', checkOnError, false);
   cache.addEventListener('updateready', finish, false);
+  cache.addEventListener('cached', firstCached, false);
   cache.addEventListener('progress', progressUpdate, false);
 
 });
