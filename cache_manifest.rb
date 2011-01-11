@@ -26,7 +26,7 @@ EOM
       dont_include?(file)
     end.map do |file|
       file.gsub(path+"/webroot/",'')
-    end
+    end.sort
     files.join("\n")
   end
 
