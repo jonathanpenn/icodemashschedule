@@ -48,6 +48,6 @@ module CodeMash
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.assets.paths << "#{Rails.root}/app/assets/javascript_specs"
+    config.assets.paths << "#{Rails.root}/spec/javascripts"
   end
 end
