@@ -1,4 +1,4 @@
-require 'templates/app_template'
+require_relative 'templates/app_template'
 
 
 class CodeMash

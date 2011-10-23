@@ -1,6 +1,6 @@
 require 'rack'
-require 'code_mash'
-require 'cache_manifest'
+require_relative 'code_mash'
+require_relative 'cache_manifest'
 
 APP_VERSION = File.read(File.dirname(__FILE__) + '/VERSION')
 HTML5_CACHING = ENV['caching'] == 'false' ? false : true
