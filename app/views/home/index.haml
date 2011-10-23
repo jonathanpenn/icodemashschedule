@@ -1,1 +1,12 @@
 Index page!
+
+:javascript
+  $(function() {
+    sessions = new Sessions();
+
+    sessions.fetch({
+      complete: function() {
+        console.log(sessions.models);
+      }
+    });
+  });

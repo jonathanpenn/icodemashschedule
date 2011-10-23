@@ -1,0 +1,3 @@
+Session = Backbone.Model.extend({
+});
+
