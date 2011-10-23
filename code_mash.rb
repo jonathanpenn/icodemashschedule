@@ -10,7 +10,7 @@ class CodeMash
   def call(env)
     case env['PATH_INFO']
     when /\/(index|app)\.html/
-      [200, {}, AppTemplate.render($1)]
+      [200, {}, [AppTemplate.render($1)]]
     when '/test'
       redirect_to '/test.html'
     when '/'
@@ -24,7 +24,7 @@ class CodeMash
     text = <<-EOS
       Redirecting to #{url}
     EOS
-    [301, {'Location' => url}, text]
+    [301, {'Location' => url}, [text]]
   end
 
 end
