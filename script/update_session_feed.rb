@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'script/schedule'
+require_relative 'schedule'
 
 OUTFILE = File.expand_path(File.join(File.dirname(__FILE__), '..', 'webroot', 'js', 'schedule.js'))
 
