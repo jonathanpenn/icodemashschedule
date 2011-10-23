@@ -16,6 +16,10 @@ gem 'haml'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :test, :development do
+  gem 'jasmine'
+end
+
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
