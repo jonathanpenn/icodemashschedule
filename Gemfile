@@ -1,8 +1,6 @@
 source :rubyforge
 
-gem 'rack'
-gem 'rack-contrib'
-gem 'rack-rewrite'
+gem 'rails'
 
-gem 'activesupport'
 gem 'nokogiri'
+
