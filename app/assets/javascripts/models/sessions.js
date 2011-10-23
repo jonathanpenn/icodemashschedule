@@ -1,3 +1,5 @@
+//=require ./session
+
 Sessions = Backbone.Collection.extend({
   model: Session,
   url: 'http://2011.codemash.org/rest/sessions.json',
@@ -19,5 +21,6 @@ Sessions = Backbone.Collection.extend({
       };
     });
   }
+
 });
 
