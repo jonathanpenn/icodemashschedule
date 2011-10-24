@@ -24,8 +24,6 @@ describe("FilteredCollection", function() {
 
   beforeEach(function() {
     parent_collection = new Backbone.Collection();
-    filtered = new FilteredCollection({parent_collection: parent_collection});
-
   });
 
   describe("filtering and sorting", function() {
@@ -33,9 +31,12 @@ describe("FilteredCollection", function() {
 
     beforeEach(function() {
       resetCounter = 0;
-      filtered.query = function(record) { return record.get('color') == 'white'; }
+      filtered = new FilteredCollection({
+        parent_collection: parent_collection,
+        query: function(record) { return record.get('color') == 'white'; },
+        comparator: function(record) { return record.get('name'); }
+      });
       filtered.bind('reset', function() { resetCounter++; });
-      filtered.comparator = function(record) { return record.get('name'); }
       resetCollection();
     });
 

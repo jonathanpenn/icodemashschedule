@@ -1,8 +1,10 @@
 FilteredCollection = Backbone.Collection.extend({
   initialize: function(options) {
     _.bindAll(this, "triggerFilter", "query");
-    this.parent_collection = options.parent_collection;
-    if (options.query) this.query = options.query;
+
+    this.parent_collection                  = options.parent_collection;
+    if (options.query)      this.query      = options.query;
+    if (options.comparator) this.comparator = options.comparator;
 
     this.parent_collection.bind('reset', this.triggerFilter);
   },
