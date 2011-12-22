@@ -1,7 +1,8 @@
 //= require ./vendor/jquery
 //= require ./vendor/underscore
 //= require ./vendor/backbone
-//= require ./vendor/jquery.mobile
+//
+// Need to leave out jquery.mobile. Conflicts with Jasmine.
 
 //= require_tree ./models
 
