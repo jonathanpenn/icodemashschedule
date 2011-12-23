@@ -8,3 +8,26 @@
  *= require_self
  *= require_tree .
 */
+
+#sessions_list li {
+  .title {
+    font-size: .9em;
+    padding-bottom: .3em;
+    overflow: hidden;
+    margin-right: 0em;
+    text-overflow: ellipsis;
+  }
+
+  .speaker, .wherewhen {
+    font-size: .7em;
+    font-weight: normal;
+    padding-right: 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .wherewhen {
+    float: right;
+  }
+}
+

@@ -1,12 +1,34 @@
-Index page!
+:plain
+  <div data-role='page' id='home_page' data-add-back-btn='false'>
+
+    <div data-role='header' data-position='fixed'>
+      <h1>CodeMash</h1>
+    </div><!-- /header -->
+
+    <div data-role='content'>
+      <ul data-role='listview' id='sessions_list'></ul>
+    </div><!-- /content -->
+
+  </div><!-- /page -->
 
 :javascript
   $(function() {
-    sessions = new Sessions();
+    SessionsDatastore.loadFromLocalStorage();
 
-    sessions.fetch({
-      complete: function() {
-        console.log(sessions.models);
-      }
-    });
+    var sessions = SessionsDatastore.sessions;
+
+    var view = new SessionsListView({collection: sessions});
+    view.render();
+
+    if (sessions.models.length == 0) {
+      $.mobile.showPageLoadingMsg();
+      SessionsDatastore.refreshFromServer(function() {
+        $.mobile.hidePageLoadingMsg();
+      });
+    } else {
+      _.delay(function() {
+        SessionsDatastore.refreshFromServer();
+      }, 2000);
+    }
   });
+

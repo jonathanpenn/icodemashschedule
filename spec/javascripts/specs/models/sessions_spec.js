@@ -9,6 +9,31 @@ describe("Sessions", function() {
     expect(sessions.url).toBe("http://2011.codemash.org/rest/sessions.json");
   });
 
+  describe("serializing to json string", function() {
+    beforeEach(function() {
+      var session1 = new Session({
+        speakerName: "Jonathan Penn",
+        technology: "Javascript"
+      });
+
+      var session2 = new Session({
+        speakerName: "Jack Squat",
+        technology: "Stones"
+      });
+
+      sessions.add(session1);
+      sessions.add(session2);
+    });
+
+    it("can save and load to json strings", function() {
+      var serialized = sessions.serialize();
+      expect(typeof serialized).toBe("string");
+
+      var rehydrated = Sessions.deserialize(serialized);
+      expect(rehydrated.models[0].get("speakerName")).toBe("Jonathan Penn");
+    });
+  });
+
   describe("parsing server results", function() {
     var results;
 
@@ -53,11 +78,7 @@ describe("Sessions", function() {
     });
 
     it("parses when the talk is", function() {
-      expect(result.when).toBe("/Date(1295037300000)/");
-    });
-
-    it("parses when the talk is", function() {
-      expect(result.when).toBe("/Date(1295037300000)/");
+      expect(result.when + "").toBe(new Date(1295037300000) + "");
     });
 
   });
