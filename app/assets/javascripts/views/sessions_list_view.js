@@ -7,11 +7,17 @@ var SessionsListView = Backbone.View.extend({
   },
 
   render: function() {
+    var self = this;
     var $list = $(this.el);
     $list.empty();
 
     this.collection.each(function(session) {
-      var item = new SessionListItemView({model: session});
+      var item = new SessionListItemView({
+        model: session,
+        hideWhen: self.options.hideWhen,
+        hideRoom: self.options.hideRoom,
+        hideSpeaker: self.options.hideSpeaker
+      });
       $list.append(item.render().el);
     });
 
@@ -19,28 +25,5 @@ var SessionsListView = Backbone.View.extend({
 
     return this;
   },
-});
-
-var SessionListItemView = Backbone.View.extend({
-  tagName: 'li',
-
-  initialize: function(options) {
-    _.bindAll(this, 'render');
-    this.model.bind('change', this.render);
-  },
-
-  render: function() {
-    $(this.el).html(" \
-                    <a href='#'> \
-                      <div class='title'>" + this.model.title() + "</div> \
-                      <div class='wherewhen'> \
-                        " + this.model.when().strftime("%a @ %I:%M %P") + ", \
-                        " + this.model.room() + " \
-                      </div> \
-                      <div class='speaker'>" + this.model.get('speakerName') + "</div> \
-                    </a> \
-                    ");
-    return this;
-  }
 });
 
