@@ -13,22 +13,11 @@
 
 :javascript
   $(function() {
-    SessionsDatastore.loadFromLocalStorage();
+    Database.initialize();
 
-    var sessions = SessionsDatastore.sessions;
+    var sessions = Database.sessions;
 
     var view = new SessionsListView({collection: sessions});
     view.render();
-
-    if (sessions.models.length == 0) {
-      $.mobile.showPageLoadingMsg();
-      SessionsDatastore.refreshFromServer(function() {
-        $.mobile.hidePageLoadingMsg();
-      });
-    } else {
-      _.delay(function() {
-        SessionsDatastore.refreshFromServer();
-      }, 2000);
-    }
   });
 
