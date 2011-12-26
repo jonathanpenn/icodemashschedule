@@ -6,7 +6,7 @@ describe("Sessions", function() {
   });
 
   it("has the latest url for json session list", function() {
-    expect(sessions.url).toBe("http://2011.codemash.org/rest/sessions.json");
+    expect(sessions.url).toBe("http://www.codemash.org/rest/sessions.json");
   });
 
   describe("serializing to json string", function() {
