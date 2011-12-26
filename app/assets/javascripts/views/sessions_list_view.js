@@ -1,6 +1,4 @@
 var SessionsListView = Backbone.View.extend({
-  el: '#sessions_list',
-
   initialize: function(options) {
     _.bindAll(this, 'render');
     this.collection.bind('reset', this.render);
@@ -9,7 +7,6 @@ var SessionsListView = Backbone.View.extend({
   render: function() {
     var self = this;
     var $list = $(this.el);
-    $list.empty();
 
     this.collection.each(function(session) {
       var item = new SessionListItemView({
@@ -19,9 +16,10 @@ var SessionsListView = Backbone.View.extend({
         hideSpeaker: self.options.hideSpeaker
       });
       $list.append(item.render().el);
+
+      $list.listview('refresh');
     });
 
-    $list.listview('refresh');
 
     return this;
   },

@@ -6,10 +6,20 @@
     </div><!-- /header -->
 
     <div data-role='content'>
-      <ul data-role='listview' id='sessions_list'></ul>
+      <ul data-role='listview' class='sessions_list'></ul>
     </div><!-- /content -->
 
   </div><!-- /page -->
+
+  <script type='text/template' id='sessions_list_template'>
+    <div data-role='header' data-position='fixed'>
+      <h1><%= navBarTitle %></h1>
+    </div><!-- /header -->
+
+    <div data-role='content'>
+      <ul data-role='listview' class='sessions_list'></ul>
+    </div><!-- /content -->
+  </script>
 
   <script type='text/template' id='sessions_list_item_template'>
     <a href='#'>
@@ -27,7 +37,10 @@
     Database.initialize();
     var sessions = SessionFilter.friday();
 
-    var view = new SessionsListView({collection: sessions});
+    var view = new SessionsListView({
+      collection: sessions,
+      el: $("#home_page .sessions_list")
+    });
     view.render();
   });
 
