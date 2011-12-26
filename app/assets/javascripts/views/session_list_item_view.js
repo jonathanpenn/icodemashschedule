@@ -18,7 +18,6 @@ var SessionListItemView = Backbone.View.extend({
     if (!this.options.hideWhen) locals.when = this.model.when().strftime("%a @ %I:%M %P");
     if (!this.options.hideRoom) locals.room = this.model.room();
     if (!this.options.hideSpeaker) locals.speakerName = this.model.get('speakerName');
-    console.log(locals);
 
     var html = SessionListItemView.template(locals);
 

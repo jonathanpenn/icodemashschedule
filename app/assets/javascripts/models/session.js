@@ -21,6 +21,10 @@ Session = Backbone.Model.extend({
     if (this.isPreCompiler()) {
       return title.replace("PreCompiler: ", '');
     } else return this.get('title');
+  },
+
+  speakerName: function() {
+    return this.get('speakerName');
   }
 
 });

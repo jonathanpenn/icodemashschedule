@@ -25,8 +25,7 @@
 :javascript
   $(function() {
     Database.initialize();
-
-    var sessions = Database.sessions;
+    var sessions = SessionFilter.friday();
 
     var view = new SessionsListView({collection: sessions});
     view.render();

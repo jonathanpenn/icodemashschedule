@@ -1,10 +1,10 @@
-describe("FilteredCollection", function() {
-  var parent_collection;
+describe("FilteredSessions", function() {
+  var parentCollection;
   var filtered;
 
   function resetCollection()
   {
-    parent_collection.reset(
+    parentCollection.reset(
       [
         {
           name: "bbb",
@@ -23,7 +23,7 @@ describe("FilteredCollection", function() {
   }
 
   beforeEach(function() {
-    parent_collection = new Backbone.Collection();
+    parentCollection = new Backbone.Collection();
   });
 
   describe("filtering and sorting", function() {
@@ -31,8 +31,8 @@ describe("FilteredCollection", function() {
 
     beforeEach(function() {
       resetCounter = 0;
-      filtered = new FilteredCollection({
-        parent_collection: parent_collection,
+      filtered = new FilteredSessions({
+        parentCollection: parentCollection,
         query: function(record) { return record.get('color') == 'white'; },
         comparator: function(record) { return record.get('name'); }
       });

@@ -2,7 +2,7 @@
 
 Sessions = Backbone.Collection.extend({
   model: Session,
-  url: 'http://2011.codemash.org/rest/sessions.json',
+  url: 'http://www.codemash.org/rest/sessions.json',
 
   parse: function(response) {
     var parseDate = function(jsondate) {
