@@ -1,3 +1,8 @@
+$(document).ready(function() {
+  var url = $.mobile.path.parseUrl(location.href);
+  if (url.hash && url.hash != '') location.href = '/';
+});
+
 $(document).bind('pagebeforechange', function(e, data) {
 
   if (typeof data.toPage !== 'string') return;
@@ -7,8 +12,7 @@ $(document).bind('pagebeforechange', function(e, data) {
 
   if ($page.length > 0) return;
 
-  var page = new PageView();
-  page.setId(url.hash.replace(/#/,''));
+  var page = new PageView({id: url.hash.replace(/#/,'')});
   page.render();
 
 });
