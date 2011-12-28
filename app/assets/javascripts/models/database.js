@@ -18,7 +18,12 @@ Database = {
         $.mobile.hidePageLoadingMsg();
         if (callback) callback();
       });
+    } else {
+      _.delay(function() {
+        Database.refreshFromServer();
+      }, 2000);
     }
+
     console.log("Database initialized");
   },
 
