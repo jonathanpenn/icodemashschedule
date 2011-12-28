@@ -19,6 +19,10 @@
 
   </div><!-- /page -->
 
+  <div data-role='page' id='room_map'>
+    test
+  </div>
+
   <script type='text/template' id='sessions_list_template'>
     <div data-role='header' data-position='fixed'>
       <h1><%= navBarTitle %></h1>
@@ -65,7 +69,7 @@
 
       <ul data-role='listview' data-inset='true'>
         <li class='room col'>
-          <a href='#<%= roomPageId %>'><label>Where</label><%= room %></a>
+          <a href='#'><label>Where</label><%= room %></a>
         </li>
         <li class='when col'><label>When</label><%= when %></li>
         <li class='technology col'><label>Tech</label><%= technology %></li>

@@ -8,7 +8,6 @@ var SessionDetailPageView = Backbone.View.extend({
     this.template = _.template($("#session_detail_page_template").html());
 
     $(this.el).attr('data-role', 'page');
-    $(this.el).attr('data-add-back-btn', 'true');
   },
 
   render: function() {
@@ -28,6 +27,12 @@ var SessionDetailPageView = Backbone.View.extend({
 
     $page.attr('id', this.options.id);
     $page.html(this.template(locals));
+
+    $page.find('li.room a').bind('vclick', function(e) {
+      console.log("here");
+      e.preventDefault();
+      $.mobile.changePage('#room_map');
+    });
 
     $page.page();
 
