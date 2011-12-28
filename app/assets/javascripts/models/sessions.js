@@ -35,6 +35,12 @@ Sessions = Backbone.Collection.extend({
     return JSON.stringify(this.toJSON());
   },
 
+  withUniqueId: function(uniqueId) {
+    return this.find(function(session) {
+      if (session.uniqueId() === uniqueId) return true;
+    });
+  },
+
   groupByDate: function() {
     return _.groupBy(this.models, function(session) {
       return session.when()

@@ -26,38 +26,35 @@ $(document).bind('pagechange', function(e, data) {
 
 Router = {
   routeToPageId: function(pageId) {
-
     if (this.isSessionId(pageId)) {
       this.displaySession(pageId);
-      return;
+    } else {
+      this[pageId]();
     }
+  },
 
-    var sessionListPageView = null;
+  precompiler_sessions: function() {
+    (new SessionListPageView({
+      id: "precompiler_sessions",
+      sessions: SessionFilter.precompiler(),
+      title: "Precompiler"
+    })).render();
+  },
 
-    switch(pageId) {
-      case "precompiler_sessions":
-        (new SessionListPageView({
-          id: "precompiler_sessions",
-          sessions: SessionFilter.precompiler(),
-          title: "Precompiler"
-        })).render();
-        break;
-      case "thursday_sessions":
-        (new SessionListPageView({
-          id: "thursday_sessions",
-          sessions: SessionFilter.thursday(),
-          title: "Thursday"
-        })).render();
-        break;
-      case "friday_sessions":
-        (new SessionListPageView({
-          id: "friday_sessions",
-          sessions: SessionFilter.friday(),
-          title: "Friday"
-        })).render();
-        break;
-    }
+  thursday_sessions: function() {
+    (new SessionListPageView({
+      id: "thursday_sessions",
+      sessions: SessionFilter.thursday(),
+      title: "Thursday"
+    })).render();
+  },
 
+  friday_sessions: function() {
+    (new SessionListPageView({
+      id: "friday_sessions",
+      sessions: SessionFilter.friday(),
+      title: "Friday"
+    })).render();
   },
 
   isSessionId: function(pageId) {
@@ -65,10 +62,26 @@ Router = {
   },
 
   displaySession: function(pageId) {
+    var session = this.sessionFromPageId(pageId);
+    if (!session) {
+      console.log("Could not find session with id", pageId);
+      return;
+    }
+
+    var page = new SessionDetailPageView({
+      model: session,
+      id: pageId
+    });
+    $("body").append(page.render().el);
   },
 
   generateSessionId: function(session) {
     return "session-" + session.uniqueId();
+  },
+
+  sessionFromPageId: function(pageId) {
+    var sessionId = pageId.replace(/^session-/, '');
+    return Database.sessions.withUniqueId(sessionId);
   }
 
 }

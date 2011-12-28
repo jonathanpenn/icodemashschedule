@@ -10,7 +10,7 @@
     </div><!-- /header -->
 
     <div data-role='content'>
-      <ul data-role='listview'>
+      <ul data-role='listview' data-inset='true'>
         <li><a href='#precompiler_sessions'>Precompiler</a></li>
         <li><a href='#thursday_sessions'>Thursday</a></li>
         <li><a href='#friday_sessions'>Friday</a></li>
@@ -52,5 +52,31 @@
       </div><!-- /content -->
 
     </div><!-- /page -->
+  </script>
+
+  <script type='text/template' id='session_detail_page_template'>
+    <div data-role='header' data-position='fixed'>
+      <h1>Session</h1>
+    </div><!-- /header -->
+
+    <div data-role='content' class='session_detail'>
+      <h2><%= title %></h2>
+      <div class='speaker'><%= speaker %></div>
+
+      <ul data-role='listview' data-inset='true'>
+        <li class='room col'>
+          <a href='#<%= roomPageId %>'><label>Where</label><%= room %></a>
+        </li>
+        <li class='when col'><label>When</label><%= when %></li>
+        <li class='technology col'><label>Tech</label><%= technology %></li>
+        <li class='difficulty col'><label>Difficulty</label><%= difficulty %></li>
+        <li class='track col'><label>Track</label>&nbsp;<%= track %></li>
+        <li class='abstract'>
+          <label>Abstract</label>
+          <%= abstract %>
+        </li>
+      </ul>
+
+    </div><!-- /content -->
   </script>
 

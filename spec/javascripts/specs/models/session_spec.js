@@ -42,8 +42,8 @@ describe("Session", function() {
   });
 
   describe("#uniqueId()", function() {
-    it("removes the /rest/sessions/ portion of the session uri and downcases", function() {
-      session.set({uri: '/rest/sessions/One-Spleen-Two-Spleen'});
+    it("downcases the lookup attribute", function() {
+      session.set({lookup: 'One-Spleen-Two-Spleen'});
       expect(session.uniqueId()).toBe('one-spleen-two-spleen');
     });
   });

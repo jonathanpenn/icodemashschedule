@@ -28,7 +28,7 @@ Session = Backbone.Model.extend({
   },
 
   uniqueId: function() {
-    return (this.get('uri') + "").replace(/\/rest\/sessions\//, '').toLowerCase();
+    return (this.get('lookup') + "").toLowerCase();
   }
 
 });
