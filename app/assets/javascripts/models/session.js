@@ -25,6 +25,10 @@ Session = Backbone.Model.extend({
 
   speakerName: function() {
     return this.get('speakerName');
+  },
+
+  uniqueId: function() {
+    return (this.get('uri') + "").replace(/\/rest\/sessions\//, '').toLowerCase();
   }
 
 });
