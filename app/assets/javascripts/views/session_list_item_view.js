@@ -12,7 +12,8 @@ var SessionListItemView = Backbone.View.extend({
   render: function() {
     var locals = {
       title: this.model.title().escapeHTML(),
-      when: null, room: null, speakerName: null
+      when: null, room: null, speakerName: null,
+      href: "#" + Router.generateSessionId(this.model)
     };
 
     if (!this.options.hideWhen) {

@@ -27,6 +27,11 @@ $(document).bind('pagechange', function(e, data) {
 Router = {
   routeToPageId: function(pageId) {
 
+    if (this.isSessionId(pageId)) {
+      this.displaySession(pageId);
+      return;
+    }
+
     var sessionListPageView = null;
 
     switch(pageId) {
@@ -53,6 +58,18 @@ Router = {
         break;
     }
 
+  },
+
+  isSessionId: function(pageId) {
+    return pageId.search(/^session-/) !== -1;
+  },
+
+  displaySession: function(pageId) {
+  },
+
+  generateSessionId: function(session) {
+    return "session-" + session.uniqueId();
   }
+
 }
 
