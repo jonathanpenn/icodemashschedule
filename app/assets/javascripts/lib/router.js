@@ -31,6 +31,10 @@ Router = {
     }
   },
 
+  room_map: function() {
+    (new RoomMapPageView()).render();
+  },
+
   precompiler_sessions: function() {
     (new SessionListPageView({
       id: "precompiler_sessions",

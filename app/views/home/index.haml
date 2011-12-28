@@ -3,6 +3,9 @@
     if (location.href.search(/#/) !== -1) location.href = '/';
   </script>
 
+  <!-- preload the map image -->
+  <img src='#{ image_path('room_map.jpg') }' style='display: none;'>
+
   <div data-role='page' id='home_page' data-add-back-btn='false'>
 
     <div data-role='header' data-position='fixed'>
@@ -19,9 +22,12 @@
 
   </div><!-- /page -->
 
-  <div data-role='page' id='room_map'>
-    <img src='#{ image_path('room_map.jpg') }'>
-  </div>
+  <script type='text/template' id='room_map_template'>
+    <div data-role='page' id='room_map'>
+      <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
+      <img src='#{ image_path('room_map.jpg') }' width='1182' height='1438'>
+    </div>
+  </script>
 
   <script type='text/template' id='sessions_list_template'>
     <div data-role='header' data-position='fixed'>
