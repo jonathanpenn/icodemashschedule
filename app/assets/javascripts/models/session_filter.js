@@ -1,3 +1,4 @@
+//= require ./constants
 //= require ./filtered_sessions
 
 SessionFilter = (function() {
@@ -27,21 +28,17 @@ SessionFilter = (function() {
     }
   }
 
-  var wednesdayStart = new Date(1326258000000);
-  var thursdayStart = new Date(1326344400000);
-  var fridayStart = new Date(1326430800000);
-
   function precompilerQuery(record) {
-    return record.when() < thursdayStart;
+    return record.when() < Constants.thursdayStart;
   }
 
   function thursdayQuery(record) {
     var when = record.when();
-    return when > thursdayStart && when < fridayStart;
+    return when > Constants.thursdayStart && when < Constants.fridayStart;
   }
 
   function fridayQuery(record) {
-    return record.when() > fridayStart;
+    return record.when() > Constants.fridayStart;
   }
 
   return SessionFilter;

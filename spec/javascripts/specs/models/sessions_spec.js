@@ -83,5 +83,40 @@ describe("Sessions", function() {
 
   });
 
+
+  describe("grouping sessions", function() {
+
+    describe(".groupByDate()", function() {
+      var sessions = null;
+
+      beforeEach(function() {
+        sessions = new Sessions();
+        sessions.reset([
+          {
+            title: "A",
+            when: new Date(1295037300000)
+          },
+          {
+            title: "B",
+            when: new Date(1295037300000)
+          },
+          {
+            title: "C",
+            when: new Date(1295137300000)
+          }
+        ]);
+      });
+
+      it("groups by the date value", function() {
+        var groups = sessions.groupByDate();
+        expect(groups[sessions.at(0).when()][0].title()).toBe('A');
+        expect(groups[sessions.at(0).when()][1].title()).toBe('B');
+        expect(groups[sessions.at(2).when()][0].title()).toBe('C');
+      });
+
+    });
+
+  });
+
 });
 

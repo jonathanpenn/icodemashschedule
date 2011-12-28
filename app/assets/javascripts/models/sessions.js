@@ -33,6 +33,12 @@ Sessions = Backbone.Collection.extend({
 
   serialize: function() {
     return JSON.stringify(this.toJSON());
+  },
+
+  groupByDate: function() {
+    return _.groupBy(this.models, function(session) {
+      return session.when()
+    });
   }
 
 });
