@@ -32,9 +32,14 @@ RoomMapPageView = {
   }
 
   function showPoint(point) {
+    var corner = {
+      x: point.x - $(window).width() / 2,
+      y: point.y - $(window).height() / 2
+    };
+
     _.delay(function() {
-      $(window).scrollTop(point.y);
-      $(window).scrollLeft(point.x);
+      $(window).scrollTop(corner.y);
+      $(window).scrollLeft(corner.x);
       scrollHandler();
     }, 100);
   }
@@ -51,15 +56,21 @@ RoomMapPageView = {
     var $page = $('#room_map');
     var roomName = RoomMapPageView.roomName;
     var coordinates = roomCoodinates[roomName];
-    console.log(coordinates);
-    showPoint(coordinates);
+    if (coordinates) showPoint(coordinates);
   });
 
 
   // Debug
+  $("#room_map").live('pageshow', triggerDebugMode);
 
-  $("#room_map").live('click', function(e) {
-    console.log("Map position", e.layerX, e.layerY);
-  });
+  function triggerDebugMode() {
+    $("#room_map").live('click', function(e) {
+      console.log("Map position", e.layerX, e.layerY);
+    });
+
+    Database.sessions.each(function(session) {
+      console.log(session.room());
+    });
+  }
 
 })();
