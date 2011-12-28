@@ -1,6 +1,9 @@
 %html
   %head
     %title iCodeMash
+    :javascript
+      if (location.href.search(/#/) !== -1) location.href = '/';
+
     =stylesheet_link_tag    "application"
     =javascript_include_tag "application"
     =csrf_meta_tags

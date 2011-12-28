@@ -1,7 +1,13 @@
 Database = {
   sessions: null,
 
+  ensureInitialized: function() {
+    this.initialize();
+  },
+
   initialize: function(callback) {
+    if (this.sessions) return;
+
     this.loadFromLocalStorage();
 
     var sessions = Database.sessions;

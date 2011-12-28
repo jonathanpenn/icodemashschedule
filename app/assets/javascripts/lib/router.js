@@ -3,6 +3,7 @@ $(function() {
 });
 
 $(document).bind('pagebeforechange', function(e, data) {
+  Database.ensureInitialized();
 
   if (typeof data.toPage !== 'string') return;
   var url = $.mobile.path.parseUrl(data.toPage);
@@ -15,13 +16,10 @@ $(document).bind('pagebeforechange', function(e, data) {
 });
 
 $(document).bind('pagechange', function(e, data) {
-
-  if (typeof data.toPage === 'string') return;
-
   if (data.options.reverse && data.options.fromPage) {
+    // Remove the old page we're coming back from
     $(data.options.fromPage).remove();
   }
-
 });
 
 Router = {
