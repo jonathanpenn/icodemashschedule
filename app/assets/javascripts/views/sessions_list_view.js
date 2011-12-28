@@ -29,6 +29,7 @@ var SessionsListView = Backbone.View.extend({
     }
 
     $list.listview('refresh');
+    console.log($list);
 
     return this;
   },

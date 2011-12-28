@@ -13,6 +13,7 @@ Database = {
         if (callback) callback();
       });
     }
+    console.log("Database initialized");
   },
 
   saveToLocalStorage: function() {
@@ -31,6 +32,7 @@ Database = {
     this.sessions.fetch({
       complete: function() {
         Database.saveToLocalStorage();
+        console.log("Database refreshed from server");
         if (callback) callback();
       }
     });
