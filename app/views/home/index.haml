@@ -6,7 +6,11 @@
     </div><!-- /header -->
 
     <div data-role='content'>
-      <ul data-role='listview' class='sessions_list'></ul>
+      <ul data-role='listview'>
+        <li><a href='#precompiler_sessions'>Precompiler</a></li>
+        <li><a href='#thursday_sessions'>Thursday</a></li>
+        <li><a href='#friday_sessions'>Friday</a></li>
+      </ul>
     </div><!-- /content -->
 
   </div><!-- /page -->
@@ -30,6 +34,19 @@
       </div>
       <div class='speaker'><%= speakerName %></div>
     </a>
+  </script>
+
+  <script type='text/template' id='page_template'>
+    <div data-role='page'>
+
+      <div data-role='header' data-position='fixed'>
+        <h1>Title</h1>
+      </div><!-- /header -->
+
+      <div data-role='content'>
+      </div><!-- /content -->
+
+    </div><!-- /page -->
   </script>
 
 :javascript
