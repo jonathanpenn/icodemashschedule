@@ -28,9 +28,11 @@ var SessionDetailPageView = Backbone.View.extend({
     $page.attr('id', this.options.id);
     $page.html(this.template(locals));
 
+    var session = this.model;
+
     $page.find('li.room a').bind('vclick', function(e) {
       e.preventDefault();
-      RoomMapPageView.show();
+      RoomMapPageView.show(session.room());
     });
 
     $page.page();
