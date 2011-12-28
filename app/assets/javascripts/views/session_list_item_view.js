@@ -16,7 +16,7 @@ var SessionListItemView = Backbone.View.extend({
     };
 
     if (!this.options.hideWhen) {
-      locals.when = this.model.when().strftime("%a @ %I:%M %P").escapeHTML();
+      locals.when = this.model.when().strftime("%a @ %I:%M %P").replace(/ 0/,' ').escapeHTML();
     }
     if (!this.options.hideRoom) {
       locals.room = this.model.room().escapeHTML();
