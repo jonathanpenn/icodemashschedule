@@ -13,18 +13,26 @@ Database = {
     var sessions = Database.sessions;
 
     if (sessions.models.length == 0) {
-      $.mobile.showPageLoadingMsg();
       Database.refreshFromServer(function() {
-        $.mobile.hidePageLoadingMsg();
         if (callback) callback();
       });
     } else {
+      var self = this;
       _.delay(function() {
-        Database.refreshFromServer();
+        self.triggerBackgroundRefreshing();
       }, 2000);
     }
 
     console.log("Database initialized");
+  },
+
+  triggerBackgroundRefreshing: function() {
+    var self = this;
+    Database.refreshFromServer(function() {
+      _.delay(function() {
+        self.triggerBackgroundRefreshing();
+      }, 20*60*1000);
+    });
   },
 
   saveToLocalStorage: function() {
@@ -40,11 +48,13 @@ Database = {
   refreshFromServer: function(callback) {
     if (!this.sessions) { this.sessions = new Sessions(); }
 
+    SyncStatus.show();
     this.sessions.fetch({
       complete: function() {
         Database.saveToLocalStorage();
         console.log("Database refreshed from server");
         if (callback) callback();
+        SyncStatus.hide();
       }
     });
   },
