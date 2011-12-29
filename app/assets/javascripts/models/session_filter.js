@@ -25,7 +25,7 @@ SessionFilter = function(sessions) {
 
     byTimeSlot: function(when) {
       return this.by(function(session) {
-        return session.when() == when;
+        return session.when().valueOf() == when.valueOf();
       });
     },
 

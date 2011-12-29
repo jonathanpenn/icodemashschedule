@@ -85,13 +85,13 @@ Router = {
   },
 
   displaySessionSlot: function(pageId) {
-    var when = this.sessionSlotFromPageId(pageId);
+    var when = SessionTimeSlot.timeFromPageId(pageId);
     if (!when) {
       console.log("Could not find session slot for", pageId);
       return;
     }
 
-    var sessions = SessionFilter.byTimeSlot(when);
+    var sessions = Database.sessions.filter().byTimeSlot(when);
 
     var page = new SessionListPageView({
       sessions: sessions,
