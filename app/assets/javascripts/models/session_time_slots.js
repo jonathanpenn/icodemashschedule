@@ -5,6 +5,7 @@ var SessionTimeSlots = Backbone.Collection.extend({
     _.bindAll(this, 'buildTimeSlotsFromSessions');
     this.sessions = options.sessions;
     this.sessions.bind('reset', this.buildTimeSlotsFromSessions);
+    this.buildTimeSlotsFromSessions();
   },
 
   comparator: function(slot) {

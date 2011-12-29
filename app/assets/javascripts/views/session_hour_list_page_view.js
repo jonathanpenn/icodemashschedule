@@ -16,7 +16,7 @@ var SessionHourListPageView = Backbone.View.extend({
     this.el.page();
 
     var view = new SessionsHourListView({
-      collection: this.options.sessions,
+      collection: new SessionTimeSlots({sessions: this.options.sessions}),
       el: this.$content.children(".hour_list")
     });
 

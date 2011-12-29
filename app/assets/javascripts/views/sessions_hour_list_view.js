@@ -10,15 +10,9 @@ var SessionsHourListView = Backbone.View.extend({
 
     $list.empty();
 
-    var groups = this.collection.groupByDate();
-    var hours = _.keys(groups);
-
-    _.each(hours, function(hour) {
-      var hourString = (new Date(hour)).strftime("%I:%M %P").replace(/^0/,'').escapeHTML();
+    this.collection.each(function(slot) {
       var item = new SessionsHourListItemView({
-        sessions: groups[hour],
-        title: hourString,
-        when: hour
+        slot: slot
       });
 
       $list.append(item.render().el);

@@ -41,7 +41,7 @@ Router = {
   precompiler_sessions: function() {
     (new SessionHourListPageView({
       id: "precompiler_sessions",
-      sessions: SessionFilter.precompiler(),
+      sessions: Database.sessions.filter().precompiler(),
       title: "Precompiler"
     })).render();
   },
@@ -49,7 +49,7 @@ Router = {
   thursday_sessions: function() {
     (new SessionHourListPageView({
       id: "thursday_sessions",
-      sessions: SessionFilter.thursday(),
+      sessions: Database.sessions.filter().thursday(),
       title: "Thursday"
     })).render();
   },
@@ -57,7 +57,7 @@ Router = {
   friday_sessions: function() {
     (new SessionHourListPageView({
       id: "friday_sessions",
-      sessions: SessionFilter.friday(),
+      sessions: Database.sessions.filter().friday(),
       title: "Friday"
     })).render();
   },
@@ -103,15 +103,6 @@ Router = {
 
   generateSessionId: function(session) {
     return "session-" + session.uniqueId();
-  },
-
-  generateDayHourId: function(when) {
-    return "sessionslot-"+(new Date(when)).valueOf();
-  },
-
-  sessionSlotFromPageId: function(pageId) {
-    var matches = pageId.match(/sessionslot-(\d+)/);
-    return new Date(matches[1]-0);
   },
 
   sessionFromPageId: function(pageId) {

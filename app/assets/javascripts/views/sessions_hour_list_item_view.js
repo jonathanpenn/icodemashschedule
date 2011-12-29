@@ -9,9 +9,10 @@ var SessionsHourListItemView = Backbone.View.extend({
   },
 
   render: function() {
+    var slot = this.options.slot;
     var locals = {
-      title: this.options.title,
-      href: "#" + Router.generateDayHourId(this.options.when)
+      title: slot.hourName(),
+      href: "#" + slot.pageId()
     };
 
     var html = SessionsHourListItemView.template(locals);

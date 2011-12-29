@@ -14,7 +14,16 @@ var SessionTimeSlot = Backbone.Model.extend({
 
   sessions: function() {
     return this.get('sessions');
+  },
+
+  pageId: function() {
+    return "sessionslot-"+this.when().valueOf();
   }
 
 });
+
+SessionTimeSlot.timeFromPageId = function(pageId) {
+  var matches = pageId.match(/sessionslot-(\d+)/);
+  return new Date(matches[1]-0);
+}
 

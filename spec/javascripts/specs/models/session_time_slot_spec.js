@@ -31,5 +31,12 @@ describe("SessionTimeSlot", function() {
       expect(slot.sessions()).toEqual('something');
     });
   });
+
+  describe("#pageId()", function() {
+    it("generates a url that identifies this slot", function() {
+      expect(slot.pageId()).toEqual('sessionslot-1325163600000');
+    });
+  });
+
 });
 
