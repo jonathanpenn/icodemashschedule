@@ -11,6 +11,7 @@ var SessionListItemView = Backbone.View.extend({
 
   render: function() {
     var locals = {
+      favoriteIcon: this.generateFavoriteIcon(),
       title: this.model.title().escapeHTML(),
       when: this.model.when().strftime("%a @ %I:%M %P").replace(/ 0/,' ').escapeHTML(),
       room: this.model.room().escapeHTML(),
@@ -23,6 +24,14 @@ var SessionListItemView = Backbone.View.extend({
     $(this.el).html(html);
 
     return this;
+  },
+
+  generateFavoriteIcon: function() {
+    if (this.model.isFavorite()) {
+      return '<%= image_tag('fav_on.png', width: '16', height: '16', class: 'ui-li-icon') %>';
+    } else {
+      return '';
+    }
   }
 });
 

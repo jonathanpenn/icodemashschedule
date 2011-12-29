@@ -7,12 +7,12 @@
 
     <div data-role='header'>
       <h1>CodeMash 2012</h1>
-      #{ image_tag('/assets/ajax-loader.gif', class: 'sync-status') }
+      #{ image_tag('ajax-loader.gif', class: 'sync-status') }
     </div><!-- /header -->
 
     <div data-role='content'>
       <ul data-role='listview' data-inset='true'>
-        <li><a href='#favorites'>#{ image_tag('/assets/fav_on.png', width: '16', height: '16', class: 'ui-li-icon') }Favorites</a></li>
+        <li><a href='#favorites'>#{ image_tag('fav_on.png', width: '16', height: '16', class: 'ui-li-icon') }Favorites</a></li>
         <li><a href='#search'>Search</a></li>
       </ul>
 
@@ -34,7 +34,7 @@
   <script type='text/template' id='sessions_list_template'>
     <div data-role='header'>
       <h1><%= navBarTitle %></h1>
-      #{ image_tag('/assets/ajax-loader.gif', class: 'sync-status') }
+      #{ image_tag('ajax-loader.gif', class: 'sync-status') }
     </div><!-- /header -->
 
     <div data-role='content'>
@@ -44,6 +44,7 @@
 
   <script type='text/template' id='sessions_list_item_template'>
     <a href='<%= href %>'>
+      <%= favoriteIcon %>
       <div class='title'><%= title %></div>
       <div class='wherewhen'>
         <%= when %>
@@ -58,7 +59,7 @@
 
       <div data-role='header' data-position='fixed'>
         <h1>Timeslots</h1>
-        #{ image_tag('/assets/ajax-loader.gif', class: 'sync-status') }
+        #{ image_tag('ajax-loader.gif', class: 'sync-status') }
       </div><!-- /header -->
 
       <div data-role='content'>
@@ -77,7 +78,7 @@
 
       <div data-role='header'>
         <h1>Session List</h1>
-        #{ image_tag('/assets/ajax-loader.gif', class: 'sync-status') }
+        #{ image_tag('ajax-loader.gif', class: 'sync-status') }
       </div><!-- /header -->
 
       <div data-role='content'>
@@ -90,6 +91,7 @@
   <script type='text/template' id='session_detail_page_template'>
 
     <div data-role='content' class='session_detail'>
+      <a href='#' class='favoriteSwitch'><%= favoriteIcon %></a>
       <h2><%= title %></h2>
       <div class='speaker'><%= speaker %></div>
 

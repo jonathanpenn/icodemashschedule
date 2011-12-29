@@ -33,6 +33,25 @@ Session = Backbone.Model.extend({
 
   pageId: function() {
     return "session-" + this.uniqueId();
+  },
+
+  isFavorite: function() {
+    return Favorites.containsSession(this);
+  },
+
+  markAsFavorite: function() {
+    Favorites.add(this);
+    this.trigger('change');
+  },
+
+  unmarkAsFavorite: function() {
+    Favorites.remove(this);
+    this.trigger('change');
+  },
+
+  toggleFavorite: function() {
+    if (this.isFavorite()) this.unmarkAsFavorite();
+    else this.markAsFavorite();
   }
 
 });

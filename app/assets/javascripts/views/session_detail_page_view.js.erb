@@ -12,6 +12,7 @@ var SessionDetailPageView = Backbone.View.extend({
 
   render: function() {
     var locals = {
+      favoriteIcon: this.generateFavoriteIcon(),
       title: this.model.title().escapeHTML(),
       speaker: this.model.speakerName().escapeHTML(),
       room: this.model.room().escapeHTML(),
@@ -35,9 +36,25 @@ var SessionDetailPageView = Backbone.View.extend({
       RoomMapPageView.show(session.room());
     });
 
-    $page.page();
+    $page.find('.favoriteSwitch').bind('vclick', function(e) {
+      e.preventDefault();
+      session.toggleFavorite();
+    });
+
+    _.defer(function() {
+      $page.page();
+    });
 
     return this;
+  },
+
+  generateFavoriteIcon: function() {
+    if (this.model.isFavorite()) {
+      return '<%= image_tag('fav_on.png') %>';
+    } else {
+      return '<%= image_tag('fav_off.png') %>';
+      return '';
+    }
   }
 
 });
