@@ -27,11 +27,8 @@ Sessions = Backbone.Collection.extend({
     });
   },
 
-  filterBy: function(query) {
-    return new FilteredSessions({
-      parentCollection: this,
-      query: query,
-    });
+  filter: function() {
+    return SessionFilter(this);
   },
 
   comparator: function(session) {

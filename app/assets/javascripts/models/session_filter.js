@@ -1,35 +1,36 @@
 //= require ./constants
 //= require ./filtered_sessions
 
-SessionFilter = (function() {
+SessionFilter = function(sessions) {
 
-  SessionFilter = {
-    filteredBy: function(query) {
-      return new FilteredSessions({query: query});
+  var result = {
+    by: function(query) {
+      return new FilteredSessions({
+        parentCollection: sessions,
+        query: query
+      });
     },
 
     precompiler: function() {
-      return this.filteredBy(precompilerQuery);
+      return this.by(precompilerQuery);
     },
 
     thursday: function() {
-      return this.filteredBy(thursdayQuery);
+      return this.by(thursdayQuery);
     },
 
     friday: function() {
-      return this.filteredBy(fridayQuery);
+      return this.by(fridayQuery);
     },
 
     byTimeSlot: function(when) {
-      var whenString = when.strftime("%A %H:%M");
-      return this.filteredBy(function(session) {
-        var sessionWhenString = session.when().strftime("%A %H:%M");
-        return sessionWhenString == whenString;
+      return this.by(function(session) {
+        return session.when() == when;
       });
     },
 
     byTitleOrSpeakerSearch: function(term) {
-      return this.filteredBy(function(record) {
+      return this.by(function(record) {
         return record.speakerName().toLowerCase().indexOf(term) >= 0 ||
           record.title().toLowerCase().indexOf(term) >= 0;
       });
@@ -49,6 +50,6 @@ SessionFilter = (function() {
     return record.when() > Constants.fridayStart;
   }
 
-  return SessionFilter;
+  return result;
+}
 
-})();

@@ -16,11 +16,10 @@ var SessionTimeSlots = Backbone.Collection.extend({
     var self = this;
     var dates = this.sessions.uniqueSessionDates();
     _.each(dates, function(when) {
+      var when = new Date(when);
       self.add(new SessionTimeSlot({
-        when: new Date(when),
-        sessions: self.sessions.filterBy(function(session) {
-          return session.when() == when;
-        })
+        when: when,
+        sessions: self.sessions.filter().byTimeSlot(when)
       }), {silent: true});
     });
     this.trigger('reset');

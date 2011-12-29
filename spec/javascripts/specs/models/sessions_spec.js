@@ -130,13 +130,5 @@ describe("Sessions", function() {
   });
 
 
-  describe("#filterBy", function() {
-    it("returns a new FilteredSessions based on this session", function() {
-      oldFilteredSessions = FilteredSessions;
-      FilteredSessions = function(options) {
-      }
-    });
-  });
-
 });
 
