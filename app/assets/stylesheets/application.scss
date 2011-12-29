@@ -82,4 +82,9 @@
     text-decoration: none;
     text-shadow: none;
   }
+
+  .dot {
+    z-index: 999;
+    position: absolute;
+  }
 }

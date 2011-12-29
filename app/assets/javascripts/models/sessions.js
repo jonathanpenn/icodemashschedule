@@ -45,6 +45,12 @@ Sessions = Backbone.Collection.extend({
     return _.groupBy(this.models, function(session) {
       return session.when()
     });
+  },
+
+  allRoomNames: function() {
+    return _.compact(_.uniq(this.map(function(session) {
+      return session.room();
+    })));
   }
 
 });

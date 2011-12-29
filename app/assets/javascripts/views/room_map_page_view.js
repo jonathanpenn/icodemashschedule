@@ -1,3 +1,5 @@
+//= require ./room_coordinates
+
 RoomMapPageView = {
 
   show: function(roomName) {
@@ -18,16 +20,19 @@ RoomMapPageView = {
 
 (function() {
 
-  var roomCoodinates = {
-    'Nile': {x: 386, y: 365},
-    'Zambezi': {x: 390, y: 231}
-  };
-
   function scrollHandler(e) {
     var $page = $('#room_map');
     $page.find('a').css({
       top: $(window).scrollTop() + 5,
       left: $(window).scrollLeft() + 5
+    });
+  }
+
+  function placeMapMarker(point) {
+    var $dot = $("#room_map .dot");
+    $dot.css({
+      top: point.y - $dot.height()/2,
+      left: point.x - $dot.width()/2
     });
   }
 
@@ -40,6 +45,7 @@ RoomMapPageView = {
     _.delay(function() {
       $(window).scrollTop(corner.y);
       $(window).scrollLeft(corner.x);
+      placeMapMarker(point);
       scrollHandler();
     }, 100);
   }
@@ -55,22 +61,53 @@ RoomMapPageView = {
   $("#room_map").live('pageshow', function() {
     var $page = $('#room_map');
     var roomName = RoomMapPageView.roomName;
-    var coordinates = roomCoodinates[roomName];
+    var coordinates = roomCoordinates[roomName];
     if (coordinates) showPoint(coordinates);
   });
 
 
   // Debug
-  $("#room_map").live('pageshow', triggerDebugMode);
+  //$("#room_map").live('pageshow', triggerDebugMode);
 
   function triggerDebugMode() {
-    $("#room_map").live('click', function(e) {
-      console.log("Map position", e.layerX, e.layerY);
+
+    var roomNames = _.sortBy(Database.sessions.allRoomNames(), function(s) { return s; });
+    var roomNames = _.difference(roomNames, _.keys(roomCoordinates));
+
+    console.log("Missing rooms:", roomNames);
+
+    $("#room_map").bind('click', function(e) {
+      var name = roomNames[i];
+      var point = {x: e.pageX, y: e.pageY};
+      roomCoordinates[name] = point;
+      showPoint(point);
+
+      console.log("var roomCoordinates = ", JSON.stringify(roomCoordinates, null, 2));
+
+      var nextName = roomNames[++i];
+      if (nextName) askForPointFor(nextName);
+      else finishAsking();
     });
 
-    Database.sessions.each(function(session) {
-      console.log(session.room());
+    $("#room_map").bind('mousemove', function(e) {
+      var point = {x: e.pageX, y: e.pageY};
+      placeMapMarker(point);
     });
+
+    var i = 0;
+    var firstName = roomNames[0];
+    askForPointFor(firstName);
+
+    function askForPointFor(name) {
+      var coordinates = roomCoordinates[name];
+      if (coordinates) showPoint(coordinates);
+      console.log("Click on point for", name);
+    }
+
+    function finishAsking() {
+      console.log("Done!");
+    }
+
   }
 
 })();
