@@ -40,15 +40,12 @@ RoomMapPageView = {
     scrollHandler();
   }
 
-  $('#room_map').live('pageinit', function() {
-    $(document).bind('scrollstop', scrollHandler);
-  });
-
   $("#room_map").live('pagehide', function() {
     $(document).unbind('scrollstop', scrollHandler);
   });
 
   $("#room_map").live('pageshow', function() {
+    $(document).bind('scrollstop', scrollHandler);
     var $page = $('#room_map');
     var roomName = RoomMapPageView.roomName;
     var coordinates = roomCoordinates[roomName];

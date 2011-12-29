@@ -18,7 +18,8 @@ $(document).bind('pagebeforechange', function(e, data) {
 $(document).bind('pagechange', function(e, data) {
   if (data.options.reverse && data.options.fromPage) {
     // Remove the old page we're coming back from
-    $(data.options.fromPage).remove();
+    var $page = $(data.options.fromPage);
+    if ($page.attr('id') !== 'room_map') $(data.options.fromPage).remove();
   }
 });
 
