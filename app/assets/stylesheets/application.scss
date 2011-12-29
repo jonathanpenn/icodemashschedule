@@ -32,6 +32,8 @@
 }
 
 .session_detail {
+  h2 { font-size: 1.2em; }
+
   .speaker {
     margin-bottom: 1em;
   }
@@ -76,6 +78,7 @@
     font-weight: normal;
     padding: 8px 13px;
     background-color: rgba(0,0,0,0.8);
+    border: solid 2px white;
     border-radius: 10px;
     position: absolute;
     color: white;
