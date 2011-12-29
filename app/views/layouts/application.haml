@@ -2,11 +2,16 @@
 %html
   %head
     %title iCodeMash
+
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+
     :javascript
       if (location.href.search(/#/) !== -1) location.href = '/';
 
     =stylesheet_link_tag    "application"
     =javascript_include_tag "application"
+
+    %link(rel="apple-touch-icon" href="/assets/icon.png")
 
   %body
     =yield

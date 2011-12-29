@@ -21,6 +21,9 @@ $(document).bind('pagechange', function(e, data) {
     var $page = $(data.options.fromPage);
     if ($page.attr('id') !== 'room_map') $(data.options.fromPage).remove();
   }
+
+  // Need to keep resetting this so that any bookmarks have the right title
+  $("head title").text("CodeMash");
 });
 
 Router = {
