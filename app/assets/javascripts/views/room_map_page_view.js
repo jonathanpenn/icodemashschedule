@@ -3,16 +3,8 @@
 RoomMapPageView = {
 
   show: function(roomName) {
-    $("#room_map").remove(); // Clear an existing room map
-
-    var template = _.template($("#room_map_template").html());
-    var $page = $(template());
-
-    $("body").append($page);
-    $page.page();
-
+    $.mobile.showPageLoadingMsg();
     this.roomName = roomName;
-
     $.mobile.changePage('#room_map');
   }
 
@@ -42,12 +34,10 @@ RoomMapPageView = {
       y: point.y - $(window).height() / 2
     };
 
-    _.delay(function() {
-      $(window).scrollTop(corner.y);
-      $(window).scrollLeft(corner.x);
-      placeMapMarker(point);
-      scrollHandler();
-    }, 100);
+    $(window).scrollTop(corner.y);
+    $(window).scrollLeft(corner.x);
+    placeMapMarker(point);
+    scrollHandler();
   }
 
   $('#room_map').live('pageinit', function() {
@@ -62,7 +52,12 @@ RoomMapPageView = {
     var $page = $('#room_map');
     var roomName = RoomMapPageView.roomName;
     var coordinates = roomCoordinates[roomName];
-    if (coordinates) showPoint(coordinates);
+    if (coordinates) {
+      _.delay(function() {
+        showPoint(coordinates);
+        $.mobile.hidePageLoadingMsg();
+      }, 50);
+    }
   });
 
 
