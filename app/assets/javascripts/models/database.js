@@ -47,6 +47,11 @@ Database = {
         if (callback) callback();
       }
     });
+  },
+
+  clear: function() {
+    window.localStorage['sessions'] = null;
+    this.loadFromLocalStorage();
   }
 }
 

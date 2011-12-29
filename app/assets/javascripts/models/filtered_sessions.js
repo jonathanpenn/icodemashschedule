@@ -4,11 +4,8 @@ FilteredSessions = Sessions.extend({
   initialize: function(options) {
     _.bindAll(this, "triggerFilter", "query");
 
-    if (options.parentCollection) {
-      this.parentCollection = options.parentCollection;
-    } else {
-      this.parentCollection = Database.sessions;
-    }
+    this.parentCollection = options.parentCollection;
+
     if (options.query)      this.query      = options.query;
     if (options.comparator) this.comparator = options.comparator;
 
