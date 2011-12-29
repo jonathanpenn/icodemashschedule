@@ -71,16 +71,13 @@ Router = {
   },
 
   displaySession: function(pageId) {
-    var session = this.sessionFromPageId(pageId);
+    var session = Session.findWithPageId(pageId);
     if (!session) {
       console.log("Could not find session with id", pageId);
       return;
     }
 
-    var page = new SessionDetailPageView({
-      model: session,
-      id: pageId
-    });
+    var page = new SessionDetailPageView({ model: session, id: pageId });
     $("body").append(page.render().el);
   },
 
@@ -99,15 +96,6 @@ Router = {
       title: when.strftime("%a %I:%M %P").replace(/ 0/, ' ')
     });
     $("body").append(page.render().el);
-  },
-
-  generateSessionId: function(session) {
-    return "session-" + session.uniqueId();
-  },
-
-  sessionFromPageId: function(pageId) {
-    var sessionId = pageId.replace(/^session-/, '');
-    return Database.sessions.withUniqueId(sessionId);
   }
 
 }

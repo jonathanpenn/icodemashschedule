@@ -29,7 +29,16 @@ Session = Backbone.Model.extend({
 
   uniqueId: function() {
     return (this.get('lookup') + "").toLowerCase();
+  },
+
+  pageId: function() {
+    return "session-" + this.uniqueId();
   }
 
 });
+
+Session.findWithPageId = function(pageId) {
+  var sessionId = pageId.replace(/^session-/, '');
+  return Database.sessions.withUniqueId(sessionId);
+}
 

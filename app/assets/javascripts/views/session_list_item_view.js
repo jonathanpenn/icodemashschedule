@@ -15,7 +15,7 @@ var SessionListItemView = Backbone.View.extend({
       when: this.model.when().strftime("%a @ %I:%M %P").replace(/ 0/,' ').escapeHTML(),
       room: this.model.room().escapeHTML(),
       speakerName: this.model.get('speakerName').escapeHTML(),
-      href: "#" + Router.generateSessionId(this.model)
+      href: "#" + this.model.pageId()
     };
 
     var html = SessionListItemView.template(locals);
