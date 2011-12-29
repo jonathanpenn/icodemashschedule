@@ -27,6 +27,13 @@ Sessions = Backbone.Collection.extend({
     });
   },
 
+  filterBy: function(query) {
+    return new FilteredSessions({
+      parentCollection: this,
+      query: query,
+    });
+  },
+
   comparator: function(session) {
     return session.when().valueOf() + session.get('title');
   },
@@ -41,10 +48,16 @@ Sessions = Backbone.Collection.extend({
     });
   },
 
-  groupByDate: function() {
-    return _.groupBy(this.models, function(session) {
-      return session.when()
-    });
+  uniqueSessionDates: function() {
+    var dates = _.reduce(this.models, function(memo, session) {
+      memo[session.when()] = true;
+      return memo;
+    }, {});
+    return _(dates).chain().
+        keys().
+        map(function(s) { return new Date(s); }).
+        sortBy(function(d) { return d; }).
+        value();
   },
 
   allRoomNames: function() {
