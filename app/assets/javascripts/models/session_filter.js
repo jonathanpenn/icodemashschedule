@@ -20,6 +20,14 @@ SessionFilter = (function() {
       return this.filteredBy(fridayQuery);
     },
 
+    byTimeSlot: function(when) {
+      var whenString = when.strftime("%A %H:%M");
+      return this.filteredBy(function(session) {
+        var sessionWhenString = session.when().strftime("%A %H:%M");
+        return sessionWhenString == whenString;
+      });
+    },
+
     byTitleOrSpeakerSearch: function(term) {
       return this.filteredBy(function(record) {
         return record.speakerName().toLowerCase().indexOf(term) >= 0 ||

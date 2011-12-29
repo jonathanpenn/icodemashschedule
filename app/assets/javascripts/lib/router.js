@@ -27,6 +27,8 @@ Router = {
   routeToPageId: function(pageId) {
     if (this.isSessionId(pageId)) {
       this.displaySession(pageId);
+    } else if (this.isSessionSlotId(pageId)) {
+      this.displaySessionSlot(pageId);
     } else {
       this[pageId]();
     }
@@ -37,7 +39,7 @@ Router = {
   },
 
   precompiler_sessions: function() {
-    (new SessionListPageView({
+    (new SessionHourListPageView({
       id: "precompiler_sessions",
       sessions: SessionFilter.precompiler(),
       title: "Precompiler"
@@ -45,7 +47,7 @@ Router = {
   },
 
   thursday_sessions: function() {
-    (new SessionListPageView({
+    (new SessionHourListPageView({
       id: "thursday_sessions",
       sessions: SessionFilter.thursday(),
       title: "Thursday"
@@ -53,7 +55,7 @@ Router = {
   },
 
   friday_sessions: function() {
-    (new SessionListPageView({
+    (new SessionHourListPageView({
       id: "friday_sessions",
       sessions: SessionFilter.friday(),
       title: "Friday"
@@ -62,6 +64,10 @@ Router = {
 
   isSessionId: function(pageId) {
     return pageId.search(/^session-/) !== -1;
+  },
+
+  isSessionSlotId: function(pageId) {
+    return pageId.search(/^sessionslot-/) !== -1;
   },
 
   displaySession: function(pageId) {
@@ -78,8 +84,34 @@ Router = {
     $("body").append(page.render().el);
   },
 
+  displaySessionSlot: function(pageId) {
+    var when = this.sessionSlotFromPageId(pageId);
+    if (!when) {
+      console.log("Could not find session slot for", pageId);
+      return;
+    }
+
+    var sessions = SessionFilter.byTimeSlot(when);
+
+    var page = new SessionListPageView({
+      sessions: sessions,
+      id: pageId,
+      title: when.strftime("%a %I:%M %P").replace(/ 0/, ' ')
+    });
+    $("body").append(page.render().el);
+  },
+
   generateSessionId: function(session) {
     return "session-" + session.uniqueId();
+  },
+
+  generateDayHourId: function(when) {
+    return "sessionslot-"+(new Date(when)).valueOf();
+  },
+
+  sessionSlotFromPageId: function(pageId) {
+    var matches = pageId.match(/sessionslot-(\d+)/);
+    return new Date(matches[1]-0);
   },
 
   sessionFromPageId: function(pageId) {

@@ -46,6 +46,24 @@
     </a>
   </script>
 
+  <script type='text/template' id='session_hour_list_page_template'>
+    <div data-role='page'>
+
+      <div data-role='header' data-position='fixed'>
+        <h1>Timeslots</h1>
+      </div><!-- /header -->
+
+      <div data-role='content'>
+        <ul data-role='listview' data-inset='true' class='hour_list'></ul>
+      </div><!-- /content -->
+
+    </div><!-- /page -->
+  </script>
+
+  <script type='text/template' id='sessions_hour_list_item_template'>
+    <a href='<%= href %>'><%= title %></a>
+  </script>
+
   <script type='text/template' id='session_list_page_template'>
     <div data-role='page'>
 
