@@ -1,5 +1,5 @@
-cache_version = 13
-do_cache = false
+cache_version = 2
+do_cache = true
 CodeMash::Application.routes.draw do
 
   if do_cache
@@ -12,6 +12,9 @@ CodeMash::Application.routes.draw do
       body << "/assets/application.css"
       body << "/assets/application.js"
       body << "/assets/room_map.jpg"
+      body << "/assets/fav_on.png"
+      body << "/assets/fav_off.png"
+      body << "/assets/ajax-loader.gif"
       body << "/assets/dot.png"
       body << "/assets/jquery-mobile/ajax-loader.png"
       body << "/assets/jquery-mobile/icons-18-white.png"
