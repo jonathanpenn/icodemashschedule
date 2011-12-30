@@ -1,4 +1,4 @@
-cache_version = 4
+cache_version = ENV['CACHE_VERSION'] || 4
 do_cache = true
 CodeMash::Application.routes.draw do
 
