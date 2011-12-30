@@ -19,7 +19,14 @@ var SessionsHourListItemView = Backbone.View.extend({
 
     $(this.el).html(html);
 
+    var bubble = new FavoriteCountBubbleView({
+      sessions: slot.sessions()
+    });
+
+    $(this.el).find('a').append(bubble.render().el);
+
     return this;
   }
+
 });
 

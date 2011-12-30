@@ -12,14 +12,14 @@
 
     <div data-role='content'>
       <ul data-role='listview' data-inset='true'>
-        <li><a href='#favorites'>#{ image_tag('fav_on.png', width: '16', height: '16', class: 'ui-li-icon') }Favorites</a></li>
+        <li><a class='favorites-link' href='#favorites'>#{ image_tag('fav_on.png', width: '16', height: '16', class: 'ui-li-icon') }Favorites</a></li>
         <li><a href='#search'>Search</a></li>
       </ul>
 
       <ul data-role='listview' data-inset='true'>
-        <li><a href='#precompiler_sessions'>Precompiler</a></li>
-        <li><a href='#thursday_sessions'>Thursday</a></li>
-        <li><a href='#friday_sessions'>Friday</a></li>
+        <li><a class='precompiler-link' href='#precompiler_sessions'>Precompiler</a></li>
+        <li><a class='thursday-link' href='#thursday_sessions'>Thursday</a></li>
+        <li><a class='friday-link' href='#friday_sessions'>Friday</a></li>
       </ul>
     </div><!-- /content -->
 
@@ -57,7 +57,7 @@
   <script type='text/template' id='session_hour_list_page_template'>
     <div data-role='page'>
 
-      <div data-role='header' data-position='fixed'>
+      <div data-role='header'>
         <h1>Timeslots</h1>
         #{ image_tag('ajax-loader.gif', class: 'sync-status') }
       </div><!-- /header -->
@@ -70,7 +70,7 @@
   </script>
 
   <script type='text/template' id='sessions_hour_list_item_template'>
-    <a href='<%= href %>'><%= title %></a>
+    <a href='<%= href %>'> <%= title %> </a>
   </script>
 
   <script type='text/template' id='session_list_page_template'>

@@ -15,6 +15,13 @@ var SessionHourListPageView = Backbone.View.extend({
     $("body").append(this.el);
     this.el.page();
 
+    var $page = this.el;
+    $(this.el).bind('pageshow', function() {
+      // Need to refresh list because rounded corners are borked
+      // if the table was rebuilt while off screen
+      $page.find("ul").listview('refresh');
+    });
+
     var view = new SessionsHourListView({
       collection: new SessionTimeSlots({sessions: this.options.sessions}),
       el: this.$content.children(".hour_list")

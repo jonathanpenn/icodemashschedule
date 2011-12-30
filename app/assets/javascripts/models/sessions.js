@@ -61,6 +61,13 @@ Sessions = Backbone.Collection.extend({
     return _.compact(_.uniq(this.map(function(session) {
       return session.room();
     })));
+  },
+
+  countFavorites: function() {
+    return this.reduce(function(memo, session) {
+      if (session.isFavorite()) return memo+1;
+      else return memo;
+    }, 0);
   }
 
 });

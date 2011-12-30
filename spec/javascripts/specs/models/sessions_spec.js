@@ -130,5 +130,23 @@ describe("Sessions", function() {
   });
 
 
+  describe("#countFavorites()", function() {
+    beforeEach(function() {
+      sessions.models = [
+        {
+          isFavorite: function() { return true; }
+        },
+        {
+          isFavorite: function() { return false; }
+        }
+      ];
+    });
+
+    it("returns the number of sessions marked as a favorite", function() {
+      expect(sessions.countFavorites()).toBe(1);
+    });
+  });
+
+
 });
 

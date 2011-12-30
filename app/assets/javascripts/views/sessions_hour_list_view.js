@@ -2,6 +2,7 @@ var SessionsHourListView = Backbone.View.extend({
   initialize: function(options) {
     _.bindAll(this, 'render');
     this.collection.bind('reset', this.render);
+    Favorites.bind('change', this.render);
   },
 
   render: function() {

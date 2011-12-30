@@ -15,6 +15,27 @@ $(document).bind('pagebeforechange', function(e, data) {
 
 });
 
+$("#home_page").live('pageinit', function() {
+  $page = $("#home_page");
+
+  $page.find('a.favorites-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions})).render().el
+  );
+  $page.find('a.precompiler-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().precompiler()})).render().el
+  );
+  $page.find('a.thursday-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().thursday()})).render().el
+  );
+  $page.find('a.friday-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().friday()})).render().el
+  );
+
+  _.defer(function() {
+    $page.find("ul").listview('refresh');
+  });
+});
+
 $(document).bind('pagechange', function(e, data) {
   if (data.options.reverse && data.options.fromPage) {
     // Remove the old page we're coming back from
