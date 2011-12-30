@@ -1,4 +1,4 @@
-cache_version = 2
+cache_version = Time.now.to_f
 do_cache = true
 CodeMash::Application.routes.draw do
 

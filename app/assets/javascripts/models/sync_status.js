@@ -7,6 +7,7 @@ var SyncStatus = {
   },
 
   hide: function() {
+    if (this.count == 0) return;
     this.count--;
     if (this.count == 0) $("body").removeClass("syncing");
   }
