@@ -66,7 +66,8 @@ Router = {
     (new SessionListPageView({
       sessions: Favorites.sessions(),
       title: 'Favorites',
-      id: 'favorites'
+      id: 'favorites',
+      groupByDate: true
     })).render();
   },
 

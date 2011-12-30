@@ -18,7 +18,8 @@ var SessionListPageView = Backbone.View.extend({
 
     var view = new SessionsListView({
       collection: this.options.sessions,
-      el: this.$content.children(".sessions_list")
+      el: this.$content.children(".sessions_list"),
+      groupByDate: this.options.groupByDate
     });
 
     view.render();

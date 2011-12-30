@@ -11,7 +11,17 @@ var SessionsListView = Backbone.View.extend({
 
     $list.empty();
 
+    var lastGroup = null;
     this.collection.each(function(session) {
+      if (self.options.groupByDate) {
+        var timeString = session.when().strftime("%A %I:%M %P").replace(/ 0/, ' ');
+
+        if (timeString != lastGroup) {
+          lastGroup = timeString;
+          $list.append('<li data-role="list-divider">'+lastGroup+'</li>');
+        }
+      }
+
       var item = new SessionListItemView({ model: session });
       $list.append(item.render().el);
     });
