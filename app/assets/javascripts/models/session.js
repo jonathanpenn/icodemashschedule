@@ -40,12 +40,12 @@ Session = Backbone.Model.extend({
   },
 
   markAsFavorite: function() {
-    Favorites.add(this);
+    Favorites.addFavorite(this);
     this.trigger('change');
   },
 
   unmarkAsFavorite: function() {
-    Favorites.remove(this);
+    Favorites.removeFavorite(this);
     this.trigger('change');
   },
 

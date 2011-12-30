@@ -37,9 +37,12 @@ Database = {
 
   saveToLocalStorage: function() {
     window.localStorage['sessions'] = this.sessions.serialize();
+    Favorites.save();
   },
 
   loadFromLocalStorage: function() {
+    Favorites.load();
+
     var data = window.localStorage['sessions'];
     if (!data) { this.sessions = new Sessions(); }
     else { this.sessions = Sessions.deserialize(data); }
