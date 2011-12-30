@@ -3,8 +3,6 @@ var SessionDetailPageView = Backbone.View.extend({
 
   initialize: function(options) {
     _.bindAll(this, 'render');
-    this.model.bind('change', this.render);
-
     this.template = _.template($("#session_detail_page_template").html());
 
     $(this.el).attr('data-role', 'page');
@@ -36,9 +34,11 @@ var SessionDetailPageView = Backbone.View.extend({
       RoomMapPageView.show(session.room());
     });
 
+    var self = this;
     $page.find('.favoriteSwitch').bind('vclick', function(e) {
       e.preventDefault();
       session.toggleFavorite();
+      self.updateFavoriteIcon();
     });
 
     _.defer(function() {
@@ -50,11 +50,15 @@ var SessionDetailPageView = Backbone.View.extend({
 
   generateFavoriteIcon: function() {
     if (this.model.isFavorite()) {
-      return '<%= image_tag('fav_on.png') %>';
+      return '<%= image_tag('fav_on.png', class: 'favIcon') %>';
     } else {
-      return '<%= image_tag('fav_off.png') %>';
+      return '<%= image_tag('fav_off.png', class: 'favIcon') %>';
       return '';
     }
+  },
+
+  updateFavoriteIcon: function() {
+    $(this.el).find('img.favIcon').replaceWith(this.generateFavoriteIcon());
   }
 
 });
