@@ -1,0 +1,50 @@
+%html
+  %head
+    %title Jasmine test suite
+    %link(rel="shortcut icon" type="image/png" href="/jasmine/images/jasmine_favicon.png")
+    =stylesheet_link_tag "jasmine/jasmine"
+
+    =javascript_include_tag "jasmine"
+
+    =stylesheet_link_tag    "application"
+    =javascript_include_tag "spec_env"
+
+    :javascript
+      var jsApiReporter;
+      (function() {
+        if (jsApiReporter) return;
+
+        var jasmineEnv = jasmine.getEnv();
+
+        jsApiReporter = new jasmine.JsApiReporter();
+        var trivialReporter = new jasmine.TrivialReporter();
+
+        jasmineEnv.addReporter(jsApiReporter);
+        jasmineEnv.addReporter(trivialReporter);
+
+        jasmineEnv.specFilter = function(spec) {
+          return trivialReporter.specFilter(spec);
+        };
+
+        var currentWindowOnload = window.onload;
+
+        window.onload = function() {
+          if (currentWindowOnload) {
+            currentWindowOnload();
+          }
+          execJasmine();
+        };
+
+        function execJasmine() {
+          jasmineEnv.execute();
+        }
+
+      })();
+
+    =javascript_include_tag "specs"
+
+    =csrf_meta_tags
+
+  %body
+    =yield
+

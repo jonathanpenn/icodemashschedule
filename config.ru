@@ -1,14 +1,4 @@
-require 'rack'
-require 'code_mash'
-require 'cache_manifest'
+# This file is used by Rack-based servers to start the application.
 
-APP_VERSION = File.read(File.dirname(__FILE__) + '/VERSION')
-HTML5_CACHING = ENV['caching'] == 'false' ? false : true
-
-use Rack::Deflater
-use Rack::ShowExceptions
-use Rack::ContentType, 'text/html'
-use CacheManifest
-use CodeMash
-use Rack::Static, :urls => ['/'], :root => 'webroot'
-run proc { [404, {}, ''] }
+require ::File.expand_path('../config/environment',  __FILE__)
+run CodeMash::Application

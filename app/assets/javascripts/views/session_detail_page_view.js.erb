@@ -1,0 +1,65 @@
+var SessionDetailPageView = Backbone.View.extend({
+  tagName: 'div',
+
+  initialize: function(options) {
+    _.bindAll(this, 'render');
+    this.template = _.template($("#session_detail_page_template").html());
+
+    $(this.el).attr('data-role', 'page');
+  },
+
+  render: function() {
+    var locals = {
+      favoriteIcon: this.generateFavoriteIcon(),
+      title: this.model.title().escapeHTML(),
+      speaker: this.model.speakerName().escapeHTML(),
+      room: this.model.room().escapeHTML(),
+      technology: this.model.get('technology').escapeHTML(),
+      difficulty: this.model.get('difficulty').escapeHTML(),
+      track: this.model.get('track'),
+      abstract: this.model.get('abstract').escapeHTML(),
+      when: this.model.when().strftime("%A, %I:%M %P").replace(/ 0/, ' ').escapeHTML(),
+      roomPageId: 'room'
+    }
+
+    var $page = $(this.el);
+
+    $page.attr('id', this.options.id);
+    $page.html(this.template(locals));
+
+    var session = this.model;
+
+    $page.find('li.room a').bind('vclick', function(e) {
+      e.preventDefault();
+      RoomMapPageView.show(session.room());
+    });
+
+    var self = this;
+    $page.find('.favoriteSwitch').bind('vclick', function(e) {
+      e.preventDefault();
+      session.toggleFavorite();
+      self.updateFavoriteIcon();
+    });
+
+    _.defer(function() {
+      $page.page();
+    });
+
+    return this;
+  },
+
+  generateFavoriteIcon: function() {
+    if (this.model.isFavorite()) {
+      return '<%= image_tag('fav_on.png', class: 'favIcon') %>';
+    } else {
+      return '<%= image_tag('fav_off.png', class: 'favIcon') %>';
+      return '';
+    }
+  },
+
+  updateFavoriteIcon: function() {
+    $(this.el).find('img.favIcon').replaceWith(this.generateFavoriteIcon());
+  }
+
+});
+

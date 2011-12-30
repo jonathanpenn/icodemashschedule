@@ -1,7 +1,5 @@
-.DS_Store
-tmp/*
-
-# These are added by bundler
-gems/*
-!gems/cache
-bin/*
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
