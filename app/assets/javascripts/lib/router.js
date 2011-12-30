@@ -62,6 +62,14 @@ Router = {
     (new RoomMapPageView()).render();
   },
 
+  favorites: function() {
+    (new SessionListPageView({
+      sessions: Favorites.sessions(),
+      title: 'Favorites',
+      id: 'favorites'
+    })).render();
+  },
+
   precompiler_sessions: function() {
     (new SessionHourListPageView({
       id: "precompiler_sessions",

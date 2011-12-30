@@ -6,6 +6,12 @@ var FavoritesCollection = Backbone.Model.extend({
     else this._favorites = [];
   },
 
+  sessions: function() {
+    return Database.sessions.filter().by(function(session) {
+      return session.isFavorite();
+    });
+  },
+
   addFavorite: function(session) {
     this._favorites.push(session.uniqueId());
     this.listChanged();
