@@ -20,10 +20,6 @@ body.syncing .ui-header img.sync-status {
   display: block;
 }
 
-.favoriteSwitch {
-  float: right;
-}
-
 .sessions_list li {
   .title {
     font-size: .9em;
@@ -48,6 +44,13 @@ body.syncing .ui-header img.sync-status {
 
 .session_detail {
   h2 { font-size: 1.2em; }
+
+  .favoriteSwitch {
+    float: right;
+    padding-left: 1em;
+    position: relative;
+    top: 12px;
+  }
 
   .speaker {
     margin-bottom: 1em;
