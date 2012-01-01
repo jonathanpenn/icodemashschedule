@@ -28,6 +28,6 @@ SessionTimeSlot.timeFromPageId = function(pageId) {
 }
 
 SessionTimeSlot.slotIdFromWhen = function(when) {
-  return "sessionslot-"+when.valueOf();
+  return "sessionslot-"+when.valueOf()+"-"+NextGuidSuffix();
 }
 

@@ -32,7 +32,7 @@ Session = Backbone.Model.extend({
   },
 
   pageId: function() {
-    return "session-" + this.uniqueId();
+    return "session-" + NextGuidSuffix() + "-" + this.uniqueId();
   },
 
   isFavorite: function() {
@@ -57,7 +57,7 @@ Session = Backbone.Model.extend({
 });
 
 Session.findWithPageId = function(pageId) {
-  var sessionId = pageId.replace(/^session-/, '');
+  var sessionId = pageId.replace(/^session-\d+-/, '');
   return Database.sessions.withUniqueId(sessionId);
 }
 
