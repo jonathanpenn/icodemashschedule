@@ -2,23 +2,29 @@ var SessionDetailPageView = Backbone.View.extend({
   tagName: 'div',
 
   initialize: function(options) {
-    _.bindAll(this, 'render');
+    _.bindAll(this, 'render', 'clickedRoom', 'clickedWhen', 'clickedFavorite');
     this.template = _.template($("#session_detail_page_template").html());
 
     $(this.el).attr('data-role', 'page');
   },
 
+  events: {
+    'vclick li.room a': 'clickedRoom',
+    'vclick li.when a': 'clickedWhen',
+    'vclick .favoriteSwitch': 'clickedFavorite'
+  },
+
   render: function() {
     var locals = {
       favoriteIcon: this.generateFavoriteIcon(),
-      title: this.model.title().escapeHTML(),
-      speaker: this.model.speakerName().escapeHTML(),
-      room: this.model.room().escapeHTML(),
-      technology: this.model.get('technology').escapeHTML(),
-      difficulty: this.model.get('difficulty').escapeHTML(),
+      title: _.escape(this.model.title()),
+      speaker: _.escape(this.model.speakerName()),
+      room: _.escape(this.model.room()),
+      technology: _.escape(this.model.get('technology')),
+      difficulty: _.escape(this.model.get('difficulty')),
       track: this.model.get('track'),
-      abstract: this.model.get('abstract').escapeHTML(),
-      when: this.model.when().strftime("%A, %I:%M %P").replace(/ 0/, ' ').escapeHTML(),
+      abstract: _.escape(this.model.get('abstract')),
+      when: _.escape(this.model.when().strftime("%A, %I:%M %P").replace(/ 0/, ' ')),
       roomPageId: 'room'
     }
 
@@ -27,30 +33,25 @@ var SessionDetailPageView = Backbone.View.extend({
     $page.attr('id', this.options.id);
     $page.html(this.template(locals));
 
-    var session = this.model;
-
-    $page.find('li.room a').bind('vclick', function(e) {
-      e.preventDefault();
-      RoomMapPageView.show(session.room());
-    });
-
-    $page.find('li.when a').bind('vclick', function(e) {
-      e.preventDefault();
-      $.mobile.changePage("#" + SessionTimeSlot.slotIdFromWhen(session.when()));
-    });
-
-    var self = this;
-    $page.find('.favoriteSwitch').bind('vclick', function(e) {
-      e.preventDefault();
-      session.toggleFavorite();
-      self.updateFavoriteIcon();
-    });
-
-    _.defer(function() {
-      $page.page();
-    });
+    _.defer(function() { $page.page(); });
 
     return this;
+  },
+
+  clickedRoom: function(e) {
+    e.preventDefault();
+    RoomMapPageView.show(this.model.room());
+  },
+
+  clickedWhen: function(e) {
+    e.preventDefault();
+    $.mobile.changePage("#" + SessionTimeSlot.slotIdFromWhen(this.model.when()));
+  },
+
+  clickedFavorite: function(e) {
+    e.preventDefault();
+    this.model.toggleFavorite();
+    $(this.el).find('img.favIcon').replaceWith(this.generateFavoriteIcon());
   },
 
   generateFavoriteIcon: function() {
@@ -60,10 +61,6 @@ var SessionDetailPageView = Backbone.View.extend({
       return '<%= image_tag('fav_off.png', class: 'favIcon') %>';
       return '';
     }
-  },
-
-  updateFavoriteIcon: function() {
-    $(this.el).find('img.favIcon').replaceWith(this.generateFavoriteIcon());
   }
 
 });
