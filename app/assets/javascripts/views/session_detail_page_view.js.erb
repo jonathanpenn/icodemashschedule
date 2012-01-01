@@ -36,7 +36,6 @@ var SessionDetailPageView = Backbone.View.extend({
 
     $page.find('li.when a').bind('vclick', function(e) {
       e.preventDefault();
-      console.log( "#" + SessionTimeSlot.slotIdFromWhen(session.when()));
       $.mobile.changePage("#" + SessionTimeSlot.slotIdFromWhen(session.when()));
     });
 
