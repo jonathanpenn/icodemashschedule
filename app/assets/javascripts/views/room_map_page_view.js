@@ -12,14 +12,6 @@ RoomMapPageView = {
 
 (function() {
 
-  function scrollHandler(e) {
-    var $page = $('#room_map');
-    $page.find('a').css({
-      top: $(window).scrollTop() + 5,
-      left: $(window).scrollLeft() + 5
-    });
-  }
-
   function placeMapMarker(point) {
     var $dot = $("#room_map .dot");
     $dot.css({
@@ -40,12 +32,7 @@ RoomMapPageView = {
     scrollHandler();
   }
 
-  $("#room_map").live('pagehide', function() {
-    $(document).unbind('scrollstop', scrollHandler);
-  });
-
   $("#room_map").live('pageshow', function() {
-    $(document).bind('scrollstop', scrollHandler);
     var $page = $('#room_map');
     var roomName = RoomMapPageView.roomName;
     var coordinates = roomCoordinates[roomName];
