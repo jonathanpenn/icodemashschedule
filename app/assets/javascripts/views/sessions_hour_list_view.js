@@ -10,18 +10,25 @@ var SessionsHourListView = Backbone.View.extend({
     var $list = $(this.el);
 
     $list.empty();
+    $list.next("p").remove();
 
-    this.collection.each(function(slot) {
-      var item = new SessionsHourListItemView({
-        slot: slot
+    if (this.collection.models.length > 0) {
+
+      this.collection.each(function(slot) {
+        var item = new SessionsHourListItemView({
+          slot: slot
+        });
+
+        $list.append(item.render().el);
       });
 
-      $list.append(item.render().el);
-    });
+      _.defer(function() {
+        $list.listview('refresh');
+      });
 
-    _.defer(function() {
-      $list.listview('refresh');
-    });
+    } else {
+      $list.after("<p class='notfound'>No data found.</p>");
+    }
 
     return this;
   },

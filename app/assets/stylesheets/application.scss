@@ -9,6 +9,11 @@
  *= require_tree .
 */
 
+.notfound {
+  margin-top: 2em;
+  text-align: center;
+}
+
 .ui-header img.sync-status {
   position: absolute;
   top: 10px;
