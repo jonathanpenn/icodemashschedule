@@ -34,6 +34,12 @@ var SessionDetailPageView = Backbone.View.extend({
       RoomMapPageView.show(session.room());
     });
 
+    $page.find('li.when a').bind('vclick', function(e) {
+      e.preventDefault();
+      console.log( "#" + SessionTimeSlot.slotIdFromWhen(session.when()));
+      $.mobile.changePage("#" + SessionTimeSlot.slotIdFromWhen(session.when()));
+    });
+
     var self = this;
     $page.find('.favoriteSwitch').bind('vclick', function(e) {
       e.preventDefault();
