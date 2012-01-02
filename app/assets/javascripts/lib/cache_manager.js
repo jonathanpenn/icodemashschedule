@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+  CacheLog.clear();
+  CacheLog.timestamp();
+
   var cache = window.applicationCache;
   if (!cache) {
     CacheLog.puts("Offline cache disabled. Application assets not cached to device.");

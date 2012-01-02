@@ -52,17 +52,23 @@ Database = {
     if (!this.sessions) { this.sessions = new Sessions(); }
 
     APILog.clear();
-    APILog.puts(new Date());
+    APILog.timestamp();
     APILog.puts("Fetching session data from server...");
 
     SyncStatus.show();
     this.sessions.fetch({
       complete: function() {
         Database.saveToLocalStorage();
-        console.log("Database refreshed from server");
-        APILog.puts("Sessions fetched and saved to local storage.");
         if (callback) callback();
         SyncStatus.hide();
+      },
+      success: function() {
+        console.log("Database refreshed from server");
+        APILog.puts("Sessions fetched and saved to local storage.");
+      },
+      error: function() {
+        APILog.puts("Unable to contact the CodeMash session API.");
+        APILog.puts("Using cached sessions.");
       }
     });
   },

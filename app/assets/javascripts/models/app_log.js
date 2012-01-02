@@ -12,7 +12,16 @@ var APILog = null;
     return $("#sync .appCacheLog p");
   }
 
+  function timestamp()
+  {
+    return (new Date()).strftime("-- %a, %Y-%m-%d %H:%M:%S %Z");
+  }
+
   CacheLog = {
+    timestamp: function() {
+      this.puts(timestamp());
+    },
+
     clear: function() {
       $appCacheLog().empty();
     },
@@ -24,6 +33,10 @@ var APILog = null;
   };
 
   APILog = {
+    timestamp: function() {
+      this.puts(timestamp());
+    },
+
     clear: function() {
       $apiLog().empty()
     },

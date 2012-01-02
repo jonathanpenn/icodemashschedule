@@ -42,17 +42,19 @@
     </div><!-- /header -->
 
     <div data-role='content'>
-      <ul data-role='listview' data-inset='true'>
-        <li>HTML5 Offline Cache</li>
-        <li class='appCacheLog'><p></p></li>
-      </ul>
+
+      <a href="javascript:Database.refreshFromServer()" data-role="button" data-icon="Refresh">Refresh Sessions</a>
 
       <ul data-role='listview' data-inset='true'>
         <li>CodeMash Session Data</li>
         <li class='apiLog'><p></p></li>
       </ul>
 
-      <a href="javascript:Database.refreshFromServer()" data-role="button" data-icon="Refresh">Refresh Sessions</a>
+      <ul data-role='listview' data-inset='true'>
+        <li>HTML5 Offline Cache</li>
+        <li class='appCacheLog'><p></p></li>
+      </ul>
+
     </div>
 
   </div>
