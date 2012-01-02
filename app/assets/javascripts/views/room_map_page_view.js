@@ -5,7 +5,10 @@ RoomMapPageView = {
   show: function(roomName) {
     $.mobile.showPageLoadingMsg();
     this.roomName = roomName;
-    $.mobile.changePage('#room_map');
+    $("#room_map img").css({opacity: 0});
+    $.mobile.changePage('#room_map', {
+      transition: 'pop'
+    });
   }
 
 };
@@ -28,6 +31,7 @@ RoomMapPageView = {
 
     $(window).scrollTop(corner.y);
     $(window).scrollLeft(corner.x);
+    $("#room_map img").animate({opacity: 1});
     placeMapMarker(point);
   }
 
