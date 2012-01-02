@@ -34,7 +34,8 @@ $(document).ready(function() {
   {
     hideStatus();
     console.log("finished");
-    CacheLog.puts("Offline cache update complete. Refresh page to finish update.");
+    CacheLog.puts("Offline cache update complete.");
+    CacheLog.puts("Refresh page to finish update.");
   }
 
   function firstCached()

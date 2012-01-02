@@ -6,10 +6,10 @@ var APILog = null;
   var $apiLog;
 
   function $apiLog() {
-    return $("#sync .apiLog");
+    return $("#sync .apiLog p");
   }
   function $appCacheLog() {
-    return $("#sync .appCacheLog");
+    return $("#sync .appCacheLog p");
   }
 
   CacheLog = {
@@ -18,17 +18,19 @@ var APILog = null;
     },
 
     puts: function(str) {
-      $appCacheLog().append("<p>" + _.escape(str) + "</p>");
+      var text = $appCacheLog().html();
+      $appCacheLog().html(text + "<br>" + _.escape(str));
     }
   };
 
   APILog = {
     clear: function() {
-      $apiLog().empty();
+      $apiLog().empty()
     },
 
     puts: function(str) {
-      $apiLog().append("<p>" + _.escape(str) + "</p>");
+      var text = $apiLog().html();
+      $apiLog().html(text + "<br>" + _.escape(str));
     }
   };
 
