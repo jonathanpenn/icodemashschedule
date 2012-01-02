@@ -15,6 +15,7 @@ class CacheManifest
 CACHE MANIFEST
 # v#{cache_version}
 
+/app.html
 #{cache_files.join("\n")}
 
 NETWORK:
