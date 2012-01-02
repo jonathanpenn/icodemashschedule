@@ -21,7 +21,7 @@ CodeMash::Application.configure do
   config.assets.digest = false
 
   # Defaults to Rails.root.join("public/assets")
-  config.assets.manifest = Rails.root.join("public/assets")
+  # config.assets.manifest = Rails.root.join("public/assets")
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
