@@ -39,6 +39,7 @@ $(document).ready(function() {
     console.log("finished");
     CacheLog.puts("Offline cache update complete.");
     CacheLog.puts("Refresh page to finish update.");
+    Notification.show("Web app cache updated. Refresh to finish.");
   }
 
   function firstCached()
@@ -46,6 +47,7 @@ $(document).ready(function() {
     hideStatus();
     console.log("firstCached");
     CacheLog.puts("Web app is now cached offline.");
+    Notification.show("Schedule is cached. Use it offline!");
   }
 
   var pinged = false;

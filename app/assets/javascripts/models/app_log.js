@@ -1,15 +1,17 @@
+var Notification = null;
 var CacheLog = null;
 var APILog = null;
 
 (function() {
-  var $appCacheLog;
-  var $apiLog;
 
   function $apiLog() {
     return $("#sync .apiLog p");
   }
   function $appCacheLog() {
     return $("#sync .appCacheLog p");
+  }
+  function $notification() {
+    return $("#home_page .notification");
   }
 
   function timestamp()
@@ -46,6 +48,11 @@ var APILog = null;
       $apiLog().html(text + "<br>" + _.escape(str));
     }
   };
+
+  Notification = {
+    hide: function() { $notification().empty(); },
+    show: function(text) { $notification().text(text); }
+  }
 
 })();
 
