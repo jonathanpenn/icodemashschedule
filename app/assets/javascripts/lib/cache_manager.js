@@ -1,7 +1,12 @@
 $(document).ready(function() {
 
   var cache = window.applicationCache;
-  if (!cache) { return; }
+  if (!cache) {
+    CacheLog.puts("Offline cache disabled. Application assets not cached to device.");
+    return;
+  }
+
+  CacheLog.puts("Offline caching enabled.");
 
   var moved = false;
   function hideStatus() {
@@ -22,24 +27,31 @@ $(document).ready(function() {
   {
     hideStatus();
     console.log("checkOnError");
+    CacheLog.puts("Network error trying to update offline cache.");
   }
 
   function finish()
   {
     hideStatus();
     console.log("finished");
+    CacheLog.puts("Offline cache update complete. Refresh page to finish update.");
   }
 
   function firstCached()
   {
     hideStatus();
     console.log("firstCached");
+    CacheLog.puts("Web app is now cached offline.");
   }
 
+  var pinged = false;
   function progressUpdate()
   {
     showStatus();
-    console.log("progressUpdate");
+    if (!pinged) {
+      CacheLog.puts("Checking cache status...");
+      pinged = true;
+    }
   }
 
   cache.addEventListener('error', checkOnError, false);

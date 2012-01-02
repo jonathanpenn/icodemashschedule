@@ -29,7 +29,6 @@ RoomMapPageView = {
     $(window).scrollTop(corner.y);
     $(window).scrollLeft(corner.x);
     placeMapMarker(point);
-    scrollHandler();
   }
 
   $("#room_map").live('pageshow', function() {

@@ -9,6 +9,17 @@
  *= require_tree .
 */
 
+#sync {
+  .appCacheLog, .apiLog {
+    padding-top: 1.5em;
+
+    p {
+      font-weight: normal;
+      font-size: 1em;
+    }
+  }
+}
+
 .notfound {
   margin-top: 2em;
   text-align: center;

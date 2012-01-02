@@ -8,15 +8,20 @@ Database = {
   initialize: function(callback) {
     if (this.sessions) return;
 
+    APILog.clear();
+    APILog.puts(new Date());
+
     this.loadFromLocalStorage();
 
     var sessions = Database.sessions;
 
     if (sessions.models.length == 0) {
+      APILog.puts("No sessions previously in local storage.");
       Database.refreshFromServer(function() {
         if (callback) callback();
       });
     } else {
+      APILog.puts("Sessions loaded from local storage.");
       var self = this;
       _.delay(function() {
         self.triggerBackgroundRefreshing();
@@ -51,11 +56,14 @@ Database = {
   refreshFromServer: function(callback) {
     if (!this.sessions) { this.sessions = new Sessions(); }
 
+    APILog.puts("Fetching session data from server...");
+
     SyncStatus.show();
     this.sessions.fetch({
       complete: function() {
         Database.saveToLocalStorage();
         console.log("Database refreshed from server");
+        APILog.puts("Sessions fetched and saved to local storage.");
         if (callback) callback();
         SyncStatus.hide();
       }
