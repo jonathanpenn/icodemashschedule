@@ -20,7 +20,7 @@ Database = {
       var self = this;
       _.delay(function() {
         self.triggerBackgroundRefreshing();
-      }, 2000);
+      }, 500);
     }
 
     console.log("Database initialized");
