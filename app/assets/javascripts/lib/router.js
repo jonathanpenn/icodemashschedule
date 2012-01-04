@@ -42,7 +42,8 @@ $(document).bind('pagechange', function(e, data) {
     var id = $page.attr('id');
     return id !== 'room_map' &&
       id !== 'sync' &&
-      id !== 'search';
+      id !== 'search' &&
+      id !== 'about';
   }
 
   if (data.options.reverse && data.options.fromPage) {

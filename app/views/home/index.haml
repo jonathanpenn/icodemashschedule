@@ -26,6 +26,7 @@
 
       <ul data-role='listview' data-inset='true'>
         <li><a href='#sync'>Sync</a></li>
+        <li><a href='#about'>About</a></li>
       </ul>
     </div><!-- /content -->
 
@@ -74,6 +75,26 @@
         <li>HTML5 Offline Cache</li>
         <li class='appCacheLog'><p></p></li>
       </ul>
+
+    </div>
+
+  </div>
+
+  <div data-role='page' id='about'>
+    <div data-role='header'>
+      <h1>About</h1>
+      #{ image_tag('ajax-loader.gif', class: 'sync-status') }
+    </div><!-- /header -->
+
+    <div data-role='content'>
+
+      <p>iCodeMash 2012 is a slick and simple HTML5 web app that caches itself offline, automatically updates, and periodically polls the CodeMash JSON api for session information. It is served up by Rails 3.1 running on Heroku.</p>
+
+      <p>Use the full text search or browse the schedule and mark the ones you think you'll attend as "favorites". Tap on a session's room name when viewing its details to see a map of the convention center with a blue dot on the room. Comments or questions? <a href="http://twitter.com/jonathanpenn">Let me know</a>!</p>
+
+      <p>Curious how it works? Download the <a href="https://github.com/jonathanpenn/icodemashschedule">source</a> and enjoy!</p>
+
+      <p>Written and directed by <a href="http://twitter.com/jonathanpenn">Jonathan Penn</a></p>
 
     </div>
 
