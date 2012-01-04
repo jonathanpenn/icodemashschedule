@@ -52,16 +52,21 @@ body.syncing .ui-header img.sync-status {
     text-overflow: ellipsis;
   }
 
-  .speaker, .wherewhen {
+  .speaker, .wherewhen, .extra {
     font-size: .7em;
     font-weight: normal;
     padding-right: 1em;
     text-overflow: ellipsis;
     overflow: hidden;
+    line-height: 1.5em;
   }
 
   .wherewhen {
     float: right;
+  }
+
+  .extra {
+    clear: both;
   }
 
   .favoriteSwitch {

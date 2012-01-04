@@ -16,12 +16,17 @@ var SessionListItemView = Backbone.View.extend({
       when: _.escape(this.model.when().strftime("%a @ %I:%M %P").replace(/ 0/,' ')),
       room: _.escape(this.model.room()),
       speakerName: _.escape(this.model.get('speakerName')),
-      href: "#" + this.model.pageId()
+      href: "#" + this.model.pageId(),
+      extra: _.escape(this.model.extra())
     };
 
     var html = SessionListItemView.template(locals);
 
     $(this.el).html(html);
+
+    if (!this.options.showExtra) {
+      $(this.el).find(".extra").remove();
+    }
 
     return this;
   },

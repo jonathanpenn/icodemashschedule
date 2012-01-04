@@ -40,7 +40,7 @@ var SearchView = Backbone.View.extend({
           $list.append('<li data-role="list-divider">'+lastGroup+'</li>');
         }
 
-        var item = new SessionListItemView({ model: session });
+        var item = new SessionListItemView({ model: session, showExtra: true });
         $list.append(item.render().el);
       });
     } else {
