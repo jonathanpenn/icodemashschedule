@@ -6,5 +6,5 @@
 // Need to leave out jquery.mobile. Conflicts with Jasmine.
 
 //= require_tree ./models
-//= require ./lib/util
+//= require_tree ./lib
 
