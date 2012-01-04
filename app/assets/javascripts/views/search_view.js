@@ -23,9 +23,7 @@ var SearchView = Backbone.View.extend({
     $list.next("p").remove();
 
     if (terms === null || terms.length === 0) {
-      _.defer(function() {
-        $list.listview('refresh');
-      });
+      $list.listview('refresh');
       return;
     }
 
@@ -47,9 +45,7 @@ var SearchView = Backbone.View.extend({
       $list.after("<p class='notfound'>No sessions found.</p>");
     }
 
-    _.defer(function() {
-      $list.listview('refresh');
-    });
+    $list.listview('refresh');
 
     return this;
   },
