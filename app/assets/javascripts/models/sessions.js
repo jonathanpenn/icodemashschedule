@@ -2,57 +2,37 @@
 
 Sessions = Backbone.Collection.extend({
   model: Session,
-  url: 'http://www.codemash.org/rest/sessions.json',
-  precompilerUrl: 'http://www.codemash.org/rest/precompiler.json',
 
-  initialize: function() {
+  fetch: function(options) {
     // Kludgy hack to get the precompiler and normal sessions
     // combined into one collection
-    this.oldFetch = this.fetch;
+    var oldsuccess = options.success;
+    var oldcomplete = options.complete;
+
+    var sessions = new AggregatedSessions();
+    var precompiler = new AggregatedSessions({precompiler: true});
+
     var self = this;
-    this.fetch = function(options) {
-      var oldsuccess = options.success;
-      var oldcomplete = options.complete;
 
-      var newoptions = _.extend(options, {
-        success: null,
-        complete: function() {
-          var newoptions = _.extend(options, {
-            success: oldsuccess,
-            complete: oldcomplete,
-            url: self.precompilerUrl,
-            add: true
-          });
+    var newoptions = _.extend(options, {
+      complete: null,
+      success: function() {
+        var newoptions = _.extend(options, {
+          complete: oldcomplete,
+          success: function() {
+            self.reset(sessions.models, {silent: true});
+            self.add(precompiler.models, {silent: true});
+            self.trigger('reset');
 
-          self.oldFetch(newoptions);
-        }
-      });
+            if (oldsuccess) oldsuccess();
+          }
+        });
 
-      self.oldFetch(newoptions);
-    };
-  },
-
-  parse: function(response) {
-    var parseDate = function(jsondate) {
-      var datenum = jsondate.match(/\(([^\)]+)\)/)[1] - 0;
-      return new Date(datenum);
-    }
-
-    return _.map(response, function(record) {
-      return {
-        abstract: record.Abstract,
-        difficulty: record.Difficulty,
-        lookup: record.Lookup,
-        room: record.Room,
-        speakerName: record.SpeakerName,
-        speakerUri: record.SpeakerURI,
-        when:  parseDate(record.Start),
-        technology: record.Technology,
-        title: record.Title,
-        track: record.Track,
-        uri: record.URI
-      };
+        precompiler.fetch(newoptions);
+      }
     });
+
+    sessions.fetch(newoptions);
   },
 
   filter: function() {
