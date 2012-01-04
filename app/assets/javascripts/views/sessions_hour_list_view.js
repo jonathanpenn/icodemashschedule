@@ -27,7 +27,12 @@ var SessionsHourListView = Backbone.View.extend({
       });
 
     } else {
-      $list.after("<p class='notfound'>No data found.</p>");
+      console.log(this.options);
+      if (this.options.precompiler) {
+        $list.after("<p class='notfound'>Precompiler sessions aren't available from the API, yet.</p>");
+      } else {
+        $list.after("<p class='notfound'>No data found.</p>");
+      }
     }
 
     return this;
