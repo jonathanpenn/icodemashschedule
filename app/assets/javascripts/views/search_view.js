@@ -6,7 +6,7 @@ var SearchView = Backbone.View.extend({
     Favorites.bind('change', this.render);
     this.$input = $(this.el).find("input");
 
-    this.lazyrender = _.debounce(this.render, 300);
+    this.lazyrender = _.debounce(this.render, 600);
   },
 
   events: {
