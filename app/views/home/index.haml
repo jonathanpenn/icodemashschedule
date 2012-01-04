@@ -3,7 +3,7 @@
     if (location.href.search(/#/) !== -1) location.href = '/';
   </script>
 
-  <div data-role='page' id='home_page'>
+  <div data-role='page' id='home_page' data-add-back-btn='false'>
 
     <div data-role='header'>
       <h1>CodeMash 2012</h1>
@@ -35,6 +35,7 @@
   <div data-role='page' id='room_map'>
     <img class='map' src='#{ image_path('room_map.jpg') }' width='946' height='1150'>
     <img class='dot' src='#{ image_path('dot.png') }'>
+    <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
   </div>
 
   <div data-role='page' id='search'>
