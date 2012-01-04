@@ -29,17 +29,15 @@ var SearchView = Backbone.View.extend({
       return;
     }
 
-    var sessions = this.collection.filter().byTitleOrSpeakerSearch(terms);
+    var sessions = this.collection.filter().byFullSearch(terms);
     var lastGroup = null;
     if (sessions.models.length > 0) {
       sessions.each(function(session) {
-        if (self.options.groupByDate) {
-          var timeString = session.when().strftime("%A %I:%M %P").replace(/ 0/, ' ');
+        var timeString = session.when().strftime("%A %I:%M %P").replace(/ 0/, ' ');
 
-          if (timeString != lastGroup) {
-            lastGroup = timeString;
-            $list.append('<li data-role="list-divider">'+lastGroup+'</li>');
-          }
+        if (timeString != lastGroup) {
+          lastGroup = timeString;
+          $list.append('<li data-role="list-divider">'+lastGroup+'</li>');
         }
 
         var item = new SessionListItemView({ model: session });

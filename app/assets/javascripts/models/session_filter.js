@@ -34,6 +34,15 @@ SessionFilter = function(sessions) {
         return record.speakerName().toLowerCase().indexOf(term) >= 0 ||
           record.title().toLowerCase().indexOf(term) >= 0;
       });
+    },
+
+    byFullSearch: function(term) {
+      return this.by(function(record) {
+        return record.speakerName().toLowerCase().indexOf(term) >= 0 ||
+          record.title().toLowerCase().indexOf(term) >= 0 ||
+          record.abstract().toLowerCase().indexOf(term) >= 0 ||
+          record.technology().toLowerCase().indexOf(term) >= 0;
+      });
     }
   }
 

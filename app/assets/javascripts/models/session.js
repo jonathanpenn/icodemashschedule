@@ -23,6 +23,14 @@ Session = Backbone.Model.extend({
     } else return this.get('title');
   },
 
+  abstract: function() {
+    return this.get('abstract');
+  },
+
+  technology: function() {
+    return this.get('technology');
+  },
+
   speakerName: function() {
     return this.get('speakerName');
   },
