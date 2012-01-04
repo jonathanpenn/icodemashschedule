@@ -3,6 +3,34 @@
 Sessions = Backbone.Collection.extend({
   model: Session,
   url: 'http://www.codemash.org/rest/sessions.json',
+  precompilerUrl: 'http://www.codemash.org/rest/precompiler.json',
+
+  initialize: function() {
+    // Kludgy hack to get the precompiler and normal sessions
+    // combined into one collection
+    this.oldFetch = this.fetch;
+    var self = this;
+    this.fetch = function(options) {
+      var oldsuccess = options.success;
+      var oldcomplete = options.complete;
+
+      var newoptions = _.extend(options, {
+        success: null,
+        complete: function() {
+          var newoptions = _.extend(options, {
+            success: oldsuccess,
+            complete: oldcomplete,
+            url: self.precompilerUrl,
+            add: true
+          });
+
+          self.oldFetch(newoptions);
+        }
+      });
+
+      self.oldFetch(newoptions);
+    };
+  },
 
   parse: function(response) {
     var parseDate = function(jsondate) {
