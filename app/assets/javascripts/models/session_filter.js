@@ -39,7 +39,7 @@ SessionFilter = function(sessions) {
     byFullSearch: function(terms) {
       return this.by(function(record) {
         var fulltext = record.fulltext();
-        var ands = terms.split(" ");
+        var ands = terms.toLowerCase().split(" ");
         return _.all(ands, function(term) {
           return fulltext.indexOf(term) >= 0;
         });
