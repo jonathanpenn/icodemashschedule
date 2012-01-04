@@ -15,7 +15,7 @@
 
       <ul data-role='listview' data-inset='true'>
         <li><a class='favorites-link' href='#favorites'>#{ image_tag('fav_on.png', width: '16', height: '16', class: 'ui-li-icon') }Favorites</a></li>
-        <!--<li><a href='#search'>Search</a></li>-->
+        <li><a href='#search'>Search</a></li>
       </ul>
 
       <ul data-role='listview' data-inset='true'>
@@ -35,6 +35,23 @@
     <img class='map' src='#{ image_path('room_map.jpg') }' width='946' height='1150'>
     <img class='dot' src='#{ image_path('dot.png') }'>
   </div>
+
+  <div data-role='page' id='search'>
+
+    <div data-role='header'>
+      <h1>Search</h1>
+      #{ image_tag('ajax-loader.gif', class: 'sync-status') }
+    </div><!-- /header -->
+
+    <div data-role='content'>
+      <p class='notification'></p>
+
+      <input type="search" name="search" id="searc-basic" value="" />
+
+      <ul data-role='listview' class='sessions_list'></ul>
+    </div><!-- /content -->
+
+  </div><!-- /page -->
 
   <div data-role='page' id='sync'>
     <div data-role='header'>
