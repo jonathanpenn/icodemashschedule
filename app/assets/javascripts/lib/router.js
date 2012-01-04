@@ -84,8 +84,7 @@ Router = {
     (new SessionHourListPageView({
       id: "precompiler_sessions",
       sessions: Database.sessions.filter().precompiler(),
-      title: "Precompiler",
-      precompiler: true
+      title: "Precompiler"
     })).render();
   },
 
