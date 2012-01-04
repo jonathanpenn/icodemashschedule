@@ -60,6 +60,13 @@ Session = Backbone.Model.extend({
   toggleFavorite: function() {
     if (this.isFavorite()) this.unmarkAsFavorite();
     else this.markAsFavorite();
+  },
+
+  fulltext: function() {
+    return [this.speakerName().toLowerCase(),
+      this.title().toLowerCase(),
+      this.abstract().toLowerCase(),
+      this.technology().toLowerCase()].join(" ");
   }
 
 });
