@@ -160,6 +160,10 @@
   </script>
 
   <script type='text/template' id='session_detail_page_template'>
+    <div data-role='header'>
+      <h1>Session</h1>
+      #{ image_tag('ajax-loader.gif', class: 'sync-status') }
+    </div><!-- /header -->
 
     <div data-role='content' class='session_detail'>
       <a href='#' class='favoriteSwitch'><%= favoriteIcon %></a>
