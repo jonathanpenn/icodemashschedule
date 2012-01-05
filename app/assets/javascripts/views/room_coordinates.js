@@ -50,6 +50,22 @@ var roomCoordinates =  {
   "Zambezi": {
     "x": 309,
     "y": 209
+  },
+  "Acacia": {
+    "x": 127,
+    "y": 944
+  },
+  "Sage / Zebra": {
+    "x": 715,
+    "y": 147
+  },
+  "Salon B": {
+    "x": 430,
+    "y": 706
+  },
+  "Salon C": {
+    "x": 496,
+    "y": 708
   }
 };
 
