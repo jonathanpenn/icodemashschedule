@@ -1,7 +1,21 @@
+//= require ./../vendor/strftime
+
 $(document).ready(function() {
 
+  function lastUpdated()
+  {
+    var data = window.localStorage.cacheLastUpdated;
+    if (data) return new Date(data-0);
+  }
+
+  function setLastUpdated()
+  {
+    window.localStorage.cacheLastUpdated = (new Date()).valueOf();
+  }
+
   CacheLog.clear();
-  CacheLog.timestamp();
+  CacheLog.puts("Last updated:");
+  CacheLog.timestamp(lastUpdated());
 
   var cache = window.applicationCache;
   if (!cache) {
@@ -40,6 +54,7 @@ $(document).ready(function() {
     CacheLog.puts("Offline cache update complete.");
     CacheLog.puts("Refresh page to finish update.");
     Notification.show("Web app cache updated. Refresh to finish.");
+    setLastUpdated();
   }
 
   function firstCached()
@@ -48,6 +63,7 @@ $(document).ready(function() {
     console.log("firstCached");
     CacheLog.puts("Web app is now cached offline.");
     Notification.show("Schedule is cached. Use it offline!");
+    setLastUpdated();
   }
 
   var pinged = false;

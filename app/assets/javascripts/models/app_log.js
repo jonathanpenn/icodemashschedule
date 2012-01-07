@@ -14,14 +14,15 @@ var APILog = null;
     return $("#home_page .notification");
   }
 
-  function timestamp()
+  function timestamp(date)
   {
-    return (new Date()).strftime("-- %a, %Y-%m-%d %H:%M:%S %Z");
+    if (date) return date.strftime("%a, %Y-%m-%d %H:%M:%S %Z");
   }
 
   CacheLog = {
-    timestamp: function() {
-      this.puts(timestamp());
+    timestamp: function(date) {
+      if (date) this.puts(timestamp(date));
+      else this.puts("Never");
     },
 
     clear: function() {
@@ -35,8 +36,9 @@ var APILog = null;
   };
 
   APILog = {
-    timestamp: function() {
-      this.puts(timestamp());
+    timestamp: function(date) {
+      if (date) this.puts(timestamp(date));
+      else this.puts("Never");
     },
 
     clear: function() {
