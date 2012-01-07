@@ -80,6 +80,15 @@ Router = {
     })).render();
   },
 
+  upcoming: function() {
+    (new SessionListPageView({
+      sessions: Database.sessions.filter().upNext(),
+      title: 'Upcoming',
+      id: 'upcoming',
+      groupByDate: true
+    })).render();
+  },
+
   precompiler_sessions: function() {
     (new SessionHourListPageView({
       id: "precompiler_sessions",

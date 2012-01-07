@@ -23,6 +23,12 @@ SessionFilter = function(sessions) {
       return this.by(fridayQuery);
     },
 
+    upNext: function() {
+      return this.by(function(session) {
+        return true;
+      });
+    },
+
     byTimeSlot: function(when) {
       return this.by(function(session) {
         return session.when().valueOf() == when.valueOf();
