@@ -24,8 +24,17 @@ SessionFilter = function(sessions) {
     },
 
     upNext: function() {
+      var nextSessionWindow = 1000 * 60 * 30;
+      var now = new Date((new Date()) - nextSessionWindow);
+      var slots = sessions.uniqueSessionDates();
+      var nextSlot = null;
+      _.each(slots, function(slot) {
+        if (slot > now && !nextSlot) nextSlot = slot;
+      });
+      console.log(nextSlot);
+
       return this.by(function(session) {
-        return true;
+        return session.when().valueOf() == nextSlot.valueOf();
       });
     },
 
