@@ -40,7 +40,9 @@ Sessions = Backbone.Collection.extend({
   },
 
   comparator: function(session) {
-    return session.when().valueOf() + session.get('title');
+    var sort = session.when().valueOf() + session.get('title');
+    if (session.isFavorite()) return "+" + sort;
+    else return sort;
   },
 
   serialize: function() {
