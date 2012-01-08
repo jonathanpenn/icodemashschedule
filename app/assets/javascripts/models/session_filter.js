@@ -24,7 +24,7 @@ SessionFilter = function(sessions) {
     },
 
     upNext: function() {
-      var nextSessionWindow = 1000 * 60 * 30;
+      var nextSessionWindow = 1000 * 60 * 12;
       var now = new Date((new Date()) - nextSessionWindow);
       var slots = sessions.uniqueSessionDates();
       var nextSlot = null;
