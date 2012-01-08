@@ -44,12 +44,12 @@ Database = {
     Favorites.load();
 
     var data = window.localStorage['sessions'];
-    if (!data) { this.sessions = new Sessions(); }
+    if (!data) this._initSessions();
     else { this.sessions = Sessions.deserialize(data); }
   },
 
   refreshFromServer: function(callback) {
-    if (!this.sessions) { this.sessions = new Sessions(); }
+    if (!this.sessions) this._initSessions();
 
     APILog.clear();
     APILog.puts("Fetching session data from server...");
@@ -91,6 +91,10 @@ Database = {
   clear: function() {
     window.localStorage['sessions'] = null;
     this.loadFromLocalStorage();
+  },
+
+  _initSessions: function() {
+    this.sessions = new Sessions();
   }
 }
 
