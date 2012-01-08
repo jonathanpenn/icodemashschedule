@@ -23,6 +23,17 @@ SessionFilter = function(sessions) {
       return this.by(fridayQuery);
     },
 
+    excludeMiscSessions: function() {
+      return this.by(function(session) {
+        return !session.isKidzMash() &&
+          !session.isVendorSession() &&
+          !session.isMeal() &&
+          !session.isRegistration() &&
+          !session.isCodeMashFamilies() &&
+          !session.isGameRoom();
+      });
+    },
+
     upNext: function() {
       var nextSessionWindow = 1000 * 60 * 12;
       var now = new Date((new Date()) - nextSessionWindow);

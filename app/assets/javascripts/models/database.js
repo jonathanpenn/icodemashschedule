@@ -36,7 +36,7 @@ Database = {
   },
 
   saveToLocalStorage: function() {
-    window.localStorage['sessions'] = this.sessions.serialize();
+    window.localStorage['sessions'] = this.allSessions.serialize();
     Favorites.save();
   },
 
@@ -45,7 +45,7 @@ Database = {
 
     var data = window.localStorage['sessions'];
     if (!data) this._initSessions();
-    else { this.sessions = Sessions.deserialize(data); }
+    else this._initSessions(Sessions.deserialize(data));
   },
 
   refreshFromServer: function(callback) {
@@ -56,7 +56,7 @@ Database = {
 
     SyncStatus.show();
     var self = this;
-    this.sessions.fetch({
+    this.allSessions.fetch({
       complete: function() {
         Database.saveToLocalStorage();
         if (callback) callback();
@@ -93,8 +93,10 @@ Database = {
     this.loadFromLocalStorage();
   },
 
-  _initSessions: function() {
-    this.sessions = new Sessions();
+  _initSessions: function(sessions) {
+    if (sessions) this.allSessions = sessions.filter().excludeMiscSessions();
+    else this.allSessions = new Sessions();
+    this.sessions = this.allSessions.filter().excludeMiscSessions();
   }
 }
 

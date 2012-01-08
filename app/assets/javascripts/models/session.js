@@ -75,6 +75,30 @@ Session = Backbone.Model.extend({
 
   extra: function() {
     return this.technology() + ", " + this.difficulty();
+  },
+
+  isKidzMash: function() {
+    return this.title().match(/^KidzMash/) !== null;
+  },
+
+  isVendorSession: function() {
+    return this.title().match(/^Vendor Sessions/) !== null;
+  },
+
+  isMeal: function() {
+    return this.title().match(/^(Breakfast|Lunch|Dinner)/);
+  },
+
+  isCodeMashFamilies: function() {
+    return this.title().match(/^CodeMash Fam/);
+  },
+
+  isRegistration: function() {
+    return this.title().match(/^(Registration|Social: Attendee Party)/);
+  },
+
+  isGameRoom: function() {
+    return this.title().match(/^Game Room/);
   }
 
 });
