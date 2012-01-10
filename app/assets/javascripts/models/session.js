@@ -78,7 +78,7 @@ Session = Backbone.Model.extend({
   },
 
   isKidzMash: function() {
-    return this.title().match(/^KidzMash/) !== null;
+    return this.title().match(/^(KidzMash|KizMash)/) !== null;
   },
 
   isVendorSession: function() {

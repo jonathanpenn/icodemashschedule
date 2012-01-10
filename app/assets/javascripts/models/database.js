@@ -68,6 +68,8 @@ Database = {
         APILog.puts("Sessions fetched and saved to local storage.");
         APILog.puts("Last updated:");
         APILog.timestamp(self.lastUpdated());
+
+        //self._logAboutFilteredSessions();
       },
       error: function() {
         APILog.puts("Unable to contact the CodeMash session API.");
@@ -97,6 +99,15 @@ Database = {
     if (sessions) this.allSessions = sessions.filter().excludeMiscSessions();
     else this.allSessions = new Sessions();
     this.sessions = this.allSessions.filter().excludeMiscSessions();
+  },
+
+  _logAboutFilteredSessions: function() {
+    var excluded = _.without(this.allSessions.models, this.sessions.models);
+
+    console.log("Excluded sessions:");
+    _.each(excluded, function(session) {
+      console.log("  " + session.title());
+    });
   }
 }
 
