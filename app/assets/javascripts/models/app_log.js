@@ -16,7 +16,7 @@ var APILog = null;
 
   function timestamp(date)
   {
-    if (date) return date.strftime("%a, %Y-%m-%d %H:%M:%S %Z");
+    if (date) return date.strftime("%a, %b %d, %H:%M:%S %Z");
   }
 
   CacheLog = {
