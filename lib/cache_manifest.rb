@@ -77,6 +77,10 @@ EOS
   def production?; @production end
 
   def cache_version
+    self.class.cache_version
+  end
+
+  def self.cache_version
     ENV['CACHE_VERSION'] || Time.now.to_f
   end
 

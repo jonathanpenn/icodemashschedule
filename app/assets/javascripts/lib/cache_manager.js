@@ -16,6 +16,8 @@ $(document).ready(function() {
   CacheLog.clear();
   CacheLog.puts("Last updated:");
   CacheLog.timestamp(lastUpdated());
+  var version = $("#cache_version").text();
+  CacheLog.puts("Cache version: " + version);
 
   var cache = window.applicationCache;
   if (!cache) {
@@ -24,6 +26,7 @@ $(document).ready(function() {
   }
 
   CacheLog.puts("Offline caching enabled.");
+  CacheLog.puts("");
 
   var moved = false;
   function hideStatus() {
