@@ -45,7 +45,9 @@ var SearchView = Backbone.View.extend({
       $list.after("<p class='notfound'>No sessions found.</p>");
     }
 
-    $list.listview('refresh');
+    _.defer(function() {
+      $list.listview('refresh');
+    });
 
     return this;
   },
