@@ -3,8 +3,11 @@
 var AggregatedSessions = Backbone.Collection.extend({
   model: Session,
 
-  sessionsUrl: 'http://www.codemash.org/rest/sessions.json',
-  precompilerUrl: 'http://www.codemash.org/rest/precompiler.json',
+  //sessionsUrl: 'http://www.codemash.org/rest/sessions.json',
+  //precompilerUrl: 'http://www.codemash.org/rest/precompiler.json',
+
+  sessionsUrl: '/sessions.json',
+  precompilerUrl: '/precompiler.json',
 
   url: function() {
     if (this.precompiler) return this.precompilerUrl;

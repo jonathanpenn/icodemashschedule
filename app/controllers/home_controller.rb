@@ -13,7 +13,11 @@ class HomeController < ApplicationController
   private
 
   def passthrough url
-    render open(url).read, format: 'json'
+    text = Rails.cache.fetch url, expires_in: 1.minute do
+      open(url).read
+    end
+
+    render text: text, format: 'json'
   end
 
 end
