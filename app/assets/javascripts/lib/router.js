@@ -68,7 +68,7 @@ Router = {
   },
 
   room_map: function() {
-    (new RoomMapPageView()).render();
+    RoomMapPageView.show();
   },
 
   favorites: function() {
