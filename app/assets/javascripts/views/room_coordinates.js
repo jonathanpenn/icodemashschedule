@@ -66,6 +66,30 @@ var roomCoordinates =  {
   "Salon C": {
     "x": 496,
     "y": 708
+  },
+  "Crown Palm": {
+    "x": 128,
+    "y": 869
+  },
+  "Grand Hall": {
+    "x": 593,
+    "y": 358
+  },
+  "Keynote Dining Hall": {
+    "x": 591,
+    "y": 357
+  },
+  "Keynote dining hall": {
+    "x": 591,
+    "y": 359
+  },
+  "Rosewood": {
+    "x": 642,
+    "y": 147
+  },
+  "Waterpark": {
+    "x": 65,
+    "y": 992
   }
 };
 
