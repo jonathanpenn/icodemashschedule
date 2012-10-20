@@ -1,6 +1,6 @@
 Constants = {
-  wednesdayStart: new Date(1326258000000),
-  thursdayStart: new Date(1326344400000),
-  fridayStart: new Date(1326430800000)
+  wednesdayStart: new Date(1357707600000),
+  thursdayStart: new Date(1357794000000),
+  fridayStart: new Date(1357880400000)
 }
 

@@ -21,8 +21,11 @@ $("#home_page").live('pageinit', function() {
   $page.find('a.favorites-link').append(
     (new FavoriteCountBubbleView({sessions: Database.sessions})).render().el
   );
-  $page.find('a.precompiler-link').append(
-    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().precompiler()})).render().el
+  $page.find('a.tuesday-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().tuesday()})).render().el
+  );
+  $page.find('a.wednesday-link').append(
+    (new FavoriteCountBubbleView({sessions: Database.sessions.filter().wednesday()})).render().el
   );
   $page.find('a.thursday-link').append(
     (new FavoriteCountBubbleView({sessions: Database.sessions.filter().thursday()})).render().el
@@ -89,11 +92,19 @@ Router = {
     })).render();
   },
 
-  precompiler_sessions: function() {
+  tuesday_sessions: function() {
     (new SessionHourListPageView({
-      id: "precompiler_sessions",
-      sessions: Database.sessions.filter().precompiler(),
-      title: "Precompiler"
+      id: "tuesday_sessions",
+      sessions: Database.sessions.filter().tuesday(),
+      title: "Tuesday"
+    })).render();
+  },
+
+  wednesday_sessions: function() {
+    (new SessionHourListPageView({
+      id: "wednesday_sessions",
+      sessions: Database.sessions.filter().wednesday(),
+      title: "Wednesday"
     })).render();
   },
 

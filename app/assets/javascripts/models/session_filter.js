@@ -11,8 +11,12 @@ SessionFilter = function(sessions) {
       });
     },
 
-    precompiler: function() {
-      return this.by(precompilerQuery);
+    tuesday: function() {
+      return this.by(tuesdayQuery);
+    },
+
+    wednesday: function() {
+      return this.by(wednesdayQuery);
     },
 
     thursday: function() {
@@ -73,8 +77,13 @@ SessionFilter = function(sessions) {
     }
   }
 
-  function precompilerQuery(record) {
-    return record.when() < Constants.thursdayStart;
+  function tuesdayQuery(record) {
+    return record.when() < Constants.wednesdayStart;
+  }
+
+  function wednesdayQuery(record) {
+    var when = record.when();
+    return when > Constants.wednesdayStart && when < Constants.thursdayStart;
   }
 
   function thursdayQuery(record) {

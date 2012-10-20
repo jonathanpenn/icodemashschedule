@@ -3,36 +3,28 @@
 Sessions = Backbone.Collection.extend({
   model: Session,
 
-  fetch: function(options) {
-    // Kludgy hack to get the precompiler and normal sessions
-    // combined into one collection
-    var oldsuccess = options.success;
-    var oldcomplete = options.complete;
+  url: 'http://rest.codemash.org/api/sessions.json',
 
-    var sessions = new AggregatedSessions();
-    var precompiler = new AggregatedSessions({precompiler: true});
+  parse: function(response) {
+    var parseDate = function(jsondate) {
+      return Date.parse(jsondate);
+    }
 
-    var self = this;
-
-    var newoptions = _.extend(options, {
-      complete: null,
-      success: function() {
-        var newoptions = _.extend(options, {
-          complete: oldcomplete,
-          success: function() {
-            self.reset(sessions.models, {silent: true});
-            self.add(precompiler.models, {silent: true});
-            self.trigger('reset');
-
-            if (oldsuccess) oldsuccess();
-          }
-        });
-
-        precompiler.fetch(newoptions);
-      }
+    return _.map(response, function(record) {
+      return {
+        abstract: record.Abstract,
+        difficulty: record.Difficulty,
+        lookup: record.SessionLookupId,
+        room: record.Room,
+        speakerName: record.SpeakerName,
+        speakerUri: record.SpeakerURI,
+        when:  parseDate(record.Start),
+        technology: record.Technology,
+        title: record.Title,
+        track: record.Track,
+        uri: record.URI
+      };
     });
-
-    sessions.fetch(newoptions);
   },
 
   filter: function() {

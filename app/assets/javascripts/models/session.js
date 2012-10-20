@@ -6,6 +6,7 @@ Session = Backbone.Model.extend({
 
   room: function() {
     var room = this.get('room');
+    if (!room) return "Room TBA";
     if (room.length == 1) return "Room " + room;
     else return room;
   },
