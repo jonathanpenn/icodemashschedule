@@ -27,7 +27,7 @@ var SessionsHourListView = Backbone.View.extend({
       });
 
     } else {
-      $list.after("<p class='notfound'>No data loaded.</p>");
+      $list.after("<p class='notfound'>No sessions found.</p>");
     }
 
     return this;
