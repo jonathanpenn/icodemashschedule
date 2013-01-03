@@ -37,7 +37,6 @@
 <div data-role='page' id='room_map'>
   <img class='map' src='<%= image_path('room_map.jpg') %>' width='946' height='1150'>
   <img class='dot' src='<%= image_path('dot.png') %>'>
-  <a href='#' class='ui-btn-left' data-icon='arrow-l' onclick="history.back(); return false">Back</a>
 </div>
 
 <div data-role='page' id='search'>
@@ -162,11 +161,6 @@
 </script>
 
 <script type='text/template' id='session_detail_page_template'>
-  <div data-role='header'>
-    <h1>Session</h1>
-    <%= image_tag('ajax-loader.gif', class: 'sync-status') %>
-  </div><!-- /header -->
-
   <div data-role='content' class='session_detail'>
     <a href='#' class='favoriteSwitch'><%%= favoriteIcon %></a>
     <h2><%%= title %></h2>
