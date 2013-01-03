@@ -21,7 +21,6 @@ Sessions = Backbone.Collection.extend({
         when:  parseDate(record.Start),
         technology: record.Technology,
         title: record.Title,
-        track: record.Track,
         uri: record.URI
       };
     });

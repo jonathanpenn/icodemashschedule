@@ -22,7 +22,6 @@ var SessionDetailPageView = Backbone.View.extend({
       room: _.escape(this.model.room()),
       technology: _.escape(this.model.get('technology')),
       difficulty: _.escape(this.model.get('difficulty')),
-      track: this.model.get('track'),
       abstract: _.escape(this.model.get('abstract')),
       when: _.escape(this.model.when().strftime("%A, %I:%M %P").replace(/ 0/, ' ')),
       roomPageId: 'room'
