@@ -1,95 +1,99 @@
 var roomCoordinates =  {
-  "Aloeswood / Leopardwood": {
-    "x": 571,
-    "y": 149
+  "Aloeswood/Leopardswood": {
+    "x": 570,
+    "y": 125
+  },
+  "Aloeswood/Lepoardwood": {
+    "x": 570,
+    "y": 125
+  },
+  "Banyan": {
+    "x": 180,
+    "y": 736
   },
   "Cypress": {
-    "x": 681,
+    "x": 680,
     "y": 668
+  },
+  "Guava/Tamarind": {
+    "x": 441,
+    "y": 829
+  },
+  "Indigo": {
+    "x": 231,
+    "y": 663
   },
   "Indigo Bay": {
-    "x": 231,
-    "y": 668
+    "x": 227,
+    "y": 664
+  },
+  "Ironwood": {
+    "x": 180,
+    "y": 809
   },
   "Nile": {
-    "x": 310,
-    "y": 312
+    "x": 311,
+    "y": 309
   },
   "Orange": {
-    "x": 311,
-    "y": 389
+    "x": 313,
+    "y": 387
   },
-  "Sagewood / Zebrawood": {
-    "x": 716,
-    "y": 147
+  "Portia/Wisteria": {
+    "x": 356,
+    "y": 828
+  },
+  "Room A": {
+    "x": 364,
+    "y": 701
+  },
+  "Room B": {
+    "x": 430,
+    "y": 704
+  },
+  "Room G": {
+    "x": 428,
+    "y": 627
+  },
+  "Room H": {
+    "x": 362,
+    "y": 630
+  },
+  "Rosewood": {
+    "x": 641,
+    "y": 114
+  },
+  "Sagewood/Zebrawood": {
+    "x": 714,
+    "y": 121
   },
   "Salon A": {
     "x": 364,
-    "y": 703
+    "y": 706
   },
   "Salon D": {
     "x": 557,
-    "y": 705
+    "y": 707
   },
   "Salon E": {
-    "x": 557,
-    "y": 631
+    "x": 556,
+    "y": 627
   },
   "Salon F": {
-    "x": 494,
-    "y": 630
+    "x": 495,
+    "y": 627
   },
   "Salon G": {
-    "x": 430,
-    "y": 630
+    "x": 429,
+    "y": 628
   },
   "Salon H": {
-    "x": 366,
-    "y": 632
+    "x": 364,
+    "y": 627
   },
   "Zambezi": {
     "x": 309,
-    "y": 209
-  },
-  "Acacia": {
-    "x": 127,
-    "y": 944
-  },
-  "Sage / Zebra": {
-    "x": 715,
-    "y": 147
-  },
-  "Salon B": {
-    "x": 430,
-    "y": 706
-  },
-  "Salon C": {
-    "x": 496,
-    "y": 708
-  },
-  "Crown Palm": {
-    "x": 128,
-    "y": 869
-  },
-  "Grand Hall": {
-    "x": 593,
-    "y": 358
-  },
-  "Keynote Dining Hall": {
-    "x": 591,
-    "y": 357
-  },
-  "Keynote dining hall": {
-    "x": 591,
-    "y": 359
-  },
-  "Rosewood": {
-    "x": 642,
-    "y": 147
-  },
-  "Waterpark": {
-    "x": 65,
-    "y": 992
+    "y": 200
   }
 };
 

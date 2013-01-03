@@ -40,7 +40,12 @@ var SessionDetailPageView = Backbone.View.extend({
 
   clickedRoom: function(e) {
     e.preventDefault();
-    RoomMapPageView.show(this.model.room());
+    var room = this.model.room();
+    if (RoomMapPageView.hasMapForRoom(room)) {
+      RoomMapPageView.show(room);
+    } else {
+      alert("Room '" + room + "' wasn't found on the map");
+    }
   },
 
   clickedWhen: function(e) {

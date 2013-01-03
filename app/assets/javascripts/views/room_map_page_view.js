@@ -7,6 +7,10 @@ RoomMapPageView = {
     this.roomName = roomName;
     $("#room_map img").css({opacity: 0});
     $.mobile.changePage('#room_map');
+  },
+
+  hasMapForRoom: function(roomName) {
+    return roomCoordinates[roomName] != undefined;
   }
 
 };
