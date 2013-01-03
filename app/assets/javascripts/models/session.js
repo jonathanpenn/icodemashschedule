@@ -87,6 +87,10 @@ Session = Backbone.Model.extend({
 
   isVendorSession: function() {
     return this.title().match(/^Vendor Sessions/) !== null;
+  },
+
+  isMeal: function() {
+    return this.title().match(/^(Breakfast|Lunch|Dinner)/) !== null;
   }
 
 });

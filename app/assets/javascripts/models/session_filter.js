@@ -36,7 +36,9 @@ SessionFilter = function(sessions) {
     upNext: function() {
       var nextSessionWindow = 1000 * 60 * 12;
       var now = new Date((new Date()) - nextSessionWindow);
-      var slots = sessions.uniqueSessionDates();
+      var slots = this.by(function(session) {
+        return !session.isMeal();
+      }).uniqueSessionDates();
       var nextSlot = null;
       _.each(slots, function(slot) {
         if (slot > now && !nextSlot) nextSlot = slot;
