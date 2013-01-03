@@ -6,9 +6,7 @@ RoomMapPageView = {
     $.mobile.showPageLoadingMsg();
     this.roomName = roomName;
     $("#room_map img").css({opacity: 0});
-    $.mobile.changePage('#room_map', {
-      transition: 'pop'
-    });
+    $.mobile.changePage('#room_map');
   }
 
 };
