@@ -64,37 +64,24 @@ Session = Backbone.Model.extend({
   },
 
   fulltext: function() {
-    return [this.speakerName().toLowerCase(),
-      this.title().toLowerCase(),
-      this.abstract().toLowerCase()].join(" ");
+    return [this.speakerName(),
+      this.title(),
+      this.abstract()].join(" ").toLowerCase();
   },
 
   extra: function() {
     return this.difficulty();
   },
 
-  isKidzMash: function() {
-    return this.title().match(/^(KidzMash|KizMash)/) !== null;
+
+  // Query methods
+
+  isMiscSession: function() {
+    return this.isVendorSession();
   },
 
   isVendorSession: function() {
     return this.title().match(/^Vendor Sessions/) !== null;
-  },
-
-  isMeal: function() {
-    return this.title().match(/^(Breakfast|Lunch|Dinner)/);
-  },
-
-  isCodeMashFamilies: function() {
-    return this.title().match(/^CodeMash Fam/);
-  },
-
-  isRegistration: function() {
-    return this.title().match(/^(Registration|Social: Attendee Party)/);
-  },
-
-  isGameRoom: function() {
-    return this.title().match(/^Game Room/);
   }
 
 });

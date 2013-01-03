@@ -29,12 +29,7 @@ SessionFilter = function(sessions) {
 
     excludeMiscSessions: function() {
       return this.by(function(session) {
-        return !session.isKidzMash() &&
-          !session.isVendorSession() &&
-          !session.isMeal() &&
-          !session.isRegistration() &&
-          !session.isCodeMashFamilies() &&
-          !session.isGameRoom();
+        return !session.isMiscSession();
       });
     },
 
