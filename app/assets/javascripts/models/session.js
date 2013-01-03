@@ -28,10 +28,6 @@ Session = Backbone.Model.extend({
     return this.get('abstract');
   },
 
-  technology: function() {
-    return this.get('technology');
-  },
-
   speakerName: function() {
     return this.get('speakerName');
   },
@@ -70,12 +66,11 @@ Session = Backbone.Model.extend({
   fulltext: function() {
     return [this.speakerName().toLowerCase(),
       this.title().toLowerCase(),
-      this.abstract().toLowerCase(),
-      this.technology().toLowerCase()].join(" ");
+      this.abstract().toLowerCase()].join(" ");
   },
 
   extra: function() {
-    return this.technology() + ", " + this.difficulty();
+    return this.difficulty();
   },
 
   isKidzMash: function() {
