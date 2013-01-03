@@ -18,11 +18,11 @@ var SessionDetailPageView = Backbone.View.extend({
     var locals = {
       favoriteIcon: this.generateFavoriteIcon(),
       title: _.escape(this.model.title()),
-      speaker: _.escape(this.model.speakerName()),
+      speaker: this.model.speakerName() ? _.escape(this.model.speakerName()) : "&nbsp;",
       room: _.escape(this.model.room()),
-      technology: _.escape(this.model.get('technology')),
-      difficulty: _.escape(this.model.get('difficulty')),
-      abstract: _.escape(this.model.get('abstract')),
+      technology: this.model.technology() ? _.escape(this.model.technology()) : "&nbsp;",
+      difficulty: this.model.difficulty() ? _.escape(this.model.difficulty()) : "&nbsp;",
+      abstract: this.model.abstract() ? _.escape(this.model.abstract()) : "&nbsp;",
       when: _.escape(this.model.when().strftime("%A, %I:%M %P").replace(/ 0/, ' ')),
       roomPageId: 'room'
     }

@@ -36,6 +36,10 @@ Session = Backbone.Model.extend({
     return this.get('difficulty');
   },
 
+  technology: function() {
+    return this.get('technology');
+  },
+
   uniqueId: function() {
     return (this.get('lookup') + "").toLowerCase();
   },
@@ -66,11 +70,12 @@ Session = Backbone.Model.extend({
   fulltext: function() {
     return [this.speakerName(),
       this.title(),
-      this.abstract()].join(" ").toLowerCase();
+      this.abstract(),
+      this.technology()].join(" ").toLowerCase();
   },
 
   extra: function() {
-    return this.difficulty();
+    return [this.technology(), this.difficulty()].join(', ');
   },
 
 
