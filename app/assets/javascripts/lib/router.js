@@ -13,6 +13,7 @@ $(document).bind('pagebeforechange', function(e, data) {
   var pageId = url.hash.replace(/#/,'');
   Router.routeToPageId(pageId);
 
+  _gauges.push(['track']);
 });
 
 $("#home_page").live('pageinit', function() {
