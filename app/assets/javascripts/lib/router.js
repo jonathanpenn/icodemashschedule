@@ -12,8 +12,6 @@ $(document).bind('pagebeforechange', function(e, data) {
 
   var pageId = url.hash.replace(/#/,'');
   Router.routeToPageId(pageId);
-
-  _gauges.push(['track']);
 });
 
 $("#home_page").live('pageinit', function() {
@@ -58,6 +56,8 @@ $(document).bind('pagechange', function(e, data) {
 
   // Need to keep resetting this so that any bookmarks have the right title
   $("head title").text("CodeMash");
+
+  _gauges.push(['track']);
 });
 
 Router = {
