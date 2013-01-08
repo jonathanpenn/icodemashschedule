@@ -34,6 +34,11 @@ var FavoritesCollection = Backbone.Model.extend({
   save: function() {
     var favoritesString = JSON.stringify(this._favorites);
     window.localStorage['favorites'] = favoritesString;
+    this.updateTransferLink();
+  },
+
+  updateTransferLink: function() {
+    var favoritesString = JSON.stringify(this._favorites);
     var transferUrl = [
       location.protocol + "//",
       location.host,
@@ -49,6 +54,7 @@ var FavoritesCollection = Backbone.Model.extend({
       var parsed = JSON.parse(data);
       if (parsed) this._favorites = parsed;
     }
+    this.updateTransferLink();
   },
 
   parse: function(hashId) {
