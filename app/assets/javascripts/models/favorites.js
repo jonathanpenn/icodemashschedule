@@ -32,7 +32,15 @@ var FavoritesCollection = Backbone.Model.extend({
   },
 
   save: function() {
-    window.localStorage['favorites'] = JSON.stringify(this._favorites);
+    var favoritesString = JSON.stringify(this._favorites);
+    window.localStorage['favorites'] = favoritesString;
+    var transferUrl = [
+      location.protocol + "//",
+      location.host,
+      location.pathname,
+      "#load-" + escape(favoritesString)
+    ];
+    $("a#saveLink").attr("href", transferUrl.join(''));
   },
 
   load: function() {
@@ -41,7 +49,12 @@ var FavoritesCollection = Backbone.Model.extend({
       var parsed = JSON.parse(data);
       if (parsed) this._favorites = parsed;
     }
-  }
+  },
+
+  parse: function(hashId) {
+    var escaped = hashId.replace(/^load-/, '');
+    window.localStorage['favorites'] = unescape(escaped);
+  },
 
 });
 

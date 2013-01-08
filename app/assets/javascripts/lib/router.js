@@ -66,6 +66,9 @@ Router = {
       this.displaySession(pageId);
     } else if (this.isSessionSlotId(pageId)) {
       this.displaySessionSlot(pageId);
+    } else if (this.isLoad(pageId)) {
+      Favorites.parse(pageId);
+      location.reload();
     } else {
       this[pageId]();
     }
@@ -123,6 +126,10 @@ Router = {
       sessions: Database.sessions.filter().friday(),
       title: "Friday"
     })).render();
+  },
+
+  isLoad: function(id) {
+    return id.search(/^load-/) !== -1;
   },
 
   isSessionId: function(pageId) {
