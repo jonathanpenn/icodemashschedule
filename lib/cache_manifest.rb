@@ -81,7 +81,7 @@ EOS
   end
 
   def self.cache_version
-    ENV['CACHE_VERSION'] || Time.now.to_f
+    @cache_version ||= ENV['CACHE_VERSION'] || Time.now.to_f
   end
 
 end
