@@ -1,6 +1,7 @@
+Conference_Start = Date.parse("2014-01-07T05:00:00Z")
+Day = 86400 * 1000
 Constants = {
-  wednesdayStart: new Date(1357707600000),
-  thursdayStart: new Date(1357794000000),
-  fridayStart: new Date(1357880400000)
+  wednesdayStart: Conference_Start + Day,
+  thursdayStart: Conference_Start + 2 * Day,
+  fridayStart: Conference_Start + 3 * Day
 }
-
